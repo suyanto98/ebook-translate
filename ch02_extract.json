@@ -1,0 +1,2064 @@
+[
+ {
+  "pdf_index": 46,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "2",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     361.2376708984375,
+     356.77392578125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about arrays and linked lists—two of the \nmost basic data structures. They’re used absolutely \neverywhere. You already used arrays in chapter 1, \nand you’ll use them in almost every chapter in this \nbook. Arrays are a crucial topic, so pay attention! \nBut sometimes it’s better to use a linked list instead \nof an array. This chapter explains the pros and cons \nof both so you can decide which one is right for \nyour algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     363.5499267578125,
+     358.53173828125,
+     516.8020629882812
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn your first sorting algorithm. A lot of algo-\nrithms only work if your data is sorted. Remember \nbinary search? You can run binary search only \non a sorted list of elements. This chapter teaches \nyou selection sort. Most languages have a sorting \nalgorithm built in, so you’ll rarely need to write \nyour own version from scratch. But selection sort \nis a stepping stone to quicksort, which I’ll cover \nin chapter 4. Quicksort is an important algorithm, \nand it will be easier to understand if you know one \nsorting algorithm already.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     295.4010009765625,
+     4.003999710083008,
+     370.1802062988281,
+     26.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "selection",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     335.468994140625,
+     22.003999710083008,
+     366.4577941894531,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 9968414,
+    "text": "sort",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 47,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n22",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     43.65399932861328,
+     165.0926055908203,
+     61.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "What you need to know",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     68.61000061035156,
+     318.8419189453125,
+     118.0999984741211
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "To understand the performance analysis bits in this chapter, you need to \nknow big O notation and logarithms. If you don’t know those, I suggest \nyou go back and read chapter 1. Big O notation will be used throughout \nthe rest of the book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     152.697998046875,
+     168.56419372558594,
+     175.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "How memory works",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     186.12100219726562,
+     307.3975830078125,
+     213.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Imagine you go to a show and need to check your things. A chest of \ndrawers is available.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     376.9809875488281,
+     326.7586364746094,
+     404.8219909667969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each drawer can hold one element. You want to store two things, so you \nask for two drawers.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    113.27099609375,
+    228.69998168945312,
+    221.75100708007812,
+    362.8599853515625
+   ],
+   [
+    56.27100372314453,
+    419.5610046386719,
+    278.7510070800781,
+    555.1610107421875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 48,
+  "blocks": [
+   {
+    "bbox": [
+     149.73199462890625,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "How memory works\n23",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     164.04075622558594,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You store your two things here.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     233.85800170898438,
+     330.13958740234375,
+     274.7010192871094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And you’re ready for the show! This is basically how your computer’s \nmemory works. Your computer looks like a giant set of drawers, and \neach drawer has an address.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     423.7989807128906,
+     222.01272583007812,
+     438.6379699707031
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "fe0ffeeb is the address of a slot in memory.",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.501998901367188,
+     441.29998779296875,
+     340.99761962890625,
+     521.1489868164062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each time you want to store an item in memory, you ask the computer \nfor some space, and it gives you an address where you can store your \nitem. If you want to store multiple items, there are two basic ways to do \nso: arrays and linked lists. I’ll talk about arrays and lists next, as well as \nthe pros and cons of each. There isn’t one right way to store items for \nevery use case, so it’s important to know the differences.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    89.87100219726562,
+    64.69700622558594,
+    281.1510009765625,
+    219.73699951171875
+   ],
+   [
+    98.1510009765625,
+    289.43701171875,
+    272.8710021972656,
+    409.677001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 49,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n24",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     188.50820922851562,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Arrays and linked lists",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     311.99664306640625,
+     107.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Sometimes you need to store a list of elements in memory. Suppose \nyou’re writing an app to manage your to-dos. You’ll want to store the \nto-dos as a list in memory.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     110.62603759765625,
+     305.9114685058594,
+     151.4690704345703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Should you use an array or a linked list? Let’s store the to-dos in an \narray first because it’s easier to grasp. Using an array means all your \ntasks are stored contiguously (right next to each other) in memory.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     318.8009948730469,
+     304.92364501953125,
+     346.6419982910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now, suppose you want to add a fourth task. But the next drawer is \ntaken up by someone else’s stuff!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     471.98199462890625,
+     322.36968994140625,
+     538.8279418945312
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s like going to a movie with your friends and finding a place to sit—\nbut another friend joins you, and there’s no place for them. You have to \nmove to a new spot where you all fit. In this case, you need to ask your \ncomputer for a different chunk of memory that can fit four tasks. Then \nyou need to move all your tasks there.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    54.71099853515625,
+    166.1999969482422,
+    280.3110046386719,
+    304.67999267578125
+   ],
+   [
+    85.67100524902344,
+    361.3800048828125,
+    249.3509979248047,
+    457.8599853515625
+   ],
+   [
+    315.4670104980469,
+    31.00000762939453,
+    414.5,
+    139.37799072265625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 50,
+  "blocks": [
+   {
+    "bbox": [
+     146.86599731445312,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Arrays and linked lists \n25",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     344.5694885253906,
+     140.9711151123047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If another friend comes by, you’re out of room again—and you all have \nto move a second time! What a pain. Similarly, adding new items to an \narray can be a big pain. If you’re out of space and need to move to a new \nspot in memory every time, adding a new item will be really slow. One \neasy fix is to “hold seats”: even if you have only three items in your task \nlist, you can ask the computer for 10 slots, just in case. Then you can \nadd up to 10 items to your task list without having to move. This is a \ngood workaround, but you should be aware of a couple of downsides:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     148.13198852539062,
+     338.651611328125,
+     188.9750213623047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You may not need the extra slots that you asked for, and then that \nmemory will be wasted. You aren’t using it, but no one else can use it \neither.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     196.13601684570312,
+     332.98870849609375,
+     223.97703552246094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You may add more than 10 items to your task list and have to move \nanyway.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     226.6390380859375,
+     328.5105895996094,
+     254.4800567626953
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So it’s a good workaround, but it’s not a perfect solution. Linked lists \nsolve this problem of adding items.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     266.1510009765625,
+     97.62600708007812,
+     283.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Linked lists",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     286.6180114746094,
+     280.1325378417969,
+     301.4570007324219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "With linked lists, your items can be anywhere in memory.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     472.3979797363281,
+     322.97650146484375,
+     500.2389831542969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each item stores the address of the next item in the list. A bunch of \nrandom memory addresses are linked together.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    84.35099792480469,
+    316.19696044921875,
+    286.6710205078125,
+    458.2769775390625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 51,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n26",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     154.60101318359375,
+     326.9665832519531,
+     221.4480743408203
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s like a treasure hunt. You go to the first address, and it says, “The next \nitem can be found at address 123.” So you go to address 123, and it says, \n“The next item can be found at address 847,” and so on. Adding an item \nto a linked list is easy: you stick it anywhere in memory and store the \naddress with the previous item.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     224.11007690429688,
+     323.6776428222656,
+     342.9651794433594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "With linked lists, you never have to move your items. You also avoid \nanother problem. Let’s say you go to a popular movie with five of your \nfriends. The six of you are trying to find a place to sit, but the theater \nis packed. There aren’t six seats together. Well, sometimes this happens \nwith arrays. Let’s say you’re trying to find 10,000 slots for an array. Your \nmemory has 10,000 slots, but it doesn’t have 10,000 slots together. You \ncan’t get space for your array! A linked list is like saying, “Let’s split up \nand watch the movie.” If there’s space in memory, you have space for \nyour linked list.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     345.627197265625,
+     307.7485046386719,
+     360.4661865234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If linked lists are so much better at inserts, what are arrays good for?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     372.13397216796875,
+     49.4839973449707,
+     389.47998046875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Arrays",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     392.6009826660156,
+     327.8785095214844,
+     511.4559631347656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Websites with top-10 lists sometimes use this tactic to get more page \nviews. Instead of showing you the list on one page, they put one item on \neach page and make you click Next to get to the next item in the list. For \nexample, Top 10 Best TV Villains won’t show you the entire list on one \npage. Instead, you start at #10 (Newman), and you have to click Next on \neach page to reach #1 (Gustavo Fring). This technique gives the websites \n10 whole pages on which to show you ads, but it’s boring to click Next \nnine times to get to #1. It would be much better if the whole list was on \none page and you could click each person’s name for more info.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     514.1179809570312,
+     320.3666076660156,
+     554.9609985351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Linked lists have a similar problem. Suppose you want to read the last \nitem in a linked list. You can’t just read it because you don’t know what \naddress it’s at. Instead, you have to go to item #1 to get the address for",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     325.5220031738281,
+     88.44497680664062,
+     383.1894836425781,
+     107.35321044921875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Linked memory \naddresses",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    88.31100463867188,
+    38.00000762939453,
+    246.71099853515625,
+    140.48001098632812
+   ],
+   [
+    333.7489929199219,
+    364.26300048828125,
+    428.3349914550781,
+    440.0570068359375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 52,
+  "blocks": [
+   {
+    "bbox": [
+     146.86599731445312,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Arrays and linked lists \n27",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     336.6934509277344,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "item #2. Then you have to go to item #2 to get the address for item #3. \nAnd so on, until you get to the last item. Linked lists are great if you’re \ngoing to read all the items one at a time: you can read one item, follow \nthe address to the next item, and so on. But if you’re going to keep \njumping around, linked lists are terrible.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     104.62704467773438,
+     341.0847473144531,
+     145.47007751464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Arrays are different. You know the address for every item in your array. \nFor example, suppose your array contains five items, and you know it \nstarts at address 00. What is the address of item #5?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     255.197998046875,
+     341.3684997558594,
+     348.049072265625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Simple math tells you: it’s 04. Arrays are great if you want to read \nrandom elements because you can look up any element in your array \ninstantly. With a linked list, the elements aren’t next to each other, \nso you can’t instantly calculate the position of the fifth element in \nmemory—you have to go to the first element to get the address to the \nsecond element, then go to the second element to get the address of the \nthird element, and so on until you get to the fifth element.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     359.7309875488281,
+     106.38860321044922,
+     377.0769958496094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Terminology",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     380.197998046875,
+     337.4315490722656,
+     408.0389709472656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The elements in an array are numbered. This numbering starts from 0, \nnot 1. For example, in this array, 20 is at position 1.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     482.01800537109375,
+     343.5102233886719,
+     548.8650512695312
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And 10 is at position 0. This usually throws new programmers for a \nspin. Starting at 0 makes all kinds of array-based code easier to write, \nso programmers have stuck with it. Almost every programming \nlanguage you use will number array elements starting at 0. You’ll soon \nget used to it.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    90.95100402832031,
+    160.19699096679688,
+    280.07098388671875,
+    241.07699584960938
+   ],
+   [
+    134.031005859375,
+    422.7770080566406,
+    236.99099731445312,
+    467.8970031738281
+   ]
+  ]
+ },
+ {
+  "pdf_index": 53,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n28",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.97500991821289,
+     326.68170166015625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The position of an element is called its index. So instead of saying, “20 is \nat position 1,” the correct terminology is, “20 is at index 1.” I’ll use index \nto mean position throughout this book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     78.62301635742188,
+     298.8616638183594,
+     93.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here are the run times for common operations on arrays and lists.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     240.97500610351562,
+     321.2917175292969,
+     294.9630432128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Question: Why does it take O(n) time to insert an element into an \narray? Suppose you wanted to insert an element at the beginning of an \narray. How would you do it? How long would it take? Find the answers \nto these questions in the next section!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     308.7279052734375,
+     70.73600769042969,
+     323.4720153808594
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISE",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     327.1180114746094,
+     300.917724609375,
+     341.9570007324219
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.1  \u0007Suppose you’re building an app to keep track of your finances.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.2349853515625,
+     402.1210021972656,
+     328.0190124511719,
+     468.9679870605469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Every day, you write down everything you spent money on. At the \nend of the month, you review your expenses and sum up how much \nyou spent. So you have lots of inserts and a few reads. Should you \nuse an array or a list?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    96.59100341796875,
+    108.19700622558594,
+    238.43099975585938,
+    226.99700927734375
+   ],
+   [
+    130.31100463867188,
+    350.3949890136719,
+    204.7100067138672,
+    402.4739990234375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 54,
+  "blocks": [
+   {
+    "bbox": [
+     146.86599731445312,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Arrays and linked lists \n29",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     229.93856811523438,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Inserting into the middle of a list",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     337.9473571777344,
+     82.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you want your to-do list to work more like a calendar. Earlier, \nyou were adding things to the end of the list.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     85.62399291992188,
+     337.3545227050781,
+     100.4629898071289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now, you want to add them in the order in which they should be done.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     88.67300415039062,
+     189.29901123046875,
+     282.6230163574219,
+     198.20901489257812
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Unordered\nOrdered",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     208.45501708984375,
+     324.8146057128906,
+     249.2980499267578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What’s better if you want to insert elements in the middle: arrays or \nlists? With lists, it’s as easy as changing what the previous element \npoints to.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     376.156005859375,
+     311.174560546875,
+     390.9949951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But for arrays, you have to shift all the rest of the elements down.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     528.4159545898438,
+     339.99224853515625,
+     556.2570190429688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And if there’s no space, you might have to copy everything to a new \nlocation! Lists are better if you want to insert elements into the middle.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    70.81500244140625,
+    112.20001220703125,
+    144.49400329589844,
+    182.04000854492188
+   ],
+   [
+    236.239990234375,
+    112.20001220703125,
+    300.2070007324219,
+    182.04000854492188
+   ],
+   [
+    27.5,
+    262.0350036621094,
+    381.02099609375,
+    364.0350036621094
+   ],
+   [
+    73.79100036621094,
+    403.7349853515625,
+    297.23101806640625,
+    516.2949829101562
+   ]
+  ]
+ },
+ {
+  "pdf_index": 55,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n30",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     43.65399932861328,
+     70.18800354003906,
+     61.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "Pointers",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     68.61000061035156,
+     318.7698059082031,
+     94.0999984741211
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "I have talked a lot about how each item in a linked list points to the next \nitem in the list. But how does it do that exactly? By using pointers.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     207.0699920654297,
+     318.7978210449219,
+     232.55999755859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "With each item in your linked list, you use a little bit of memory to store \nthe address of the next item. This is called a pointer.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.499977111816406,
+     235.4399871826172,
+     318.7839050292969,
+     261.05999755859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You will hear the word pointers come up sometimes, especially if you write \nusing a lower-level language like C. So it’s good to know what it means.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     277.6139831542969,
+     69.21000671386719,
+     294.9599914550781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Deletions",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     298.08099365234375,
+     314.02069091796875,
+     338.92401123046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What if you want to delete an element? Again, lists are better because \nyou just need to change what the previous element points to. With \narrays, everything needs to be moved up when you delete an element.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     341.5860290527344,
+     311.840576171875,
+     382.4290466308594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Unlike insertions, deletions will always work. Insertions can fail \nsometimes when there’s no space left in memory. But you can always \ndelete an element.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     385.0910339355469,
+     321.2488098144531,
+     399.9300231933594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here are the run times for common operations on arrays and linked lists.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     507.2610168457031,
+     317.39654541015625,
+     561.1060180664062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s worth mentioning that insertions and deletions are O(1) time only \nif you can instantly access the element to be deleted. It’s a common \npractice to keep track of the first and last items in a linked list, so it \nwould take only O(1) time to delete those.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    65.87100219726562,
+    103.20001220703125,
+    269.1510009765625,
+    198.95999145507812
+   ],
+   [
+    89.87100219726562,
+    408.6600036621094,
+    245.1510009765625,
+    499.1400146484375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 56,
+  "blocks": [
+   {
+    "bbox": [
+     112.46000671386719,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Which is used more, arrays or linked lists?\n31",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     195.1322021484375,
+     75.99798583984375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Which is used more,  \narrays or linked lists?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     87.12100219726562,
+     339.5754699707031,
+     114.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Arrays are often used because they have a lot of advantages over linked \nlists. First, they are better at reads. Arrays provide random access.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     117.6240234375,
+     345.8355712890625,
+     223.4771270751953
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There are two different types of access: random access and sequential \naccess. Sequential access means reading the elements one by one, \nstarting with the first element. Linked lists can only do sequential \naccess. If you want to read the 10th element of a linked list, you have \nto read the first nine elements and follow the links to the 10th element. \nRandom access means you can jump directly to the 10th element. \nArrays provide random access. A lot of use cases require random access, \nso arrays are used a lot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     226.13912963867188,
+     340.8855285644531,
+     266.9821472167969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Even beyond random access, though, arrays are faster because they can \nuse caching. Maybe you are picturing reads like this, reading one item \nat a time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499191284179688,
+     390.3877258300781,
+     326.3590393066406,
+     418.2279357910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.99977970123291,
+    "color": 2301728,
+    "text": "But in reality, computers read a whole section at a time because that \nmakes it a lot faster to go to the next item:",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    41.23699951171875,
+    281.70001220703125,
+    163.15699768066406,
+    376.260009765625
+   ],
+   [
+    216.9849853515625,
+    281.70098876953125,
+    329.78497314453125,
+    372.6600036621094
+   ],
+   [
+    121.31101989746094,
+    432.96099853515625,
+    249.71002197265625,
+    522.47998046875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 57,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n32",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     326.2516174316406,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is something you can do with arrays. With an array, you can read a \nwhole section of items. But you can’t do this with a linked list! You don’t \nknow where the next item is. You need to read an item, find out where \nthe next item is, and then read the next item.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     91.62503051757812,
+     308.1346435546875,
+     119.4660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So not only do arrays give you random access, but they also provide \nfaster sequential access!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     122.1280517578125,
+     326.2064514160156,
+     175.9730987548828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Arrays are better for reads. What about memory efficiency? Remember \nearlier I said that with arrays, you typically request more space than you \nneed, and if you don’t end up using that extra memory you requested, it \nis wasted?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     288.5780029296875,
+     319.9815979003906,
+     368.42706298828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Well, in reality, there is not much wasted space like this. On the other \nhand, when you use a linked list, you are using extra memory per item \nbecause you need to store the address of the next item. So linked lists \nwill take up more space if each item is pretty small. Here’s the same \ninformation as an array and a linked list. You can see the linked list \ntakes up more space.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    82.5510025024414,
+    190.69699096679688,
+    252.47100830078125,
+    274.4570007324219
+   ],
+   [
+    118.79200744628906,
+    383.15802001953125,
+    216.23098754882812,
+    427.3170166015625
+   ],
+   [
+    100.31100463867188,
+    441.5169982910156,
+    234.71099853515625,
+    549.9970092773438
+   ]
+  ]
+ },
+ {
+  "pdf_index": 58,
+  "blocks": [
+   {
+    "bbox": [
+     112.46000671386719,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Which is used more, arrays or linked lists?\n33",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     343.9413757324219,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Of course, if each item is big, then even a single slot of wasted space can \nbe a big deal, and that extra memory you’re using to store the pointers \ncan feel pretty small by comparison.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     78.62301635742188,
+     345.3394775390625,
+     93.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So arrays are used more often than linked lists except in specific use cases.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     107.2279052734375,
+     99.54399108886719,
+     121.97200775146484
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     125.61801147460938,
+     342.6207275390625,
+     192.46507263183594
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.2  \u0007Suppose you’re building an app for restaurants to take customer \norders. Your app needs to store a list of orders. Servers keep adding \norders to this list, and chefs take orders off the list and make them. \nIt’s an order queue: servers add orders to the back of the queue, and \nthe chef takes the first order off the queue and cooks it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.239990234375,
+     305.1210021972656,
+     344.73699951171875,
+     358.9660339355469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Would you use an array or a linked list to implement this queue? \n(Hint: Linked lists are good for inserts/deletes, and arrays are good \nfor random access. Which one are you going to be doing here?)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     361.6210021972656,
+     344.28961181640625,
+     480.4759826660156
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.3  \u0007Let’s run a thought experiment. Suppose Facebook keeps a list of \nusernames. When someone tries to log in to Facebook, a search is \ndone for their username. If their name is in the list of usernames, \nthey can log in. People log in to Facebook pretty often, so there are \na lot of searches through this list of usernames. Suppose Facebook \nuses binary search to search the list. Binary search needs random \naccess—you need to be able to get to the middle of the list of \nusernames instantly. Knowing this, would you implement the list as \nan array or a linked list?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     483.1210021972656,
+     342.56256103515625,
+     549.968017578125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.4  \u0007People sign up for Facebook pretty often, too. Suppose you decided \nto use an array to store the list of users. What are the downsides \nof an array for inserts? In particular, suppose you’re using binary \nsearch to search for logins. What happens when you add new users \nto an array?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    45.23999786376953,
+    204.35501098632812,
+    342.239990234375,
+    310.1180114746094
+   ]
+  ]
+ },
+ {
+  "pdf_index": 59,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n34",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     326.88690185546875,
+     114.96707916259766
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.5  \u0007In reality, Facebook uses neither an array nor a linked list to store user \ninformation. Let’s consider a hybrid data structure: an array of linked \nlists. You have an array with 26 slots. Each slot points to a linked list. \nFor example, the first slot in the array points to a linked list containing \nall the usernames starting with A. The second slot points to a linked list \ncontaining all the usernames starting with B, and so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     28.191986083984375,
+     208.5150146484375,
+     328.0190124511719,
+     331.9681091308594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose Adit B signs up for Facebook, and you want to add them \nto the list. You go to slot 1 in the array, go to the linked list for slot \n1, and add Adit B at the end. Now, suppose you want to search for \nZakhir H. You go to slot 26, which points to a linked list of all the Z \nnames. Then you search through that list to find Zakhir H. \n \nCompare this hybrid data structure to arrays and linked lists. Is it slower \nor faster than each for searching and inserting? You don’t have to give big \nO run times, just whether the data structure would be faster or slower.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     350.1919860839844,
+     119.83821105957031,
+     372.4939880371094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Selection sort",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     379.1150207519531,
+     302.69073486328125,
+     406.95599365234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s put it all together to learn your second algorithm: selection sort. To \nfollow this section, you need to understand arrays and big O notation.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     409.6180114746094,
+     291.349609375,
+     437.4590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have a bunch of music on your computer. For each \nartist, you have a play count.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    28.194000244140625,
+    124.78800201416016,
+    325.5220031738281,
+    216.33700561523438
+   ],
+   [
+    119.12899780273438,
+    440.1939697265625,
+    244.88900756835938,
+    565.9539794921875
+   ],
+   [
+    304.5799865722656,
+    347.62701416015625,
+    414.5,
+    457.3070068359375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 60,
+  "blocks": [
+   {
+    "bbox": [
+     161.33799743652344,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Selection sort\n35",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     338.3215637207031,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You want to sort these artists from most to least played so that you can \nrank your favorite artists. How can you do it?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     65.62100219726562,
+     334.26361083984375,
+     93.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "One way is to go through the list and find the most-played artist. Add \nthat artist to a new list.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     293.2040100097656,
+     231.67868041992188,
+     308.0429992675781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Do it again to find the next-most-played artist.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     530.593994140625,
+     255.22854614257812,
+     545.4330444335938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Keep doing this, and you’ll end up with a sorted list.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.87799835205078,
+    108.19700622558594,
+    343.14398193359375,
+    279.0830078125
+   ],
+   [
+    27.555999755859375,
+    322.78302001953125,
+    343.46600341796875,
+    516.4730224609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 61,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n36",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     229.24099731445312,
+     327.4935302734375,
+     283.0860290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s put on our computer science hats and see how long this will take to \nrun. Remember that O(n) time means you touch every element in a list \nonce. For example, running a simple search over the list of artists means \nlooking at each artist once.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     432.4219970703125,
+     311.841552734375,
+     473.2649841308594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To find the artist with the highest play count, you have to check each \nitem in the list. This takes O(n) time, as you just saw. So you have an \noperation that takes O(n) time, and you have to do that n times.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    82.07099914550781,
+    38.0,
+    252.9510040283203,
+    215.1199951171875
+   ],
+   [
+    84.95100402832031,
+    297.82098388671875,
+    250.0709991455078,
+    418.3009948730469
+   ]
+  ]
+ },
+ {
+  "pdf_index": 62,
+  "blocks": [
+   {
+    "bbox": [
+     161.33799743652344,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Selection sort\n37",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     240.85800170898438,
+     199.2478790283203,
+     255.8400115966797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This takes O(n × n) time or O(n2) time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.4949951171875,
+     258.50201416015625,
+     258.62255859375,
+     273.34100341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Sorting algorithms are very useful. Now you can sort",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.4949951171875,
+     280.50201416015625,
+     140.5959014892578,
+     295.34100341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Names in a phone book",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.4949951171875,
+     302.50201416015625,
+     88.45591735839844,
+     317.34100341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Travel dates",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.4949951171875,
+     324.50201416015625,
+     146.5689239501953,
+     339.34100341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Emails (newest to oldest)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     359.7339782714844,
+     256.14361572265625,
+     377.0799865722656
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "Checking fewer elements each time",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.496002197265625,
+     384.69000244140625,
+     336.81494140625,
+     446.1800231933594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "As you go through the operations, the number of elements you have to \ncheck keeps decreasing. Eventually, you’re down to having to check just \none element. So maybe you are wondering: How can the run time still be \nO(n2)? That’s a good question, and the answer has to do with constants in \nbig O notation. I’ll get into this more in chapter 4, but here’s the gist.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.496002197265625,
+     449.0600280761719,
+     336.8429870605469,
+     510.6800231933594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You’re right that you don’t have to check a list of n elements each time. You \ncheck n elements, then n – 1, n – 2, . . . 2, 1. On average, you check a list that \nhas 1/2 × n elements. The runtime is O(n × 1/2 × n). But constants like 1/2 \nare ignored in big O notation (again, see chapter 4 for the full discussion), \nso you just write O(n × n) or O(n2).",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    38.0,
+    406.9410095214844,
+    226.8800048828125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 63,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     230.67417907714844,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 2  I  selection sort\n38",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     319.6516418457031,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Selection sort is a neat algorithm, but it’s not very fast. Quicksort is a \nfaster sorting algorithm that only takes O(n log n) time. It’s coming up \nin chapter 4!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     105.69500732421875,
+     174.83001708984375,
+     127.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Example code listing",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     139.11801147460938,
+     321.6182861328125,
+     192.9630584716797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I didn’t show you the code to sort the music list, but the following is \nsome code that will do something very similar: sort an array from \nsmallest to largest. Let’s write a function to find the smallest element in \nan array:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     200.302001953125,
+     173.15859985351562,
+     285.96392822265625
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def findSmallest(arr): \n  smallest = arr[0]    \n  smallest_index = 0    \n  for i in range(1, len(arr)):\n    if arr[i] < smallest:\n      smallest = arr[i]\n      smallest_index = i\n  return smallest_index",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     293.9179992675781,
+     243.0364990234375,
+     308.7569885253906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you can use this function to write selection sort:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     316.10198974609375,
+     299.7533874511719,
+     391.76495361328125
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def selectionSort(arr):     \nSorts an array\n  newArr = []\n  copiedArr = list(arr) // copy array before mutating\n  for i in range(len(copiedArr)):\n      smallest = findSmallest(copiedArr)  \n      newArr.append(copiedArr.pop(smallest))\n  return newArr",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     401.22662353515625,
+     207.8319854736328,
+     410.22662353515625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "print(selectionSort([5, 3, 6, 2, 10]))",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     208.1529998779297,
+     212.91998291015625,
+     342.52301025390625,
+     232.67498779296875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Stores the smallest value\nStores the index of the smallest value",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     291.52301025390625,
+     359.9649963378906,
+     412.3929748535156,
+     378.87322998046875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Finds the smallest element in the \narray and adds it to the new array",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 64,
+  "blocks": [
+   {
+    "bbox": [
+     174.57200622558594,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Recap\n39",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     293.51800537109375,
+     76.13600158691406,
+     315.82000732421875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     326.9410095214844,
+     272.94952392578125,
+     341.7799987792969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Your computer’s memory is like a giant set of drawers.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     348.9410095214844,
+     332.2407531738281,
+     376.7831115722656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t When you want to store multiple elements, use an array or a linked \nlist.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     383.9440002441406,
+     329.0704345703125,
+     398.7831115722656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t With an array, all your elements are stored right next to each other.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     405.9440002441406,
+     345.7903747558594,
+     433.7850036621094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t With a linked list, elements are strewn all over, and one element stores \nthe address of the next one.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     440.9460144042969,
+     138.19187927246094,
+     455.7850036621094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Arrays allow fast reads.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     462.9460144042969,
+     216.48764038085938,
+     477.7850036621094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Linked lists allow fast inserts and deletes.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    70.43099975585938,
+    38.0,
+    300.59100341796875,
+    264.32000732421875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 65,
+  "blocks": [],
+  "images": []
+ }
+]

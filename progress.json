@@ -1,0 +1,140 @@
+{
+  "source_pdf": "/home/jacky/Downloads/roadmap bigtech/grokking-algorithms-2nd-edition-2nd_compress.pdf",
+  "chapters": [
+    {
+      "id": "front_matter",
+      "start": 0,
+      "end": 25,
+      "extract_json": "front_matter_extract.json",
+      "translations_module": "translations_front_matter",
+      "built_pdf": "chapters/front_matter-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch01",
+      "start": 26,
+      "end": 45,
+      "extract_json": "ch1_extract.json",
+      "translations_module": "translations",
+      "built_pdf": "chapters/ch01-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch02",
+      "start": 46,
+      "end": 65,
+      "extract_json": "ch02_extract.json",
+      "translations_module": "translations_ch02",
+      "built_pdf": "chapters/ch02-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch03",
+      "start": 66,
+      "end": 79,
+      "extract_json": "ch03_extract.json",
+      "translations_module": "translations_ch03",
+      "built_pdf": "chapters/ch03-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch04",
+      "start": 80,
+      "end": 101,
+      "extract_json": "ch04_extract.json",
+      "translations_module": "translations_ch04",
+      "built_pdf": "chapters/ch04-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch05",
+      "start": 102,
+      "end": 125,
+      "extract_json": "ch05_extract.json",
+      "translations_module": "translations_ch05",
+      "built_pdf": "chapters/ch05-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch06",
+      "start": 126,
+      "end": 145,
+      "extract_json": "ch06_extract.json",
+      "translations_module": "translations_ch06",
+      "built_pdf": "chapters/ch06-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch07",
+      "start": 146,
+      "end": 165,
+      "extract_json": "ch07_extract.json",
+      "translations_module": "translations_ch07",
+      "built_pdf": "chapters/ch07-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch08",
+      "start": 166,
+      "end": 189,
+      "extract_json": "ch08_extract.json",
+      "translations_module": "translations_ch08",
+      "built_pdf": "chapters/ch08-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch09",
+      "start": 190,
+      "end": 215,
+      "extract_json": "ch09_extract.json",
+      "translations_module": "translations_ch09",
+      "built_pdf": "chapters/ch09-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch10",
+      "start": 216,
+      "end": 227,
+      "extract_json": "ch10_extract.json",
+      "translations_module": "translations_ch10",
+      "built_pdf": "chapters/ch10-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch11",
+      "start": 228,
+      "end": 253,
+      "extract_json": "ch11_extract.json",
+      "translations_module": "translations_ch11",
+      "built_pdf": "chapters/ch11-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch12",
+      "start": 254,
+      "end": 271,
+      "extract_json": "ch12_extract.json",
+      "translations_module": "translations_ch12",
+      "built_pdf": "chapters/ch12-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "ch13",
+      "start": 272,
+      "end": 289,
+      "extract_json": "ch13_extract.json",
+      "translations_module": "translations_ch13",
+      "built_pdf": "chapters/ch13-id.pdf",
+      "status": "built"
+    },
+    {
+      "id": "back_matter",
+      "start": 290,
+      "end": 321,
+      "extract_json": "back_matter_extract.json",
+      "translations_module": "translations_back_matter",
+      "built_pdf": "chapters/back_matter-id.pdf",
+      "status": "built"
+    }
+  ]
+}

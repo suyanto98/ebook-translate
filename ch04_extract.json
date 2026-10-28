@@ -1,0 +1,2602 @@
+[
+ {
+  "pdf_index": 80,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "4",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     362.1177062988281,
+     342.77093505859375
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about divide and conquer. Sometimes \nyou’ll come across a problem that can’t be solved \nby any algorithm you’ve learned. When a good \nalgorithmist encounters such a problem, they don’t \njust give up. They have a toolbox full of techniques \nthey use on the problem, trying to come up with \na solution. Divide and conquer is the first general \ntechnique you learn.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     351.5489501953125,
+     357.3360290527344,
+     392.7770080566406
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about quicksort, an elegant sorting algo-\nrithm often used in practice. Quicksort uses divide \nand conquer.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     292.3450012207031,
+     4.003999710083008,
+     366.43121337890625,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "quicksort",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     442.0979919433594,
+     408.9476318359375,
+     495.9429931640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You learned all about recursion in the last chapter. This chapter \nfocuses on using your new skill to solve problems. We’ll explore divide \nand conquer (D&C), a well-known recursive technique for solving \nproblems.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     498.6050109863281,
+     417.0259704589844,
+     552.4500122070312
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This chapter really gets into the meat of algorithms. After all, an \nalgorithm isn’t very useful if it can only solve one type of problem. \nInstead, D&C gives you a new way to think about solving problems. \nD&C is another tool in your toolbox. When you get a new problem, you",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 81,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n56",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     323.2278137207031,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "don’t have to be stumped. Instead, you can ask, “Can I solve this if I use \ndivide and conquer?”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     65.62100219726562,
+     319.5868225097656,
+     119.4660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "At the end of the chapter, you’ll learn your first major D&C algorithm: \nquicksort. Quicksort is a sorting algorithm that is much faster than \nselection sort (which you learned in chapter 2). It’s a good example of \nelegant code.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     149.19500732421875,
+     166.18820190429688,
+     171.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Divide and conquer",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     182.61801147460938,
+     278.0165710449219,
+     249.46507263183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "D&C can take some time to grasp. So, we’ll \ndo three examples. First, I’ll show you a visual \nexample. Then I’ll show a code example that is less \npretty but maybe easier. Finally, we’ll go through quicksort, a \nsorting algorithm that uses D&C.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     252.1270751953125,
+     199.65475463867188,
+     266.966064453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re a farmer with a plot of land.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     416.875,
+     327.99407958984375,
+     444.8589782714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You want to divide this farm evenly into square plots. You want the plots \nto be as big as possible. So none of these will work.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    243.1400146484375,
+    127.07899475097656,
+    414.5,
+    272.27899169921875
+   ],
+   [
+    59.980003356933594,
+    281.697021484375,
+    275.0199890136719,
+    402.89703369140625
+   ],
+   [
+    31.900001525878906,
+    459.59698486328125,
+    303.1009826660156,
+    541.9169921875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 82,
+  "blocks": [
+   {
+    "bbox": [
+     150.4969940185547,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Divide and conquer\n57",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     340.7303161621094,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How do you figure out the largest square size you can use for a plot of \nland? Use the D&C strategy! D&C algorithms are recursive algorithms. \nThere are two steps to solving a problem using D&C:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     78.62301635742188,
+     331.31982421875,
+     93.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Figure out the base case. This should be the simplest possible case.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     96.12399291992188,
+     320.2021179199219,
+     110.9629898071289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Divide or decrease your problem until it becomes the base case.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     118.12399291992188,
+     334.449462890625,
+     145.9650115966797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s use D&C to find the solution to this problem. What is the largest \nsquare size you can use?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     148.62701416015625,
+     346.0105285644531,
+     176.46803283691406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, figure out the base case. The easiest case would be if one side was a \nmultiple of the other side.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     280.197998046875,
+     338.1784362792969,
+     321.041015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose one side is 25 m and the other side is 50 m. Then the largest \nbox you can use is 25 m × 25 m. You need two of those boxes to divide \nup the land.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     323.7030334472656,
+     338.4886779785156,
+     377.5480651855469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you need to figure out the recursive case. This is where D&C \ncomes in. According to D&C, with every recursive call, you have to \nreduce your problem. How do you reduce the problem here? Let’s start \nby marking out the biggest boxes you can use.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    46.07099914550781,
+    191.19699096679688,
+    324.9520263671875,
+    266.0769958496094
+   ],
+   [
+    58.310997009277344,
+    392.2770080566406,
+    312.7120056152344,
+    530.9970092773438
+   ]
+  ]
+ },
+ {
+  "pdf_index": 83,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n58",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     35.11800765991211,
+     327.2965087890625,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can fit two 640 m × 640 m boxes in there, and there’s some land still \nleft to be divided. Now here comes the “Aha!” moment. There’s a farm \nsegment left to divide. Why don’t you apply the same algorithm to this \nsegment?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     243.3380126953125,
+     326.0339660644531,
+     310.18505859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So you started out with a 1,680 m × 640 m farm that needed to be split \nup. But now you need to split up a smaller segment, 640 m × 400 m. If \nyou find the biggest box that will work for this size, that will be the biggest \nbox that will work for the entire farm. You just reduced the problem \nfrom a 1,680 m × 640 m farm to a 640 m × 400 m farm!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     330.57098388671875,
+     129.68798828125,
+     347.9169921875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "Euclid’s algorithm",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     355.5269775390625,
+     318.8480224609375,
+     441.0169982910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "“If you find the biggest box that will work for this size, that will be the \nbiggest box that will work for the entire farm.” If it’s not obvious to you \nwhy this statement is true, don’t worry. It isn’t obvious. Unfortunately, the \nproof for why it works is a little too long to include in this book, so you’ll \njust have to believe me that it works. If you want to understand the proof, \nlook up Euclid’s algorithm for finding the greatest common denominator. \nThe Khan Academy has a good explanation (http://mng.bz/orm2).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     112.69999694824219,
+     495.5379943847656,
+     324.1156311035156,
+     536.3810424804688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s apply the same algorithm again. Starting \nwith a 640 m × 400 m farm, the biggest box you \ncan create is 400 m× 400 m.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    20.990997314453125,
+    103.697998046875,
+    314.031005859375,
+    229.21701049804688
+   ],
+   [
+    9.5,
+    465.91998291015625,
+    100.69999694824219,
+    560.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 84,
+  "blocks": [
+   {
+    "bbox": [
+     150.4969940185547,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Divide and conquer\n59",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     290.8917236328125,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And that leaves you with a smaller segment, 400 m × 240 m.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     158.01800537109375,
+     312.7364501953125,
+     185.85902404785156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And you can draw a box on that to get an even smaller segment,  \n240 m × 160 m.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     290.8949890136719,
+     311.2548828125,
+     305.8769836425781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And then you draw a box on that to get an even smaller segment.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     420.4179992675781,
+     322.58056640625,
+     448.2590026855469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hey, you’re at the base case: 80 is a factor of 160. If you split up this \nsegment using boxes, you don’t have anything left over!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    79.79100036621094,
+    64.69700622558594,
+    291.23101806640625,
+    143.89700317382812
+   ],
+   [
+    74.99099731445312,
+    200.59698486328125,
+    296.031005859375,
+    276.9169921875
+   ],
+   [
+    90.95100402832031,
+    320.61700439453125,
+    280.07098388671875,
+    406.2969970703125
+   ],
+   [
+    130.0709991455078,
+    462.99798583984375,
+    240.95098876953125,
+    539.0780029296875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 85,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n60",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     273.7815246582031,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So, for the original farm, the biggest plot size you can use is  \n80 m × 80 m.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     273.48199462890625,
+     154.13682556152344,
+     288.32098388671875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To recap, here’s how D&C works:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     290.9830017089844,
+     202.90087890625,
+     305.8219909667969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Figure out a simple case as the base case.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     308.4840087890625,
+     304.0457458496094,
+     323.322998046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Figure out how to reduce your problem and get to the base case.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     330.4840087890625,
+     320.5107421875,
+     358.32501220703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "D&C isn’t a simple algorithm that you can apply to a problem. Instead, \nit’s a way to think about a problem. Let’s do one more example.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     110.53500366210938,
+     360.9870300292969,
+     319.2457275390625,
+     401.83001708984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’re given an array of numbers. You have to \nadd up all the numbers and return the total. It’s \npretty easy to do this with a loop:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     409.1659851074219,
+     99.98870086669922,
+     460.02496337890625
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def sum(arr):\n  total = 0\n  for x in arr:\n    total += x\n  return total",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     469.48663330078125,
+     135.85186767578125,
+     478.48663330078125
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "print(sum([1, 2, 3, 4]))",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     487.98199462890625,
+     243.84063720703125,
+     502.82098388671875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But how would you do this with a recursive function?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    16.158000946044922,
+    77.697021484375,
+    318.864013671875,
+    259.3599853515625
+   ],
+   [
+    9.5,
+    364.6300048828125,
+    98.54000091552734,
+    397.27001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 86,
+  "blocks": [
+   {
+    "bbox": [
+     150.4969940185547,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Divide and conquer\n61",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     343.7377014160156,
+     75.9610366821289
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 1: Figure out the base case. What’s the simplest array you could \nget? Think about the simplest case, and then read on. If you get an array \nwith 0 or 1 element, that’s pretty easy to sum up.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     166.25799560546875,
+     151.1366729736328,
+     181.0970001220703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So that will be the base case.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     183.75799560546875,
+     340.17352294921875,
+     211.59901428222656
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 2: You need to move closer to an empty array with every recursive \ncall. How do you reduce your problem size? Here’s one way.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     275.4980163574219,
+     113.2989273071289,
+     290.3370056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s the same as this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.495025634765625,
+     349.43798828125,
+     339.6523742675781,
+     390.2789611816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In either case, the result is 12. But in the second version, you’re passing \na smaller array into the sum function. That is, you decreased the size of \nyour problem!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.495025634765625,
+     392.9380187988281,
+     199.06069946289062,
+     407.77996826171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Your sum function could work like this.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    68.51100158691406,
+    90.69699096679688,
+    302.510986328125,
+    152.13699340820312
+   ],
+   [
+    89.031005859375,
+    226.33700561523438,
+    281.99102783203125,
+    261.37701416015625
+   ],
+   [
+    34.91100311279297,
+    305.0769958496094,
+    336.11199951171875,
+    335.3169860839844
+   ],
+   [
+    49.430999755859375,
+    422.51702880859375,
+    321.59100341796875,
+    550.43701171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 87,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n62",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     92.93282318115234,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here it is in action.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     210.8699951171875,
+     208.5625457763672,
+     225.70899963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember, recursion keeps track of the state.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     160.5260009765625,
+     505.29595947265625,
+     174.49598693847656,
+     517.6859741210938
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Tip",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     20.09600067138672,
+     522.6419677734375,
+     316.90545654296875,
+     546.0604248046875
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "When you’re writing a recursive function involving an array, the base case is \noften an empty array or an array with one element. If you’re stuck, try that first.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    52.697998046875,
+    325.5220031738281,
+    202.74899291992188
+   ],
+   [
+    24.005996704101562,
+    234.45001220703125,
+    311.0159912109375,
+    485.9859924316406
+   ]
+  ]
+ },
+ {
+  "pdf_index": 88,
+  "blocks": [
+   {
+    "bbox": [
+     150.4969940185547,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Divide and conquer\n63",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     43.65399932861328,
+     280.08221435546875,
+     61.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "Sneak peek at functional programming",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     68.61000061035156,
+     336.8209228515625,
+     142.10000610351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "“Why would I do this recursively if I can do it easily with a loop?” you \nmay be thinking. Well, this is a sneak peek into functional programming! \nFunctional programming languages like Haskell don’t have loops, so \nyou have to use recursion to write functions like this. If you have a good \nunderstanding of recursion, functional languages will be easier to learn. \nFor example, here’s how you’d write a sum function in Haskell:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.499000549316406,
+     150.1316375732422,
+     265.2265625,
+     170.375244140625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "sum [] = 0         \nBase case\nRecursive case\nsum (x:xs) = x + (sum xs)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     178.61000061035156,
+     336.83795166015625,
+     228.10000610351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Notice that it looks like you have two definitions for the function. The first \ndefinition runs when you hit the base case. The second definition runs at \nthe recursive case. You can also write this function in Haskell using an if \nstatement:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.499000549316406,
+     231.6316375732422,
+     289.2755126953125,
+     260.629638671875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "sum arr = if arr == []\n            then 0\n            else (head arr) + (sum (tail arr))",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     270.1099853515625,
+     336.8351745605469,
+     319.6000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "But the first definition is easier to read. Because Haskell makes heavy use \nof recursion, it includes all kinds of niceties like this to make recursion \neasy. If you like recursion or you’re interested in learning a new language, \ncheck out Haskell.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     350.23089599609375,
+     96.57598876953125,
+     364.9750061035156
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     368.6210021972656,
+     251.21490478515625,
+     383.4599914550781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.1  \u0007Write out the code for the earlier sum function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     386.1210021972656,
+     312.4324951171875,
+     413.9620056152344
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.2  \u0007Write a recursive function to count the number of items in a \nlist.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     416.6210021972656,
+     314.62554931640625,
+     444.4620056152344
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.3  \u0007Write a recursive function to find the maximum number in a \nlist.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     447.1210021972656,
+     325.1195983886719,
+     487.9639892578125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.4  \u0007Remember binary search from chapter 1? It’s a D&C algorithm, \ntoo. Can you come up with the base case and recursive case for \nbinary search?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    335.52301025390625,
+    353.5989990234375,
+    406.0820007324219,
+    469.03900146484375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 89,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n64",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     87.81620788574219,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Quicksort",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     326.2053527832031,
+     94.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Quicksort is a sorting algorithm. It’s much faster than selection sort and \nis frequently used in real life. Quicksort also uses D&C.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     97.62399291992188,
+     303.11749267578125,
+     138.46702575683594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s use quicksort to sort an array. What’s the simplest array that a \nsorting algorithm can handle (remember my tip from the previous \nsection)? Well, some arrays don’t need to be sorted at all.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     244.60101318359375,
+     327.3945007324219,
+     272.4420166015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Empty arrays and arrays with just one element will be the base case. You \ncan just return those arrays as is—there’s nothing to sort:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     279.7850036621094,
+     128.99478149414062,
+     310.64599609375
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def quicksort(array):\n  if len(array) < 2:\n    return array",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     318.60101318359375,
+     319.39739990234375,
+     346.4420166015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s look at bigger arrays. An array with two elements is pretty easy to \nsort, too.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     434.8210144042969,
+     181.68075561523438,
+     449.6600036621094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What about an array of three elements?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     460.8249816894531,
+     317.439453125,
+     514.6699829101562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember, you’re using D&C. So you \nwant to break down this array until you’re at the base case. Here’s how \nquicksort works. First, pick an element from the array. This element is \ncalled the pivot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     62.54199981689453,
+     523.3269653320312,
+     327.36248779296875,
+     551.1680297851562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We’ll talk about how to pick a good pivot later. For now, let’s \nsay the first item in the array is the pivot.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    309.6999816894531,
+    32.562015533447266,
+    419.7049865722656,
+    236.9110107421875
+   ],
+   [
+    33.59100341796875,
+    153.20001220703125,
+    301.4309997558594,
+    230.48001098632812
+   ],
+   [
+    68.7509994506836,
+    361.1800231933594,
+    266.27099609375,
+    420.70001220703125
+   ],
+   [
+    210.11099243164062,
+    430.57501220703125,
+    302.27099609375,
+    456.9750061035156
+   ],
+   [
+    9.5,
+    521.5999755859375,
+    50.540000915527344,
+    570.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 90,
+  "blocks": [
+   {
+    "bbox": [
+     168.14199829101562,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Quicksort\n65",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     332.12841796875,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now find the elements smaller than the pivot and the elements larger \nthan the pivot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     194.15499877929688,
+     207.22900390625,
+     209.1370086669922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is called partitioning. Now you have",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     216.29800415039062,
+     254.87767028808594,
+     231.1370086669922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A sub-array of all the numbers less than the pivot",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     238.29800415039062,
+     80.2560043334961,
+     253.1370086669922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The pivot",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     260.2980041503906,
+     267.44952392578125,
+     275.1369934082031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A sub-array of all the numbers greater than the pivot",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     277.79901123046875,
+     328.0926513671875,
+     305.6400146484375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The two sub-arrays aren’t sorted. They’re just partitioned. But if they \nwere sorted, then sorting the whole array would be pretty easy.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.498001098632812,
+     377.9380187988281,
+     345.57281494140625,
+     431.77899169921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If the sub-arrays are sorted, then you can combine the whole thing as \nleft array + pivot + right array, and you get a sorted array. In \nthis case, it’s [10, 15] + [33] + [] = [10, 15, 33], which is a sorted \narray.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499008178710938,
+     434.4410095214844,
+     343.93048095703125,
+     501.2879943847656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How do you sort the sub-arrays? Well, the quicksort base case already \nknows how to sort empty arrays (the right sub-array), and it can \nrecursively sort arrays of two elements (the left sub-array). So if you call \nquicksort on the two sub-arrays and then combine the results, you get a \nsorted array:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     508.94866943359375,
+     306.65411376953125,
+     528.1920166015625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "quicksort([15, 10]) + [33] + quicksort([])\n> [10, 15, 33]              \nA sorted array",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    56.39099884033203,
+    77.6969985961914,
+    314.6319885253906,
+    180.177001953125
+   ],
+   [
+    104.99099731445312,
+    320.3769836425781,
+    266.031005859375,
+    363.8169860839844
+   ]
+  ]
+ },
+ {
+  "pdf_index": 91,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n66",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     310.7294616699219,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This strategy will work with any pivot. Suppose you choose 15 as the \npivot instead.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     138.37799072265625,
+     313.689453125,
+     179.2210235595703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Both sub-arrays have only one element, and you know how to sort \nthose. So now you know how to sort an array of three elements. Here \nare the steps:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     181.88299560546875,
+     80.60400390625,
+     196.72203063964844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Pick a pivot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     199.38400268554688,
+     319.9958190917969,
+     227.2250213623047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Partition the array into two sub-arrays: elements less than the pivot \nand elements greater than the pivot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     229.88699340820312,
+     237.13397216796875,
+     244.7260284423828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t Call quicksort recursively on the two sub-arrays.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     251.88699340820312,
+     177.61077880859375,
+     266.7259826660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What about an array of four elements?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     331.5780029296875,
+     192.2847442626953,
+     346.4169921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you choose 33 as the pivot again.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     409.8379821777344,
+     319.7396240234375,
+     437.6789855957031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The array on the left has three elements. You already know how to sort \nan array of three elements: call quicksort on it recursively.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    98.75100708007812,
+    77.69699096679688,
+    236.27101135253906,
+    124.25698852539062
+   ],
+   [
+    108.83099365234375,
+    281.4570007324219,
+    226.1909942626953,
+    317.4570007324219
+   ],
+   [
+    78.71099853515625,
+    361.156982421875,
+    256.3110046386719,
+    395.71697998046875
+   ],
+   [
+    50.03099822998047,
+    452.4169921875,
+    284.9909973144531,
+    548.177001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 92,
+  "blocks": [
+   {
+    "bbox": [
+     168.14199829101562,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Quicksort\n67",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     337.2336730957031,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So you can sort an array of four elements. And if you can sort an array \nof four elements, you can sort an array of five elements. Why is that? \nSuppose you have this array of five elements.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     133.37799072265625,
+     331.3034973144531,
+     161.21900939941406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here are all the ways you can partition this array, depending on what \npivot you choose.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     395.9980163574219,
+     332.2945861816406,
+     449.8429870605469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice that all of these sub-arrays have somewhere between zero and \nfour elements. And you already know how to sort an array of zero to \nfour elements using quicksort! So no matter what pivot you pick, you \ncan call quicksort recursively on the two sub-arrays.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    116.27200317382812,
+    90.697021484375,
+    254.75099182128906,
+    119.25701904296875
+   ],
+   [
+    65.63099670410156,
+    175.95701599121094,
+    305.3909912109375,
+    381.87701416015625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 93,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n68",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     321.0914611816406,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For example, suppose you pick 3 as the pivot. You call quicksort on the \nsub-arrays.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     241.5780029296875,
+     323.9745178222656,
+     269.41900634765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The sub-arrays get sorted, and then you combine the whole thing to get \na sorted array. This works even if you choose 5 as the pivot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     449.7190246582031,
+     300.6106262207031,
+     490.5619812011719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This works with any element as the pivot. So you can sort an array \nof five elements. Using the same logic, you can sort an array of six \nelements and so on.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    50.1510009765625,
+    77.69700622558594,
+    284.8710021972656,
+    227.45700073242188
+   ],
+   [
+    40.551002502441406,
+    284.15802001953125,
+    294.4720153808594,
+    435.5980224609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 94,
+  "blocks": [
+   {
+    "bbox": [
+     168.14199829101562,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Quicksort\n69",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     43.65399932861328,
+     138.7256317138672,
+     61.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "Inductive proofs",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.49897766113281,
+     68.4800033569336,
+     336.8199768066406,
+     166.10000610351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You just got a sneak peek into inductive proofs! Inductive proofs are one \nway to prove that your algorithm works. Each inductive proof has two \nsteps: the base case and the inductive case. Sound familiar? For example, \nsuppose I want to prove that I can climb to the top of a ladder. In the \ninductive case, if my legs are on a rung, I can put my legs on the next rung. \nSo if I’m on rung 2, I can climb to rung 3. That’s the inductive case. For \nthe base case, I’ll say that my legs are on rung 1. Therefore, I can climb the \nentire ladder, going up one rung at a time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.49897766113281,
+     169.11000061035156,
+     336.8427734375,
+     254.60000610351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You use similar reasoning for quicksort. In the base case, I showed that the \nalgorithm works for the base case: arrays of size 0 and 1. In the inductive \ncase, I showed that if quicksort works for an array of size 1, it will work for \nan array of size 2. And if it works for arrays of size 2, it will work for arrays \nof size 3, and so on. Then I can say that quicksort will work for all arrays of \nany size. I won’t go deeper into inductive proofs here, but they’re fun and \ngo hand in hand with D&C.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     410.72100830078125,
+     155.2187957763672,
+     425.55999755859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the code for quicksort:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.49998474121094,
+     432.9049987792969,
+     303.61798095703125,
+     512.2296142578125
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def quicksort(array):\n  if len(array) < 2:\n    return array  \n  else:\n    pivot = array[0]    \nRecursive case\n    less = [i for i in array[1:] if i <= pivot]    \n    \n    greater = [i for i in array[1:] if i > pivot]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     522.9010009765625,
+     338.95367431640625,
+     533.7640380859375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "return quicksort(less) + [pivot] + quicksort(greater)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     543.2256469726562,
+     190.14610290527344,
+     552.2256469726562
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "print(quicksort([10, 5, 2, 3]))",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     163.49099731445312,
+     454.56500244140625,
+     363.71112060546875,
+     463.4750061035156
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Base case: arrays with 0 or 1 element are already sorted.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     331.08099365234375,
+     481.37799072265625,
+     435.9310302734375,
+     500.28472900390625
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Sub-array of all the elements \nless than the pivot",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     331.6960144042969,
+     503.37799072265625,
+     436.5460510253906,
+     522.2847290039062
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Sub-array of all the elements \ngreater than the pivot",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    134.031005859375,
+    274.20001220703125,
+    236.99099731445312,
+    396.6000061035156
+   ]
+  ]
+ },
+ {
+  "pdf_index": 95,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n70",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     199.07421875,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Big O notation revisited",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     324.9733581542969,
+     107.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Quicksort is unique because its speed depends on the pivot you choose. \nBefore I talk about quicksort, let’s look at the most common big O run \ntimes again.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     285.0249938964844,
+     283.467529296875,
+     293.93499755859375
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Estimates based on a slow computer that performs 10 operations per second",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     312.1809997558594,
+     320.9264221191406,
+     366.0260314941406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The example times in this chart are estimates if you perform 10 \noperations per second. These graphs aren’t precise—they’re just there \nto give you a sense of how different these run times are. In reality, your \ncomputer can do way more than 10 operations per second.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     368.68804931640625,
+     320.7709655761719,
+     409.5220031738281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each run time also has an example algorithm attached. Check out \nselection sort, which you learned in chapter 2. It’s O(n2). That’s a pretty \nslow algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.503875732421875,
+     412.0409851074219,
+     319.269287109375,
+     453.0269775390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There’s another sorting algorithm called merge sort, which is O(n log \nn). Much faster! Quicksort is a tricky case. In the worst case, quicksort \ntakes O(n2) time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.496997833251953,
+     455.6820068359375,
+     305.9084777832031,
+     483.5229797363281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s as slow as selection sort! But that’s the worst case. In the average \ncase, quicksort takes O(n log n) time. So you might be wondering:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.49700927734375,
+     486.0419921875,
+     220.66290283203125,
+     501.02398681640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What do worst case and average case mean here?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.49700927734375,
+     503.5429992675781,
+     297.209716796875,
+     531.5270385742188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If quicksort is O(n log n) on average, but merge sort is O(n log n) \nalways, why not use merge sort? Isn’t it faster?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    122.69999694824219,
+    394.22100830078125,
+    282.05999755859375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 96,
+  "blocks": [
+   {
+    "bbox": [
+     143.60400390625,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Big O notation revisited\n71",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     176.8632354736328,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Merge sort vs. quicksort",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     317.2905578613281,
+     69.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have this simple function to print every item in a list:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     77.30500030517578,
+     162.54766845703125,
+     106.62968444824219
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def print_items(myList):\n  for item in myList:\n    print(item)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     116.12100219726562,
+     332.3056335449219,
+     169.96604919433594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This function goes through every item in the list and prints it out. \nBecause it loops over the whole list once, this function runs in O(n) \ntime. Now, suppose you change this function so it sleeps for 1 second \nbefore it prints out an item:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     177.30499267578125,
+     167.47335815429688,
+     226.6276092529297
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "from time import sleep\ndef print_items2(myList):\n  for item in myList:\n    sleep(1)\n    print(item)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     236.12100219726562,
+     322.3494567871094,
+     263.9620056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Before it prints out an item, it will pause for 1 second. Suppose you \nprint a list of five items using both functions.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49799346923828,
+     356.99798583984375,
+     345.94293212890625,
+     436.98199462890625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Both functions loop through the list once, so they’re both O(n) time. \nWhich one do you think will be faster in practice? I think print_items \nwill be much faster because it doesn’t pause for 1 second before printing \nan item. So even though both functions are the same speed in big O \nnotation, print_items is faster in practice. When you write big O \nnotation like O(n), it really means this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499000549316406,
+     515.0409545898438,
+     339.93634033203125,
+     555.8800048828125
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "c is some fixed amount of time that your algorithm takes. It’s called the \nconstant. For example, it might be 10 milliseconds * n for print_\nitems versus 1 second * n for print_items2.",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    272.6999816894531,
+    382.9410095214844,
+    349.0199890136719
+   ],
+   [
+    125.63200378417969,
+    445.7200012207031,
+    245.3909912109375,
+    506.91998291015625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 97,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n72",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     312.56756591796875,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You usually ignore that constant because if two algorithms have \ndifferent big O times, the constant doesn’t matter. Take binary search \nand simple search, for example. Suppose both algorithms had these \nconstants.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     152.85800170898438,
+     325.7578430175781,
+     193.70103454589844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You might say, “Wow! Simple search has a constant of 10 ms, but binary \nsearch has a constant of 1 second. Simple search is way faster!” Now \nsuppose you’re searching a list of 4 billion elements. Here are the times.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     284.7179870605469,
+     323.19244384765625,
+     325.5610046386719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We’re using 32 for binary search because binary search runs in log time \nand log(4 billion) equals 32. As you can see, binary search is still way \nfaster. That constant didn’t make a difference at all.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     328.08001708984375,
+     327.15362548828125,
+     395.0700378417969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But sometimes the constant can make a difference. Quicksort versus \nmerge sort is one example. Often, given the way quicksort and merge \nsort are implemented, if they’re both O(n log n) time, quicksort is faster. \nAnd quicksort is faster in practice because it hits the average case way \nmore often than the worst case.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     397.7320556640625,
+     303.7795715332031,
+     425.5730285644531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So now you’re wondering: What’s the average case versus the worst \ncase?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     437.2509765625,
+     178.56263732910156,
+     454.59698486328125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Average case vs. worst case",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     457.7179870605469,
+     321.304931640625,
+     524.5650024414062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The performance of quicksort heavily depends on the pivot you \nchoose. Suppose you always choose the first element as the pivot. \nAnd you call quicksort with an array that is already sorted. Quicksort \ndoesn’t check to see whether the input array is already sorted. So it \nwill still try to sort it.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    71.1510009765625,
+    103.6969985961914,
+    263.8710021972656,
+    138.73699951171875
+   ],
+   [
+    16.671001434326172,
+    208.43701171875,
+    318.35101318359375,
+    270.59698486328125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 98,
+  "blocks": [
+   {
+    "bbox": [
+     143.60400390625,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Big O notation revisited\n73",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     322.3179931640625,
+     334.0534973144531,
+     376.16302490234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice that you’re not splitting the array into two halves. Instead, one \nof the sub-arrays is always empty. So the call stack is really long. Now, \ninstead, suppose you always picked the middle element as the pivot. \nLook at the call stack now.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     517.2569580078125,
+     340.2025451660156,
+     558.1000366210938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s so short! Because you divide the array in half every time, you don’t \nneed to make as many recursive calls. You hit the base case sooner, and \nthe call stack is much shorter.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    38.0,
+    343.5220031738281,
+    314.1969909667969
+   ],
+   [
+    48.94000244140625,
+    384.89697265625,
+    322.0830078125,
+    509.135986328125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 99,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n74",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     309.8285827636719,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The first example you saw is the worst-case scenario, and the second \nexample is the best-case scenario. In the worst case, the stack size is \nO(n). In the best case, the stack size is O(log n). Read on to find out \nhow this affects the worst and average case running times.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     91.62503051757812,
+     320.4864807128906,
+     158.4720916748047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Look at the first level in the stack. You pick one element as the pivot, \nand the rest of the elements are divided into sub-arrays. You touch all \neight elements in the array. So this first operation takes O(n) time. You \ntouched all eight elements on this level of the call stack. But actually, \nyou touch O(n) elements on every level of the call stack.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    19.437000274658203,
+    173.19699096679688,
+    315.58599853515625,
+    536.833984375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 100,
+  "blocks": [
+   {
+    "bbox": [
+     143.60400390625,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Big O notation revisited\n75",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.97500991821289,
+     324.6595153808594,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Even if you partition the array differently, you’re still touching O(n) \nelements every time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     237.36398315429688,
+     339.5986022949219,
+     291.3520202636719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In this example, there are O(log n) levels (the technical way to say that \nis, “The height of the call stack is O(log n)”). And each level takes O(n) \ntime. The entire algorithm will take O(n) * O(log n) = O(n log n) time. \nThis is the best-case scenario.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49884033203125,
+     293.87103271484375,
+     345.29437255859375,
+     321.85504150390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the worst case, there are O(n) levels, so the algorithm will take O(n) * \nO(n) = O(n2) time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49700164794922,
+     324.50799560546875,
+     335.4927062988281,
+     391.3550109863281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Well, guess what? I’m here to tell you that the best case is also the \naverage case. If you always choose a random element in the array as the \npivot, quicksort will complete in O(n log n) time on average. (There’s \none exception: if all the elements in your array are the same, you will \nalways hit the worst-case run time without some additional logic.)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49700927734375,
+     394.01702880859375,
+     328.0994873046875,
+     421.8580017089844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Quicksort is one of the fastest sorting algorithms out there, and it’s a \nvery good example of D&C.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     435.61688232421875,
+     96.57598876953125,
+     450.3609924316406
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     454.0069885253906,
+     311.46173095703125,
+     468.8459777832031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How long would each of these operations take in big O notation?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     471.5069885253906,
+     249.87767028808594,
+     486.3459777832031
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.5  \u0007Printing the value of each element in an array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     489.0069885253906,
+     252.70468139648438,
+     503.8459777832031
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.6  \u0007Doubling the value of each element in an array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     506.5069885253906,
+     287.17755126953125,
+     521.3460083007812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.7  \u0007Doubling the value of just the first element in an array.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.282997131347656,
+    77.697998046875,
+    343.739990234375,
+    223.385986328125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 101,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     223.6641082763672,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 4  I  quicksort\n76",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     325.56353759765625,
+     75.9610366821289
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.8  \u0007Creating a multiplication table with all the elements in the array. So \nif your array is [2, 3, 7, 8, 10], you first multiply every element by 2, \nthen multiply every element by 3, then by 7, and so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     223.69500732421875,
+     58.13600158691406,
+     245.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     257.1180114746094,
+     310.1156311035156,
+     297.9610290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t D&C works by breaking a problem down into smaller and smaller \npieces. If you’re using D&C on a list, the base case is probably an \nempty array or an array with one element.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     305.12200927734375,
+     310.6524658203125,
+     332.9630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If you’re implementing quicksort, choose a random element as the \npivot. The average run time of quicksort is O(n log n)!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     340.1239929199219,
+     319.4634704589844,
+     380.9670104980469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Given two algorithms with the same big O running time, one can be \nconsistently faster than the other. That’s why quicksort is faster than \nmerge sort.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     388.1280212402344,
+     324.98876953125,
+     415.968994140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The constant almost never matters for simple search versus binary search \nbecause O(log n) is so much faster than O(n) when your list gets big.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    28.194000244140625,
+    82.99700164794922,
+    140.8260040283203,
+    193.12100219726562
+   ],
+   [
+    47.63099670410156,
+    430.6969909667969,
+    287.3909912109375,
+    557.4169921875
+   ]
+  ]
+ }
+]

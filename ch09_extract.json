@@ -1,0 +1,3095 @@
+[
+ {
+  "pdf_index": 190,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "9",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     360.9186706542969,
+     272.7559814453125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nWe continue the discussion of graphs, and you \nlearn about weighted graphs, a way to assign more \nor less weight to some edges.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     279.531982421875,
+     331.0757751464844,
+     320.7599792480469
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn Dijkstra’s algorithm, which lets you \nanswer “What’s the shortest path to X?” for \nweighted graphs.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     327.53594970703125,
+     355.440673828125,
+     354.760986328125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about negative-weight edges in graphs, \nwhere Dijkstra’s algorithm doesn’t work.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     289.114990234375,
+     4.003999710083008,
+     370.1707458496094,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "Dijkstra’s \nalgorithm",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     404.0979919433594,
+     387.2777404785156,
+     418.9369812011719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In chapter 6, you figured out a way to get from point A to point B.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    171.44000244140625,
+    435.677001953125,
+    342.55999755859375,
+    510.0769958496094
+   ]
+  ]
+ },
+ {
+  "pdf_index": 191,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n166",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     315.30548095703125,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s not necessarily the fastest path. It’s the shortest path because it has \nthe least number of segments (three segments). But suppose you add \ntravel times to those segments. Now you see that there’s a faster path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     201.53799438476562,
+     324.83258056640625,
+     255.38304138183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You used breadth-first search in chapter 6. Breadth-first search will find \nthe path with the fewest segments (the first graph shown here). What if \nyou want the fastest path instead (the second graph)? You can do that \nfastest with a different algorithm called Dijkstra’s algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     285.114990234375,
+     277.718017578125,
+     307.4169921875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Working with Dijkstra’s algorithm",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     318.5379943847656,
+     175.024658203125,
+     333.3769836425781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s see how it works with this graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     431.8379821777344,
+     299.4994812011719,
+     459.6789855957031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each segment has a travel time in minutes. You’ll use Dijkstra’s \nalgorithm to go from Start to Finish in the shortest possible time.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    79.43099975585938,
+    90.69699096679688,
+    255.59100341796875,
+    187.4169921875
+   ],
+   [
+    116.51100158691406,
+    348.1169738769531,
+    218.51100158691406,
+    417.71697998046875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 192,
+  "blocks": [
+   {
+    "bbox": [
+     125.72999572753906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Working with Dijkstra’s algorithm\n167",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     286.2936706542969,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you ran breadth-first search on this graph, you’d get this  \nshortest path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     174.61801147460938,
+     338.0025634765625,
+     202.4590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But that path takes 7 minutes. Let’s see if you can find a path that takes \nless time! There are four steps to Dijkstra’s algorithm:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     205.12100219726562,
+     341.5596618652344,
+     232.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Find the “cheapest” node. This is the node you can get to in the least \namount of time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     235.62399291992188,
+     341.51690673828125,
+     263.4649963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Update the costs of the out-neighbors of this node. I’ll explain what  \nI mean by this shortly.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     266.12701416015625,
+     293.89569091796875,
+     280.96600341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t Repeat until you’ve done this for every node in the graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     283.62799072265625,
+     148.53187561035156,
+     298.4670104980469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "4.\t Calculate the final path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.496002197265625,
+     305.6180114746094,
+     332.1927490234375,
+     346.4610290527344
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 1: Find the cheapest node. You’re standing at Start, wondering if \nyou should go to node A or node B. How long does it take to get to  \neach node?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     457.9580078125,
+     338.42156982421875,
+     485.7989807128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It takes 6 minutes to get to node A and 2 minutes to get to node B. The \nrest of the nodes, you don’t know yet.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     488.46099853515625,
+     250.43370056152344,
+     542.3060302734375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Because you don’t know how long it takes to get to \nFinish yet, you put down infinity (you’ll see why \nsoon). Node B is the closest node—it’s  \n2 minutes away.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    141.2310028076172,
+    71.69700622558594,
+    229.79100036621094,
+    160.49700927734375
+   ],
+   [
+    142.91099548339844,
+    355.197021484375,
+    228.1099853515625,
+    447.8370056152344
+   ],
+   [
+    264.7900085449219,
+    474.5199890136719,
+    332.2300109863281,
+    547.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 193,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n168",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.496002197265625,
+     34.97500991821289,
+     325.1190185546875,
+     62.959022521972656
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 2: Calculate how long it takes to get to all of node B’s out-neighbors \nby following an edge from B.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     157.73800659179688,
+     320.465576171875,
+     185.5790252685547
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hey, you just found a shorter path to node A! It used to take 6 minutes \nto get to node A.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     262.0379943847656,
+     314.3055419921875,
+     276.8769836425781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But if you go through node B, there’s a path that only takes 5 minutes!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     357.89801025390625,
+     327.6265869140625,
+     385.7389831542969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When you find a shorter path for a neighbor of B, update its cost. In this \ncase, you found",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     392.8999938964844,
+     265.9715881347656,
+     407.7389831542969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A shorter path to A (down from 6 minutes to 5 minutes)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     414.8999938964844,
+     274.8045654296875,
+     429.7389831542969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A shorter path to Finish (down from infinity to 7 minutes)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     432.3979797363281,
+     75.02191925048828,
+     447.2369689941406
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 3: Repeat.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.497997283935547,
+     449.8979797363281,
+     327.7125549316406,
+     477.7389831542969
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 1 again: Find the node that takes the least amount of time to get to. \nYou’re done with node B, so node A has the next smallest time estimate.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    55.551002502441406,
+    73.69700622558594,
+    279.47100830078125,
+    147.61700439453125
+   ],
+   [
+    118.07200622558594,
+    188.31698608398438,
+    216.95098876953125,
+    251.9169921875
+   ],
+   [
+    118.07200622558594,
+    285.61700439453125,
+    216.95098876953125,
+    347.7770080566406
+   ],
+   [
+    121.31100463867188,
+    488.47698974609375,
+    213.70999145507812,
+    557.1170043945312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 194,
+  "blocks": [
+   {
+    "bbox": [
+     125.72999572753906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Working with Dijkstra’s algorithm\n169",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.47800064086914,
+     281.045654296875,
+     49.459999084472656
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 2 again: Update the costs for node A’s out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     127.1610107421875,
+     222.8236541748047,
+     142.00001525878906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Woo, it takes 6 minutes to get to Finish now!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     144.66201782226562,
+     341.0494689941406,
+     172.50303649902344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ve run Dijkstra’s algorithm for every node (you don’t need to run it \nfor the Finish node). At this point, you know",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     179.66400146484375,
+     188.1186981201172,
+     194.50303649902344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t It takes 2 minutes to get to node B.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     199.1669921875,
+     189.43978881835938,
+     214.00599670410156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t It takes 5 minutes to get to node A.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     218.66998291015625,
+     184.74169921875,
+     233.50901794433594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t It takes 6 minutes to get to Finish.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     311.0769958496094,
+     340.0373840332031,
+     338.9179992675781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I’ll save the last step, calculating the final path, for the next section. For \nnow, I’ll just show you what the final path is.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     414.1210021972656,
+     325.79254150390625,
+     454.9639892578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Breadth-first search wouldn’t have found this as the shortest path \nbecause it has three segments. And there’s a way to get from Start to \nFinish in two segments.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    124.67100524902344,
+    55.20001220703125,
+    246.35101318359375,
+    119.03997802734375
+   ],
+   [
+    148.01699829101562,
+    242.239990234375,
+    223.0050048828125,
+    302.95599365234375
+   ],
+   [
+    142.39300537109375,
+    344.656005859375,
+    228.62899780273438,
+    406.0
+   ],
+   [
+    114.60299682617188,
+    457.70001220703125,
+    256.41900634765625,
+    553.4600219726562
+   ]
+  ]
+ },
+ {
+  "pdf_index": 195,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n170",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     320.6184997558594,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the last chapter, you used breadth-first search to find the shortest \npath between two points. Back then, “shortest path” meant the path \nwith the fewest segments. But in Dijkstra’s algorithm, you assign a \nnumber or weight to each segment. Then Dijkstra’s algorithm finds the \npath with the smallest total weight.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     229.77801513671875,
+     202.74465942382812,
+     244.6170196533203
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To recap, Dijkstra’s algorithm has four steps:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     247.27899169921875,
+     316.09185791015625,
+     275.1199951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Find the cheapest node. This is the node you can get to in the least \namount of time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     277.7820129394531,
+     311.92181396484375,
+     305.6230163574219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Check whether there’s a cheaper path to the out-neighbors of this \nnode. If so, update their costs.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     308.2850036621094,
+     275.8957214355469,
+     323.1240234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t Repeat until you’ve done this for every node in the graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     325.7860107421875,
+     275.3347473144531,
+     340.625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "4.\t Calculate the final path. (Coming up in the next section!)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     361.85498046875,
+     110.92820739746094,
+     384.156982421875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Terminology",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     391.7779846191406,
+     300.720703125,
+     419.6189880371094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I want to show you some more examples of Dijkstra’s algorithm in \naction. But, first, let me clarify some terminology.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     422.281005859375,
+     321.6084899902344,
+     450.1219787597656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When you work with Dijkstra’s algorithm, each edge in the graph has a \nnumber associated with it. These are called weights.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     531.5970458984375,
+     295.2900085449219,
+     559.5809936523438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A graph with weights is called a weighted graph. A graph without \nweights is called an unweighted graph.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    110.697021484375,
+    325.5220031738281,
+    221.65701293945312
+   ],
+   [
+    117.51400756835938,
+    455.8570251464844,
+    217.5080108642578,
+    526.6190185546875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 196,
+  "blocks": [
+   {
+    "bbox": [
+     163.02099609375,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Terminology\n171",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     105.61801147460938,
+     340.23663330078125,
+     146.6040496826172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To calculate the shortest path in an unweighted graph, use breadth-first \nsearch. To calculate the shortest path in a weighted graph, use Dijkstra’s \nalgorithm. Graphs can also have cycles. A cycle looks like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     228.52499389648438,
+     338.9166259765625,
+     269.3680114746094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It means you can start at a node, travel around, and end up at the same \nnode. Suppose you’re trying to find the shortest path in this graph that \nhas a cycle.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     365.7049865722656,
+     343.77752685546875,
+     393.5459899902344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Would it make sense to follow the cycle? Well, you can use the path that \navoids the cycle.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     470.8260192871094,
+     149.48782348632812,
+     485.6650085449219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Or you can follow the cycle.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    73.6709976196289,
+    38.00001525878906,
+    297.3509826660156,
+    100.6400146484375
+   ],
+   [
+    125.83999633789062,
+    152.34100341796875,
+    245.1820068359375,
+    223.40399169921875
+   ],
+   [
+    117.95100402832031,
+    272.10400390625,
+    253.0709991455078,
+    362.5840148925781
+   ],
+   [
+    129.54800415039062,
+    396.2850341796875,
+    241.4739990234375,
+    465.7039794921875
+   ],
+   [
+    121.80499267578125,
+    488.4049987792969,
+    249.21798706054688,
+    555.4639892578125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 197,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n172",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     296.8595275878906,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You end up at the target node either way, but the cycle adds more \nweight. You could even follow the cycle twice if you wanted.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     147.8179931640625,
+     306.3527526855469,
+     175.6590118408203
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But every time you follow the cycle, you’re just adding 8 to the total \nweight. So following the cycle will never give you the shortest path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     178.32101440429688,
+     314.85430908203125,
+     206.1620330810547
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Finally, remember our conversation about directed versus undirected \ngraphs from chapter 6?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     281.5780029296875,
+     321.1794738769531,
+     309.41900634765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "An undirected graph means that both nodes point to each other. That’s \na cycle!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     373.9179992675781,
+     323.3584899902344,
+     453.7669982910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "With an undirected graph, each edge adds another cycle. Dijkstra’s \nalgorithm only works on graphs with no cycles, where all the edges \nare nonnegative. Yes, it’s possible for graph edges to have a negative \nweight! But Dijkstra’s algorithm won’t work—in that case, you’ll need \nan algorithm called Bellman–Ford. There’s a section on negative weight \nedges coming later in the chapter.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     480.4949951171875,
+     161.00601196289062,
+     502.7969970703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Trading for a piano",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     511.4179992675781,
+     256.18157958984375,
+     539.259033203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Enough terminology, let’s look at another example! This \nis Rama.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     541.9209594726562,
+     223.72055053710938,
+     556.760009765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Rama is trying to trade a music book for a piano.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    95.031005859375,
+    69.69699096679688,
+    239.9910125732422,
+    141.69699096679688
+   ],
+   [
+    30.83100128173828,
+    214.89700317382812,
+    304.1919860839844,
+    273.4570007324219
+   ],
+   [
+    68.7509994506836,
+    312.156982421875,
+    266.27099609375,
+    368.7969970703125
+   ],
+   [
+    259.7619934082031,
+    463.8630065917969,
+    325.5220031738281,
+    559.1430053710938
+   ]
+  ]
+ },
+ {
+  "pdf_index": 198,
+  "blocks": [
+   {
+    "bbox": [
+     151.38900756835938,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Trading for a piano\n173",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     303.70440673828125,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "“I’ll give you this poster for your book,” says Alex. “It’s a poster \nof my favorite band, Destroyer. Or I’ll give you this rare LP of \nRick Astley for your book and $5 more.” “Ooh, I’ve heard that \nLP has a really great song,” says Amy. “I’ll trade you my guitar \nor drum set for the poster or the LP.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     104.62704467773438,
+     289.0083312988281,
+     132.4680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "“I’ve been meaning to get into guitar!” exclaims Beethoven. \n“Hey, I’ll trade you my piano for either of Amy’s things.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     135.13006591796875,
+     343.2275390625,
+     188.97511291503906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Perfect! With a little bit of money, Rama can trade his way from a piano \nbook to a real piano. Now he just needs to figure out how to spend the \nleast amount of money to make those trades. Let’s graph out what he’s \nbeen offered.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     356.4179992675781,
+     345.2506103515625,
+     462.2709655761719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In this graph, the nodes are all the items Rama can trade for. The \nweights on the edges are the amount of money he would have to pay to \nmake the trade. So he can trade the poster for the guitar for $30 or trade \nthe LP for the guitar for $15. How is Rama going to figure out the path \nfrom the book to the piano where he spends the least dough? Dijkstra’s \nalgorithm to the rescue! Remember, Dijkstra’s algorithm has four steps. \nIn this example, you’ll do all four steps, so you’ll calculate the final path \nat the end, too.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     175.3730010986328,
+     488.4289855957031,
+     337.97283935546875,
+     542.2739868164062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Before you start, you need some \nsetup. Make a table of the cost for \neach node. The cost of a node is how \nexpensive it is to get to.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    67.31099700927734,
+    191.69699096679688,
+    303.71099853515625,
+    351.2969970703125
+   ],
+   [
+    321.00201416015625,
+    37.999969482421875,
+    429.7220153808594,
+    112.15997314453125
+   ],
+   [
+    25.13500213623047,
+    470.8800048828125,
+    161.197998046875,
+    563.56298828125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 199,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n174",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     327.61322021484375,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ll keep updating this table as the algorithm goes on. To calculate the \nfinal path, you also need a parent column on this table.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     161.37399291992188,
+     305.7575378417969,
+     176.21299743652344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I’ll show you how this column works soon. Let’s start the algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     178.87399291992188,
+     327.0003662109375,
+     271.7250671386719
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 1: Find the cheapest node. In this case, the poster is the cheapest \ntrade at $0. Is there a cheaper way to trade for the poster? This is a really \nimportant point, so think about it. Can you see a series of trades that \nwill get Rama the poster for less than $0? Read on when you’re ready. \nAnswer: No. Because the poster is the cheapest node Rama can get to, \nthere’s no way to make it any cheaper. Here’s a different way to look at it. \nSuppose you’re traveling from home to work.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     370.2259826660156,
+     327.88079833984375,
+     437.0729675292969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you take the path toward the school, that takes 2 minutes. If you take the \npath toward the park, that takes 6 minutes. Is there any way you can take \nthe path toward the park and end up at the school in less than 2 minutes? \nIt’s impossible because it takes longer than 2 minutes just to get to the park. \nOn the other hand, can you find a faster path to the park? Yup.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    129.2429962158203,
+    68.697998046875,
+    205.7779998779297,
+    156.25299072265625
+   ],
+   [
+    103.73199462890625,
+    277.4540100097656,
+    231.29098510742188,
+    364.1050109863281
+   ],
+   [
+    84.59800720214844,
+    442.80499267578125,
+    250.4250030517578,
+    570.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 200,
+  "blocks": [
+   {
+    "bbox": [
+     151.38900756835938,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Trading for a piano\n175",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     326.5514221191406,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is the key idea behind Dijkstra’s algorithm: look at the cheapest \nnode on your graph. There is no cheaper way to get to this node!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     65.62100219726562,
+     289.6465148925781,
+     80.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Back to the music example. The poster is the cheapest trade.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     83.11801147460938,
+     340.414794921875,
+     97.9570083618164
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 2: Figure out how long it takes to get to its out-neighbors (the cost).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     206.92498779296875,
+     345.0975341796875,
+     260.77001953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You have prices for the bass guitar and the drum set in the table. Their \nvalue was set when you went through the poster, so the poster gets set \nas their parent. That means, to get to the bass guitar, you follow the edge \nfrom the poster, and the same for the drums.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     367.5050048828125,
+     256.378662109375,
+     382.343994140625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 1 again: The LP is the next cheapest node at $5.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     385.0050048828125,
+     280.445556640625,
+     399.843994140625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Step 2 again: Update the values of all of its out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     513.490966796875,
+     338.72857666015625,
+     554.3340454101562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hey, you updated the price of both the drums and the guitar! That \nmeans it’s cheaper to get to the drums and guitar by following the edge \nfrom the LP. So you set the LP as the new parent for both instruments.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    104.69698333740234,
+    343.5220031738281,
+    199.80398559570312
+   ],
+   [
+    71.39099884033203,
+    267.5050048828125,
+    299.6310119628906,
+    360.3840026855469
+   ],
+   [
+    27.5,
+    406.5849914550781,
+    343.5220031738281,
+    506.3699951171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 201,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n176",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     302.33758544921875,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The bass guitar is the next cheapest item. Update its out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     169.01800537109375,
+     316.43963623046875,
+     209.8610382080078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "OK, you finally have a price for the piano by trading the guitar for the \npiano. So you set the guitar as the parent. Finally, the last node, the \ndrum set.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     330.1029968261719,
+     312.43450927734375,
+     357.9440002441406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Rama can get the piano even cheaper by trading the drum set for the \npiano instead. So the cheapest set of trades will cost Rama $35.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     360.60601806640625,
+     322.8526611328125,
+     401.4490051269531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now, as I promised, you need to figure out the path. So far, you know \nthat the shortest path costs $35, but how do you figure out the path? To \nstart with, look at the parent for piano.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     525.822998046875,
+     319.8946838378906,
+     553.6640014648438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The piano has drums as its parent. That means Rama trades the drums \nfor the piano. So you follow this edge.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    64.69700622558594,
+    325.5220031738281,
+    154.89700317382812
+   ],
+   [
+    9.5,
+    224.59698486328125,
+    325.5220031738281,
+    315.98199462890625
+   ],
+   [
+    104.75100708007812,
+    416.1820068359375,
+    230.26998901367188,
+    511.7019958496094
+   ]
+  ]
+ },
+ {
+  "pdf_index": 202,
+  "blocks": [
+   {
+    "bbox": [
+     151.38900756835938,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Trading for a piano\n177",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.97500991821289,
+     317.1399230957031,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s see how you’d follow the edges. Piano has drums as its parent.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     155.15200805664062,
+     182.56471252441406,
+     170.13401794433594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And drums has the LP as its parent.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     266.1340026855469,
+     341.10443115234375,
+     306.9770202636719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So Rama will trade the LP for the drums. And, of course, he’ll trade the \nbook for the LP. By following the parents backward, you now have the \ncomplete path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     401.7389831542969,
+     233.86651611328125,
+     416.5779724121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the series of trades Rama needs to make.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    100.47200012207031,
+    55.69701385498047,
+    270.54998779296875,
+    149.17300415039062
+   ],
+   [
+    107.55900573730469,
+    175.87399291992188,
+    263.4639892578125,
+    260.01300048828125
+   ],
+   [
+    90.55099487304688,
+    309.7129821777344,
+    280.47198486328125,
+    396.61798095703125
+   ],
+   [
+    121.19099426269531,
+    422.31903076171875,
+    249.83099365234375,
+    570.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 203,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n178",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.97500991821289,
+     321.8383483886719,
+     114.96707916259766
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So far, I’ve been using the term shortest path pretty literally: calculating \nthe shortest path between two locations or between two people.  \nI hope this example showed you that the shortest path doesn’t have to \nbe about physical distance. It can be about minimizing something. In \nthis case, Rama wanted to minimize the amount of money he spent. \nThanks, Dijkstra!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     142.69500732421875,
+     195.0260009765625,
+     164.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Negative-weight edges",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     176.11801147460938,
+     263.3316345214844,
+     203.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the trading example, Alex offered to trade the book for \ntwo items.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     206.47802734375,
+     252.9365997314453,
+     247.4640655517578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose Sarah offers to trade the LP for the poster, and \nshe’ll give Rama an additional $7. It doesn’t cost Rama \nanything to make this trade; instead, he gets $7 back.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     250.12606811523438,
+     185.90475463867188,
+     264.9650573730469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How would you show this on the graph?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     379.8979797363281,
+     305.5605773925781,
+     420.7409973144531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The edge from the LP to the poster has a negative weight! Rama  \ngets $7 back if he makes that trade. Now Rama has two ways to get  \nto the poster.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    101.75100708007812,
+    271.697021484375,
+    233.27101135253906,
+    371.77703857421875
+   ],
+   [
+    45.23100280761719,
+    423.47698974609375,
+    289.7919921875,
+    556.677001953125
+   ],
+   [
+    280.56201171875,
+    150.28500366210938,
+    371.5220031738281,
+    251.80499267578125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 204,
+  "blocks": [
+   {
+    "bbox": [
+     144.3280029296875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Negative-weight edges\n179",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     340.63140869140625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So it makes sense to do the second trade—Rama gets $2 back that way! \nNow, if you remember, Rama can trade the poster for the drums. There \nare two paths he could take.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     203.697998046875,
+     333.7025451660156,
+     283.54705810546875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The second path costs him $2 less, so he should take that path, right? \nWell, guess what? If you run Dijkstra’s algorithm on this graph, Rama \nwill take the wrong path. He’ll take the longer path. You can’t use \nDijkstra’s algorithm if you have negative-weight edges. Negative-weight \nedges break the algorithm. Let’s see what happens when you run \nDijkstra’s algorithm on this. First, make the table of costs.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     379.5979919433594,
+     342.9853820800781,
+     446.4449768066406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Next, find the lowest-cost node and update the costs for its out-\nneighbors. In this case, the poster is the lowest-cost node. So, according \nto Dijkstra’s algorithm, there is no cheaper way to get to the poster than \npaying $0 (you know that’s wrong!). Anyway, let’s update the costs for  \nits out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     542.3379516601562,
+     198.52577209472656,
+     557.177001953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "OK, the drums have a cost of $35 now.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    56.39099884033203,
+    84.6969985961914,
+    314.6319885253906,
+    195.57699584960938
+   ],
+   [
+    157.43099975585938,
+    292.2769775390625,
+    213.59100341796875,
+    371.47698974609375
+   ],
+   [
+    70.31099700927734,
+    449.177978515625,
+    300.71099853515625,
+    532.2169799804688
+   ]
+  ]
+ },
+ {
+  "pdf_index": 205,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n180",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     302.32659912109375,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s get the next-cheapest node that hasn’t already been processed.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     132.41799926757812,
+     177.20266723632812,
+     147.2570037841797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Update the costs for its out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     258.9179992675781,
+     326.9236755371094,
+     325.7650451660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You already processed the poster node, but you’re updating the cost for \nit. This is a big red flag. Once you process a node, it means there’s no \ncheaper way to get to that node. But you just found a cheaper way to the \nposter! Drums doesn’t have any out-neighbors, so that’s the end of the \nalgorithm. Here are the final costs.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     438.2980041503906,
+     326.2306213378906,
+     557.1530151367188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It costs $35 to get to the drums. You know that there’s a path that costs \nonly $33, but Dijkstra’s algorithm didn’t find it. Dijkstra’s algorithm \nassumed that because you were processing the poster node, there was \nno cheaper way to get to that node. That assumption only works if you \nhave no negative-weight edges. So you can’t use negative-weight edges \nwith Dijkstra’s algorithm. If you want to find the shortest path in a graph \nthat has negative-weight edges, there’s an algorithm for that! It’s called \nthe Bellman–Ford algorithm. Bellman–Ford is out of the scope of this \nbook, but you can find some great explanations online.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    120.83099365234375,
+    56.696998596191406,
+    214.1909942626953,
+    126.2969970703125
+   ],
+   [
+    52.91100311279297,
+    155.9969940185547,
+    282.1109924316406,
+    250.7969970703125
+   ],
+   [
+    138.11099243164062,
+    333.49700927734375,
+    196.91099548339844,
+    431.177001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 206,
+  "blocks": [
+   {
+    "bbox": [
+     156.3699951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementation\n181",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     157.24221801757812,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Implementation",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     319.0274658203125,
+     94.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s see how to implement Dijkstra’s algorithm in code. Here’s the \ngraph I’ll use for the example.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     175.86099243164062,
+     251.20367431640625,
+     190.6999969482422
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To code this example, you’ll need three hash tables.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     331.5610046386719,
+     329.3245849609375,
+     372.4040222167969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ll update the costs and parents hash tables as the algorithm \nprogresses. First, you need to implement the graph. You’ll use a hash \ntable like you did in chapter 6:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     377.5716552734375,
+     89.64411163330078,
+     386.5716552734375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph = {}",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     391.5610046386719,
+     324.3074645996094,
+     419.4020080566406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the last chapter, you stored all the out-neighbors of a node in the \nhash table, like this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     424.5716552734375,
+     243.03720092773438,
+     433.5716552734375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph[\"you\"] = [\"alice\", \"bob\", \"claire\"]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     438.4179992675781,
+     343.70379638671875,
+     466.4020080566406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But this time, you need to store the out-neighbors and the cost for getting \nto that neighbor. For example, Start has two out-neighbors, A and B.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    127.19099426269531,
+    97.69998931884766,
+    243.83099365234375,
+    168.739990234375
+   ],
+   [
+    47.1510009765625,
+    198.44000244140625,
+    323.87200927734375,
+    324.44000244140625
+   ],
+   [
+    142.43099975585938,
+    473.1409912109375,
+    228.59100341796875,
+    558.5809936523438
+   ]
+  ]
+ },
+ {
+  "pdf_index": 207,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n182",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     306.25360107421875,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How do you represent the weights of those edges? Why not just use \nanother hash table?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     70.62864685058594,
+     132.29966735839844,
+     99.62669372558594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph[\"start\"] = {}\ngraph[\"start\"][\"a\"] = 6\ngraph[\"start\"][\"b\"] = 2",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.496009826660156,
+     227.23800659179688,
+     314.0826416015625,
+     255.0790252685547
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So graph[\"start\"] is a hash table. You can get all the out-neighbors \nfor Start like this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     262.7486572265625,
+     205.43089294433594,
+     281.7476501464844
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> print(list(graph[\"start\"].keys()))\n[\"a\", \"b\"]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     291.2380065917969,
+     326.4716491699219,
+     319.0790100097656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There’s an edge from Start to A and an edge from Start to B. What if you \nwant to find the weights of those edges?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     326.7486572265625,
+     165.13534545898438,
+     365.7456359863281
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> print(graph[\"start\"][\"a\"])\n6\n>>> print(graph[\"start\"][\"b\"])\n2",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     375.2380065917969,
+     304.3714599609375,
+     390.0769958496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s add the rest of the nodes and their out-neighbors to the graph:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     397.7486572265625,
+     120.94344329833984,
+     416.7476501464844
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph[\"a\"] = {}\ngraph[\"a\"][\"fin\"] = 1",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     427.74566650390625,
+     121.37995147705078,
+     456.74365234375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph[\"b\"] = {}\ngraph[\"b\"][\"a\"] = 3\ngraph[\"b\"][\"fin\"] = 5",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     467.74163818359375,
+     330.79949951171875,
+     477.99200439453125
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph[\"fin\"] = {}   \nThe Finish node doesn’t have any out-neighbors.",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    114.95100402832031,
+    115.19700622558594,
+    220.07101440429688,
+    213.11700439453125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 208,
+  "blocks": [
+   {
+    "bbox": [
+     156.3699951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementation\n183",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     201.41763305664062,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The full graph hash table looks like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     196.16400146484375,
+     323.25030517578125,
+     211.0030059814453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Next, you need a hash table to store the current costs for each node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.61900329589844,
+     213.52200317382812,
+     335.17779541015625,
+     319.5180969238281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The cost of a node is how long it takes to get to that \nnode from Start. You know it takes 2 minutes from \nStart to node B. You know it takes 6 minutes to get \nto node A (although you may find a path that takes \nless time). You don’t know how long it takes to get to \nFinish. If you don’t know the cost yet, you put down \ninfinity. Can you represent infinity in Python? Turns \nout, you can:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     327.1746520996094,
+     137.3494873046875,
+     336.1746520996094
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "infinity = math.inf",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     341.16400146484375,
+     197.9856719970703,
+     356.00299072265625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the code to make the costs table:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     363.6746520996094,
+     154.41616821289062,
+     412.6706237792969
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "infinity = math.inf\ncosts = {}\ncosts[\"a\"] = 6\ncosts[\"b\"] = 2\ncosts[\"fin\"] = infinity",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     422.16400146484375,
+     240.39056396484375,
+     437.00299072265625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You also need another hash table for the parents:",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    121.73199462890625,
+    58.697998046875,
+    249.29098510742188,
+    188.04299926757812
+   ],
+   [
+    144.83099365234375,
+    445.74298095703125,
+    226.1909942626953,
+    555.1829833984375
+   ],
+   [
+    27.5,
+    224.3050079345703,
+    90.6199951171875,
+    303.5050048828125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 209,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n184",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     245.34649658203125,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the code to make the hash table for the parents:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     56.1286506652832,
+     131.13674926757812,
+     95.12571716308594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "parents = {}\nparents[\"a\"] = \"start\"\nparents[\"b\"] = \"start\"\nparents[\"fin\"] = None",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     104.61801147460938,
+     308.78363037109375,
+     132.4590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Finally, you need a set to keep track of all the nodes you’ve already \nprocessed because you don’t need to process a node more than once:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     138.62864685058594,
+     107.66210174560547,
+     147.62864685058594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "processed = set()",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     152.61801147460938,
+     231.168701171875,
+     167.45701599121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That’s all the setup. Now let’s look at the algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     379.1750183105469,
+     309.9715270996094,
+     394.0140075683594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I’ll show you the code first and then walk through it. Here’s the code:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.499996185302734,
+     401.6856689453125,
+     317.3185119628906,
+     510.6856689453125
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "node = find_lowest_cost_node(costs) \nwhile node is not None:   \nIf you’ve processed all the  \nnodes, this while loop is done.\n    cost = costs[node]\n    neighbors = graph[node]  \n    for n in neighbors.keys():    \n        new_cost = cost + neighbors[n] \n        if costs[n] > new_cost:     \n            costs[n] = new_cost        \n            parents[n] = node      \n    processed.add(node)        \nMarks the node as processed\n    node = find_lowest_cost_node(costs)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     520.1749877929688,
+     323.8513488769531,
+     550.1740112304688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That’s Dijkstra’s algorithm in Python! Let's see this code in action. Then \nI'll show you the code for the find_lowest_cost_node function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     325.1919860839844,
+     403.0190124511719,
+     405.7494812011719,
+     431.92401123046875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Finds the lowest-cost \nnode that you haven’t \nprocessed yet",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     224.27398681640625,
+     443.0190124511719,
+     394.5238037109375,
+     451.92901611328125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Goes through all the out-neighbors of this node",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     212.64199829101562,
+     453.0190124511719,
+     415.7129821777344,
+     490.92901611328125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "If it’s cheaper to get to this out-\nneighbor by going through this node . . .\n. . . updates the cost for the neighbor\nThis node becomes the new parent for this out-neighbor.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     267.74798583984375,
+     503.0190124511719,
+     414.52288818359375,
+     511.92901611328125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Finds the next node to process and loops",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    89.55900573730469,
+    175.19699096679688,
+    245.4639892578125,
+    372.0539855957031
+   ]
+  ]
+ },
+ {
+  "pdf_index": 210,
+  "blocks": [
+   {
+    "bbox": [
+     156.3699951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementation\n185",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     180.50779724121094,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Find the node with the lowest cost.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     105.16500854492188,
+     221.84463500976562,
+     120.0040054321289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Get the cost and out-neighbors of that node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     235.98300170898438,
+     172.33474731445312,
+     250.82200622558594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Loop through the out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     321.3380126953125,
+     336.6605529785156,
+     362.1810302734375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each node has a cost. The cost is how long it takes to get to that node \nfrom Start. Here, you’re calculating how long it would take to get to \nnode A if you went Start > node B > node A, instead of Start > node A.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     420.531005859375,
+     140.08277893066406,
+     435.3699951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s compare those costs.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    48.03099822998047,
+    52.69700622558594,
+    322.99200439453125,
+    101.04400634765625
+   ],
+   [
+    57.952003479003906,
+    125.74400329589844,
+    313.07000732421875,
+    230.86199951171875
+   ],
+   [
+    72.1259994506836,
+    253.56201171875,
+    298.8970031738281,
+    316.2170104980469
+   ],
+   [
+    48.03099822998047,
+    367.9169921875,
+    322.99200439453125,
+    415.4100036621094
+   ],
+   [
+    93.38499450683594,
+    433.6100158691406,
+    277.6369934082031,
+    555.4600219726562
+   ]
+  ]
+ },
+ {
+  "pdf_index": 211,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n186",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     241.48556518554688,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You found a shorter path to node A! Update the cost.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     141.55401611328125,
+     282.6904296875,
+     156.3930206298828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The new path goes through node B, so set B as the new parent.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     257.38299560546875,
+     326.0169982910156,
+     285.2239990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "OK, you’re back at the top of the loop. The next out-neighbor in the for \nloop is the Finish node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     351.6719970703125,
+     289.73150634765625,
+     366.510986328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How long does it take to get to Finish if you go through node B?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     444.35699462890625,
+     291.78863525390625,
+     472.1979675292969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It takes 7 minutes. The previous cost was infinity minutes, and 7 \nminutes is less than that.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    64.0469970703125,
+    55.697021484375,
+    270.97601318359375,
+    136.43301391601562
+   ],
+   [
+    64.0469970703125,
+    162.13299560546875,
+    270.97601318359375,
+    252.26199340820312
+   ],
+   [
+    96.64500427246094,
+    287.9629821777344,
+    238.3769989013672,
+    346.5509948730469
+   ],
+   [
+    39.952003479003906,
+    372.2509765625,
+    295.07000732421875,
+    439.2359619140625
+   ],
+   [
+    72.5510025024414,
+    470.4350280761719,
+    262.47198486328125,
+    555.9000244140625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 212,
+  "blocks": [
+   {
+    "bbox": [
+     156.3699951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementation\n187",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     274.0054931640625,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Set the new cost and the new parent for the Finish node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     243.73599243164062,
+     337.3094482421875,
+     271.5769958496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "OK, you updated the costs for all the out-neighbors of node B. Mark it \nas processed.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     327.4360046386719,
+     159.84979248046875,
+     342.2749938964844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Find the next node to process.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     442.656005859375,
+     216.25775146484375,
+     457.4949951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Get the cost and out-neighbors for node A.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    80.62999725341797,
+    55.697021484375,
+    290.39300537109375,
+    238.614990234375
+   ],
+   [
+    41.990997314453125,
+    274.31500244140625,
+    329.031982421875,
+    322.31500244140625
+   ],
+   [
+    37.670997619628906,
+    345.0150146484375,
+    333.35198974609375,
+    440.5350036621094
+   ],
+   [
+    121.73199462890625,
+    465.2349853515625,
+    249.29098510742188,
+    557.0599975585938
+   ]
+  ]
+ },
+ {
+  "pdf_index": 213,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n188",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     238.43963623046875,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Node A only has one out-neighbor: the Finish node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     110.08999633789062,
+     323.0605163574219,
+     137.93101501464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Currently, it takes 7 minutes to get to the Finish node. How long would \nit take to get there if you went through node A?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.502216339111328,
+     359.54876708984375,
+     321.4817199707031,
+     374.3882141113281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.00039291381836,
+    "color": 2301728,
+    "text": "It’s faster to get to Finish from node A! Let’s update the cost and parent.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    96.64500427246094,
+    55.69699478149414,
+    238.3769989013672,
+    104.968994140625
+   ],
+   [
+    55.07099914550781,
+    143.66900634765625,
+    279.95098876953125,
+    214.70901489257812
+   ],
+   [
+    54.125999450683594,
+    224.9090118408203,
+    280.8970031738281,
+    354.4360046386719
+   ],
+   [
+    75.38504791259766,
+    380.135986328125,
+    259.6371154785156,
+    550.8699951171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 214,
+  "blocks": [
+   {
+    "bbox": [
+     156.3699951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementation\n189",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.498001098632812,
+     35.11800765991211,
+     328.0696105957031,
+     88.9570083618164
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Once you’ve processed all the nodes, the algorithm is over. I hope \nthe walkthrough helped you understand the algorithm a little better. \nFinding the lowest-cost node is pretty easy with the find_lowest_\ncost_node function. Here it is in code:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.49999237060547,
+     96.30200958251953,
+     344.0098571777344,
+     187.16400146484375
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def find_lowest_cost_node(costs):\n    lowest_cost = math.inf\n    lowest_cost_node = None\n    for node in costs:    \nGoes through each node\n        cost = costs[node]\n        if cost < lowest_cost and node not in processed: \n            lowest_cost = cost      \n. . . sets it as the new \nlowest-cost node\n            lowest_cost_node = node\n    return lowest_cost_node",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     195.11801147460938,
+     342.48822021484375,
+     261.9650573730469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To find the lowest cost node, we loop through all the nodes each time. \nThere is a more efficient version of this algorithm. It uses a data structure \ncalled a priority queue. A priority queue is itself built on top of a different \ndata structure called a heap. If you’re curious about priority queues and \nheaps, check out the section on heaps in the last chapter of the book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     275.7279052734375,
+     88.73599243164062,
+     290.4720153808594
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISE",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     294.1180114746094,
+     344.75042724609375,
+     321.9590148925781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "9.1  \u0007In each of these graphs, what is the weight of the shortest path from \nStart to Finish?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     375.86700439453125,
+     116.66000366210938,
+     437.2619934082031,
+     155.56201171875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "If it’s the lowest \ncost so far and \nhasn’t been \nprocessed yet . . .",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    86.03399658203125,
+    324.697021484375,
+    284.98797607421875,
+    560.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 215,
+  "blocks": [
+   {
+    "bbox": [
+     9.501007080078125,
+     -3.6251630783081055,
+     241.8350830078125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 9  I  Dijkstra’s algorithm\n190",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     58.13600158691406,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     71.62100219726562,
+     296.5835266113281,
+     99.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Breadth-first search is used to calculate the shortest path for an \nunweighted graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     106.62301635742188,
+     290.1826171875,
+     134.4640350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Dijkstra’s algorithm is used to calculate the shortest path for a \nweighted graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     141.625,
+     299.9944763183594,
+     156.4640350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Dijkstra’s algorithm works when all the weights are nonnegative.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     163.625,
+     291.7115783691406,
+     178.46400451660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If you have negative weights, use the Bellman–Ford algorithm.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ }
+]

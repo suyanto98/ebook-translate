@@ -1,0 +1,2360 @@
+[
+ {
+  "pdf_index": 146,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "7",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     362.4477233886719,
+     258.75299072265625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn what a tree is and the difference between \ntrees and graphs.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     267.531005859375,
+     344.6827697753906,
+     294.7559814453125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou get comfortable with running an algorithm \nover a tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     303.53399658203125,
+     357.6979064941406,
+     330.7590026855469
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn depth-first search and see the difference \nbetween depth-first search and breadth-first search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     339.5369873046875,
+     342.07904052734375,
+     366.7619934082031
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn Huffman coding, a compression algo-\nrithm that makes use of trees.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     327.44500732421875,
+     4.003999710083008,
+     366.44744873046875,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "trees",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     413.0979919433594,
+     414.6444396972656,
+     492.9469909667969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What do compression algorithms and database storage have in common? \nThere is often a tree underneath doing all the hard work. Trees are a \nsubset of graphs. They are worth covering separately as \nthere are many specialized types of trees. For example, \nHuffman coding, a compression algorithm you will \nlearn in this chapter, uses binary trees.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     495.6090087890625,
+     314.3706359863281,
+     562.4559936523438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Most databases use a balanced tree like a B-tree, \nwhich you will learn about in the next chapter. \nThere are so many types of trees out there. These \ntwo chapters will give you the vocabulary and \nconcepts you need to understand them.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    323.10101318359375,
+    454.5610046386719,
+    442.0,
+    560.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 147,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n122",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     117.5360107421875,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Your first tree",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     256.1816101074219,
+     107.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Trees are a type of graph. We will have a more thorough \ndefinition later. First, let’s learn some terminology and \nlook at an example.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     110.62603759765625,
+     232.80648803710938,
+     125.46503448486328
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Just like graphs, trees are made of nodes and edges.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     111.50299072265625,
+     186.62503051757812,
+     320.3226318359375,
+     227.4680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In this book, we will work with rooted trees. \nRooted trees have one node that leads to all the \nother nodes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     317.4810485839844,
+     283.3185119628906,
+     358.4670715332031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We will work exclusively with rooted trees, so when I say tree \nin this chapter, I mean a rooted tree. Nodes can have children, \nand child nodes can have a parent.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     125.17599487304688,
+     431.1330871582031,
+     322.0176086425781,
+     471.97607421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In a tree, nodes have at most one parent.  \nThe only node with no parents is the root. \nNodes with no children are called leaf nodes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     527.1410522460938,
+     325.27374267578125,
+     541.9801025390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you understand root, leaf, parent, and child, you are ready to read on!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    286.2090148925781,
+    64.99999237060547,
+    389.8890075683594,
+    152.1199951171875
+   ],
+   [
+    18.139999389648438,
+    168.72100830078125,
+    111.5,
+    270.239990234375
+   ],
+   [
+    286.2090148925781,
+    306.8410339355469,
+    401.8890380859375,
+    381.96002197265625
+   ],
+   [
+    9.499950408935547,
+    397.98406982421875,
+    111.49992370605469,
+    499.2640380859375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 148,
+  "blocks": [
+   {
+    "bbox": [
+     161.99899291992188,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Your first tree\n123",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     121.04660034179688,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "File Directories",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     338.6636047363281,
+     121.96805572509766
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Since a tree is a type of a graph, we can run a graph algorithm on it. In \nchapter 6, we learned breadth-first search, an algorithm for finding the \nshortest path in a graph. We are going to use breadth-first search on \na tree. If you are not comfortable with breadth-first search, check out \nchapter 6.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     124.63006591796875,
+     247.07640075683594,
+     152.47108459472656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A file directory is a tree that all of us interact with \nevery day. Suppose I have this file directory.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     155.13308715820312,
+     270.1653747558594,
+     221.9801483154297
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I want to print the name of every file in the pics \ndirectory, including all its subdirectories. Here, there is \nonly one subdirectory, 2001. We can use breadth-first \nsearch to do this! First, let me show you what this file \ndirectory looks like as a tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     343.46099853515625,
+     339.1013488769531,
+     462.3160095214844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Since this file directory is a tree, we can run a graph algorithm on it. \nEarlier, we used breadth-first search as a search algorithm. But search \nisn’t the only thing it’s good for. Breadth-first search is a traversal \nalgorithm. That means it is an algorithm that visits every node in a \ntree—that is, it traverses or walks the tree. That’s exactly what we need! \nWe need an algorithm that will go to every file in this tree and print \nout its name. We will use breadth-first search to list all the files in a \ndirectory. The algorithm will also go into subdirectories, find files in \nthere, and print out their names. My logic will be as follows:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     464.9779968261719,
+     164.92190551757812,
+     479.8169860839844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Visit every node in the tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     482.47900390625,
+     212.02391052246094,
+     497.3179931640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t If this node is a file, print out its name.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     499.9800109863281,
+     335.2248229980469,
+     514.8190307617188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t If the node is a folder, add it to a queue of folders to search for files.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    141.2310028076172,
+    236.6999969482422,
+    229.79100036621094,
+    329.3399963378906
+   ],
+   [
+    280.6419982910156,
+    126.52699279785156,
+    359.72198486328125,
+    193.18399047851562
+   ]
+  ]
+ },
+ {
+  "pdf_index": 149,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n124",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     295.318359375,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The code follows. It is very similar to the mango seller code from \nchapter 6:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     70.62864685058594,
+     187.56134033203125,
+     99.62669372558594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "from os import listdir\nfrom os.path import isfile, join\nfrom collections import deque",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     110.62467956542969,
+     303.0081787109375,
+     219.6276397705078
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def printnames(start_dir):\n    search_queue = deque()\n    search_queue.append(start_dir)\n    while search_queue:\n        dir = search_queue.popleft()\n        for file in sorted(listdir(dir)):\n            fullpath = join(dir, file)\n            if isfile(fullpath):\n                print(file)    \nIf it is a file, print \nout the name.\n            else:\n                search_queue.append(fullpath)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     230.62562561035156,
+     111.0514907836914,
+     239.62562561035156
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "printnames(\"pics\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     249.11801147460938,
+     321.5875549316406,
+     302.9630432128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here, we use a queue like we did in the mango seller example. In the \nqueue we keep track of what folders we still need to search. Of course, \nin that example, we stopped once we found a mango seller, but here we \ngo through the whole tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     305.62506103515625,
+     325.0294189453125,
+     333.466064453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There’s one other important difference from the mango seller code. Can \nyou spot it?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     336.1280822753906,
+     290.11553955078125,
+     363.9690856933594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the mango seller example, remember we had to keep track of \nwhether we had already searched a person:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     371.628662109375,
+     230.97006225585938,
+     410.6256103515625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "...   \n        if person not in searched:\n            if person_is_seller(person):\n...",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     145.3979949951172,
+     420.1180114746094,
+     326.1356506347656,
+     525.9710083007812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We don’t have to do that here! Trees \ndon’t have cycles, and each node only \nhas one parent. There’s no way we would \naccidentally search the same folder more \nthan once or end up in an infinite loop, \nso there’s no need to keep track of which \nfolders we have already searched. There \nsimply isn’t a way to revisit a folder.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     248.135986328125,
+     111.74400329589844,
+     356.0821228027344,
+     132.43499755859375
+    ],
+    "font": "Univers-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "We use a queue to keep \ntrack of folders to search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     247.6199951171875,
+     135.5550079345703,
+     384.3201599121094,
+     156.24600219726562
+    ],
+    "font": "Univers-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "While the queue is not empty, \npop off a folder to look through.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     286.9849853515625,
+     160.2840118408203,
+     389.1070861816406,
+     180.97500610351562
+    ],
+    "font": "Univers-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Loop through every file \nand folder in this folder.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     320.93499755859375,
+     209.7880096435547,
+     401.6561584472656,
+     240.47799682617188
+    ],
+    "font": "Univers-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "If it is a folder, add \nit to the queue of \nfolders to search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     265.5669860839844,
+     381.6990051269531,
+     368.73406982421875,
+     412.38897705078125
+    ],
+    "font": "Univers-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Only search this person \nif you haven't already \nsearched them.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    424.7640380859375,
+    138.02000427246094,
+    522.5040283203125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 150,
+  "blocks": [
+   {
+    "bbox": [
+     161.99899291992188,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Your first tree\n125",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     334.1964416503906,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This property of trees has made our code simpler. That’s an important \ntakeaway from this chapter: trees don’t have cycles.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     83.35102081298828,
+     187.50161743164062,
+     100.697021484375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "A note on symbolic links",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     108.30702209472656,
+     336.84002685546875,
+     145.79702758789062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You may know what symbolic links are. If you don’t, symbolic links are a \nway to introduce a cycle in a file directory. I could make a symbolic link on \nmacOS or Linux with",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.499000549316406,
+     151.32862854003906,
+     178.90411376953125,
+     160.32862854003906
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "ln -s pics/ pics/2001/pics",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     165.30699157714844,
+     124.02400207519531,
+     178.7969970703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "or, on Windows, with",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.499000549316406,
+     184.32862854003906,
+     200.4626922607422,
+     193.32862854003906
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "mklink /d pics/ pics/2001/pics",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     198.30699157714844,
+     240.79306030273438,
+     211.7969970703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "If I did that, the tree would look like the following.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     372.2869873046875,
+     336.8260192871094,
+     409.7770080566406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Now our file directory isn’t a tree anymore! To keep things simple, for this \nexample, we are going to ignore symbolic links. If we did have a symbolic link, \nPython is smart enough to avoid an infinite loop. Here is the error it throws:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.499000549316406,
+     415.30865478515625,
+     338.99139404296875,
+     434.3076477050781
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "OSError: [Errno 62] Too many levels of symbolic links: \n'pics/2001/pics'",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    116.63099670410156,
+    220.89700317382812,
+    254.3909912109375,
+    364.177001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 151,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n126",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     152.90599060058594,
+     75.99798583984375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "A space odyssey:  \nDepth-first search",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     87.12100219726562,
+     301.36834716796875,
+     101.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s traverse our file directory again, doing it recursively this time:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     109.63163757324219,
+     187.56134033203125,
+     128.63063049316406
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "from os import listdir\nfrom os.path import isfile, join",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     139.6286163330078,
+     208.88499450683594,
+     208.62257385253906
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def printnames(dir):\n    for file in sorted(listdir(dir)):\n        fullpath = join(dir, file)\n        if isfile(fullpath):\n            print(file)\n        else:\n            printnames(fullpath)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     219.6205596923828,
+     111.0514907836914,
+     228.6205596923828
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "printnames(\"pics\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     238.12100219726562,
+     295.82562255859375,
+     304.9680480957031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice that now we are not using a queue. Instead, when we  \ncome across a folder, we immediately look inside for more  \nfiles and folders. Now we have two ways of listing the file names.  \nBut here’s the surprising part: the solutions will print the file  \nnames in different orders!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     307.63006591796875,
+     160.71478271484375,
+     322.46905517578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "One prints the names out like this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     330.13165283203125,
+     76.10901641845703,
+     359.129638671875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "a.png\nspace.png\nodyssey.png",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     368.6210021972656,
+     101.57990264892578,
+     383.4599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The other prints this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     391.13165283203125,
+     76.10901641845703,
+     420.129638671875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "odyssey.png\na.png\nspace.png",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     429.6210021972656,
+     316.47265625,
+     457.4620056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Can you figure out which solution prints which order and why? Try it \nyourself before moving on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     202.58099365234375,
+     146.55799865722656,
+     367.1960754394531,
+     197.24899291992188
+    ],
+    "font": "Univers-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Loop through every \nfile and folder in \nthe current folder.\nIf it is a file, print \nout the name.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     272.29901123046875,
+     196.55799865722656,
+     392.19622802734375,
+     227.24798583984375
+    ],
+    "font": "Univers-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "If it is a folder, call this \nfunction recursively on it to \nlook for files and folders.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 152,
+  "blocks": [
+   {
+    "bbox": [
+     123.13800048828125,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "A space odyssey: Depth-first search\n127",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     343.8753662109375,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The first solution uses breadth-first search. When it finds a folder, that \nfolder is added to the queue to be checked later. So the algorithm goes \nto the 2001 folder, does not go into it but adds it to the queue to be \nlooked at later, prints all the file names in the pics/ folder, and then goes \nback to the 2001/ folder and prints the file names in there.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     282.1920166015625,
+     333.19659423828125,
+     323.0350341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can see the algorithm visits the 2001 folder first but doesn’t look \ninside. That folder is just added to the queue, and breadth-first search \nmoves on to odyssey.png.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     325.6970520019531,
+     340.367431640625,
+     366.5400695800781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The second solution uses an algorithm called depth-first search. Depth-\nfirst search is also a graph and tree traversal algorithm. When it finds a \nfolder, it looks inside immediately instead of adding it to a queue.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    44.105003356933594,
+    112.697021484375,
+    326.9169921875,
+    272.0710144042969
+   ],
+   [
+    27.5,
+    377.27099609375,
+    191.20799255371094,
+    510.15899658203125
+   ],
+   [
+    196.21800231933594,
+    377.27099609375,
+    359.7229919433594,
+    510.23101806640625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 153,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n128",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     207.24359130859375,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The second solution is the one that prints out",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     57.6286506652832,
+     76.10901641845703,
+     86.62669372558594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "a.png\nspace.png\nodyssey.png",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     96.11801147460938,
+     323.0770263671875,
+     162.96507263183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Breadth-first search and depth-first search are closely related, and \noften where one is mentioned, the other will be also. Both algorithms \nprinted out all the file names, so they both work for this example. But \nthere is a big difference. Depth-first search cannot be used for finding \nthe shortest path!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     165.6270751953125,
+     321.4566345214844,
+     258.4781494140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the mango seller example, we could not have used depth-first \nsearch. We rely on the fact that we are checking all our first-degree \nfriends before our second-degree friends, and so on. That’s what \nbreadth-first search does. But depth-first search will go as deep as \npossible right away. It may find you a mango seller three degrees \naway when you have a closer contact! Suppose the following is your \nsocial network.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    93.71099853515625,
+    273.197021484375,
+    241.31100463867188,
+    439.99700927734375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 154,
+  "blocks": [
+   {
+    "bbox": [
+     123.13800048828125,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "A space odyssey: Depth-first search\n129",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     342.13739013671875,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s say we process nodes in order from left to right. Depth-first search \nwill get to the leftmost child node and go deep.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     224.71099853515625,
+     329.31146240234375,
+     252.55201721191406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Because the depth-first search went deep on the left node, it failed to \nrealize that the right node is a mango seller that is much closer.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     255.21401977539062,
+     302.48333740234375,
+     270.0530090332031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Breadth-first search will correctly find the closest mango seller.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     433.7309875488281,
+     343.9744567871094,
+     487.57598876953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So while both algorithms worked for listing files, only breadth-first \nsearch works for finding the shortest path. Depth-first search has other \nuses. It can be used to find the topological sort, a concept we saw briefly \nin chapter 6.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    126.68499755859375,
+    77.69699096679688,
+    244.33799743652344,
+    210.58999633789062
+   ],
+   [
+    125.78700256347656,
+    284.78997802734375,
+    245.23500061035156,
+    419.6099853515625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 155,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n130",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     174.03919982910156,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "A better definition of trees",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.12099838256836,
+     321.9078674316406,
+     82.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now that you have seen an example, it’s time for a better definition of a \ntree. A tree is a connected, acyclic graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     230.1409912109375,
+     311.7965087890625,
+     283.98602294921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "As I had said earlier, we are working exclusively with rooted trees, so \nour trees all have a root as well. And we are working exclusively with \nconnected graphs. So the most important thing to remember is trees \ncannot have cycles.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500007629394531,
+     286.6480407714844,
+     320.38641357421875,
+     314.4890441894531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now we have seen a tree in action, let’s zoom in on one specific type of \ntree.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    97.69998931884766,
+    388.9410095214844,
+    216.01998901367188
+   ]
+  ]
+ },
+ {
+  "pdf_index": 156,
+  "blocks": [
+   {
+    "bbox": [
+     164.50100708007812,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Binary trees\n131",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     123.69020080566406,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Binary trees",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     334.4275207519531,
+     107.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Computer science is full of different types of trees. Binary trees are a \nvery common type of tree. For the rest of this chapter and most of the \nnext, we will work with binary trees.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     110.62603759765625,
+     341.3343505859375,
+     151.4690704345703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A binary tree is a special type of tree where nodes can have at most two \nchildren (hence the name binary, meaning two). These are traditionally \ncalled left child and right child.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     259.52099609375,
+     336.121337890625,
+     287.36199951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "An ancestry tree is an example of a binary tree since everyone has two \nbiological parents.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    133.67100524902344,
+    166.20001220703125,
+    237.35101318359375,
+    245.39999389648438
+   ],
+   [
+    116.87100219726562,
+    302.0999755859375,
+    254.1510009765625,
+    406.97998046875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 157,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n132",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     321.1805114746094,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In that example, there’s a clear connection between nodes—they are all \nfamily. However, the data can be totally arbitrary.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     177.25799560546875,
+     287.8846130371094,
+     205.09901428222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The important thing is you never have more than two children. \nSometimes people refer to the left subtree or right subtree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     340.51800537109375,
+     321.29058837890625,
+     381.3609924316406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Binary trees show up everywhere in computer science. We are going to \nspend the rest of this chapter looking at an example that uses a binary \ntree.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    134.031005859375,
+    77.69699096679688,
+    200.99099731445312,
+    163.13699340820312
+   ],
+   [
+    117.83099365234375,
+    219.83700561523438,
+    217.1909942626953,
+    326.3970031738281
+   ]
+  ]
+ },
+ {
+  "pdf_index": 158,
+  "blocks": [
+   {
+    "bbox": [
+     156.19000244140625,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Huffman coding\n133",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     156.36203002929688,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Huffman coding",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     324.5935363769531,
+     120.9660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Huffman coding is a neat example of using binary trees. It’s also the \nfoundation for text compression algorithms. We won’t describe the \nalgorithm but will spend time focusing on how it works and how it \nmakes clever use of trees.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.498992919921875,
+     123.6280517578125,
+     345.7539978027344,
+     190.4600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, a little background. To know how compression works, we need to \nknow how much space a text file takes. Suppose we have a text file with \njust one word: tilt. How much space does that use? You can use the stat \ncommand (available on Unix). First, save the word in a file called test.\ntxt. Then, using stat,",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     198.1316375732422,
+     109.98949432373047,
+     217.13063049316406
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "$ cat test.txt\ntilt",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     228.1286163330078,
+     140.55885314941406,
+     247.1276092529297
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "$ stat -f%z test.txt\n4",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     256.6210021972656,
+     237.91458129882812,
+     271.4599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "so that file takes up 4 bytes: 1 byte per character.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49999237060547,
+     274.12200927734375,
+     345.20745849609375,
+     405.9790954589844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This makes sense. Assuming we are using ISO-8859-1 (see the following \nsidebar for what this means), each letter takes up exactly 1 byte. For \nexample, the letter a is ISO-8859-1 code 97, which I can write in binary \nas 01100001. That is 8 bits. A bit is a digit that can be either 0 or 1. And \nthere are eight of them. Eight bits is 1 byte. So the letter a is represented \nusing 1 byte. ISO-8859-1 code goes from 00000000, which represents \nthe null character, all the way to 11111111, which represents ÿ (Latin \nlowercase letter y with diaeresis). There are 256 possible combinations \nof 0s and 1s with 8 bits, so the ISO-8859-1 code allows for 256 possible \nletters.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 159,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n134",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     43.65399932861328,
+     140.53799438476562,
+     61.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "Character encoding",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     68.61000061035156,
+     318.8108215332031,
+     106.0999984741211
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "As this example will show you, there are many different ways to encode \ncharacters. That is, the letter a could be written in binary in many different \nways.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.50000762939453,
+     109.11000061035156,
+     318.8369140625,
+     158.60000610351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "It started with ASCII. In the 1960s, ASCII was created. ASCII is a 7-bit \nencoding. Unfortunately, ASCII did not include a lot of characters. ASCII \ndoes not include any characters with umlauts (ü or ö, for example) or \ncommon currencies like the British pound or Japanese yen.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.510009765625,
+     161.61000061035156,
+     318.8219299316406,
+     235.10000610351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "So ISO-8859-1 was created. ISO-8859-1 is an 8-bit encoding, so it doubles \nthe number of characters that ASCII provided. We went from 128 characters \nto 256 characters. But this was still not enough, and countries began making \ntheir own encodings. For example, Japan has several encodings for Japanese \nsince ISO-8859-1 and ASCII were focused on European languages. The \nwhole situation was a mess until Unicode was introduced.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.510009765625,
+     238.11000061035156,
+     318.79693603515625,
+     275.6000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Unicode is an encoding standard. It aims to provide characters for any \nlanguage. Unicode has 149,186 characters as of version 15—quite a jump \nfrom 256! More than 1,000 of these are emojis.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.510009765625,
+     278.6099853515625,
+     318.8121032714844,
+     328.1000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Unicode is the standard, but you need to use an encoding that follows the \nstandard. The most popular encoding today is UTF-8. UTF-8 is variable-\nlength character encoding, which means characters can be anywhere from \n1 to 4 bytes (8–32 bits).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.510009765625,
+     331.1099853515625,
+     318.7968444824219,
+     368.6000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You don’t need to worry too much about this. I’ve kept the example simple \nintentionally by using ISO-8859-1, which is 8 bits—a nice consistent \nquantity of bits to work with.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.510009765625,
+     371.6099853515625,
+     146.60006713867188,
+     385.1000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Just remember these takeaways:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.510009765625,
+     392.6099853515625,
+     298.9748840332031,
+     418.1000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "•\t Compression algorithms try to reduce the number of bits needed to \nstore each character.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.51000213623047,
+     425.6099853515625,
+     305.4450378417969,
+     451.1000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "•\t If you need to pick an encoding for a project, UTF-8 is a good default \nchoice.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     470.6210021972656,
+     323.22772216796875,
+     511.4639892578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s decode some binary to ISO-8859-1 together: \n011100100110000101100100. You can Google an ISO-8859-1 table or a \nbinary-to-ISO-8859-1 converter to make this easier.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     514.1259765625,
+     323.37945556640625,
+     541.967041015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, we know that each letter is 8 bits, so I am going to divide this into \nchunks of 8 bits to make it easier to read:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     549.6316528320312,
+     147.98480224609375,
+     558.6316528320312
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "01110010 01100001 01100100",
+    "is_code": true
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 160,
+  "blocks": [
+   {
+    "bbox": [
+     156.19000244140625,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Huffman coding\n135",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     344.1027526855469,
+     101.9570083618164
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Great, now we see that there are three letters. Looking them up in an \nISO-8859-1 table, I see they spell out rad: 01110010 is r, and so on. \nThis is how your text editor takes the binary data in a text file and \ndisplays it as ISO-8859-1. You can view the binary information by using \nxxd. This utility is available on Unix. Here is how tilt looks in binary:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     109.62864685058594,
+     260.68115234375,
+     138.6266326904297
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "$ xxd -b test.txt\n00000000: 01110100 01101001 01101100 01110100\ntilt",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     147.97500610351562,
+     342.66644287109375,
+     201.9630584716797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here is where the compression comes in. For the word tilt, we don’t \nneed 256 possible letters; we just need three. So we don’t need 8 bits; we \nonly need 2. We could come up with our own 2-bit code just for these \nthree letters:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     209.62864685058594,
+     68.52471160888672,
+     238.6266326904297
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "t = 00\ni = 01\nl = 10",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     247.97500610351562,
+     325.9179382324219,
+     288.9610290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here is how we could write tilt using our new code: 00011000. I can \nmake this easier to read by adding spaces again: 00 01 10 00. If you \ncompare it to the mapping, you’ll see this spells out tilt.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     291.623046875,
+     341.1044616699219,
+     332.466064453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is what Huffman coding does: it looks at the characters being used \nand tries to use less than 8 bits. That is how it compresses the data. \nHuffman coding generates a tree.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    150.11199951171875,
+    347.1969909667969,
+    220.91099548339844,
+    437.9169921875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 161,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n136",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     35.11800765991211,
+     323.1252136230469,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can use this tree to find the code for each letter. Starting at the \nroot node, find a path down to the letter L. Whenever you choose a \nleft branch, append a 0 to your code. When you choose a right branch, \nappend 1. When you get to a letter, stop progressing down the tree. So \nthe code for the letter L is 01. Here are the three codes given by the tree:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     109.62864685058594,
+     50.52471160888672,
+     138.6266326904297
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "i = 00\nl = 01\nt = 1",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     148.11801147460938,
+     321.3565368652344,
+     188.96104431152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice that the letter T has a code of just one digit. Unlike ISO-8859-1, \nin Huffman coding, the codes don’t all have to be the same length. This is \nimportant. Let’s see another example to understand why.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     191.623046875,
+     313.0197448730469,
+     219.4640655517578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now we want to compress the phrase “paranoid android.” Here is the \ntree generated by the Huffman coding algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     377.5350036621094,
+     319.9816589355469,
+     405.5190124511719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Check yourself: What is the code for the letter P? Try it yourself before \nreading on. It is 0001. What about the letter D? It is 10.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500015258789062,
+     408.1809997558594,
+     320.34234619140625,
+     423.0199890136719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In this case, there are actually three different possible lengths! Suppose",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     149.71701049804688,
+     421.1830139160156,
+     327.5738525390625,
+     527.0360107421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "we try to decode some binary data: \n01101010. We see the problem right \naway: we can’t chunk this up the way we \ndid with ISO-8859-1! While all ISO-\n8859-1 codes were eight digits, here the \ncode could be two, three, or four digits. \nSince the code length varies, we can’t use \nchunking anymore.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500015258789062,
+     529.6979370117188,
+     312.2815856933594,
+     557.5390014648438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Instead, we need to look at one digit at a time, as if we are looking at  \na tape.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    84.59100341796875,
+    234.19700622558594,
+    250.43099975585938,
+    363.5570068359375
+   ],
+   [
+    9.5,
+    436.3699951171875,
+    137.71400451660156,
+    509.7559814453125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 162,
+  "blocks": [
+   {
+    "bbox": [
+     156.19000244140625,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Huffman coding\n137",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     335.2745056152344,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s how to do it: first number is 0, so go left (I’m only showing part \nof the tree here).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     203.03399658203125,
+     164.10678100585938,
+     217.8730010986328
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then we get a 1, so we go right.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     357.3909912109375,
+     219.58963012695312,
+     372.22998046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then we get another 1, so we go right again.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    112.09500122070312,
+    77.69699096679688,
+    258.927001953125,
+    188.91299438476562
+   ],
+   [
+    111.90899658203125,
+    232.6129913330078,
+    259.11297607421875,
+    343.2699890136719
+   ],
+   [
+    112.1719970703125,
+    386.97100830078125,
+    258.8500061035156,
+    502.60198974609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 163,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n138",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     35.11800765991211,
+     318.72760009765625,
+     114.96707916259766
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Aha! We found a letter. This is the binary data we have left: 01010. \nWe can start over at the root node and find the other letters. Try \ndecoding the rest yourself and then read on. Did you get the word? \nIt was rad. This is a big difference between Huffman coding and \nISO-8859-1. The codes can vary, so the decoding needs to be done \ndifferently.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     117.62908935546875,
+     325.72137451171875,
+     210.4801788330078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It is more work to do it this way instead of chunking. But there is \none big benefit. Notice that the letters that show up more often have \nshorter codes. D appears three times, so its code is just two digits versus \nI, which appears twice, and P, which appears only once. Instead of \nassigning 4 bits to everything, we can compress frequently used letters \neven more. You can see how, in a longer piece of text, this would be a \nbig savings!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     213.14218139648438,
+     311.30145263671875,
+     240.9832000732422
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now that we understand at a high level how Huffman coding works, \nlet’s see what properties of trees Huffman is taking advantage of here.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     243.64520263671875,
+     324.6873779296875,
+     258.48419189453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, could there be overlap between codes? Take this code for example:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     266.128662109375,
+     50.52471160888672,
+     295.12664794921875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "a = 0\nb = 1\nc = 00",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     304.4750061035156,
+     321.1849670410156,
+     345.4610290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now if you see the binary 001, is that AAB or CB? c and a share part \nof their code, so it’s unclear. Here is what the tree for this code would \nlook like.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    128.51199340820312,
+    348.1969909667969,
+    206.51100158691406,
+    437.9570007324219
+   ]
+  ]
+ },
+ {
+  "pdf_index": 164,
+  "blocks": [
+   {
+    "bbox": [
+     156.19000244140625,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Huffman coding\n139",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     265.2286682128906,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We pass A on the way to C, which causes the problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     52.61898422241211,
+     341.7752990722656,
+     106.46402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That’s not a problem with Huffman coding because letters only show \nup at leaf nodes. And there’s a unique path from the root to each leaf \nnode—that’s one of the properties of trees. So we can guarantee overlap \nis not a problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     109.12603759765625,
+     316.3995056152344,
+     149.9690704345703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This also guarantees there is only one code for each letter. Having \nmultiple paths to each letter would mean there are multiple codes \nassigned to each letter, which would be unnecessary.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     152.63107299804688,
+     343.481689453125,
+     206.4761199951172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When we read the code one digit at a time, we are assuming we will \neventually end up at a letter. If this was a graph with a cycle, we couldn’t \nmake that assumption. We could get stuck in the cycle and end up in an \ninfinite loop.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     316.197998046875,
+     297.5234375,
+     344.03900146484375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But since this is a tree, we know there are no cycles, so we are \nguaranteed to end up at some letter.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     346.7010192871094,
+     321.5474548339844,
+     387.5440368652344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We are using a rooted tree. Rooted trees have a root node, which is \nimportant because we need to know where to start! Graphs do not \nnecessarily have a root node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     390.0630187988281,
+     346.0468444824219,
+     444.0509948730469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Finally, the type of tree used here is called a binary tree. Binary trees can \nhave at most two children—the left child and the right child. This makes \nsense because binary only has two digits. If there was a third child, it \nwould be unclear what digit it is supposed to represent.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     446.7130126953125,
+     327.54132080078125,
+     474.5539855957031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This chapter introduced you to trees. In the next chapter, we will see \nsome different types of trees and what they are used for.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    139.43099975585938,
+    221.19699096679688,
+    231.59100341796875,
+    302.0769958496094
+   ]
+  ]
+ },
+ {
+  "pdf_index": 165,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     215.53298950195312,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 7  I  trees\n140",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     58.13600158691406,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     63.62099838256836,
+     246.25946044921875,
+     78.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Trees are a type of graph, but trees don’t have cycles.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     85.62100219726562,
+     307.56158447265625,
+     113.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Depth-first search is another graph traversal algorithm. It can’t be \nused to find shortest paths.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     120.62301635742188,
+     318.3403015136719,
+     148.4640350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A binary tree is a special type of tree where nodes can have, at most, \ntwo children.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     155.625,
+     321.2256774902344,
+     196.46803283691406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t There are many different types of character encodings. Unicode is \nthe international standard, and UTF-8 is the most common Unicode \nencoding.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    59.352996826171875,
+    199.1999969482422,
+    275.66998291015625,
+    368.7460021972656
+   ]
+  ]
+ }
+]

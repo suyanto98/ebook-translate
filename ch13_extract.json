@@ -1,0 +1,1870 @@
+[
+ {
+  "pdf_index": 272,
+  "blocks": [
+   {
+    "bbox": [
+     362.7659912109375,
+     -7.2039947509765625,
+     416.0460205078125,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "13",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     357.7067565917969,
+     272.7559814453125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou get a brief overview of 10 algorithms that \nhaven’t been covered in this book and why they’re \nuseful.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     279.531982421875,
+     355.9148864746094,
+     306.7569885253906
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou get pointers on what to read next, depending \non what your interests are.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     274.94000244140625,
+     4.003999710083008,
+     348.1747741699219,
+     26.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "where to",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     284.3179931640625,
+     22.003999710083008,
+     344.4686279296875,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 9968414,
+    "text": "go next",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     354.6780090332031,
+     238.0802001953125,
+     376.9800109863281
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Linear regression",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     388.1009826660156,
+     391.4454650878906,
+     415.9419860839844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you need to sell your house. It is 3,000 ft². You look at the \nhomes recently sold in your neighborhood.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    123.91999816894531,
+    424.6800231933594,
+    390.08099365234375,
+    551.6400146484375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 273,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n248",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     326.3394775390625,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Based on this information, how would you price your house? Here’s one \nway you could do it. Plot all the points.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     212.29800415039062,
+     187.0146484375,
+     227.1370086669922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then eyeball a line through these points.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     375.1000061035156,
+     320.817626953125,
+     402.9410095214844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you can see where 3000 ft² lands on that line, and that would be a \npretty good starting price for your home:",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    93.59100341796875,
+    71.69700622558594,
+    241.43099975585938,
+    204.177001953125
+   ],
+   [
+    90.21200561523438,
+    235.8780059814453,
+    244.80999755859375,
+    366.97900390625
+   ],
+   [
+    88.55099487304688,
+    411.67999267578125,
+    246.4709930419922,
+    545.6849975585938
+   ]
+  ]
+ },
+ {
+  "pdf_index": 274,
+  "blocks": [
+   {
+    "bbox": [
+     156.4149932861328,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Inverted indexes\n249",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     337.98272705078125,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is how linear regression works. Given a bunch of points, it tries to \nfit a line to them, and then you can use that line to make predictions.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     65.62100219726562,
+     330.67657470703125,
+     132.4680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Linear regression has been used in statistics for a long time, and now \nit is being widely used in machine learning because it is an easy first \ntechnique to try. It is useful if your values are continuous. If you are \ntrying to predict something, linear regression might be a good place  \nto start.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     162.19500732421875,
+     161.02220153808594,
+     184.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Inverted indexes",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     195.61801147460938,
+     338.87152099609375,
+     223.4590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s a very simplified version of how a search engine works. Suppose \nyou have three web pages with this simple content.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     332.4779968261719,
+     207.14862060546875,
+     347.3169860839844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s build a hash table from this content.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     488.01800537109375,
+     246.93788146972656,
+     541.863037109375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The keys of the hash table are the words, and the \nvalues tell you what pages each word appears on. \nNow suppose a user searches for hi. Let’s see what \npages hi shows up on.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    71.27100372314453,
+    238.19699096679688,
+    299.7510070800781,
+    318.35699462890625
+   ],
+   [
+    149.1510009765625,
+    362.0570068359375,
+    221.87100219726562,
+    473.8970031738281
+   ],
+   [
+    261.2019958496094,
+    484.85101318359375,
+    343.5220031738281,
+    534.051025390625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 275,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n250",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     327.2845458984375,
+     127.9690933227539
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Aha! It appears on pages A and B. Let’s show the user those pages as \nthe result. Or suppose the user searches for there. Well, you know that \nit shows up on pages A and C. Pretty easy, huh? This is a useful data \nstructure: a hash that maps words to places where they appear. This data \nstructure is called an inverted index, and it’s commonly used to build \nsearch engines. If you’re interested in search, this is a good place  \nto start.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     157.69500732421875,
+     184.2602081298828,
+     179.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "The Fourier transform",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.496002197265625,
+     191.11801147460938,
+     326.11883544921875,
+     270.9590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The Fourier transform is one of those rare algorithms: brilliant, \nelegant, and with a million use cases. The best analogy for the Fourier \ntransform comes from Better Explained (a great website that explains \nmath simply): given a smoothie, the Fourier transform will tell you the \ningredients in the smoothie.1 Or, to put it another way, given a song, the \ntransform can separate it into individual frequencies.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.496002197265625,
+     273.62103271484375,
+     327.0946350097656,
+     379.47412109375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It turns out that this simple idea has a lot of use cases. For example, if \nyou can separate a song into frequencies, you can boost the ones you \ncare about. You could boost the bass and hide the treble. The Fourier \ntransform is great for processing signals. You can also use it to compress \nmusic. First, you break an audio file down into its ingredient notes. The \nFourier transform tells you exactly how much each note contributes to \nthe overall song. So you can get rid of the notes that aren’t important. \nThat’s how the MP3 format works!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.496002197265625,
+     382.1361389160156,
+     319.6354675292969,
+     461.9851379394531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Music isn’t the only type of digital signal. The JPG format is another \ncompressed format, and it works the same way. People use the Fourier \ntransform to try to predict upcoming earthquakes and analyze DNA. \nYou can use it to build an app like Shazam, which guesses what song is \nplaying. The Fourier transform has a lot of uses. Chances are high that \nyou’ll run into it!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     552.7100219726562,
+     310.0215148925781,
+     561.875
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 4.372000217437744,
+    "color": 2301728,
+    "text": "1 Kalid, “An Interactive Guide to the Fourier Transform,” Better Explained, http://mng.bz/dd9N.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 276,
+  "blocks": [
+   {
+    "bbox": [
+     151.64100646972656,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Parallel algorithms\n251",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     178.86199951171875,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Parallel algorithms",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     339.2784729003906,
+     159.9720916748047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The next three topics are about scalability and working with a lot of \ndata. Back in the day, computers kept getting faster and faster. If you \nwanted to make your algorithm faster, you could wait a few months, \nand the computers themselves would become faster. But we’re near the \nend of that period. Instead, laptops and computers ship with multiple \ncores. To make your algorithms faster, you need to change them to run \nin parallel across all the cores at once!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     162.63409423828125,
+     344.855712890625,
+     216.47914123535156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s a simple example. The best you can do with a sorting algorithm is \nroughly O(n log n). It’s well known that you can’t sort an array in O(n) \ntime—unless you use a parallel algorithm! There’s a parallel version of \nquicksort that will sort an array in O(n) time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     219.14114379882812,
+     341.6644287109375,
+     298.9902038574219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Parallel algorithms are hard to design. And it’s hard to make sure they \nwork correctly and to figure out what type of speed boost you’ll see. \nOne thing is for sure—the time gains aren’t linear. So if you have two \ncores in your laptop instead of one, that almost never means your \nalgorithm will magically run twice as fast. There are a couple of reasons \nfor this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     306.00799560546875,
+     334.53094482421875,
+     372.998046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Overhead of managing the parallelism—Suppose you have to sort an \narray of 1,000 items. How do you divide this task between the two \ncores? Do you give each core 500 items to sort and then merge the \ntwo sorted arrays into one big sorted array? Merging the two arrays \ntakes time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     380.0159912109375,
+     345.932373046875,
+     499.01397705078125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Amdahl’s law—Suppose you are painting a picture. Paintings take \nyou very long to do, typically 20 hours. Ideally, you would do it in 10 \nhours. You decide to optimize your process. You break it down into \ntwo steps: (i) doing the initial sketch and (ii) painting it. For the initial \nsketch, instead of free-handing it, surely tracing will be faster. But \nthe next time you paint, it still takes 19 hours and 5 minutes! What \nhappened? Well, the sketch used to take an hour. You’ve got it down \nto 5 minutes, which is a big improvement. But the painting is the part \nthat took the most time, and you didn’t optimize that at all.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 277,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n252",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     35.11800765991211,
+     323.6907043457031,
+     140.9711151123047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is Amdahl’s law. Amdahl’s law says that when you optimize one \npart of the system, the performance gain is limited by how much \ntime that part actually takes. In this case, we cut the sketch time to \n1/12th of what it used to be. In the process, we saved 55 minutes. If \nwe could have cut the painting time by the same amount, we would \nhave saved 1,045 minutes! When you are speeding up your algorithm \nby parallelizing it, think about which part to parallelize. Are you \nparallelizing the painting part or the sketching part?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.501998901367188,
+     147.98898315429688,
+     314.6485290527344,
+     227.98106384277344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Load balancing—Suppose you have 10 tasks to do, so you give each \ncore five tasks. But core A gets all the easy tasks, so it’s done in 10 \nseconds, whereas core B gets all the hard tasks, so it takes a minute. \nThat means core A was sitting idle for 50 seconds while core B was \ndoing all the work! How do you distribute the work evenly so both \ncores are working equally hard?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.501998901367188,
+     230.64306640625,
+     327.7363586425781,
+     258.48406982421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you’re interested in the theoretical side of performance and scalability, \nparallel algorithms might be for you!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     283.69500732421875,
+     106.05020141601562,
+     305.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "map/reduce",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     317.1180114746094,
+     321.53240966796875,
+     396.967041015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There’s a special type of parallel algorithm that is becoming increasingly \npopular: the distributed algorithm. It’s fine to run a parallel algorithm on \nyour laptop if you need two to four cores, but what if you need hundreds \nof cores? Then you can write your algorithm to run across multiple \nmachines. Google popularized a distributed algorithm that they called \nMapReduce, but these functions have been around for longer.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     399.6290588378906,
+     316.93353271484375,
+     453.4740295410156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Why are distributed algorithms useful? Suppose you have a table with \nbillions or trillions of rows, and you want to run a complicated SQL \nquery on it. You can’t run it on MySQL because it struggles after a few \nbillion rows. Use map/reduce!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     456.13604736328125,
+     324.82049560546875,
+     509.9810485839844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Or suppose you have to process a long list of jobs. Each job takes 10 \nseconds to process, and you need to process 1 million jobs like this. If \nyou do this on one machine, it will take you months! If you could run it \nacross 100 machines, you might be done in a few days.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     512.6430053710938,
+     311.1497497558594,
+     540.4840698242188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Distributed algorithms are great when you have a lot of work to do and \nwant to speed up the time required to do it.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 278,
+  "blocks": [
+   {
+    "bbox": [
+     130.4949951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Bloom filters and HyperLogLog\n253",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     276.5083923339844,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Bloom filters and HyperLogLog",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     337.77252197265625,
+     120.9660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re running Reddit. When someone posts a link, you want \nto see if it’s been posted before. Stories that haven’t been posted before \nare considered more valuable. So you need to figure out whether this \nlink has been posted before.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     123.6280517578125,
+     337.7076721191406,
+     164.47108459472656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Or suppose you’re Google, and you’re crawling web pages. You only \nwant to crawl a web page if you haven’t crawled it already. So you need \nto figure out whether this page has been crawled before.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     167.13308715820312,
+     345.03265380859375,
+     220.97813415527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Or suppose you’re running bit.ly, which is a URL shortener. You don’t \nwant to redirect users to malicious websites. You have a set of URLs that \nare considered malicious. Now you need to figure out whether you’re \nredirecting the user to a URL in that set.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     223.64013671875,
+     338.42041015625,
+     238.47914123535156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "All of these examples have the same problem. You have a very large set.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     428.7610168457031,
+     339.17828369140625,
+     469.6039733886719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you have a new item, and you want to see whether it belongs in \nthat set. You could do this quickly with a hash. For example, suppose \nGoogle has a big hash in which the keys are all the pages it has crawled.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    88.07099914550781,
+    249.20098876953125,
+    282.95098876953125,
+    418.6400146484375
+   ],
+   [
+    124.67100524902344,
+    480.34100341796875,
+    246.35101318359375,
+    553.781005859375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 279,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n254",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     312.32568359375,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You want to see whether you’ve already crawled adit.io. Look it up in \nthe hash.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     107.17800903320312,
+     316.87261962890625,
+     148.01902770996094
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "adit.io is a key in the hash, so you’ve already crawled it. The average \nlookup time for hash tables is O(1). adit.io is in the hash, so you’ve \nalready crawled it. You found that out in constant time. Pretty good!",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.500991821289062,
+     150.53802490234375,
+     323.4464416503906,
+     204.5260772705078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Except that this hash needs to be huge. Google indexes trillions of web \npages. If this hash has all the URLs that Google has indexed, it will take \nup a lot of space. Reddit and bit.ly have the same space problem. When \nyou have so much data, you need to get creative!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     216.21099853515625,
+     88.80860900878906,
+     233.5570068359375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Bloom filters",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     236.53500366210938,
+     324.1517333984375,
+     303.5250549316406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Bloom filters offer a solution. Bloom filters are probabilistic data \nstructures. They give you an answer that could be wrong but is probably \ncorrect. Instead of a hash, you can ask your bloom filter if you’ve \ncrawled this URL before. A hash table would give you an accurate \nanswer. A bloom filter will give you an answer that’s probably correct:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     310.6860046386719,
+     327.5924987792969,
+     338.5270080566406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t False positives are possible. Google might say, “You’ve already crawled \nthis site,” even though you haven’t.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     345.68798828125,
+     312.2486267089844,
+     373.52899169921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t False negatives aren’t possible. If the bloom filter says, “You haven’t \ncrawled this site,” then you definitely haven’t crawled this site.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     376.1910095214844,
+     326.9984130859375,
+     443.0379943847656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Bloom filters are great because they take up very little space. A hash \ntable would have to store every URL crawled by Google, but a bloom \nfilter doesn’t have to do that. They’re great when you don’t need an exact \nanswer, as in all of these examples. It’s OK for bit.ly to say, “We think \nthis site might be malicious, so be extra careful.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     454.71099853515625,
+     94.26861572265625,
+     472.0570068359375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "HyperLogLog",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     475.1780090332031,
+     326.0854797363281,
+     529.0230102539062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Along the same lines is another algorithm called HyperLogLog. \nSuppose Google wants to count the number of unique searches \nperformed by its users. Or suppose Amazon wants to count the number \nof unique items that users looked at today. Answering these questions",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    104.51100158691406,
+    77.697998046875,
+    230.510986328125,
+    93.0570068359375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 280,
+  "blocks": [
+   {
+    "bbox": [
+     106.18699645996094,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "HTTPS and the Diffie–Hellman key exchange\n255",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     341.06158447265625,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "takes a lot of space! With Google, you’d have to keep a log of all the \nunique searches. When a user searches for something, you have to see \nwhether it’s already in the log. If not, you have to add it to the log. Even \nfor a single day, this log would be massive!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     91.62503051757812,
+     342.1813659667969,
+     145.47007751464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "HyperLogLog approximates the number of unique elements in a set. \nJust like bloom filters, it won’t give you an exact answer, but it comes \nvery close and uses only a fraction of the memory a task like this would \notherwise take.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     148.132080078125,
+     324.5174560546875,
+     175.9730987548828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you have a lot of data and are satisfied with approximate answers, \ncheck out probabilistic algorithms!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     205.69500732421875,
+     304.1762390136719,
+     247.9949951171875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "HTTPS and the Diffie–Hellman key \nexchange",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     259.1180114746094,
+     338.5206298828125,
+     325.9650573730469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "HTTPS is the backbone of the internet, enabling secure online \ntransactions from password entry to online purchases. HTTPS works \nby encrypting messages between the client and the server. Here’s how \nencryption works. You pass a message and a secret key into a function. \nIt then generates an encrypted message.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     481.1549987792969,
+     334.8179931640625,
+     509.1390075683594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To decrypt the message, pass the encrypted message and the same key \ninto a function, and you will get back the original message.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    80.87100219726562,
+    340.6969909667969,
+    290.1510009765625,
+    467.177001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 281,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n256",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     179.32101440429688,
+     323.446533203125,
+     233.1660614013672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When you send some data to a server, your browser encrypts the \nmessage for you, and then the server decrypts it. Simple, right? Except \nfor one thing: How do you make sure your browser and the server have \nthe same key?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     361.8609924316406,
+     323.766845703125,
+     454.71197509765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember that for HTTPS to work, both sides need to have the same \nkey. But how do you agree on a key without someone seeing what it is? \nIf you send the server a key to use, someone could intercept that key. \nHow do you agree on a key so that only your browser and the server \nknow what key you’re using? This seems impossible, but it can be done! \nThere’s a very clever algorithm to do it called the Diffie–Hellman key \nexchange. Here’s how it works.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     457.3739929199219,
+     322.24652099609375,
+     498.21697998046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In step 1, we generate our own keys. I’m the client, and I generate a key \nfor myself. The server also generates a key. These keys are different. We \ndon’t know each other’s keys. They are private to us.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    76.07099914550781,
+    38.00001525878906,
+    258.95098876953125,
+    165.20001220703125
+   ],
+   [
+    100.19099426269531,
+    247.89999389648438,
+    234.83099365234375,
+    347.739990234375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 282,
+  "blocks": [
+   {
+    "bbox": [
+     106.18699645996094,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "HTTPS and the Diffie–Hellman key exchange\n257",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     147.1610107421875,
+     329.7952880859375,
+     175.0020294189453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I’m using a pattern here for each key so I can show you visually what \nhappens. In reality, these would be bytes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     177.66403198242188,
+     207.98464965820312,
+     192.50303649902344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In step 2, we generate a common pattern.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     335.1210021972656,
+     329.8294372558594,
+     362.9620056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This pattern is public. Both of us can see it as well as anyone else. We \ndon’t care who sees it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     365.6240234375,
+     284.7085876464844,
+     380.4630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In step 3, we each overlay this pattern onto our private key.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    109.91099548339844,
+    38.00000762939453,
+    261.1109924316406,
+    133.04000854492188
+   ],
+   [
+    114.59100341796875,
+    207.24099731445312,
+    256.4309997558594,
+    321.0
+   ],
+   [
+    106.39599609375,
+    395.1999816894531,
+    264.62701416015625,
+    515.3709716796875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 283,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n258",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     180.85800170898438,
+     326.8885192871094,
+     221.8440399169922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Doing so gives us our public key. The public key is, well, public, so we \ndon’t care who sees it. The server can see my public key, and I can see its \npublic key.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     224.50604248046875,
+     312.4565124511719,
+     252.34706115722656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Finally, in step 4, I take the server’s public key and overlay it onto my \nprivate key. And the server does the same with my public key.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     450.8240051269531,
+     311.0177001953125,
+     478.6650085449219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Tada! We now have the same key! We both have a key that combines \nthree patterns.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    74.03099822998047,
+    38.0,
+    260.9909973144531,
+    166.8800048828125
+   ],
+   [
+    9.5,
+    267.08099365234375,
+    366.260009765625,
+    436.7030029296875
+   ],
+   [
+    98.75100708007812,
+    493.40301513671875,
+    236.27101135253906,
+    521.9630126953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 284,
+  "blocks": [
+   {
+    "bbox": [
+     106.18699645996094,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "HTTPS and the Diffie–Hellman key exchange\n259",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     343.55206298828125,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Somehow we have both agreed on a key without ever sending the key \nto each other. This key we have agreed on is called the shared secret, and \nthat’s how the Diffie–Hellman key exchange works.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     269.0190124511719,
+     334.5924072265625,
+     296.8600158691406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "HTTPS is a fascinating and important part of our daily lives. Here are \nsome terms you’ll hear about in connection to HTTPS:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     303.87799072265625,
+     328.2905578613281,
+     331.86199951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t TLS—TLS (Transport Layer Security) is a protocol. TLS is how we \nestablish this secure connection.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     338.8800048828125,
+     341.4246520996094,
+     418.8720397949219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t SSL—SSL is the old name for TLS, but people often don’t make a \ndistinction. If you hear someone say SSL, they are probably talking \nabout TLS. People find security holes in these protocols, so they \nconstantly need to be updated. The TLS protocol was first introduced \nin 1999. Every version of the SSL protocol that came before the TLS \nprotocol is broken.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     425.8899841308594,
+     335.3415832519531,
+     479.87799072265625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Symmetric key encryption—In our example, both sides used the \nsame key. There is also something called asymmetric key encryption, \nwhere both sides have different keys. I talked about symmetric key \nencryption because that is what HTTPS uses.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499954223632812,
+     487.03900146484375,
+     338.54144287109375,
+     553.8860473632812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "HTTPS uses a modified version of the Diffie–Hellman key exchange \ncalled the ephemeral Diffie–Hellman key exchange. It works exactly \nlike we just saw, except the private keys are generated fresh for every \nconnection. This means even if an attacker discovers one of the private \nkeys, they can only decrypt the messages from one connection.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    99.99299621582031,
+    90.69700622558594,
+    271.02899169921875,
+    254.89801025390625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 285,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n260",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     313.38275146484375,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The world of cryptography is deep and interesting. If you’d like to  \nlearn more, I highly recommend another Manning book: Real-World \nCryptography by David Wong (https://www.manning.com/books/\nreal-world-cryptography).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     190.4949951171875,
+     217.30824279785156,
+     212.7969970703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Locality-sensitive hashing",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     223.91799926757812,
+     323.4773254394531,
+     251.75901794433594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A lot of hash functions you use will be locality insensitive. Suppose you \nhave a string, and you generate a hash for it using SHA-256.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     305.5780029296875,
+     316.05450439453125,
+     333.41900634765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you change just one character of the string and regenerate the hash, \nit’s totally different!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     380.2779846191406,
+     313.10540771484375,
+     408.1189880371094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is good because an attacker can’t compare hashes to see whether \nthey’re close to cracking a password.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     410.781005859375,
+     313.6785583496094,
+     477.62799072265625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Sometimes, you want the opposite: you want a locality-sensitive hash \nfunction. That’s where Simhash comes in. If you make a small change \nto a string, Simhash generates a hash that’s only a little different. This \nallows you to compare hashes and see how similar two strings are, \nwhich is pretty useful!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     484.78900146484375,
+     306.8464660644531,
+     499.62799072265625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Google uses Simhash to detect duplicates while crawling the web.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     506.7889709472656,
+     326.030517578125,
+     534.6300048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A teacher could use Simhash to see whether a student copied an essay \nfrom the web.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    97.67100524902344,
+    103.6969985961914,
+    237.3509979248047,
+    161.2969970703125
+   ],
+   [
+    100.07200622558594,
+    266.49700927734375,
+    234.95098876953125,
+    291.4570007324219
+   ],
+   [
+    104.27099609375,
+    348.1570129394531,
+    230.75100708007812,
+    366.1570129394531
+   ]
+  ]
+ },
+ {
+  "pdf_index": 286,
+  "blocks": [
+   {
+    "bbox": [
+     131.39100646972656,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Min heaps and priority queues\n261",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     342.3266296386719,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Scribd allows users to upload documents or books to share with \nothers. But Scribd doesn’t want users uploading copyrighted content! \nThe site could use Simhash to check whether an upload is similar to a \nHarry Potter book and, if so, reject it automatically.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500015258789062,
+     91.62503051757812,
+     289.2185974121094,
+     106.46402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Simhash is useful when you want to check for similar items.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     136.19500732421875,
+     271.0921936035156,
+     158.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Min heaps and priority queues",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     169.61801147460938,
+     293.0673522949219,
+     197.4590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Min heaps are a data structure built using trees. These heaps \nstore a bunch of numbers. Here is an example of a min heap.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     200.12103271484375,
+     298.4915466308594,
+     253.96607971191406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Min heaps let you get the smallest element in the heap \nquickly since the smallest value is always the root. This is the \nmain usefulness of the min heap. You can look at the smallest \nelement in O(1) time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     380.5950012207031,
+     336.1996154785156,
+     408.5790100097656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Or, in O(log n) time, you can remove it from the heap with a new min \nin its place:",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    94.08799743652344,
+    256.697021484375,
+    230.6479949951172,
+    366.61700439453125
+   ],
+   [
+    116.72900390625,
+    411.3170166015625,
+    254.29400634765625,
+    547.0
+   ],
+   [
+    309.23699951171875,
+    152.85198974609375,
+    395.8760070800781,
+    254.61199951171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 287,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n262",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     301.11541748046875,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Heaps let you sort very easily. Keep asking for the minimum value.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     226.04800415039062,
+     324.54425048828125,
+     266.8910217285156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And keep putting the values in order. At the end, the tree will be empty, \nand you will have a sorted list of numbers! This algorithm is called \nheapsort.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500003814697266,
+     269.55303955078125,
+     295.81353759765625,
+     297.39404296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Max heaps are very similar to min heaps, but now the root is the  \nlargest value.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     470.00799560546875,
+     323.41259765625,
+     549.8569946289062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Heaps are great for implementing priority queues. We met the queue \ndata structure in chapter 6. Remember that queues are a FIFO (first in, \nfirst out) data structure. (In contrast, a stack is a LIFO [last in, first out] \ndata structure.) Well, a priority queue is just like a queue, except when \nyou ask for an item, it gives you the item with the highest priority! A \nto-do list application is a great use case for a priority queue. First, you",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    64.69700622558594,
+    325.5220031738281,
+    211.927001953125
+   ],
+   [
+    96.83200073242188,
+    300.12799072265625,
+    238.1909942626953,
+    455.8869934082031
+   ]
+  ]
+ },
+ {
+  "pdf_index": 288,
+  "blocks": [
+   {
+    "bbox": [
+     148.18899536132812,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Linear programming\n263",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     342.87554931640625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "put in your to-dos. Then you ask for something to work on, and your \npriority queue gives you the next highest priority to-do. Priority queues \nare also used to implement an efficient version of Dijkstra’s algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     105.69500732421875,
+     193.20619201660156,
+     127.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Linear programming",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     139.11801147460938,
+     345.7585144042969,
+     166.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I saved the best for last. Linear programming is one of the coolest things \nI know.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     169.62103271484375,
+     340.510498046875,
+     249.47010803222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Linear programming is used to maximize something given some linear \nconstraints. For example, suppose your company makes two products, \nshirts and totes. Shirts need 1 m of fabric and five buttons. Totes need \n2 m of fabric and two buttons. You have 11 meters of fabric and 20 \nbuttons. You make $2 per shirt and $3 per tote. How many shirts and \ntotes should you make to maximize your profit?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     252.13211059570312,
+     327.674560546875,
+     279.9731140136719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here you’re trying to maximize profit, and you’re constrained by the \namount of materials you have.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     282.6351318359375,
+     346.0213928222656,
+     388.4881896972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Another example: you’re a politician, and you want to maximize the \nnumber of votes you get. Your research has shown that it takes an \naverage of 1 hour of work (marketing, research, and so on) for each vote \nfrom a San Franciscan or 1.5 hours/vote from a Chicagoan. You need at \nleast 500 San Franciscans and at least 300 Chicagoans. You have 50 days. \nIt costs you $2/San Franciscan versus $1/Chicagoan. Your total budget \nis $1,500. What’s the maximum number of total votes you can get (San \nFrancisco + Chicago)?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     391.15020751953125,
+     332.0855407714844,
+     418.9911804199219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here you’re trying to maximize votes, and you’re constrained by time \nand money.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     421.6531982421875,
+     345.9896240234375,
+     501.5021667480469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You might be thinking, “You’ve talked about a lot of optimization topics \nin this book. How are they related to linear programming?” All the \ngraph algorithms we have discussed in this book can be done through \nlinear programming instead. Linear programming is a much more \ngeneral framework, and the graph problems we have seen are a subset of \nthat. I hope your mind is blown!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     504.1642150878906,
+     309.0075988769531,
+     545.0072021484375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Linear programming uses the Simplex algorithm. It’s a complex \nalgorithm, which is why I didn’t include it in this book. If you’re \ninterested in optimization, look up linear programming!",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 289,
+  "blocks": [
+   {
+    "bbox": [
+     9.500991821289062,
+     -3.6251630783081055,
+     239.22508239746094,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 13  I  where to go next\n264",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     80.72599792480469,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Epilogue",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     322.4664611816406,
+     120.9660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I hope this quick tour of 10 algorithms showed you how much more is \nleft to discover. I think the best way to learn is to find something you’re \ninterested in and dive in. This book gives you a solid foundation to do \njust that.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ }
+]

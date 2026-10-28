@@ -1,0 +1,5836 @@
+[
+ {
+  "pdf_index": 290,
+  "blocks": [
+   {
+    "bbox": [
+     262.9630126953125,
+     -7.2039947509765625,
+     414.2539978027344,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "A\nperformance",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     270.8290100097656,
+     22.003999710083008,
+     364.4397277832031,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 9968414,
+    "text": "of AVL trees",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     204.97799682617188,
+     322.3714294433594,
+     246.01902770996094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This appendix discusses the performance of AVL trees, which were \nintroduced in chapter 8. You will need to read that chapter before \nreading this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     248.53802490234375,
+     230.13865661621094,
+     315.72607421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember that AVL trees offer O(log n) \nsearch performance. But there is something \nmisleading going on. Here are two trees. Both \noffer O(log n) search performance, but their \nheights are different!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     544.4979858398438,
+     213.75961303710938,
+     559.3370361328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "(Dashed nodes show the holes in the tree.)",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    27.5,
+    330.45703125,
+    207.5,
+    530.3770141601562
+   ],
+   [
+    247.99099731445312,
+    237.96499633789062,
+    415.031005859375,
+    420.364990234375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 291,
+  "blocks": [
+   {
+    "bbox": [
+     9.504013061523438,
+     -3.6251630783081055,
+     255.02218627929688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix A  I  performance of AVL trees\n266",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     328.051025390625,
+     127.9690933227539
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "AVL trees allow a difference of one in heights. That’s why, even though \nboth these trees have 15 nodes, the perfectly balanced tree is height \n3, but the AVL tree is height 4. The perfectly balanced tree is what we \nmight picture a balanced tree to look like, where each level is completely \nfilled with nodes before a new level is added. But the AVL tree is also \nconsidered “balanced,” even though it has holes—gaps where a node \ncould be.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     130.631103515625,
+     325.2713623046875,
+     171.47413635253906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember that in a tree, performance is closely related to height. How \ncan these trees offer the same performance if their heights are different? \nWell, we never discussed what the base in log n is!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     173.99313354492188,
+     323.57635498046875,
+     253.98521423339844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The perfectly balanced tree has performance O(log n), where the “log” \nis log base 2, just like binary search. We can see that in the picture. \nEach new level doubles the nodes plus 1. So a perfectly balanced tree of \nheight 1 has 3 nodes, of height 2 has 7 nodes (32 + 1), of height 3 has \n15 nodes (72 + 1), etc. You could also think of it as each layer adds a \nnumber of nodes equal to a power of 2.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     398.8349914550781,
+     305.8674621582031,
+     426.8190002441406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So the perfectly balanced tree has performance O(log n), where the \n“log” is log base 2.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     429.3379821777344,
+     323.2947998046875,
+     470.323974609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The AVL tree has some gaps. In an AVL tree, each new layer adds less \nthan double the nodes. It turns out that an AVL offers performance \nO(log n), but the “log” is log base phi (aka the golden ratio, aka ~1.618).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     473.1839904785156,
+     325.2384948730469,
+     527.6229858398438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is a small but interesting difference—AVL trees offer performance \nthat is not quite as good as perfectly balanced trees since the base is \ndifferent. But the performance is still very close, since both are O(log n) \nafter all. Just know it’s not exactly the same.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    81.95099639892578,
+    268.6969909667969,
+    253.07098388671875,
+    384.85699462890625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 292,
+  "blocks": [
+   {
+    "bbox": [
+     289.6940002441406,
+     -7.2039947509765625,
+     411.75799560546875,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "B\nNP-hard \nproblems",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     204.97799682617188,
+     338.7965393066406,
+     245.82102966308594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Both the set-covering and traveling salesperson problems have \nsomething in common: they are hard to solve. You have to check every \npossible iteration to find the smallest set cover or the shortest route.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     248.34002685546875,
+     343.3265380859375,
+     315.330078125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Both of these problems are NP-hard. The terms NP, NP-hard, and NP-\ncomplete can cause a lot of confusion. They certainly confused me. In \nthis appendix, I’ll try to explain what all these terms mean, but I need \nto explain some other concepts first. Here is a roadmap of the things we \nwill learn and how they depend on each other:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     491.3949890136719,
+     304.0895080566406,
+     532.3810424804688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But, first, I need to explain what a decision problem is because  \nall the problems we will look at in the rest of this appendix are  \ndecision problems.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    114.44000244140625,
+    330.0570068359375,
+    255.55999755859375,
+    477.4169921875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 293,
+  "blocks": [
+   {
+    "bbox": [
+     9.503997802734375,
+     -3.6251630783081055,
+     242.68411254882812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix B  I  NP-hard problems\n268",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     158.2501983642578,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Decision problems",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     327.9598693847656,
+     120.9660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "NP-complete problems are always decision problems. A decision \nproblem has a yes-or-no answer. The traveling salesperson problem is \nnot a decision problem. It’s asking you to find the shortest path, which is \nan optimization problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     156.89100646972656,
+     135.8100128173828,
+     178.13101196289062,
+     148.20001220703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     20.095977783203125,
+     153.14651489257812,
+     316.9056091308594,
+     176.574462890625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "I know I was talking about NP-hard problems in the introduction, and now I’m \ntalking about NP-complete problems. I’ll explain what the difference is soon.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499977111816406,
+     371.1080017089844,
+     280.7445068359375,
+     385.9469909667969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s a decision version of the traveling salesperson problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     29.499977111816406,
+     350.8420104980469,
+     111.30247497558594,
+     359.75201416015625
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Find the shortest path!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     29.499977111816406,
+     540.967041015625,
+     82.62996673583984,
+     559.875244140625
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Is there a path \nof length 5?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    78.81097412109375,
+    195.89999389648438,
+    256.21197509765625,
+    362.98699951171875
+   ],
+   [
+    79.9999771118164,
+    394.68701171875,
+    255.02297973632812,
+    560.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 294,
+  "blocks": [
+   {
+    "bbox": [
+     140.43600463867188,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The satisfiability problem\n269",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     342.5345764160156,
+     114.96707916259766
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice how this question has a yes-or-no answer: is there a path of \nlength 5? I wanted to talk about decision problems up front because \nall NP-complete problems are decision problems. So all the problems \nI discuss in the rest of this appendix will be decision problems. So when \nyou see “traveling salesperson” mentioned in the rest of this appendix, I \nmean the decision version of the traveling salesperson problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500038146972656,
+     117.62908935546875,
+     344.07452392578125,
+     145.47010803222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now let’s start learning what NP-complete actually means! The first step \nis to learn about the satisfiability (SAT) problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     170.19500732421875,
+     231.31224060058594,
+     192.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "The satisfiability problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     300.2380065917969,
+     275.0065612792969,
+     315.0769958496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Jerry, George, Elaine, and Kramer are all ordering pizza.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     317.739013671875,
+     195.38967895507812,
+     332.5780029296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "“Ooh, let’s get pepperoni!” says Elaine.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     335.2400207519531,
+     308.5345764160156,
+     363.0810241699219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "“Pepperoni is good. Sausage is good. We could get pepperoni or \nsausage,” says Jerry.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     365.60003662109375,
+     340.6040344238281,
+     393.5840148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "“Get me an olive pizza to maintain my complexion,” says Kramer. “Lots \nof olives. Or, onions.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500030517578125,
+     396.10302734375,
+     335.7398376464844,
+     424.0870056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "“I can do any pizza but no onions,” says George. “I can’t take any more \nonions, Jerry!”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500030517578125,
+     426.7490234375,
+     341.45770263671875,
+     454.5899963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "“Oh boy. OK, let me figure this out. So what toppings do I need again?” \nsays Jerry.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500030517578125,
+     457.25201416015625,
+     277.8016357421875,
+     472.09100341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Can you help him out? Here are everyone’s requirements:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500030517578125,
+     479.2519836425781,
+     119.139892578125,
+     494.09100341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Pepperoni (Elaine)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     500.2510070800781,
+     161.22474670410156,
+     515.0900268554688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Pepperoni or sausage (Jerry)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     521.25,
+     152.44789123535156,
+     536.0890502929688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Olives or onions (Kramer)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     542.2489624023438,
+     124.38688659667969,
+     557.0880126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t No onions (George)",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    200.19700622558594,
+    381.260009765625,
+    286.11700439453125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 295,
+  "blocks": [
+   {
+    "bbox": [
+     9.503997802734375,
+     -3.6251630783081055,
+     242.68411254882812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix B  I  NP-hard problems\n270",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     308.3765563964844,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "See if you can figure out what toppings the pizza should have before \nmoving on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     65.62100219726562,
+     313.9646301269531,
+     106.46402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Did you get it? A pepperoni and olive pizza satisfies all the \nrequirements. This is an example of a SAT problem. In pseudocode, I \ncould write it like this. First, I have four boolean variables:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     114.12864685058594,
+     89.30120086669922,
+     153.12562561035156
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "pepperoni = ?\nsausage = ?\nolives = ?\nonions = ?",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     162.61801147460938,
+     165.36778259277344,
+     177.45701599121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then I write out a boolean formula:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     185.12864685058594,
+     306.74365234375,
+     204.1276397705078
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "(pepperoni) and (pepperoni or sausage) and (olives or \nonions) and (not onions)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     209.11801147460938,
+     319.00152587890625,
+     249.96104431152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This formula contains the requirements for each person in the form of \nboolean logic. The SAT problem asks the question: Can you set these \nvariables to some values so that the statement evaluates to true?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500885009765625,
+     252.6190185546875,
+     327.0993957519531,
+     319.466064453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The SAT problem is famous because it is the first NP-complete problem, \ndescribed in 1971 (although I don’t think the authors used Seinfeld as \nan example). Before this, the concept of an NP-complete problem did \nnot exist. Here is how the SAT problem works. You start with a boolean \nformula:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     327.128662109375,
+     218.19638061523438,
+     346.1276550292969
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "if (pepperoni) and (olives or onions):\n    print(\"pizza\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     355.6180114746094,
+     305.4956970214844,
+     383.4590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then you ask, is there some way we can assign our variables so that \ncode prints pizza?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.496978759765625,
+     386.1180114746094,
+     316.2258605957031,
+     426.958984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This example is pretty easy, so we can solve it ourselves. If pepperoni \nand onions are true, this code will print pizza. So the answer would \nbe yes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.50299072265625,
+     429.4779968261719,
+     192.14698791503906,
+     444.4599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s one where the answer would be no:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     452.128662109375,
+     312.14007568359375,
+     471.12762451171875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "if (olives or onions) and (not olives) and (not onions):\n    print(\"pizza\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     480.6180114746094,
+     279.6324768066406,
+     508.458984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There is nothing you can set the variables to so this code will  \nprint pizza!",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 296,
+  "blocks": [
+   {
+    "bbox": [
+     140.43600463867188,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The satisfiability problem\n271",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     186.13800048828125,
+     342.13299560546875,
+     214.1220245361328
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The SAT problem always looks for a yes-or-no answer, so it is a decision \nproblem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     216.78402709960938,
+     342.0615234375,
+     244.6250457763672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "SAT is actually a pretty hard problem. Here is a tougher example just to \ngive you an idea:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     252.29164123535156,
+     318.6839904785156,
+     284.2866516113281
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "if (pepperoni or not olives) and (onions or not \npepperoni) and (not olives or not pepperoni):        \n  print(\"pizza\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     293.781005859375,
+     271.92767333984375,
+     360.6280517578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You don’t need to solve this one. I’m just showing it \nas an example so you can appreciate how hard this \nproblem can get. You can have any number of variables \nand any number of clauses, and the problems get pretty \nhard pretty quickly.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     363.1470642089844,
+     272.3874816894531,
+     417.1199951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "With n toppings, there are 2n possible pizzas. If \nyou list them all out and check each one, you get \nsomething called a truth table. Here’s the truth table for \npepperoni and (olives or onions).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.498001098632812,
+     419.7820129394531,
+     261.4305419921875,
+     473.6269836425781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Sometimes you need to list every option, just like the \nset-covering problem and the traveling salesperson \nproblem! In fact, the SAT problem is just as hard as \nthese two problems. It has a big O run time of O(2n).",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    34.430999755859375,
+    38.0,
+    336.5920104980469,
+    172.16000366210938
+   ],
+   [
+    282.4419860839844,
+    283.6920166015625,
+    404.60198974609375,
+    541.4530029296875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 297,
+  "blocks": [
+   {
+    "bbox": [
+     9.503997802734375,
+     -3.6251630783081055,
+     242.68411254882812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix B  I  NP-hard problems\n272",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     237.2342529296875,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Hard to solve, quick to verify",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     327.91375732421875,
+     133.9680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We often see problems where finding a solution is much harder than \nverifying a solution. Suppose I ask you to come up with a sentence that \nis a palindrome (it reads the same backward and forward) that includes \nthe words cat and car. How long do you think it would take you to come \nup with that sentence?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     136.487060546875,
+     327.54852294921875,
+     164.47108459472656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now suppose I tell you that I know a sentence like that. Here it is: Was it \na car or a cat I saw?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     167.13308715820312,
+     315.8995361328125,
+     194.97410583496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It would take you much less time to verify that claim than to come up \nwith your own sentence. Verifying was quicker than solving!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     197.6361083984375,
+     324.9765625,
+     264.483154296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A SAT problem is as hard to solve as the set-covering problem or the \ntraveling salesperson problem, but unlike those problems, verifying \na solution is easy. For example, for this question that we gave earlier: \n(pepperoni or not olives) and (onions or not pepperoni) and (not olives \nor not pepperoni), here’s a solution:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     272.13165283203125,
+     110.45568084716797,
+     301.129638671875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "pepperoni = False\nolives = False\nonions = False",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     310.6210021972656,
+     316.2476806640625,
+     351.4620056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can quickly check for yourself that these values will make that \nboolean formula true. Checking those values was faster than solving  \nit yourself!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     97.58198547363281,
+     353.98101806640625,
+     309.9667663574219,
+     368.9630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The SAT problem is quick to verify, so it is in NP.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     97.58198547363281,
+     371.4820251464844,
+     317.0286865234375,
+     425.4700012207031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "NP is the class of problems that can be verified in \npolynomial time. NP problems may or may not \nbe easy to solve, but they are easy to verify. This is \ndifferent from P.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    171.2310028076172,
+    440.20001220703125,
+    251.87100219726562,
+    547.0
+   ],
+   [
+    9.5,
+    361.80499267578125,
+    85.58000183105469,
+    461.885009765625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 298,
+  "blocks": [
+   {
+    "bbox": [
+     165.58999633789062,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Reductions\n273",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.97500991821289,
+     323.914794921875,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A problem is in P if it can be verified and solved in polynomial time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     52.61898422241211,
+     314.88043212890625,
+     93.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Polynomial time means its big O is not bigger than a polynomial. \nI won’t define what a polynomial is in this book, but here’s two \npolynomials.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     128.87799072265625,
+     289.61572265625,
+     143.7169952392578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And here are a couple of examples that are not polynomials.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     185.93798828125,
+     254.86549377441406,
+     213.7790069580078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "P is a subset of NP. So NP contains all the problems \nin P, plus others.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     259.3730163574219,
+     84.9120101928711,
+     278.7490234375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "P vs. NP",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499969482421875,
+     284.68902587890625,
+     336.84490966796875,
+     346.30902099609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You may have heard of the famous P versus NP problem. We just saw that \nthe problems in P are both quick to verify and quick to solve. The problems \nin NP are quick to verify but may or may not be quick to solve. The P versus \nNP problem asks whether every problem that is quick to verify is also quick \nto solve. If that is the case, P wouldn’t be a subset of NP; P would equal NP.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     365.8299865722656,
+     329.181640625,
+     393.6709899902344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "NP-hard is the next term we will define, but first we need to (briefly) \ndiscuss what a reduction is.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     423.406982421875,
+     117.59002685546875,
+     445.708984375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Reductions",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     456.8299865722656,
+     342.5356750488281,
+     497.6730041503906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What do you do when you have a hard problem? Change the problem \nto one you can solve! In real life, when we’re faced with a hard problem, \nit is extremely common to change the problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     500.3349914550781,
+     319.7557067871094,
+     528.176025390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s one you can try right now. How do you multiply two binary \nnumbers? Try multiplying these two binary numbers:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     535.8406372070312,
+     82.71771240234375,
+     544.8406372070312
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "101 * 110",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    135.59100341796875,
+    102.197021484375,
+    235.43099975585938,
+    118.75701904296875
+   ],
+   [
+    151.0709991455078,
+    154.4569854736328,
+    219.95098876953125,
+    175.81698608398438
+   ],
+   [
+    274.8819885253906,
+    164.58299255371094,
+    343.52197265625,
+    240.66299438476562
+   ]
+  ]
+ },
+ {
+  "pdf_index": 299,
+  "blocks": [
+   {
+    "bbox": [
+     9.503997802734375,
+     -3.6251630783081055,
+     242.68411254882812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix B  I  NP-hard problems\n274",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     311.47601318359375,
+     75.95902252197266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you’re like me, you didn’t try to figure out how to do the \nmultiplication in binary. You just figured out that 101 is 5 in decimal \nand 110 is 6, and then you multiplied 5 and 6 instead.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.497001647949219,
+     78.61898803710938,
+     326.41461181640625,
+     119.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is called a reduction. You are reducing a problem that you don’t \nknow how to solve to a problem you do know how to solve. This is done \nall the time in computer science.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     220.34698486328125,
+     75.41600036621094,
+     242.64898681640625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "NP-hard",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     253.76998901367188,
+     268.9866638183594,
+     268.6089782714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We have already seen three examples of NP-hard problems:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     275.7699890136719,
+     131.01593017578125,
+     290.6089782714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The set-covering problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     297.7699890136719,
+     168.66783142089844,
+     312.6089782714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The traveling salesperson problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     319.7699890136719,
+     95.88299560546875,
+     334.6089782714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The SAT problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     337.12799072265625,
+     321.9273681640625,
+     365.11199951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "(Remember, I mean the decision versions of these problems—all the \nproblems we look at in the rest of this appendix are decision problems.)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     367.7740173339844,
+     325.58282470703125,
+     408.61700439453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The three previously noted problems are NP-hard. We say a problem is \nNP-hard if any problem in NP can be reduced to that problem. This is the \ndefinition of NP-hard.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     411.2790222167969,
+     301.9427185058594,
+     439.1200256347656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can also reduce all NP problems to any NP-hard problem. For \nexample, you can reduce all NP problems to SAT.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    78.5530014038086,
+    128.19699096679688,
+    256.4700012207031,
+    191.14898681640625
+   ],
+   [
+    78.76200103759766,
+    447.8489990234375,
+    256.260009765625,
+    553.1170043945312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 300,
+  "blocks": [
+   {
+    "bbox": [
+     162.23300170898438,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "NP-complete\n275",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     339.2125244140625,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "One extra requirement is that you need to be able to reduce all these \nproblems in polynomial time. That “in polynomial time” is important \nbecause you don’t want the reducing part to be the bottleneck. Any NP \nproblem can be reduced to SAT in polynomial time, so it is NP-hard.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.50000762939453,
+     91.62503051757812,
+     327.44476318359375,
+     132.4680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Since any problem in NP can be reduced to any NP-hard problem, a \npolynomial time solution for any one NP-hard problem gives us  \na polynomial time solution for every problem in NP!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     152.69500732421875,
+     131.25201416015625,
+     174.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "NP-complete",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     186.11801147460938,
+     145.92379760742188,
+     200.95701599121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We’ve seen two definitions:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     208.11801147460938,
+     323.5507507324219,
+     235.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Problems in NP are quick to verify and may or may not be quick  \nto solve.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     243.1199951171875,
+     304.3237609863281,
+     283.9630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Problems that are NP-hard are at least as hard as the hardest  \nproblems in NP, and any problem in NP can be reduced  \nto a problem in NP-hard.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     286.4820251464844,
+     340.3578186035156,
+     314.4660339355469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now here’s my final definition: a problem is NP-complete if it is both NP \nand NP-hard.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     473.1579895019531,
+     144.6708984375,
+     487.9969787597656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "NP-complete problems are",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     495.1579895019531,
+     340.6656188964844,
+     522.9990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Hard to solve (at least right now; if someone proves that P = NP, they \nwould not be)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     530.1599731445312,
+     95.9299087524414,
+     544.9990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Easy to verify",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    98.87100219726562,
+    323.1969909667969,
+    272.1510009765625,
+    465.0369873046875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 301,
+  "blocks": [
+   {
+    "bbox": [
+     9.503997802734375,
+     -3.6251630783081055,
+     242.68411254882812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix B  I  NP-hard problems\n276",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     291.2176818847656,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And any problem in NP can be reduced to a problem that is NP-\ncomplete.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     65.62100219726562,
+     216.69268798828125,
+     80.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here are the terms we defined in this appendix:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     87.62100219726562,
+     100.97489929199219,
+     102.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Decision problems",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     109.62100219726562,
+     95.88299560546875,
+     124.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The SAT problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     131.62100219726562,
+     71.5730209350586,
+     146.4600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t P versus NP",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     153.62100219726562,
+     68.1399154663086,
+     168.4600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Reductions",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     175.62100219726562,
+     56.558013916015625,
+     190.4600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t NP-hard",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     197.62100219726562,
+     76.2799072265625,
+     212.4600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t NP-complete",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     215.12200927734375,
+     320.7416687011719,
+     242.96302795410156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When you see a discussion about NP-complete problems, I hope you’ll \nfeel more confident about what these terms mean!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     272.69500732421875,
+     58.13600158691406,
+     294.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     310.6180114746094,
+     294.57159423828125,
+     325.4570007324219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A problem is in P if it is both quick to solve and quick to verify.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     332.6180114746094,
+     321.0365295410156,
+     360.4590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A problem is in NP if it is quick to verify. It may or may not be quick \nto solve.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     367.6199951171875,
+     327.1866149902344,
+     395.4609680175781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If we find a fast (polynomial time) algorithm for every problem in NP, \nthen P = NP.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     402.6219787597656,
+     295.419677734375,
+     430.4629821777344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A problem is NP-hard if any problem in NP can be reduced to  \nthat problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     437.6239929199219,
+     275.8395080566406,
+     452.4629821777344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If a problem is in both NP and NP-hard, it is NP-complete.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 302,
+  "blocks": [
+   {
+    "bbox": [
+     272.9580078125,
+     -7.2039947509765625,
+     411.32598876953125,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "C\nanswers \nto exercises",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     206.59088134765625,
+     98.80060577392578,
+     221.33499145507812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 1",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     224.98098754882812,
+     340.5616149902344,
+     265.8240051269531
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.1\t Suppose you have a sorted list of 128 names, and you’re searching \nthrough it using binary search. What’s the maximum number of \nsteps it would take?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     268.3429870605469,
+     98.98297882080078,
+     283.3249816894531
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: 7.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     285.9809875488281,
+     319.4405822753906,
+     313.8219909667969
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.2\t Suppose you double the size of the list. What’s the maximum \nnumber of steps now?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     316.34100341796875,
+     96.4859848022461,
+     331.322998046875
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: 8.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     333.9809875488281,
+     344.7636413574219,
+     361.8219909667969
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.3\t You have a name, and you want to find the person’s phone number \nin the phone book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     364.34100341796875,
+     129.21099853515625,
+     379.322998046875
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: O(log n).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     381.9809875488281,
+     344.13671875,
+     422.8240051269531
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.4\t You have a phone number, and you want to find the person’s name \nin the phone book. (Hint: You’ll have to search through the whole \nbook!)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     425.3429870605469,
+     112.88700103759766,
+     440.3249816894531
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: O(n).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     442.9809875488281,
+     341.6716003417969,
+     457.8199768066406
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.5\t You want to read the numbers of every person in the phone book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     460.3389892578125,
+     112.88700103759766,
+     475.32098388671875
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: O(n).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     477.8379821777344,
+     248.3387908935547,
+     492.8199768066406
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.6\t You want to read the numbers of just the As.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     495.3389892578125,
+     338.7444763183594,
+     562.3290405273438
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: O(n). You may think, “I’m only doing this for 1 out of \n26 characters, so the run time should be O(n/26).” A simple rule \nto remember is to ignore numbers that are added, subtracted, \nmultiplied, or divided. None of these are correct big O run times: \nO(n + 26), O(n – 26), O(n * 26), O(n/26). They’re all the same as",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 303,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     -3.6251630783081055,
+     245.91107177734375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix C  I  answers to exercises\n278",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     33.5,
+     34.97500991821289,
+     327.6917419433594,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "O(n)! Why? If you’re curious, flip to “big O notation revisited” in \nchapter 4 and read up on constants in big O notation (a constant is \njust a number; 26 was the constant in this question).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     89.7279052734375,
+     80.80060577392578,
+     104.47200775146484
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 2",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     108.11801147460938,
+     307.17266845703125,
+     122.9570083618164
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.1\t Suppose you’re building an app to keep track of your finances.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     223.09799194335938,
+     320.7307434082031,
+     276.9430236816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Every day, you write down everything you spent money on. At \nthe end of the month, you review your expenses and sum up \nhow much you spent. So, you have lots of inserts and a few reads. \nShould you use an array or a list?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     279.4620056152344,
+     322.95166015625,
+     385.4580993652344
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: In this case, you’re adding expenses to the list every day \nand reading all the expenses once a month. Arrays have fast reads \nand slow inserts. Linked lists have slow reads and fast inserts. \nBecause you’ll be inserting more often than reading, it makes \nsense to use a linked list. Also, linked lists have slow reads only \nif you’re accessing random elements in the list. Because you’re \nreading every element in the list, linked lists will do well on reads, \ntoo. So a linked list is a good solution to this problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     388.0979919433594,
+     323.40057373046875,
+     454.9449768066406
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.2 \t Suppose you’re building an app for restaurants to take customer \norders. Your app needs to store a list of orders. Servers keep adding \norders to this list, and chefs take orders off the list and make them. \nIt’s an order queue: servers add orders to the back of the queue, and \nthe chef takes the first order off the queue and cooks it.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    116.87100219726562,
+    137.69699096679688,
+    218.1510009765625,
+    208.97698974609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 304,
+  "blocks": [
+   {
+    "bbox": [
+     149.68800354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "answers to exercises\n279",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     143.42401123046875,
+     346.0214538574219,
+     239.27806091308594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Would you use an array or a linked list to implement this queue? \n(Hint: Linked lists are good for inserts/deletes, and arrays are good \nfor random access. Which one are you going to be doing here?) \n\t\nAnswer: A linked list. Lots of inserts are happening (servers \nadding orders), which linked lists excel at. You don’t need search \nor random access (what arrays excel at) because the chefs always \ntake the first order off the queue.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     240.42401123046875,
+     345.241455078125,
+     427.2919921875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.3 \t Let’s run a thought experiment. Suppose Facebook keeps a list of \nusernames. When someone tries to log in to Facebook, a search is \ndone for their username. If their name is in the list of usernames, \nthey can log in. People log in to Facebook pretty often, so there are \na lot of searches through this list of usernames. Suppose Facebook \nuses binary search to search the list. Binary search needs random \naccess—you need to be able to get to the middle of the list of \nusernames instantly. Knowing this, would you implement the list \nas an array or a linked list? \n\t\nAnswer: A sorted array. Arrays give you random access—you can \nget an element from the middle of the array instantly. You can’t \ndo that with linked lists. To get to the middle element in a linked \nlist, you’d have to start at the first element and follow all the links \ndown to the middle element.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     428.4239807128906,
+     339.4164733886719,
+     563.2839965820312
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.4\t People sign up for Facebook pretty often, too. Suppose you \ndecided to use an array to store the list of users. What are the \ndownsides of an array for inserts? In particular, suppose you’re \nusing binary search to search for logins. What happens when you \nadd new users to an array?\n\t\nAnswer: Inserting into arrays is slow. Also, if you’re using binary \nsearch to search for usernames, the array needs to be sorted. \nSuppose someone named Adit B signs up for Facebook. Their \nname will be inserted at the end of the array. So you need to sort \nthe array every time a name is inserted!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    38.657997131347656,
+    31.00000762939453,
+    332.3639831542969,
+    135.30300903320312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 305,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     -3.6251630783081055,
+     245.91107177734375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix C  I  answers to exercises\n280",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.62099838256836,
+     328.07586669921875,
+     127.47208404541016
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "2.5\t In reality, Facebook uses neither an array nor a linked list to store \nuser information. Let’s consider a hybrid data structure: an array \nof linked lists. You have an array with 26 slots. Each slot points to a \nlinked list. For example, the first slot in the array points to a linked \nlist containing all the usernames starting with A. The second slot \npoints to a linked list containing all the usernames starting with B, \nand so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     262.8810119628906,
+     324.04052734375,
+     329.7280578613281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose Adit B signs up for Facebook, and you want to add them \nto the list. You go to slot 1 in the array, go to the linked list for slot \n1, and add Adit B at the end. Now, suppose you want to search for \nZakhir H. You go to slot 26, which points to a linked list of all the \nZ names. Then you search through that list to find Zakhir H.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     332.3900146484375,
+     321.4324645996094,
+     386.2350158691406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Compare this hybrid data structure to arrays and linked lists. Is it \nslower or faster than each for searching and inserting? You don’t \nhave to give big O run times, just whether the new data structure \nwould be faster or slower.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     388.7539978027344,
+     327.8454284667969,
+     481.74798583984375
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Searching—slower than arrays, faster than linked lists. \nInserting—faster than arrays, same amount of time as linked lists. \nSo it’s slower for searching than an array, but faster or the same as \nlinked lists for everything. We’ll talk about another hybrid data \nstructure called a hash table later in the book. This should give you \nan idea of how you can build up more complex data structures \nfrom simple ones.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     484.4100036621094,
+     308.5744934082031,
+     538.2550048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So what does Facebook really use? It probably uses a dozen \ndifferent databases with different data structures behind them: \nhash tables, B-trees, and others. Arrays and linked lists are the \nbuilding blocks for these more complex data structures.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    33.5,
+    142.20001220703125,
+    379.58099365234375,
+    248.760009765625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 306,
+  "blocks": [
+   {
+    "bbox": [
+     149.68800354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "answers to exercises\n281",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     36.730899810791016,
+     98.80060577392578,
+     51.474998474121094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 3",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     227.85565185546875,
+     69.95999908447266
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "3.1\t Suppose I show you a call stack like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     171.06100463867188,
+     334.9126281738281,
+     185.90000915527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What information can you give me, just based on this call stack?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     188.41900634765625,
+     262.47857666015625,
+     203.40101623535156
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Here are some things you could tell me:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     206.06100463867188,
+     297.8109130859375,
+     220.90199279785156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The greet function is called first, with name = maggie.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     223.56100463867188,
+     338.2689514160156,
+     251.40000915527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then the greet function calls the greet2 function, with name = \nmaggie.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.50299835205078,
+     254.06100463867188,
+     335.0146484375,
+     281.9020080566406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "At this point, the greet function is in an incomplete, suspended \nstate.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.501998901367188,
+     284.5610046386719,
+     264.294921875,
+     299.4029846191406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The current function call is the greet2 function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499000549316406,
+     302.0610046386719,
+     341.7237548828125,
+     316.9010009765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "After this function call completes, the greet function will resume.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     319.5610046386719,
+     342.4085388183594,
+     373.4060363769531
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "3.2\t Suppose you accidentally write a recursive function that runs \nforever. As you saw, your computer allocates memory on the \nstack for each function call. What happens to the stack when your \nrecursive function runs forever?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     375.9250183105469,
+     346.01007080078125,
+     416.9109802246094
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: The stack grows forever. Each program has a limited amount \nof space on the call stack. When your program runs out of space \n(which it eventually will), it will exit with a stack-overflow error.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    126.23100280761719,
+    84.70000457763672,
+    244.79100036621094,
+    156.94000244140625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 307,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     -3.6251630783081055,
+     245.91107177734375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix C  I  answers to exercises\n282",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     36.730899810791016,
+     80.80060577392578,
+     51.474998474121094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 4",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.32101058959961,
+     241.1495361328125,
+     70.1600112915039
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.1\t Write out the code for the earlier sum function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     72.87698364257812,
+     68.20100402832031,
+     87.8589859008789
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     33.5,
+     95.20502471923828,
+     197.6553497314453,
+     136.06503295898438
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def sum(list):\n  if list == []:\n    return 0\n  return list[0] + sum(list[1:])",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     144.02099609375,
+     315.2774963378906,
+     158.86000061035156
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.2\t Write a recursive function to count the number of items in a list.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     161.37899780273438,
+     68.20100402832031,
+     176.3610076904297
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     33.5,
+     183.70498657226562,
+     178.8867950439453,
+     224.56497192382812
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def count(list):\n  if list == []:\n    return 0\n  return 1 + count(list[1:])",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     232.52099609375,
+     318.424560546875,
+     247.36000061035156
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.3\t Write a recursive function to find the maximum number in a list.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     250.07699584960938,
+     68.48700714111328,
+     265.0589904785156
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     33.5,
+     272.4049987792969,
+     303.2288513183594,
+     323.26397705078125
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def max(list):\n  if len(list) == 2:\n    return list[0] if list[0] > list[1] else list[1]\n  sub_max = max(list[1:])\n  return list[0] if list[0] > sub_max else sub_max",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     331.22100830078125,
+     313.3755798339844,
+     372.06402587890625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.4\t Remember binary search from chapter 1? It’s a D&C algorithm, \ntoo. Can you come up with the base case and recursive case for \nbinary search?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     374.0769958496094,
+     322.61669921875,
+     415.06298828125
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: The base case for binary search is an array with one item. \nIf the item you’re looking for matches the item in the array, you \nfound it! Otherwise, it isn’t in the array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     417.2190246582031,
+     319.0406494140625,
+     445.05999755859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the recursive case for binary search, you split the array in half, \nthrow away one half, and call binary search on the other half.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     447.21600341796875,
+     317.457763671875,
+     462.05499267578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How long would each of these operations take in big O notation?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     464.22100830078125,
+     237.1796417236328,
+     479.05999755859375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.5\t Printing the value of each element in an array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     481.072998046875,
+     92.37899780273438,
+     496.05499267578125
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: O(n)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     498.22100830078125,
+     242.50367736816406,
+     513.0599975585938
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.6\t Doubling the value of each element in an array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     515.072998046875,
+     92.37899780273438,
+     530.0549926757812
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: O(n)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     532.220947265625,
+     274.4796142578125,
+     547.0599975585938
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.7\t Doubling the value of just the first element in an array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     549.072998046875,
+     91.8070068359375,
+     564.0549926757812
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: O(1)",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 308,
+  "blocks": [
+   {
+    "bbox": [
+     149.68800354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "answers to exercises\n283",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.62099838256836,
+     337.2263488769531,
+     75.46402740478516
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "4.8\t Creating a multiplication table with all the elements in the array. \nSo if your array is [2, 3, 7, 8, 10], you first multiply every element \nby 2, then multiply every element by 3, then by 7, and so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     77.98300170898438,
+     113.46099853515625,
+     92.96500396728516
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: O(n2)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     106.73089599609375,
+     98.80060577392578,
+     121.4749984741211
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 5",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     125.12100219726562,
+     227.57559204101562,
+     139.9600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Which of these hash functions are consistent?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     143.61000061035156,
+     244.1614532470703,
+     157.10000610351562
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.1\t\nf(x) = 1       \nReturns 1 for all input",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     164.47799682617188,
+     135.95999145507812,
+     179.4600067138672
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Consistent",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     182.11000061035156,
+     320.7699890136719,
+     195.60000610351562
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.2\t\nf(x) = rand()      \nReturns a random number every time",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     202.97799682617188,
+     152.3719940185547,
+     217.9600067138672
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Not consistent",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     220.61000061035156,
+     341.0080261230469,
+     256.4599914550781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.3\t\nf(x) = next_empty_slot()    \nReturns the index of the next \nempty slot in the hash table\n\t\nAnswer: Not consistent",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     259.1099853515625,
+     334.0259704589844,
+     272.6000061035156
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.4\t\nf(x) = len(x)      \nUses the length of the string as the index",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     280.1780090332031,
+     135.95999145507812,
+     295.1600036621094
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Consistent",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49999237060547,
+     297.822021484375,
+     320.50250244140625,
+     312.6610107421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have these four hash functions that work with strings:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.501991271972656,
+     315.322998046875,
+     172.21710205078125,
+     330.1620178222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A.\t Return “1” for all input.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.50199890136719,
+     332.8240051269531,
+     243.37493896484375,
+     347.6629943847656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "B.\t Use the length of the string as the index.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.50199890136719,
+     350.32501220703125,
+     338.06280517578125,
+     365.16400146484375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "C.\t Use the first character of the string as the index. So, all strings",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     69.49800109863281,
+     363.18402099609375,
+     268.81793212890625,
+     378.166015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "starting with a are hashed together, and so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.50201416015625,
+     380.8280029296875,
+     342.63665771484375,
+     395.6670227050781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "D.\t Map every letter to a prime number: a = 2, b = 3, c = 5, d = 7, e",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     69.49800109863281,
+     393.8299865722656,
+     345.98394775390625,
+     447.67498779296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "= 11, and so on. For a string, the hash function is the sum of all \nthe characters modulo the size of the hash. For example, if your \nhash size is 10, and the string is “bag,” the index is 3 + 2 + 17 % \n10 = 22 % 10 = 2.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     450.3370056152344,
+     311.2406311035156,
+     478.1780090332031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For each of the following examples, which hash functions would \nprovide a good distribution? Assume a hash table size of 10 slots.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     481.02099609375,
+     326.65765380859375,
+     509.0599670410156
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.5\t A phonebook where the keys are names and values are phone \nnumbers. The names are as follows: Esther, Ben, Bob, and Dan.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.494003295898438,
+     511.7770080566406,
+     334.87579345703125,
+     526.759033203125
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Hash functions C and D would give a good distribution.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 309,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     -3.6251630783081055,
+     245.91107177734375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix C  I  answers to exercises\n284",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     322.85870361328125,
+     63.157020568847656
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.6\t A mapping from battery size to power. The sizes are A, AA, AAA, \nand AAAA.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     65.87399291992188,
+     316.02764892578125,
+     80.85599517822266
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Hash functions B and D would give a good distribution.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     83.57498168945312,
+     314.43603515625,
+     111.75699615478516
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.7\t A mapping from book titles to authors. The titles are Maus, Fun \nHome, and Watchmen.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.493999481201172,
+     114.4739990234375,
+     275.9436340332031,
+     142.65602111816406
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Hash functions B, C, and D would give a good \ndistribution.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     154.42788696289062,
+     317.36358642578125,
+     199.1590118408203
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 6\nRun the breadth-first search algorithm on each of these graphs to find \nthe solution.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     202.01800537109375,
+     275.5135803222656,
+     216.8570098876953
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.1\t Find the length of the shortest path from start to finish.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     343.37799072265625,
+     223.2607421875,
+     358.3599853515625
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: The shortest path has a length of 2.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     361.22100830078125,
+     274.16058349609375,
+     376.05999755859375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.2\t Find the length of the shortest path from “cab” to “bat.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     543.5180053710938,
+     223.28271484375,
+     558.5
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: The shortest path has a length of 2.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    89.28599548339844,
+    225.59701538085938,
+    245.73699951171875,
+    335.20001220703125
+   ],
+   [
+    81.23100280761719,
+    386.29998779296875,
+    253.79100036621094,
+    535.3399658203125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 310,
+  "blocks": [
+   {
+    "bbox": [
+     149.68800354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "answers to exercises\n285",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     244.78860473632812,
+     49.957008361816406
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Here’s a small graph of my morning routine.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     172.51800537109375,
+     325.2485046386719,
+     187.3570098876953
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.3\t For these three lists, mark whether each one is valid or invalid.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     305.2149963378906,
+     240.99676513671875,
+     320.1969909667969
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answers: A—Invalid; B—Valid; C—Invalid.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     323.0580139160156,
+     281.7105712890625,
+     337.8970031738281
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.4\t Here’s a larger graph. Make a valid list for this graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     483.114990234375,
+     329.1935119628906,
+     511.2969665527344
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: 1—Wake up; 2—Exercise; 3—Shower; 4—Brush teeth; \n5—Get dressed; 6—Pack lunch; 7—Eat breakfast.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    98.87100219726562,
+    68.19699096679688,
+    272.1510009765625,
+    158.19699096679688
+   ],
+   [
+    44.63099670410156,
+    205.59698486328125,
+    326.3919677734375,
+    291.0369873046875
+   ],
+   [
+    88.07099914550781,
+    356.13702392578125,
+    282.95098876953125,
+    468.93701171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 311,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     -3.6251630783081055,
+     245.91107177734375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix C  I  answers to exercises\n286",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     229.8865966796875,
+     49.957008361816406
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.5\t Which of the following graphs are also trees?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     165.69500732421875,
+     325.6575622558594,
+     206.68104553222656
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answers: A—Tree; B—Not a tree; C—Tree. The last example is just \na sideways tree. Trees are a subset of graphs. So a tree is always a \ngraph, but a graph may or may not be a tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     220.44790649414062,
+     80.80060577392578,
+     235.1920166015625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 9",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     239.03799438476562,
+     307.76446533203125,
+     267.0769958496094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "9.1\t In each of these graphs, what is the weight of the shortest path \nfrom Start to Finish?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     533.0960083007812,
+     172.01284790039062,
+     548.0780029296875
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answers: A: A—8; B—60; C—4.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    65.27100372314453,
+    68.19701385498047,
+    269.7510070800781,
+    151.71701049804688
+   ],
+   [
+    61.551002502441406,
+    274.3179931640625,
+    273.47100830078125,
+    525.1179809570312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 312,
+  "blocks": [
+   {
+    "bbox": [
+     149.68800354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "answers to exercises\n287",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     36.730899810791016,
+     106.57061004638672,
+     51.474998474121094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 10",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.32101058959961,
+     340.3707580566406,
+     136.1600799560547
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "10.1\t You work for a furniture company, and you have to ship furniture \nall over the country. You need to pack your truck with boxes. All \nthe boxes are of different sizes, and you’re trying to maximize \nthe space you use in each truck. How would you pick boxes to \nmaximize space? Come up with a greedy strategy. Will that give \nyou the optimal solution?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     138.87698364257812,
+     338.4534606933594,
+     180.25901794433594
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: A greedy strategy would be to pick the largest box that \nwill fit in the remaining space and repeat until you can’t pack any \nmore boxes. No, this won’t give you the optimal solution.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     183.12100219726562,
+     343.07452392578125,
+     263.9600524902344
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "10.2\t You’re going to Europe, and you have seven days to see everything \nyou can. You assign a point value to each item (how much you \nwant to see it) and estimate how long it takes. How can you \nmaximize the point total (seeing all the things you really want to \nsee) during your stay? Come up with a greedy strategy. Will that \ngive you the optimal solution?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     266.677001953125,
+     344.1416320800781,
+     308.05902099609375
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Keep picking the activity with the highest point value that \nyou can still do in the time you have left. Stop when you can’t do \nanything else. No, this won’t give you the optimal solution.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     321.8309020996094,
+     106.57061004638672,
+     336.57501220703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 11",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     340.4209899902344,
+     326.29949951171875,
+     368.4599914550781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "11.1\t Suppose you can steal another item: a mechanical keyboard. It \nweighs 1 lb and is worth $1,000. Should you steal it?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     371.177001953125,
+     332.646484375,
+     399.3589782714844
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: Yes. Then you could steal the mechanical keyboard, the \niPhone, and the guitar, worth a total of $4,500.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     402.22100830078125,
+     336.3767395019531,
+     443.4599914550781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "11.2\t Suppose you’re going camping. You have a knapsack that holds 6 \nlb, and you can take the following items. They each have a value, \nand the higher the value, the more important the item is:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.50199890136719,
+     450.6210021972656,
+     122.41787719726562,
+     465.4599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Water, 3 lb, 10",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.50199890136719,
+     472.6210021972656,
+     114.95986938476562,
+     487.4599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Book, 1 lb, 3",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.50199890136719,
+     494.6210021972656,
+     114.3438720703125,
+     509.4599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Food, 2 lb, 9",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.50199890136719,
+     516.6209716796875,
+     117.68788146972656,
+     531.4600219726562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Jacket, 2 lb, 5",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     51.50199890136719,
+     538.6209716796875,
+     126.26786804199219,
+     553.4600219726562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Camera, 1 lb, 6",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 313,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     -3.6251630783081055,
+     245.91107177734375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "appendix C  I  answers to exercises\n288",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     302.9436950683594,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What’s the optimal set of items to take on your camping trip?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     52.47598648071289,
+     258.21759033203125,
+     67.4579849243164
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: You should take water, food, and a camera.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     70.31802368164062,
+     286.430419921875,
+     98.3570327758789
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "11.3\t Draw and fill in the grid to calculate the longest common \nsubstring between blue and clues.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     101.07400512695312,
+     68.49300384521484,
+     116.0560073852539
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     251.78790283203125,
+     88.57061004638672,
+     266.5320129394531
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "CHAPTER 12",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     270.37799072265625,
+     327.8796081542969,
+     377.6170654296875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "12.1 \tIn the Netflix example, you calculated the distance between two \ndifferent users using the distance formula. But not all users rate \nmovies the same way. Suppose you have two users, Yogi and Pinky, \nwho have the same taste in movies. But Yogi rates any movie he \nlikes as a 5, whereas Pinky is choosier and reserves the 5s for \nonly the best. They’re well matched, but according to the distance \nalgorithm, they aren’t neighbors. How would you take their \ndifferent rating strategies into account?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     380.3340148925781,
+     322.2266540527344,
+     461.31597900390625
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: You could use something called normalization. You \nlook at the average rating for each person and use it to scale their \nratings. For example, you might notice that Pinky’s average rating \nis 3, whereas Yogi’s average rating is 3.5. So you bump up Pinky’s \nratings a little until her average rating is 3.5 as well. Then you can \ncompare their ratings on the same scale.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     464.1780090332031,
+     322.8416442871094,
+     531.8170166015625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "12.2\t Suppose Netflix nominates a group of “influencers.” For example, \nQuentin Tarantino and Wes Anderson are influencers on Netflix, \nso their ratings count for more than a normal user’s. How would \nyou change the recommendations system so it’s biased toward the \nratings of influencers?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    99.35200500488281,
+    118.79700469970703,
+    235.67098999023438,
+    226.5570068359375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 314,
+  "blocks": [
+   {
+    "bbox": [
+     149.68800354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "answers to exercises\n289",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.97500991821289,
+     345.6914367675781,
+     115.95706939697266
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: You could give more weight to the ratings of the \ninfluencers when using KNN. Suppose you have three neighbors: \nJoe, Dave, and Wes Anderson (an influencer). They rated \nCaddyshack 3, 4, and 5, respectively. Instead of just taking the \naverage of their ratings (3 + 4 + 5 / 3 = 4 stars), you could give Wes \nAnderson’s rating more weight: 3 + 4 + 5 + 5 + 5 / 5 = 4.4 stars.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     118.8179931640625,
+     344.30535888671875,
+     160.05702209472656
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "12.3\t Netflix has millions of users. The earlier example looked at the five \nclosest neighbors for building the recommendations system. Is \nthis too low? Too high?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     162.77398681640625,
+     343.4826354980469,
+     204.15602111816406
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: It’s too low. If you look at fewer neighbors, there’s a bigger \nchance that the results will be skewed. A good rule of thumb is \nthat if you have N users, you should look at sqrt(N) neighbors.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 315,
+  "blocks": [],
+  "images": []
+ },
+ {
+  "pdf_index": 316,
+  "blocks": [
+   {
+    "bbox": [
+     82.09600067138672,
+     187.14849853515625,
+     93.90399932861328,
+     203.875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "A",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     208.5989990234375,
+     66.29901123046875,
+     220.74000549316406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "algorithms",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     219.59698486328125,
+     147.69317626953125,
+     231.7379913330078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "running times of, growth rates",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     230.594970703125,
+     143.4991455078125,
+     253.7339630126953
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "of  11–13\nrun-time analysis, worst-case",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     252.5909423828125,
+     138.4511260986328,
+     297.72589111328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "run time  15\napproximate solution  205\napproximation algorithms  197\narrays",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     296.5828857421875,
+     148.83709716796875,
+     330.7198486328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "linked lists and  24–25\nterminology  27\nASCII (American Standard Code",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     329.57684326171875,
+     144.85911560058594,
+     363.71380615234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "for Information Interchange)  \n134\nasymmetric key encryption",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     362.57080078125,
+     84.14508819580078,
+     385.70977783203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "259\naverage case  70",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     384.5668029785156,
+     135.69619750976562,
+     407.705810546875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "quicksort, vs. worst case  75\nAVL trees  151",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     82.56400299072266,
+     415.64849853515625,
+     93.43600463867188,
+     432.375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "B",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     437.0989990234375,
+     129.81114196777344,
+     449.239990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "balanced trees  141, 150, 164",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     448.09698486328125,
+     133.23020935058594,
+     482.2340087890625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "AVL trees  151\nB-trees  162–164\nimproving insertion speed",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     481.09100341796875,
+     133.85122680664062,
+     548.2219848632812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "with  143\nrotation  151\nsplay trees  159\nbalance factor  154\nbase case, in recursion  44–45\nBellman-Ford algorithm  180",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     160.5019989013672,
+     184.62200927734375,
+     281.0570983886719,
+     196.7630157470703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "BFS (breadth-first search)  101, 120",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     169.5019989013672,
+     195.6199951171875,
+     278.0671081542969,
+     218.7589874267578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graphs, overview of  102–104\nimplementing BFS algorithm",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     169.5019989013672,
+     217.615966796875,
+     277.6082458496094,
+     262.75091552734375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "113–117\nimplementing graph  111–112\noverview of  106, 109\nshortest path problem,",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     160.5019989013672,
+     261.60791015625,
+     274.17919921875,
+     295.744873046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "using breadth-first search  \n108–109\nBig O notation  10, 75",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     169.5019989013672,
+     294.60186767578125,
+     267.97821044921875,
+     306.74285888671875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "average case vs. worst case",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     169.5019989013672,
+     305.599853515625,
+     269.26519775390625,
+     328.73883056640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "72–75\nestablishing worst-case run",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     169.5019989013672,
+     327.5958251953125,
+     281.5061340332031,
+     372.73077392578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "time  15\nmerge sort vs. quicksort  71–72\nrun times  15–17, 70\ntraveling salesperson problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     160.5019989013672,
+     371.5877685546875,
+     257.6911926269531,
+     405.72479248046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "17–19\nvisualizing run times  13\nbinary search  3, 142",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     160.5019989013672,
+     404.581787109375,
+     270.6612243652344,
+     471.7127685546875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "running time of  10\nbinary_search function  8\nbinary search trees (BSTs)  143\nbinary trees  131, 139\nBloom filters  253\nbreadth-first search. See BFS",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     160.50198364257812,
+     470.5697937011719,
+     281.1001281738281,
+     493.70880126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "(breadth-first search)\nbrute-force algorithms, knapsack",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     160.50198364257812,
+     492.5657958984375,
+     262.8941650390625,
+     526.7027587890625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "problem  204\nBSTs. See binary search trees\nB-trees  161",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     160.50198364257812,
+     525.559814453125,
+     252.77902221679688,
+     548.6987915039062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "advantages of  162–164\nbye function  48",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     348.6449890136719,
+     187.14849853515625,
+     359.35498046875,
+     203.875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "C",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     293.5,
+     209.5989990234375,
+     405.0982666015625,
+     298.72589111328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "cache, using hash tables as  88\ncall stack  46, 47–49, 49\ncharacter encoding  134\ncollisions  91–93\nconnected, acyclic graph  130\nconstant  71\nconstant time  94\ncountdown example, base case",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     302.5,
+     297.5828857421875,
+     393.6961669921875,
+     309.723876953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "and recursive case  44–45",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     347.7359924316406,
+     317.64849853515625,
+     360.2640075683594,
+     334.375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "D",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     293.5,
+     339.0989990234375,
+     346.7610778808594,
+     351.239990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "data structures",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     302.5,
+     350.09698486328125,
+     324.3249816894531,
+     362.23797607421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "arrays",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     302.5,
+     361.094970703125,
+     412.6591491699219,
+     472.21795654296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "linked lists and  24–25\noverview of  26\nselection sort and  24\nterminology  27\nAVL trees  151\nbalanced trees  147–150, 164\nbinary search trees (BSTs)  143\nbinary trees  131, 139\nB-trees  161\ngraphs",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     313.49798583984375,
+     471.0749816894531,
+     386.505126953125,
+     483.2159729003906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "BFS, implementing",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     313.49798583984375,
+     482.072998046875,
+     411.5420837402344,
+     505.21197509765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "111–112\nDijkstra’s algorithm, imple-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     313.49798583984375,
+     504.0689697265625,
+     407.0611267089844,
+     549.2039794921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "mentation of  181–189\noverview of  102–105, 122\nterminology  170–172\nweighted  165",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     123.697998046875,
+     72.3379898071289,
+     146.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "index",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 317,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     0.17300033569335938,
+     221.81918334960938,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "index\n292",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.52497100830078,
+     105.67399597167969,
+     47.7829704284668
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "data structures (continued)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     46.63995361328125,
+     133.83497619628906,
+     91.77490997314453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "hash tables  77, 84, 91, 99, 111\nheaps  261–263\nlinked lists  24\nprobabilistic algorithms, Hyper-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     90.63189697265625,
+     127.36217498779297,
+     146.7648468017578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "LogLog  255\nqueues, overview of  109\nrecommendation systems  231\nsplay trees  159\nstacks",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     29.498001098632812,
+     145.621826171875,
+     120.61221313476562,
+     168.7608184814453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "call stack  47–49\ncall stack with recursion",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     167.6177978515625,
+     134.46226501464844,
+     201.75477600097656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "49–53\ntrees, depth-first search  126–129\nD&C. See divide and conquer",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500003814697266,
+     200.61175537109375,
+     131.0711669921875,
+     289.7386474609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "(D&C)\ndecision problems  268\ndeletions  30\ndepth-first search (DFS)  126–129\ndeque function  113\ndictionaries  83\ndiff command  227\nDiffie-Hellman key exchange  255",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.500003814697266,
+     288.59564208984375,
+     129.31520080566406,
+     300.73663330078125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "ephemeral Diffie-Hellman key",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     299.5936279296875,
+     113.98014068603516,
+     322.73260498046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "exchange  259\nDijkstra’s algorithm  165, 190",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     321.589599609375,
+     132.32211303710938,
+     388.72052001953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "implementation of  181–189\nterminology  170–172\nworking with  166–170\ndirected graph  112\ndistributed algorithms  252\ndivide and conquer (D&C)  56–63",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     387.5775451660156,
+     114.39412689208984,
+     443.7105407714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "quicksort  64–76\nDNS cache  86\nDNS resolution  86\nduplicates, preventing  86–88\ndynamic programming  228",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     442.56756591796875,
+     118.4171371459961,
+     454.70855712890625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "knapsack problem  203, 216",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     29.498001098632812,
+     453.5655517578125,
+     132.94308471679688,
+     476.70452880859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "brute-force solution  204\ndynamic programming solu-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     29.498001098632812,
+     475.5615539550781,
+     131.0881805419922,
+     520.696533203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "tion for  205\nFAQ  213, 216, 217\nfilling in grid  216\nfilling knapsack completely",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     29.498001098632812,
+     519.5535888671875,
+     125.86822509765625,
+     542.6925659179688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "220\nitems that depend on each",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     38.49800109863281,
+     541.549560546875,
+     74.76799774169922,
+     553.6905517578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "other  219",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     168.5,
+     35.64202880859375,
+     264.6092224121094,
+     58.7810173034668
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "overview of  206–208\nstealing fractions of items",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     157.5019989013672,
+     57.63800048828125,
+     255.09613037109375,
+     80.77698516845703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "217\nlongest common substring",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5019989013672,
+     79.63397216796875,
+     213.90501403808594,
+     91.77497100830078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "problem  220",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     168.5,
+     90.6319580078125,
+     253.54002380371094,
+     113.77094268798828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "filling in grid  222–223\nlongest common subse-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     168.5,
+     112.6279296875,
+     232.53500366210938,
+     135.7669219970703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "quence  225\nsolution  224–225",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     207.19400024414062,
+     143.69149780273438,
+     216.80599975585938,
+     160.41799926757812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "E",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     168.14199829101562,
+     264.1212463378906,
+     202.2789764404297
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "edges, negative-weight  178–180\nenqueue  113\nEuclids algorithm  58",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     207.2570037841797,
+     210.19149780273438,
+     216.74301147460938,
+     226.91799926757812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "F",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     234.64199829101562,
+     267.7302551269531,
+     257.7809753417969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "factorial function  49\nfeature extraction  233–237, 243,",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     256.6379699707031,
+     273.32818603515625,
+     312.7709045410156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "246\nFeynman algorithm  222\nFIFO (first in, first out)  110, 263\nfile directories  123–125\nfind_lowest_cost_node algorithm",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     311.6278991699219,
+     261.52923583984375,
+     345.7648620605469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "184\nFourier transform  250\nfruit classification example  229",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     205.86199951171875,
+     353.6914978027344,
+     218.13800048828125,
+     370.4179992675781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "G",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     376.1419982910156,
+     208.94309997558594,
+     399.281005859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "golden ratio  266\ngraphs",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     157.5,
+     398.13800048828125,
+     271.6272277832031,
+     421.2769775390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "BFS, implementing  111–112\nDijkstra’s algorithm, implemen-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     420.1340026855469,
+     251.06314086914062,
+     476.2669982910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "tation of  181–189\noverview of  102–105, 122\nterminology  170–172\nweighted  165\ngreedy algorithms  191, 202",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     157.5,
+     475.1240234375,
+     272.8701477050781,
+     498.26300048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "knapsack problem  194–196\nset-covering problem  196–197,",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     497.1199951171875,
+     252.0162353515625,
+     553.2529907226562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "201–202\ncalculating answer  199\ncode for setup  198\nsets  201\ngreet2 function  48",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     35.64202880859375,
+     408.2511901855469,
+     69.77899932861328
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "greet function  48, 49\ngrowth rates of algorithms  11–13\nguitar row  206–208",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     344.79901123046875,
+     77.6915283203125,
+     357.2010192871094,
+     94.41802978515625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "H",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     102.14202880859375,
+     394.8970642089844,
+     125.28101348876953
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "hash functions  97\nhash tables  77, 84, 91, 99, 111",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.5,
+     124.13800048828125,
+     368.7510681152344,
+     158.2749786376953
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "collisions  91–93\nlookups  84–86\nperformance  93–95",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.5,
+     157.1319580078125,
+     400.4212646484375,
+     191.26893615722656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "hash functions  97\nload factor  96–97\npreventing duplicate entries",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     190.12591552734375,
+     398.586181640625,
+     257.2568359375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "86–88\nuse cases, lookups  84–86\nusing as cache  88\nheapsort algorithm  262\nHuffman coding  136, 133–139\nHyperLogLog  253, 255",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     348.43499755859375,
+     265.1914978027344,
+     353.56500244140625,
+     281.9179992675781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "I",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     289.6419982910156,
+     365.7091979980469,
+     334.7769470214844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "inductive proofs  69\ninjective function  83\nin-neighbors  105\nISO-8859-1 code  133",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     345.4739990234375,
+     342.6914978027344,
+     356.5260009765625,
+     359.4179992675781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "K",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     365.1419982910156,
+     405.0571594238281,
+     377.2829895019531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "knapsack problem  194–196, 203",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.5,
+     376.1400146484375,
+     413.2822265625,
+     421.2749938964844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "adding items to  213–215\nadding smaller item  216\nchanging order of rows  216\ndynamic programming solution",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.5,
+     420.13201904296875,
+     415.3396301269531,
+     476.2650146484375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "for  205\nFAQ  213\nfilling in grid row-wise  216\nfilling knapsack completely  220\nitems that depend on each other",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.5,
+     475.12200927734375,
+     408.2151794433594,
+     509.2590026855469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "219\noptimizing travel itinerary  217\noverview of dynamic program-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.5,
+     508.11602783203125,
+     406.8382263183594,
+     531.2550048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "ming  206–208\nrevisited, brute-force solution",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.5,
+     530.1119995117188,
+     405.56927490234375,
+     553.2509765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "204\nstealing fractions of items  217",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 318,
+  "blocks": [
+   {
+    "bbox": [
+     220.18121337890625,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "index\n293",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.64202880859375,
+     143.4821014404297,
+     47.78303146362305
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "k-nearest neighbors (KNN)  229",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     46.6400146484375,
+     136.92018127441406,
+     58.7810173034668
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "building spam filters, Naive",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     57.63800048828125,
+     147.28823852539062,
+     80.77698516845703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Bayes classifier  243\noverview of machine learning",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     79.63397216796875,
+     125.0860595703125,
+     102.77295684814453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "241\nrecommendation system",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     101.62994384765625,
+     154.12100219726562,
+     157.7628936767578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "feature extraction  233–237\nfeatures for  240\nregression  238–240\nstock market, predicting  244\ntraining models, high-level over-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.5,
+     156.619873046875,
+     140.73806762695312,
+     168.76087951660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "view of  224–228, 229–246",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     86.4010009765625,
+     176.69149780273438,
+     95.5989990234375,
+     193.41799926757812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "L",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     201.14199829101562,
+     143.0231475830078,
+     268.2729187011719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Levenshtein distance  227\nLIFO (last in, first out)  110, 263\nlinear programming  263\nlinear regression  247\nlinear time  15\nlinked lists  24",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     267.1299133300781,
+     145.24522399902344,
+     356.2568054199219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "deletions  30\nselection sort  25, 31–34\nterminology  27\nload factor  96–97\nlogarithmic time. See log time\nlogarithms  7\nlog time  10, 15\nlongest common substring prob-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     355.1138000488281,
+     148.09823608398438,
+     389.25079345703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "lem  220\nfilling in grid  222–223\nlongest common subsequence",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     388.1077880859375,
+     146.2261962890625,
+     433.2427978515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "225\nmaking grid  221–222\nsolution  224–225\nLSH (locality-sensitive hashing)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     432.09979248046875,
+     67.0999984741211,
+     444.24078369140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "260–261",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     83.38600158691406,
+     452.1914978027344,
+     98.61399841308594,
+     468.9179992675781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "M",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     475.6419982910156,
+     142.41018676757812,
+     487.7829895019531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "machine learning, overview of",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     486.6400146484375,
+     93.28913116455078,
+     531.7750244140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "241\nmap function  252\nmap/reduce  252\nmerge sort  70",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     530.6320190429688,
+     108.0581283569336,
+     553.77099609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "vs. quicksort  71–72\nmin heaps  261–263",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     35.64202880859375,
+     250.46910095214844,
+     47.78303146362305
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "ML (machine learning)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     175.5,
+     46.6400146484375,
+     269.0712585449219,
+     58.7810173034668
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "stock market, predicting",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     175.5,
+     57.63800048828125,
+     276.4692687988281,
+     80.77698516845703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "244\ntraining models, high-level",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     184.5,
+     79.63397216796875,
+     261.0081481933594,
+     91.77497100830078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "overview of  244–246",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     223.79000854492188,
+     99.6915283203125,
+     236.2100067138672,
+     116.41802978515625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "N",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     124.14199829101562,
+     292.2363586425781,
+     158.2789764404297
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Naive Bayes classifier  243\nnegative-weight edges  178–180\nnondeterministic polynomial time",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     157.13595581054688,
+     287.6031494140625,
+     180.2749481201172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "(NP)  267\nNP-complete problems  267, 268,",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     179.13192749023438,
+     285.0121154785156,
+     202.2709197998047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "275–276\nNP-hard problems  267, 274–275",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     175.5,
+     201.12789916992188,
+     281.60821533203125,
+     213.26890563964844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "hard to solve, quick to verify",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     212.12588500976562,
+     290.7431945800781,
+     268.2588195800781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "272\noverview of  274–275\nreductions  273\nsatisfiability problem  269–271\nNP (nondeterministic polynomial",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     175.5,
+     267.1158142089844,
+     212.0220184326172,
+     279.2568054199219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "time)  267",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     223.5469970703125,
+     287.1914978027344,
+     236.4530029296875,
+     303.9179992675781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "O",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     311.6419982910156,
+     272.0412292480469,
+     323.7829895019531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "optical character recognition",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     322.6399841308594,
+     234.494140625,
+     345.7789611816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "(OCR)  242\nout-neighbors  105",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     224.77099609375,
+     353.6914978027344,
+     235.22900390625,
+     370.4179992675781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "P",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     376.1419982910156,
+     258.1991882324219,
+     498.26300048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "parallel algorithms  251\npartitioning  65\nperfect hash function  83\nperformance  2\npivot  64\npointers  30\npop  113\npower set  196\nprint function  47\npriority queues  261–263\nprobabilistic algorithms,",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     497.1199951171875,
+     272.6531982421875,
+     520.259033203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "HyperLogLog  255\nprobabilistic data structures",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     166.5,
+     519.1160278320312,
+     246.3741455078125,
+     553.2529907226562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "254\npush  113\nP vs. NP problem  273",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     362.5469970703125,
+     38.14849853515625,
+     375.4530029296875,
+     54.875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "Q",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.5,
+     60.5989990234375,
+     396.26318359375,
+     83.73798370361328
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "queue data structure  109\nquicksort  64–76",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     314.5,
+     82.594970703125,
+     431.9671630859375,
+     138.72792053222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "average case vs. worst case  72–75\nBig O notation  75\ndivide and conquer  56–63\nmerge sort vs.  71–72\nrun times for  70",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     363.6629943847656,
+     146.64849853515625,
+     374.3370056152344,
+     163.375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "R",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.6470031738281,
+     168.98199462890625,
+     430.19805908203125,
+     181.24000549316406
+    ],
+    "font": "MinionPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Real-World Cryptography (Wong)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.50299072265625,
+     180.09698486328125,
+     414.36529541015625,
+     203.23597717285156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "260\nrecommendation systems  231",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.50299072265625,
+     202.09295654296875,
+     412.58319091796875,
+     225.23194885253906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "feature extraction  233–237\nrecursion  41, 44, 54",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     314.50299072265625,
+     224.08892822265625,
+     431.2392578125,
+     269.223876953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "base case and recursive case  44\ncall stack  47–49\noverview of  42\nstacks, call stack with recursion",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.50299072265625,
+     268.08087158203125,
+     429.7192077636719,
+     335.2117919921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "49–53\nreduce function  252\nreductions  273\nregression  239\nregression analysis, linear  247\nregression, KNN (k-nearest neigh-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.50299072265625,
+     334.06878662109375,
+     427.6761779785156,
+     368.20574951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "bors)  238–240\nrotation, in AVL trees  151, 154\nrun-time analysis, worst-case run",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.50299072265625,
+     367.062744140625,
+     366.3870849609375,
+     390.20172119140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "time  15\nrun times  15–17",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     314.50299072265625,
+     389.0587463378906,
+     365.8110656738281,
+     401.1997375488281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "visualizing  13",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     364.1400146484375,
+     409.14849853515625,
+     373.8600158691406,
+     425.875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "S",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.5,
+     431.5989990234375,
+     408.44110107421875,
+     443.739990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "SAT (satisfiability) problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     305.5,
+     442.59698486328125,
+     404.291259765625,
+     476.7340087890625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "269–271\nsearch, binary search  5–9\nselection sort  21, 34, 38, 39",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     314.5,
+     475.59100341796875,
+     418.0531311035156,
+     487.73199462890625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "arrays and linked lists  24, 31",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     314.5,
+     486.5889892578125,
+     417.8532409667969,
+     531.7239990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "terminology  27\narrays, overview of  26\ndeletions  30\ninsertion sort, inserting into",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     314.5,
+     530.5809936523438,
+     383.55615234375,
+     553.719970703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "middle of list  29\nmemory  22–23",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 319,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     0.17300033569335938,
+     221.81918334960938,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "index\n294",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.6419677734375,
+     120.19013214111328,
+     58.78095626831055
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "selection sort, code listing  38\nset-covering problem  196, 267",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     57.637939453125,
+     102.01822662353516,
+     91.77490997314453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "calculating answer  199\ncode for setup  198\ngreedy algorithms for",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     90.63189697265625,
+     137.06332397460938,
+     124.76886749267578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "approximation algorithms  197\nshortest path  178\nshortest-path algorithms, Dijkstra’s",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     123.6258544921875,
+     106.76212310791016,
+     146.7648468017578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "algorithm  165\nshortest-path problem  104",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     145.621826171875,
+     114.17720031738281,
+     168.7608184814453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "terminology  170–172\nusing breadth-first search",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     167.6177978515625,
+     135.78802490234375,
+     234.7487335205078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "108–109\nsimple search  5\nspam filters, building with KNN  243\nsplay trees  159\nstack data structure  46\nstacks",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     233.605712890625,
+     131.57424926757812,
+     267.74267578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "call stack  47–49\ncall stack with recursion  49–53\nstat command  133",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     35.64202880859375,
+     259.9092102050781,
+     69.77899932861328
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "subproblem  215\nsum function  61, 63\nsymmetric key encryption  259",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     207.0679931640625,
+     77.6915283203125,
+     216.93199157714844,
+     94.41802978515625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "T",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     102.14202880859375,
+     259.9811706542969,
+     147.27699279785156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "tail recursion  53\ntopological sort  118\ntraining  243\ntraveling salesperson problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     146.13397216796875,
+     250.69317626953125,
+     169.27296447753906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "17–19, 267\ntravel itinerary, optimizing",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     168.12994384765625,
+     262.46429443359375,
+     191.26893615722656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "217\ntree algorithms, file directories",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     190.12591552734375,
+     263.03131103515625,
+     213.26490783691406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "123–125\ntree insertion, improving speed",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     148.5,
+     212.12188720703125,
+     216.66604614257812,
+     235.26087951660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "with  143\ntrees  119, 121, 140",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     157.5,
+     234.11785888671875,
+     255.2391357421875,
+     268.25482177734375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "depth-first search  126–129\nHuffman coding  133–139\noverview of  122",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     344.86199951171875,
+     38.14849853515625,
+     357.13800048828125,
+     54.875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "U",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     62.5989990234375,
+     408.0082092285156,
+     85.73798370361328
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "unweighted graphs  170\nUTF-8 (Unicode Transformation",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.5,
+     84.594970703125,
+     349.35699462890625,
+     96.73596954345703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Format 8)  134",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     345.2760009765625,
+     104.64849853515625,
+     356.7239990234375,
+     121.375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "V",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     129.0989990234375,
+     330.1411437988281,
+     141.24000549316406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "vectors  236",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     343.00799560546875,
+     149.14849853515625,
+     358.99200439453125,
+     165.875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 15.588457107543945,
+    "color": 10690613,
+    "text": "W",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     173.5989990234375,
+     383.4580078125,
+     207.73597717285156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "weighted graphs  170\nweights  170\nWong, David, Real-World",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.5,
+     206.4759521484375,
+     361.9480285644531,
+     229.73194885253906
+    ],
+    "font": "MinionPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Cryptography  260\nworst case  70",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 320,
+  "blocks": [],
+  "images": [
+   [
+    42.08000183105469,
+    117.05999755859375,
+    399.9200134277344,
+    246.48699951171875
+   ],
+   [
+    42.08000183105469,
+    292.5989990234375,
+    399.9200134277344,
+    433.468017578125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 321,
+  "blocks": [],
+  "images": []
+ }
+]

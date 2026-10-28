@@ -1,0 +1,1835 @@
+[
+ {
+  "pdf_index": 216,
+  "blocks": [
+   {
+    "bbox": [
+     362.7659912109375,
+     -7.2039947509765625,
+     416.0460205078125,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "10",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     356.2216491699219,
+     258.75299072265625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about the greedy strategy, a very simple \nproblem-solving strategy.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     267.531005859375,
+     350.4610290527344,
+     308.75897216796875
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn how to cope with the impossible: prob-\nlems that have no fast algorithmic solution (NP-\nhard problems).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     315.53497314453125,
+     354.6058654785156,
+     356.7629699707031
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about approximation algorithms, which \nyou can use to find an approximate solution to an \nNP-hard problem quickly.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     363.5389404296875,
+     356.2216491699219,
+     390.76397705078125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about the greedy strategy, a very simple \nproblem-solving strategy.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     259.6080017089844,
+     4.003999710083008,
+     348.1698303222656,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "greedy \nalgorithms",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 217,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     242.05596923828125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 10  I  greedy algorithms\n192",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     288.0104064941406,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "The classroom scheduling problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     261.91485595703125,
+     94.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have a classroom and want to hold as many  \nclasses here as possible. You get a list of classes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     229.51800537109375,
+     325.31536865234375,
+     244.50001525878906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can’t hold all of these classes in there because some of them overlap.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     386.8810119628906,
+     320.32159423828125,
+     427.7239685058594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You want to hold as many classes as possible in this classroom. How \ndo you pick what set of classes to hold so that you get the biggest set of \nclasses possible?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     430.385986328125,
+     317.7475280761719,
+     458.2269592285156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Sounds like a hard problem, right? Actually, the algorithm is so easy it \nmight surprise you. Here’s how it works:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     460.88897705078125,
+     320.5577697753906,
+     488.7300109863281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Pick the class that ends the soonest. This is the first class you’ll hold \nin this classroom.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     491.3919982910156,
+     295.8739318847656,
+     532.2350463867188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Now, you have to pick a class that starts after the first class.  \nAgain, pick the class that ends the soonest. This is the second  \nclass you’ll hold.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    116.27200317382812,
+    109.70001220703125,
+    218.75100708007812,
+    215.54000854492188
+   ],
+   [
+    41.03099822998047,
+    259.2400207519531,
+    293.99200439453125,
+    372.760009765625
+   ],
+   [
+    297.7799987792969,
+    38.0,
+    394.5,
+    167.83999633789062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 218,
+  "blocks": [
+   {
+    "bbox": [
+     123.34500122070312,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The classroom scheduling problem\n193",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     337.9815979003906,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Keep doing this, and you’ll end up with the answer! Let’s try it out. Art \nends the soonest, at 10:00 a.m., so that’s one of the classes you pick.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     185.3380126953125,
+     328.3456115722656,
+     213.1790313720703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you need the next class that starts after 10:00 a.m. and ends the \nsoonest.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     327.5580139160156,
+     288.8445739746094,
+     342.3970031738281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "English is out because it conflicts with Art, but Math works.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     345.05902099609375,
+     242.61257934570312,
+     359.89801025390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Finally, CS conflicts with Math, but Music works.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     482.2790222167969,
+     281.3975830078125,
+     497.1180114746094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So these are the three classes you’ll hold in this classroom.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    128.63099670410156,
+    73.69701385498047,
+    242.3909912109375,
+    175.21701049804688
+   ],
+   [
+    128.031005859375,
+    215.91702270507812,
+    242.99099731445312,
+    317.43701171875
+   ],
+   [
+    126.71200561523438,
+    370.6380310058594,
+    244.31100463867188,
+    472.156982421875
+   ],
+   [
+    51.111000061035156,
+    507.8580017089844,
+    319.9119873046875,
+    550.8179931640625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 219,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     242.05596923828125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 10  I  greedy algorithms\n194",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499996185302734,
+     35.11800765991211,
+     325.89849853515625,
+     140.9711151123047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A lot of people tell me that this algorithm seems easy. It’s too obvious, \nso it must be wrong. But that’s the beauty of greedy algorithms: they’re \neasy! A greedy algorithm is simple: at each step, pick the optimal move. \nIn this case, each time you pick a class, you pick the class that ends the \nsoonest. In technical terms, at each step, you pick the locally optimal \nsolution, and in the end, you’re left with the globally optimal solution. \nBelieve it or not, this simple algorithm finds the optimal solution to this \nscheduling problem!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499996185302734,
+     143.63311767578125,
+     316.18768310546875,
+     171.47413635253906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Obviously, greedy algorithms don’t always work. But they’re simple to \nwrite! Let’s look at another example.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     197.19500732421875,
+     190.95799255371094,
+     219.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "The knapsack problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     230.61801147460938,
+     261.7266540527344,
+     284.4630432128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re a greedy thief. You’re in a store with  \na knapsack, and there are all these items you can steal.  \nBut you can only take what you can fit in your knapsack.  \nThe knapsack can hold 35 pounds.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     88.69999694824219,
+     287.12506103515625,
+     319.5965881347656,
+     314.966064453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’re trying to maximize the value of the items you \nput in your knapsack. What algorithm do you use?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     88.69999694824219,
+     317.6280822753906,
+     274.6296081542969,
+     332.4670715332031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Again, the greedy strategy is pretty simple:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     88.69999694824219,
+     335.1289978027344,
+     319.0156555175781,
+     362.9700012207031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.   \u0007Pick the most expensive thing that will fit in your \nknapsack.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     88.69999694824219,
+     365.6319885253906,
+     317.838623046875,
+     393.4729919433594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.   \u0007Pick the next most expensive thing that will fit in \nyour knapsack. And so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     400.6340026855469,
+     318.5614929199219,
+     428.4750061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Except this time, it doesn’t work! For example, suppose there are three \nitems you can steal.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    11.87099838256836,
+    431.197021484375,
+    323.1520080566406,
+    548.5570068359375
+   ],
+   [
+    266.7349853515625,
+    184.6649932861328,
+    366.81500244140625,
+    271.3039855957031
+   ],
+   [
+    9.499969482421875,
+    296.5460205078125,
+    76.69993591308594,
+    369.2660217285156
+   ]
+  ]
+ },
+ {
+  "pdf_index": 220,
+  "blocks": [
+   {
+    "bbox": [
+     144.94900512695312,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The knapsack problem\n195",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     322.4288024902344,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Your knapsack can hold 35 pounds of items. The stereo system is \nthe most expensive, so you steal that. Now you don’t have space for \nanything else.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     178.25799560546875,
+     339.7966613769531,
+     206.09901428222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You got $3,000 worth of goods. But wait! If you’d picked the laptop and \nthe guitar instead, you could have had $3,500 worth of loot!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     311.197998046875,
+     341.159423828125,
+     352.041015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Clearly, the greedy strategy doesn’t give you the optimal solution here. \nSometimes, it gives poor results. But sometimes, it can get you close. In \nthe next chapter, I’ll explain how to calculate the correct solution.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     354.5600280761719,
+     338.69537353515625,
+     408.5480041503906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the takeaway from this second example: sometimes perfect is the \nenemy of good. Sometimes all you need is an algorithm that solves the \nproblem pretty well. And that’s where greedy algorithms shine because \nthey’re simple to write and get results that are often good enough.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     422.3078918457031,
+     96.57598876953125,
+     437.052001953125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     440.697998046875,
+     340.6116638183594,
+     520.5469970703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "10.1  \u0007You work for a furniture company, and you have to ship furniture \nall over the country. You need to pack your truck with boxes. All \nthe boxes are of different sizes, and you’re trying to maximize \nthe space you use in each truck. How would you pick boxes to \nmaximize space? Come up with a greedy strategy. Will that give \nyou the optimal solution?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     523.197998046875,
+     343.3165283203125,
+     551.0390014648438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "10.2  \u0007You’re going to Europe, and you have seven days to see everything \nyou can. You assign a point value to each item (how much you",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    111.47099304199219,
+    82.69699096679688,
+    259.5509948730469,
+    168.13699340820312
+   ],
+   [
+    134.031005859375,
+    216.83700561523438,
+    236.99099731445312,
+    301.0769958496094
+   ]
+  ]
+ },
+ {
+  "pdf_index": 221,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     242.05596923828125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 10  I  greedy algorithms\n196",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     33.74299621582031,
+     35.11800765991211,
+     318.0654296875,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "want to see it) and estimate how long it takes. How can you \nmaximize the point total (seeing all the things you really want to \nsee) during your stay? Come up with a greedy strategy. Will that \ngive you the optimal solution?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.50009536743164,
+     91.62503051757812,
+     285.2535400390625,
+     119.4660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s look at one last example. This is an example where greedy \nalgorithms are absolutely necessary.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     149.19500732421875,
+     214.7882080078125,
+     171.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "The set-covering problem",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     182.61801147460938,
+     280.99859619140625,
+     249.46507263183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re starting a radio show. You want to \nreach listeners in all 50 US states. You have to decide \nwhat stations to play on to reach all those listeners. It costs \nmoney to be on each station, so you’re trying to minimize the \nnumber of stations you play on. You have a list of stations.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     124.63699340820312,
+     252.1270751953125,
+     300.9416809082031,
+     279.96807861328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each station covers a region, and there’s \noverlap.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     124.63699340820312,
+     282.6300964355469,
+     306.32073974609375,
+     336.4751281738281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How do you figure out the smallest set of \nstations you can play on to cover all 50 \nstates? Sounds easy, doesn’t it? Turns out \nit’s extremely hard. Here’s how to do it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     124.63200378417969,
+     339.13714599609375,
+     299.55401611328125,
+     379.9590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "List every possible subset of stations. \nThis is called the power set. There are 2n \npossible subsets.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    49.30000305175781,
+    427.697998046875,
+    285.70001220703125,
+    530.177001953125
+   ],
+   [
+    249.1669921875,
+    131.96600341796875,
+    381.406982421875,
+    226.7659912109375
+   ],
+   [
+    9.5,
+    255.77999877929688,
+    104.54000091552734,
+    404.1000061035156
+   ],
+   [
+    310.82000732421875,
+    254.61399841308594,
+    414.5,
+    403.41400146484375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 222,
+  "blocks": [
+   {
+    "bbox": [
+     140.05299377441406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The set-covering problem\n197",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     345.6364440917969,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "From these, pick the set with the smallest number of stations that covers \nall 50 states.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.498016357421875,
+     65.62100219726562,
+     338.8045959472656,
+     145.46507263183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The problem is that it takes a long time to calculate every possible \nsubset of stations. It takes O(2n) time because there are 2n subsets. It’s \npossible to do if you have a small set of 5 to 10 stations. But with all \nthe examples here, think about what will happen if you have a lot of \nitems. It takes much longer if you have more stations. Suppose you can \ncalculate 10 subsets per second.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.498016357421875,
+     148.1270751953125,
+     337.91571044921875,
+     162.96607971191406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There’s no known algorithm that solves it fast enough! What can you do?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     284.531005859375,
+     192.92401123046875,
+     301.87701416015625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Approximation algorithms",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     304.9980163574219,
+     337.155517578125,
+     332.8390197753906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Greedy algorithms to the rescue! Here’s a greedy algorithm that comes \npretty close:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     335.5010070800781,
+     342.7586975097656,
+     376.3440246582031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Pick the station that covers the most states that haven’t been covered \nyet. It’s OK if the station covers some states that have been covered \nalready.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     379.0060119628906,
+     207.7789764404297,
+     393.84503173828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Repeat until all the states are covered.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     400.8630065917969,
+     334.28778076171875,
+     441.8489685058594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is called an approximation algorithm. When calculating the exact \nsolution will take too much time, an approximation algorithm will \nwork. Approximation algorithms are judged by",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     449.0099792480469,
+     112.90289306640625,
+     463.8489990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t How fast they are",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     471.010009765625,
+     222.108642578125,
+     485.8489990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t How close they are to the optimal solution",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     488.5110168457031,
+     335.2535095214844,
+     542.3390502929688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Greedy algorithms are a good choice because not only are they simple \nto come up with, but that simplicity means they usually run fast, too. \nIn this case, the greedy algorithm runs in O(n2) time, where n is the \nnumber of radio stations.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    128.39100646972656,
+    175.697998046875,
+    242.63101196289062,
+    267.37701416015625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 223,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     242.05596923828125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 10  I  greedy algorithms\n198",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     187.61973571777344,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s see how this problem looks in code.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     61.65100860595703,
+     100.2480239868164,
+     78.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Code for setup",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     82.11801147460938,
+     323.2144775390625,
+     109.95902252197266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For this example, I’m going to use a subset of the states and the stations \nto keep things simple.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     112.62103271484375,
+     218.77166748046875,
+     127.46002960205078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, make a list of the states you want to cover:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     133.59600830078125,
+     323.4757995605469,
+     154.37200927734375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "states_needed = set([\"mt\", \"wa\", \"or\", \"id\", \"nv\", \"ut\",\n\"ca\", \"az\"])   \nYou pass an array in, and it gets converted to a set.",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     163.61801147460938,
+     327.37139892578125,
+     204.46104431152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I used a set for this. A set is like a list, except that each item can show up \nonly once in a set. Sets can’t have duplicates. For example, suppose you \nhad this list:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     212.12864685058594,
+     161.1814422607422,
+     221.12864685058594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> arr = [1, 2, 2, 3, 3, 3]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     226.11801147460938,
+     138.27476501464844,
+     240.95701599121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And you converted it to a set:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     248.62864685058594,
+     85.85871887207031,
+     267.6276550292969
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> set(arr)\nset([1, 2, 3])",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     277.1180114746094,
+     244.5545654296875,
+     291.9570007324219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The numbers 1, 2, and 3 all show up just once in a set.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     356.6579895019531,
+     314.8433837890625,
+     384.4989929199219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You also need the list of stations that you’re choosing from. I chose to \nuse a dict for this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     392.16864013671875,
+     236.84072875976562,
+     451.16363525390625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "stations = {}\nstations[\"kone\"] = set([\"id\", \"nv\", \"ut\"])\nstations[\"ktwo\"] = set([\"wa\", \"id\", \"mt\"])\nstations[\"kthree\"] = set([\"or\", \"nv\", \"ca\"])\nstations[\"kfour\"] = set([\"nv\", \"ut\"])\nstations[\"kfive\"] = set([\"ca\", \"az\"])",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     460.6579895019531,
+     319.8913879394531,
+     514.5029907226562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The keys are station names, and the values are the states they cover. \nSo, in this example, the kone station covers Idaho, Nevada, and Utah. \nAll the values are sets, too. Making everything a set will make your life \neasier, as you’ll see soon.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     517.1649780273438,
+     313.908447265625,
+     532.0040283203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Finally, you need something to hold the final set of stations you’ll use:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     539.6686401367188,
+     134.27236938476562,
+     548.6686401367188
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "final_stations = set()",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    19.31100082397461,
+    302.6969909667969,
+    315.7120056152344,
+    346.5369873046875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 224,
+  "blocks": [
+   {
+    "bbox": [
+     140.05299377441406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The set-covering problem\n199",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     169.09600830078125,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Calculating the answer",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     313.2634582519531,
+     95.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you need to calculate what stations you’ll use. Take a look \nat the image at right, and see if you can predict what stations you \nshould use.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     98.62600708007812,
+     294.65252685546875,
+     139.4690399169922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There can be more than one correct solution. You need to go \nthrough every station and pick the one that covers the most \nuncovered states. I’ll call this best_station:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     147.1316375732422,
+     308.0621032714844,
+     177.66598510742188
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "best_station = None\nstates_covered = set()\nfor station, states_for_station in stations.items():",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.495994567871094,
+     185.62100219726562,
+     340.72332763671875,
+     252.4640350341797
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "states_covered is the biggest set of states we can newly cover. \nRemember, we are trying to find the station that will cover the \nmost states that haven’t been covered yet. The for loop allows you to \nloop over every station to see which one is the best station. Let’s look at \nthe body of the for loop:",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     260.13165283203125,
+     288.2621765136719,
+     299.1286315917969
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "covered = states_needed & states_for_station   \nif len(covered) > len(states_covered):\n  best_station = station\n  states_covered = covered",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     308.6210021972656,
+     173.61077880859375,
+     323.4599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There’s a funny-looking line here:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     331.13165283203125,
+     272.06219482421875,
+     340.13165283203125
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "covered = states_needed & states_for_station",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     345.1210021972656,
+     102.23400115966797,
+     359.9599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What’s going on?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     371.65399169921875,
+     53.76399612426758,
+     389.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Sets",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     392.1210021972656,
+     167.4397430419922,
+     406.9599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have a set of fruits.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     479.6260070800781,
+     169.7717742919922,
+     494.4649963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You also have a set of vegetables.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     532.1289672851562,
+     310.16265869140625,
+     546.968017578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When you have two sets, you can do some fun things with them.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     335.7550048828125,
+     261.4649963378906,
+     422.3050231933594,
+     280.37176513671875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "New syntax! This is \ncalled a set intersection.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    318.5,
+    38.0,
+    432.5,
+    201.44000244140625
+   ],
+   [
+    191.1959991455078,
+    373.7510070800781,
+    280.47601318359375,
+    440.23101806640625
+   ],
+   [
+    191.44200134277344,
+    463.94097900390625,
+    273.5220031738281,
+    522.5
+   ]
+  ]
+ },
+ {
+  "pdf_index": 225,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     242.05596923828125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 10  I  greedy algorithms\n200",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     196.37570190429688,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here are some things you can do with sets.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     328.8380126953125,
+     191.54774475097656,
+     343.677001953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A set union means “combine both sets.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     350.8380126953125,
+     327.0095520019531,
+     378.67901611328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A set intersection means “find the items that show up in both sets” (in \nthis case, just the tomato).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     385.8399963378906,
+     327.74755859375,
+     413.6809997558594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A set difference means “subtract the items in one set from the items in \nthe other set.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     416.3429870605469,
+     66.21491241455078,
+     431.1819763183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For example:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     438.8486328125,
+     318.6748962402344,
+     529.0919799804688
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> fruits = set([\"avocado\", \"tomato\", \"banana\"])\n>>> vegetables = set([\"beets\", \"carrots\", \"tomato\"])\n>>> fruits | vegetables  \nThis is a set union.\nset([\"avocado\", \"beets\", \"carrots\", \"tomato\", \"banana\"])\n>>> fruits & vegetables  \nThis is a set intersection.\nset([\"tomato\"])\n>>> fruits – vegetables  \nThis is a set difference.\nset([\"avocado\", \"banana\"])\n>>> vegetables – fruits  \nWhat do you think this will do?",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    45.83100128173828,
+    64.697021484375,
+    289.1910095214844,
+    310.2170104980469
+   ]
+  ]
+ },
+ {
+  "pdf_index": 226,
+  "blocks": [
+   {
+    "bbox": [
+     140.05299377441406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The set-covering problem\n201",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     67.5609130859375,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To recap:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     57.11800765991211,
+     253.67758178710938,
+     71.9570083618164
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Sets are like lists, except sets can’t have duplicates.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     79.11801147460938,
+     296.62158203125,
+     106.95902252197266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You can do some interesting operations on sets, like union, \nintersection, and difference.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     118.65100860595703,
+     129.6706085205078,
+     135.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Back to the code",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     139.11801147460938,
+     191.46266174316406,
+     153.95701599121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s get back to the original example.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     156.6190185546875,
+     134.83580017089844,
+     171.45802307128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is a set intersection:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     179.12864685058594,
+     272.06219482421875,
+     188.12864685058594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "covered = states_needed & states_for_station",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.49700927734375,
+     193.11801147460938,
+     275.0604553222656,
+     259.9630432128906
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "covered is a set of states that were in both states_\nneeded and states_for_station. So covered is the \nset of uncovered states that this station covers! Next you \ncheck whether this station covers more states than the \ncurrent best_station:",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     267.302001953125,
+     235.95425415039062,
+     296.62664794921875
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "if len(covered) > len(states_covered):\n  best_station = station\n  states_covered = covered",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     306.1180114746094,
+     342.3659973144531,
+     333.9590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If so, this station is the new best_station. Finally, after the for loop is \nover, you add best_station to the final list of stations:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     341.628662109375,
+     205.07713317871094,
+     350.628662109375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "final_stations.add(best_station)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.4949951171875,
+     355.6180114746094,
+     328.9147644042969,
+     383.4590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You also need to update states_needed. Because this station covers \nsome states, those states aren’t needed anymore:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     391.128662109375,
+     203.19337463378906,
+     400.128662109375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "states_needed -= states_covered",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.496002197265625,
+     405.1180114746094,
+     331.1696472167969,
+     432.958984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And you loop until states_needed is empty. Here’s the full code for  \nthe loop:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     440.302001953125,
+     257.96905517578125,
+     519.6216430664062
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "while states_needed:\n  best_station = None\n  states_covered = set()\n  for station, states in stations.items():\n    covered = states_needed & states\n    if len(covered) > len(states_covered):\n      best_station = station\n      states_covered = covered",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     530.61962890625,
+     215.87713623046875,
+     549.6185913085938
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "states_needed -= states_covered\n  final_stations.add(best_station)",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    282.9649963378906,
+    122.80999755859375,
+    396.9649963378906,
+    286.25
+   ]
+  ]
+ },
+ {
+  "pdf_index": 227,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     242.05596923828125,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 10  I  greedy algorithms\n202",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     290.5098571777344,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Finally, you can print final_stations, and you should see this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     57.6286506652832,
+     212.85850524902344,
+     76.62767028808594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> print(final_stations)\nset(['ktwo', 'kthree', 'kone', 'kfive'])",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     86.11801147460938,
+     315.9336242675781,
+     126.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Is that what you expected? Instead of stations 1, 2, 3, and 5, you could \nhave chosen stations 2, 3, 4, and 5. Let’s compare the run time of the \ngreedy algorithm to the exact algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     265.9779968261719,
+     309.1476135253906,
+     319.8230285644531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The greedy algorithm won’t always give an exact answer, but it runs \nmuch faster. The set-covering problem is known as an NP-hard \nproblem. If you want to learn a little more about NP-hard problems, \ncheck out appendix B.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     349.55499267578125,
+     58.13600158691406,
+     371.85699462890625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     387.4779968261719,
+     313.62261962890625,
+     415.3190002441406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Greedy algorithms optimize locally, hoping to end up with a global \noptimum.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     422.4800109863281,
+     275.6417541503906,
+     450.32098388671875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If you have an NP-hard problem, your best bet is to use an \napproximation algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     457.48199462890625,
+     305.73663330078125,
+     485.3229675292969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Greedy algorithms are easy to write and fast to run, so they make \ngood approximation algorithms.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    53.750999450683594,
+    141.69699096679688,
+    281.27099609375,
+    251.85699462890625
+   ]
+  ]
+ }
+]

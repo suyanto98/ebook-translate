@@ -1,0 +1,2286 @@
+[
+ {
+  "pdf_index": 166,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "8",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     357.6847839355469,
+     258.75299072265625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about a new data structure called binary \nsearch trees (BSTs).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     267.531005859375,
+     360.9076843261719,
+     294.7559814453125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about balanced trees and why they often \nperform better than arrays or linked lists.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     303.53399658203125,
+     354.5606384277344,
+     358.7649841308594
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou also learn about AVL trees, a type of balanced \nBST. In the worst-case scenario, binary trees can \nbe slow. A balanced tree will help them perform \neffectively.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     294.5989990234375,
+     4.003999710083008,
+     370.1773986816406,
+     26.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "balanced",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     327.4490051269531,
+     22.003999710083008,
+     366.4514465332031,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 9968414,
+    "text": "trees",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     408.0979919433594,
+     320.61761474609375,
+     526.9530029296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the last chapter, you learned about the new \ndata structure, trees. Now that you and trees are \nbest friends, it’s time to see what they are used \nfor. When arrays and linked lists fail to deliver the \ndesired performance, a good next step is to try a \ntree. In this chapter, we’ll discuss the performance \nthat trees can offer. We’ll then explore a \nspecial type of tree that can offer exceptional \nperformance, called a balanced tree.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    339.8599853515625,
+    400.9799499511719,
+    414.5,
+    527.4599609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 167,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n142",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     132.4921875,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "A balancing act",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     67.12100219726562,
+     325.4595947265625,
+     159.9720916748047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember binary search from way back in chapter 1? Using binary \nsearch, we are able to find information much more quickly than if \nwe did a simple search using O(log n) instead of O(n). There is one \nproblem, though: insertion. Sure, searching takes O(log n) time, but the \narray needs to be sorted. If you want to insert a new number into your \nsorted array, it will take O(n) time. The issue is making a spot for the \nnew value. You need to move a bunch of values to make room.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     276.6610107421875,
+     321.28948974609375,
+     304.50201416015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If only we could insert like we do in a linked list, where we just need to \nchange a couple of pointers.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     438.4809875488281,
+     314.99749755859375,
+     466.3219909667969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But searching is linear time in linked lists. How can we get the best of \nboth worlds?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    88.91099548339844,
+    174.70001220703125,
+    246.11099243164062,
+    262.5400085449219
+   ],
+   [
+    92.99099731445312,
+    319.239990234375,
+    242.03099060058594,
+    424.3599853515625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 168,
+  "blocks": [
+   {
+    "bbox": [
+     157.4409942626953,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "A balancing act\n143",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     257.0692138671875,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Improving insertion speed with trees",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     343.6333312988281,
+     95.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So we really want the search speed of a sorted array with a faster \ninsertion speed. We know that insertions are faster in linked lists. So we \nwant some kind of data structure that combines these ideas.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     284.6610107421875,
+     337.9924621582031,
+     338.50604248046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And that structure is a tree! There are dozens of different types of trees \nto choose from, so I specifically mean a balanced binary search tree \n(BST). In this chapter, we will see how a BST works, and then we will \nlearn how to balance it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     341.1680603027344,
+     283.9715270996094,
+     356.0070495605469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "BSTs are a type of binary tree. Here is an example of a BST.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    62.03099822998047,
+    110.70001220703125,
+    308.9909973144531,
+    270.5400085449219
+   ],
+   [
+    119.75100708007812,
+    370.7409973144531,
+    251.27101135253906,
+    484.7409973144531
+   ]
+  ]
+ },
+ {
+  "pdf_index": 169,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n144",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     321.818603515625,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Just like a binary tree, each node has up to two children: the left child \nand the right child. But it has a special property that makes it a BST: \nthe value of the left child is always smaller than the node, and the value \nof the right child is always greater. So for node 10, its left child has a \nsmaller value (5), and its right child has a bigger value (20).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     246.97799682617188,
+     320.0695495605469,
+     274.8190002441406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Not only that, all the numbers in the left child subtree are smaller than \nthe node!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     490.15899658203125,
+     247.4464874267578,
+     504.99798583984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This special property means searches will be very fast.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    91.55099487304688,
+    116.69699096679688,
+    243.4709930419922,
+    232.85699462890625
+   ],
+   [
+    9.5,
+    289.5579833984375,
+    357.02099609375,
+    476.0379638671875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 170,
+  "blocks": [
+   {
+    "bbox": [
+     157.4409942626953,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "A balancing act\n145",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     341.4884033203125,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s see if the number 7 is in this tree. Here is how we do it. Start at the \nroot node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     208.697998046875,
+     344.6232604980469,
+     275.5450439453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Seven is smaller than 10, so we check the left subtree. Remember, all the \nnodes with smaller values are on the left, and all the nodes with bigger \nvalues are on the right. So we know right away we don’t need to check \nthe nodes on the right since 7 won’t be there. If we go left from the 10, \nwe get to the 5.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     396.7980041503906,
+     236.8695068359375,
+     411.6369934082031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Seven is bigger than 5, so let’s go right this time.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    131.87100219726562,
+    77.697998046875,
+    239.1510009765625,
+    194.57699584960938
+   ],
+   [
+    132.3509979248047,
+    290.2770080566406,
+    238.67098999023438,
+    382.677001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 171,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n146",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     152.92098999023438,
+     320.31268310546875,
+     180.7620086669922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We found it! Now let’s look for another number, 8. We follow the exact \nsame path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     348.34100341796875,
+     317.6153869628906,
+     415.1891174316406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Except now it is not there! If it was in the tree, it would be right where \nthe dotted node is. The whole reason we are talking about trees is to \nsee if they are faster than arrays and linked lists. So let’s talk about the \nperformance of this tree. To do that, we need to look at the height  \nof the tree.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    111.59100341796875,
+    38.0,
+    223.42999267578125,
+    138.79998779296875
+   ],
+   [
+    106.07099914550781,
+    195.5,
+    228.95098876953125,
+    334.2200012207031
+   ]
+  ]
+ },
+ {
+  "pdf_index": 172,
+  "blocks": [
+   {
+    "bbox": [
+     145.3090057373047,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Shorter trees are faster\n147",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     211.20619201660156,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Shorter trees are faster",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     287.7776184082031,
+     94.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s look at two trees. They both have seven nodes, but the \nperformance is very different.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     248.16900634765625,
+     344.1625061035156,
+     328.01806640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The height of the best-case tree is 2. This means you can get to any node \nfrom the root node in, at most, two steps. The height of the worst-case \ntree is 6. This means you can get to any node from the root node in, at \nmost, six steps. Let’s compare this to the performance of binary search \nversus simple search. Just to remind you, here’s the performance of \nbinary search versus simple search:",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    77.1709976196289,
+    109.70098876953125,
+    293.85101318359375,
+    234.04800415039062
+   ],
+   [
+    67.6709976196289,
+    336.74798583984375,
+    303.35198974609375,
+    552.4169921875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 173,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n148",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     317.7256164550781,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember our number guessing game? To guess a number out of 100 \nnumbers, it would take 7 guesses with binary search, but 100 guesses \nwith simple search. Well, we’re in a similar situation with trees.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     231.77801513671875,
+     322.03863525390625,
+     298.62506103515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The worst-case tree is taller, and it has worse performance. In the \nworst-case tree, the nodes are all in a line. This tree has height O(n), so \nsearches will take O(n) time. You can think of it this way: this tree is \nreally just a linked list since one node points to another, and so on, in a \nline. And searching through a linked list takes O(n) time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     301.1440734863281,
+     321.1794128417969,
+     329.1280822753906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The best-case tree has height O(log n), and searching this tree will take \nO(log n) time.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    70.91100311279297,
+    90.69701385498047,
+    264.1109924316406,
+    217.65701293945312
+   ],
+   [
+    58.551002502441406,
+    343.85699462890625,
+    276.47100830078125,
+    477.2969970703125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 174,
+  "blocks": [
+   {
+    "bbox": [
+     145.3090057373047,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Shorter trees are faster\n149",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.97500991821289,
+     341.6985168457031,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So this situation is very similar to binary search versus simple search! If \nwe can guarantee the height of our tree will be O(log n), then searching \nthe tree will be O(log n), just like we wanted.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     253.95498657226562,
+     321.4473876953125,
+     294.9410095214844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But how can we guarantee the height will be O(log n)? Here’s an \nexample where we build a tree that ends up being a worst-case tree \n(something we want to avoid). We will start with one node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     297.60302734375,
+     123.39688873291016,
+     312.4420166015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s add another one.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    70.07099914550781,
+    90.69699096679688,
+    300.95098876953125,
+    239.97698974609375
+   ],
+   [
+    157.79100036621094,
+    327.177001953125,
+    213.2310028076172,
+    396.0570068359375
+   ],
+   [
+    333.0419921875,
+    262.8970031738281,
+    363.5220031738281,
+    290.97698974609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 175,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n150",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     170.21768188476562,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So far, so good. Let’s add a few more.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     244.11801147460938,
+     193.50466918945312,
+     284.9610290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We keep having to add these nodes to the \nright since they are all bigger than the \nother nodes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     305.1240539550781,
+     198.1356658935547,
+     371.9710998535156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Yikes, this tree is a worst-case tree—its \nheight is O(n)! Shorter trees are faster. The \nshortest a BST can be is O(log n). To make \na BST shorter, we need to balance it. So \nlets look at a balanced BST next.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    123.11199951171875,
+    64.69700622558594,
+    211.91099548339844,
+    177.49700927734375
+   ],
+   [
+    195.9219970703125,
+    195.84498596191406,
+    325.5220031738281,
+    408.4849853515625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 176,
+  "blocks": [
+   {
+    "bbox": [
+     126.61199951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "AVL trees: A type of balanced tree\n151",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     296.00421142578125,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "AVL trees: A type of balanced tree",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     345.74761962890625,
+     120.9660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "AVL trees are a type of self-balancing BST. This means AVL trees will \nmaintain a height of O(log n). Whenever the tree is out of balance—that \nis, the height is not O(log n)—it will correct itself. For the last example, \nthe tree may balance itself to look like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     272.0780029296875,
+     323.6596374511719,
+     300.06201171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "An AVL tree will give us that O(log n) height we want by balancing \nitself through rotations.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     311.7539978027344,
+     87.6300048828125,
+     329.1000061035156
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Rotations",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     332.22100830078125,
+     345.77947998046875,
+     360.06201171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have a tree with three nodes. Any one of them could be the \nroot node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     483.0010070800781,
+     296.3466491699219,
+     510.8420104980469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You use rotation to move a set of nodes to end up with a new \narrangement. Let’s see a rotation in slow motion.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    129.95199584960938,
+    135.70001220703125,
+    241.07101440429688,
+    258.1000061035156
+   ],
+   [
+    65.27100372314453,
+    374.79998779296875,
+    305.7510070800781,
+    468.8800048828125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 177,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n152",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     161.08099365234375,
+     324.3705749511719,
+     188.92201232910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We rotated to the left. We started with an unbalanced tree with A as the \nroot node and ended up with a balanced tree with B as the root node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     191.58401489257812,
+     279.35870361328125,
+     232.4270477294922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Rotations are a popular way to balance trees. AVL trees use  \nrotation to balance. Let’s see an example. We’ll start with one  \nnode again.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.95800018310547,
+     270.0910339355469,
+     144.5238800048828,
+     284.9300231933594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s add a node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     326.7960510253906,
+     314.9533996582031,
+     367.6390686035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So far, so good. The children aren’t exactly the same height; there’s a \ndifference of 1. But a difference of 1 is OK for AVL trees. Now we will \nadd one more.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     370.30108642578125,
+     232.80763244628906,
+     385.14007568359375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Uh oh! Now the tree is unbalanced. Time to rotate!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     543.9439697265625,
+     260.779541015625,
+     558.7830200195312
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We did a left rotation, and now the tree is balanced again.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    37.99999237060547,
+    362.781005859375,
+    146.95999145507812
+   ],
+   [
+    58.611000061035156,
+    388.8609924316406,
+    144.83999633789062,
+    529.822998046875
+   ],
+   [
+    179.79600524902344,
+    417.75799560546875,
+    276.4110107421875,
+    529.822998046875
+   ],
+   [
+    285.2019958496094,
+    190.25999450683594,
+    325.5220031738281,
+    227.45999145507812
+   ],
+   [
+    7.4010009765625,
+    239.5989990234375,
+    71.96099853515625,
+    319.9989929199219
+   ]
+  ]
+ },
+ {
+  "pdf_index": 178,
+  "blocks": [
+   {
+    "bbox": [
+     126.61199951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "AVL trees: A type of balanced tree\n153",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     136.91587829589844,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s add one more node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     190.12100219726562,
+     129.58987426757812,
+     204.9600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And add another node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     348.8240051269531,
+     134.00088500976562,
+     363.6629943847656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We need to rotate again!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     514.5859375,
+     340.80743408203125,
+     555.4290161132812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Phew. Using rotation, the AVL tree has balanced itself. Notice in that \nlast example, the node “30” got rotated instead of the node “20”. There’s \nan example coming up that explains why.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    141.8990020751953,
+    55.697021484375,
+    229.12298583984375,
+    185.0
+   ],
+   [
+    140.1840057373047,
+    213.70001220703125,
+    230.8389892578125,
+    340.7019958496094
+   ],
+   [
+    139.38900756835938,
+    378.4019775390625,
+    231.6330108642578,
+    500.4649658203125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 179,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n154",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     281.0552673339844,
+     68.00201416015625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "How does the AVL tree know when it’s time  \nto rotate?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     71.12100219726562,
+     319.67242431640625,
+     98.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We can see visually that the tree is off balance—one side is longer than \nthe other. But how does the tree know that?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     101.62399291992188,
+     327.1348876953125,
+     155.4690399169922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For the tree to know when it’s time to balance itself, it needs to \nstore some extra information. Each node stores one of two pieces of \ninformation: its height or something called a balance factor. The balance \nfactor can be −1, 0, or 1.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     360.96099853515625,
+     212.19476318359375,
+     414.8059997558594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Note that this image shows you the balance \nfactors for the root nodes only, but you would \nneed to store the balance factor for each node \n(I’ll show an example of this shortly).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     417.4679870605469,
+     219.83753967285156,
+     497.3169860839844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The balance factor tells you which child is taller \nand by how much. The balance factor lets the \ntree know when to rebalance. Zero means the \ntree is balanced. A −1 or 1 is OK, too, because \nremember, AVL trees don’t have to be perfectly \nbalanced: a difference of one is OK.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     499.9789733886719,
+     227.10850524902344,
+     540.822021484375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But if the balance factor drops below −1 or \nmoves above 1, it’s time to rebalance. To the right \nare two trees that need rebalancing.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    30.47100067138672,
+    170.1999969482422,
+    304.552001953125,
+    346.8399963378906
+   ],
+   [
+    249.07598876953125,
+    364.12799072265625,
+    414.5,
+    541.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 180,
+  "blocks": [
+   {
+    "bbox": [
+     126.61199951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "AVL trees: A type of balanced tree\n155",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     342.9414978027344,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "As I said, each node needs to store either the height or the balance \nfactor. In my example, I am going to store both so you can see how they \nboth change. But if you have the heights of each subtree, it is easy to \ncompute the balance factor. Let’s see an example. Take this tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     241.12100219726562,
+     181.0027313232422,
+     255.9600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We are going to add this node to it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     295.8240051269531,
+     342.4245300292969,
+     323.6650085449219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, let’s write out the height and balance factors for each node. In this \nimage, H is height, and BF is balance factor.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     486.7649841308594,
+     342.24853515625,
+     540.6100463867188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember, I am storing both values to show how they change, but you \nwould only need to store one. Make sure these numbers make sense to \nyou. Note that all the leaf nodes have a balance factor of 0: they have no \nchild nodes, so there’s nothing to keep in balance.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    142.197998046875,
+    91.69700622558594,
+    228.8249969482422,
+    227.0
+   ],
+   [
+    129.7740020751953,
+    338.39996337890625,
+    241.2480010986328,
+    472.64398193359375
+   ],
+   [
+    209.32400512695312,
+    237.11300659179688,
+    237.67898559570312,
+    266.6919860839844
+   ]
+  ]
+ },
+ {
+  "pdf_index": 181,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n156",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     132.05979919433594,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now let’s add the new node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     277.2980041503906,
+     327.0633850097656,
+     318.1410217285156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "After adding this node, we need to set its height and balance factor. \nThen we can go up the tree, updating the heights and balance factors for \nall its ancestors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     501.5769958496094,
+     408.2068176269531,
+     510.48699951171875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Set the height and balance factor.\nGo up the tree and update the height and balance factor for the ancestors.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    100.79200744628906,
+    64.69700622558594,
+    234.23098754882812,
+    263.177001953125
+   ],
+   [
+    9.5,
+    332.87799072265625,
+    138.3800048828125,
+    496.3179931640625
+   ],
+   [
+    145.3979949951172,
+    332.8780212402344,
+    279.5570068359375,
+    495.5980224609375
+   ],
+   [
+    286.57501220703125,
+    332.87799072265625,
+    408.0150146484375,
+    495.1180114746094
+   ]
+  ]
+ },
+ {
+  "pdf_index": 182,
+  "blocks": [
+   {
+    "bbox": [
+     126.61199951171875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "AVL trees: A type of balanced tree\n157",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     339.00360107421875,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Aha! We just set the balance factor to −2, which means it’s time to \nrotate! I will show the rest of the example next, but this is the main \ntakeaway: after an insert, you update the balance factors for that node’s \nancestors. The AVL tree looks at the balance factor to know when it \nneeds to rebalance. Finishing the example, let’s rotate the 10.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     270.7380065917969,
+     289.0634460449219,
+     285.5769958496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now that subtree is balanced. Let’s keep moving up the tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     455.3180236816406,
+     343.7114562988281,
+     483.15899658203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Nothing to update there. We actually didn’t need to keep moving up the \ntree because AVL trees require, at most, one rebalancing.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     485.8210144042969,
+     341.4783630371094,
+     513.6620483398438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "AVL trees are a good option if you want a balanced BST. Let’s recap our \njourney:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     520.822998046875,
+     166.8336639404297,
+     535.6620483398438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Binary trees are a type of tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     542.822998046875,
+     267.8356018066406,
+     557.6620483398438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t In binary trees, each node has, at most, two children.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    125.27200317382812,
+    116.697021484375,
+    245.75100708007812,
+    256.61700439453125
+   ],
+   [
+    127.79200744628906,
+    300.3170166015625,
+    243.23098754882812,
+    441.197021484375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 183,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n158",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     315.59136962890625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t BSTs are a type of binary tree where all the values in the left subtree \nare smaller than the node, and all the values in the right are greater \nthan the node.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     83.12197875976562,
+     322.99432373046875,
+     110.9629898071289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t BSTs can give great performance if we can guarantee their height will \nbe O(log n).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499996185302734,
+     118.12399291992188,
+     315.3703308105469,
+     145.9650115966797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t AVL trees are self-balancing BSTs, guaranteeing their height will be \nO(log n).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500003814697266,
+     153.12600708007812,
+     230.79461669921875,
+     167.9650115966797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t AVL trees balance themselves through rotations.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     175.12600708007812,
+     323.53466796875,
+     215.9690399169922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We haven’t covered everything. We have covered one case for rotations, \nand there are other cases. We won’t spend time digging into them, as \nyou will rarely need to implement an AVL tree yourself.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     218.488037109375,
+     246.55650329589844,
+     298.4801025390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now we know AVL trees offer O(log n) search \nperformance. What about insertions? Well, insertions \nare just a matter of searching for a place to insert the \nnode and adding a pointer, just like a linked list. For \nexample, if we want to insert an 8 in this tree, we just \nneed to find where to add the pointer.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     300.9991149902344,
+     159.16378784179688,
+     315.9811096191406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So insertions are O(log n) as well.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500007629394531,
+     318.64312744140625,
+     274.99151611328125,
+     359.48614501953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "At the start of this chapter, we were looking for a data \nstructure that offered both fast searches and fast inserts. \nWe have found our magic data structure: it’s a balanced BST!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    87.35099792480469,
+    374.1969909667969,
+    247.67100524902344,
+    477.6369934082031
+   ],
+   [
+    285.56201171875,
+    211.72900390625,
+    397.88201904296875,
+    338.6889953613281
+   ]
+  ]
+ },
+ {
+  "pdf_index": 184,
+  "blocks": [
+   {
+    "bbox": [
+     166.30099487304688,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Splay trees\n159",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     115.39399719238281,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Splay trees",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     66.97799682617188,
+     340.62158203125,
+     94.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "AVL trees are a good basic balanced BST that guarantees O(log n) time \nfor a bunch of operations.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     97.62399291992188,
+     261.2905578613281,
+     190.47508239746094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Splay trees are a different take on balanced BSTs. The \ncool thing about splay trees is if you have recently \nlooked up an item, the next time you look it up, the \nlookup will be faster. There is something intuitively \npleasing about this. For example, suppose you have \nsome software where you give it a zip code, and it \nwill look up the city for you.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     193.1370849609375,
+     229.65347290039062,
+     207.97608947753906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can picture the interaction going like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     324.9809875488281,
+     301.95660400390625,
+     339.8199768066406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now suppose you are repeatedly looking up the same zip code.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    32.39099884033203,
+    220.69998168945312,
+    338.6319885253906,
+    312.8599853515625
+   ],
+   [
+    30.59100341796875,
+    354.5610046386719,
+    340.4320068359375,
+    448.1600036621094
+   ],
+   [
+    31.430999755859375,
+    462.3609924316406,
+    339.59100341796875,
+    555.240966796875
+   ],
+   [
+    274.0610046386719,
+    100.95999908447266,
+    419.7409973144531,
+    190.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 185,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n160",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     146.20098876953125,
+     106.23181915283203,
+     161.0399932861328
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That feels sort of silly.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     163.70199584960938,
+     323.5995788574219,
+     191.5430145263672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The software just looked up the zip code; why can’t it remember that? It \nshould really go something like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     319.041015625,
+     327.63653564453125,
+     372.88604736328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is what splay trees allow you to do. When you look up a node in a \nsplay tree, it will make that node the new root, so if you look it up again, \nthe lookup will be instant. In general, the nodes you have looked up \nrecently get clustered to the top and become faster to look up.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     375.4050598144531,
+     324.48065185546875,
+     442.3950500488281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The tradeoff is the tree is not guaranteed to be balanced. So some \nsearches might take longer than O(log n) time. Some searches may take \nas long as linear time! Also, while performing the search, you may have \nto rotate the node up to the root if it is not already the root, and that \nwill take time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     445.05706787109375,
+     318.1687927246094,
+     511.904052734375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But we are OK with the tradeoff of not having a balanced tree all the \ntime. Because the cool thing is that if you do n searches, the total time \nis O(n log n) guaranteed—that is, O(log n) per search. So even though \na single search may take longer than O(log n) time, overall, they will \naverage out to O(log n) time, and the faster search time is our goal.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    73.5510025024414,
+    38.0,
+    261.47100830078125,
+    132.07998657226562
+   ],
+   [
+    94.55099487304688,
+    206.28001403808594,
+    240.4709930419922,
+    304.9200134277344
+   ]
+  ]
+ },
+ {
+  "pdf_index": 186,
+  "blocks": [
+   {
+    "bbox": [
+     173.19500732421875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "B-trees\n161",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     84.50601196289062,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "B-trees",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     328.4104919433594,
+     94.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "B-trees are a generalized form of binary tree. They are often used for \nbuilding databases. Here is a B-tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     208.73699951171875,
+     336.9035949707031,
+     236.57801818847656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Looks pretty wild, huh? You may notice that some of these nodes have \nmore than two children.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     351.6470031738281,
+     284.8734436035156,
+     366.4859924316406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Unlike binary trees, B-trees can have many more children.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     369.14801025390625,
+     344.6133728027344,
+     396.9889831542969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ve probably also noticed that, unlike our previous trees, most nodes \nhave two keys.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     510.7629699707031,
+     342.6785583496094,
+     551.6060180664062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So not only can nodes in B-trees have more than two children, they can \nhave more than one key! This is why I said B-trees are a generalized \nform of BSTs.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    49.447998046875,
+    101.70098876953125,
+    321.5740051269531,
+    200.61599731445312
+   ],
+   [
+    49.447998046875,
+    243.31600952148438,
+    321.5740051269531,
+    343.5260009765625
+   ],
+   [
+    49.447998046875,
+    403.72698974609375,
+    321.5740051269531,
+    502.6419982910156
+   ]
+  ]
+ },
+ {
+  "pdf_index": 187,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n162",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     217.32861328125,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "What is the advantage of B-trees?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.12099838256836,
+     324.95361328125,
+     121.96805572509766
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "B-trees have a very interesting optimization because it’s a physical \noptimization. Computers are physical objects. So when we are looking \nthings up in a tree, a physical object has to move to retrieve that data. \nThis is called seek time. Seek time can be a big factor in how fast or slow \nyour algorithm is.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     124.63006591796875,
+     325.6905822753906,
+     217.4811553955078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Think of it like going to the grocery store. You could go shopping for \none item at a time. Suppose you decide to buy milk. After coming \nhome, you realize you should get some bread, too, so you go back to the \nstore. After coming home again, you realize you’re out of coffee. So you \ngo back to the store again. What an inefficient way to shop! It would be \nmuch better to shop once and buy a bunch of stuff while you are there. \nIn this example, driving to and from the store is the seek time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     220.00015258789062,
+     326.1637268066406,
+     273.9881896972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The fundamental idea with B-Trees is that once you’ve done the seek, you \nmight as well read a bunch of stuff into memory. That is, once you’re at \nthe store, you might as well buy everything you need instead of going \nback repeatedly.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     276.65020751953125,
+     324.4146423339844,
+     330.4952392578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "B-trees have bigger nodes: each node can have many more keys and \nchildren than a binary tree. So we spend more time reading each node. \nBut we seek less because we read more data in one go. This is what makes \nB-trees faster.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     333.1572570800781,
+     319.9462890625,
+     360.9982604980469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "B-trees are a popular data structure for databases, which is no surprise \nas databases spend a lot of time retrieving data from disk.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     363.6602783203125,
+     318.71539306640625,
+     391.5012512207031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice the ordering in a B-tree; it is pretty interesting, too. You start at \nthe lower left.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     530.0009765625,
+     135.10787963867188,
+     544.8400268554688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Where do you go from here?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    17.03099822998047,
+    406.20001220703125,
+    317.9909973144531,
+    515.8800048828125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 188,
+  "blocks": [
+   {
+    "bbox": [
+     173.19500732421875,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "B-trees\n163",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     176.46963500976562,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ll snake across the whole tree.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     438.1789855957031,
+     337.9684143066406,
+     492.02398681640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice that it is still following the property of the BST, where for each \nkey, the keys to the left are smaller, and the keys to the right are bigger. \nFor example, for key 3, the keys to the left are 1 and 2, and the keys to \nthe right are 4 and 5.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     494.6860046386719,
+     341.3464660644531,
+     535.5289916992188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Also notice that the number of children is one greater than the number \nof keys. So the root node has one key and two children. Each of those \nchildren has two keys and three children.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    33.23100280761719,
+    64.697021484375,
+    337.7909851074219,
+    175.57699584960938
+   ],
+   [
+    33.95099639892578,
+    189.77700805664062,
+    337.0710144042969,
+    299.93701171875
+   ],
+   [
+    34.191001892089844,
+    314.13800048828125,
+    336.8320007324219,
+    424.0579833984375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 189,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     233.10910034179688,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 8  I  balanced trees\n164",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     322.9284362792969,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That concludes our two chapters on trees. It’s unlikely you will need \nto implement a tree yourself, but it’s important to know that trees are \na type of graph, and they offer great performance. In the next chapter, \nwe will return to graphs and talk about a new type of graph: a weighted \ngraph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     131.69500732421875,
+     58.13600158691406,
+     153.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     165.11801147460938,
+     299.82952880859375,
+     192.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Balanced binary search trees (BSTs) offer the same Big O search \nperformance as arrays with better insertion performance.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     200.1199951171875,
+     207.176513671875,
+     214.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The height of a tree affects its performance.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     222.1199951171875,
+     309.0135192871094,
+     249.9610137939453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t AVL trees are a popular type of balanced BST. Like most balanced \ntrees, AVL trees balance themselves through rotation.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     257.12200927734375,
+     325.00750732421875,
+     284.9630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t B-trees are generalized BSTs, where each node can have multiple keys \nand multiple child nodes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     292.1239929199219,
+     327.2062683105469,
+     319.9649963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Seek time is like travel time to a grocery store. B-trees try to minimize \nseek time by reading more data in one go.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    334.697021484375,
+    397.58099365234375,
+    450.37701416015625
+   ]
+  ]
+ }
+]

@@ -1,0 +1,2615 @@
+[
+ {
+  "pdf_index": 0,
+  "blocks": [
+   {
+    "bbox": [
+     24.259231567382812,
+     196.12689208984375,
+     130.4324951171875,
+     209.44515991210938
+    ],
+    "font": "HypatiaSansPro-Semibold",
+    "size": 13.31827163696289,
+    "color": 2301728,
+    "text": "Aditya Y. Bhargava",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     24.259231567382812,
+     214.45724487304688,
+     140.85694885253906,
+     224.44595336914062
+    ],
+    "font": "HypatiaSansPro-Semibold",
+    "size": 9.988703727722168,
+    "color": 7171697,
+    "text": "Foreword by Daniel Zingaro",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     170.05517578125,
+     156.58937072753906,
+     270.60888671875,
+     169.0752410888672
+    ],
+    "font": "HypatiaSansPro-Semibold",
+    "size": 12.485879898071289,
+    "color": 2301728,
+    "text": "SECOND EDITION",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    0.0,
+    0.0,
+    442.0,
+    554.3602905273438
+   ]
+  ]
+ },
+ {
+  "pdf_index": 1,
+  "blocks": [
+   {
+    "bbox": [
+     7.334604263305664,
+     99.00382995605469,
+     42.88059997558594,
+     153.93853759765625
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 44.88130187988281,
+    "color": 14755878,
+    "text": "T",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334278106689453,
+     109.49959564208984,
+     272.61334228515625,
+     207.46229553222656
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.580586433410645,
+    "color": 2301728,
+    "text": "he algorithms you use most often have already been \ndiscovered, tested, and proven. Grokking Algorithms, \nSecond Edition makes it a breeze to learn, under-\nstand, and use them. With beautifully simple explanations, over \n400 fun illustrations, and dozens of relevant examples, it’s the \nperfect way to unlock the power of algorithms in your everyday \nwork and prepare for your next coding interview—no math \nrequired!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334604263305664,
+     215.78524780273438,
+     272.70343017578125,
+     326.2840881347656
+    ],
+    "font": "BodoniURW-MedObl",
+    "size": 10.633889198303223,
+    "color": 14755878,
+    "text": "Grokking Algorithms, Second Edition teaches you important \nalgorithms to speed up your programs, simplify your code, \nand solve common programming problems. Start with tasks \nlike sorting and searching, then build your skills to tackle \nadvanced problems like data compression and artiﬁ cial intell-\nigence. You’ll even learn to compare the performance tradeoffs \nbetween algorithms. Plus, this new edition includes fresh \ncoverage of trees, NP-complete problems, and code updates to \nPython 3.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334514617919922,
+     332.1415100097656,
+     220.84268188476562,
+     412.8829040527344
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 8.784517288208008,
+    "color": 14755878,
+    "text": "What’s Inside\n•  Search, sort, and graph algorithms\n•  Data structures such as arrays, lists, hash tables, \n     trees, and graphs\n•  NP-complete and greedy algorithms\n•  Exercises and code samples in every chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334604263305664,
+     421.4049072265625,
+     220.84181213378906,
+     432.0387878417969
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "No advanced math or programming skills required.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334604263305664,
+     439.12744140625,
+     260.14501953125,
+     474.7275695800781
+    ],
+    "font": "BodoniURW-MedObl",
+    "size": 10.580586433410645,
+    "color": 14755878,
+    "text": "Aditya Bhargava is a Software Engineer with a dual back-\nground in Computer Science and Fine Arts. He blogs on pro-\ngramming at adit.io.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334978103637695,
+     481.81719970703125,
+     233.1636962890625,
+     492.4510803222656
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "The technical editor on this book was David Eisenstat.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334604263305664,
+     503.417724609375,
+     183.44107055664062,
+     523.7608032226562
+    ],
+    "font": "FuturaPT-Book",
+    "size": 9.24686050415039,
+    "color": 2301728,
+    "text": "For print book owners, all ebook formats are free:\nhttps://www.manning.com/freebook",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334604263305664,
+     21.905460357666016,
+     121.74009704589844,
+     66.12761688232422
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 14.547283172607422,
+    "color": 14755878,
+    "text": "grokking \nalgorithms",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.334604263305664,
+     71.07243347167969,
+     93.90740966796875,
+     96.26520538330078
+    ],
+    "font": "HypatiaSansPro-Semibold",
+    "size": 10.17154598236084,
+    "color": 2301728,
+    "text": "SECOND EDITION\nECOND EDITION\nAditya Y. Bhargava",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     292.3782958984375,
+     121.10761260986328,
+     405.3357849121094,
+     131.7415008544922
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "“Breaks down a semester’s",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     297.7048034667969,
+     133.12814331054688,
+     429.6810607910156,
+     203.8647918701172
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "worth of Algorithms & Data \nStructures into easily digest-\nible explanations and diagrams \nthat don’t require deep know-\nledge of the underlying \nmathematical concepts.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     299.03607177734375,
+     207.99134826660156,
+     395.76239013671875,
+     218.1628875732422
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.17154598236084,
+    "color": 2301728,
+    "text": "—Katie Sylor-Miller, Etsy",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     292.3782958984375,
+     228.83352661132812,
+     425.3998718261719,
+     239.46742248535156
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "“A rare combination of effective",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     297.7044982910156,
+     240.85406494140625,
+     412.28509521484375,
+     287.55108642578125
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "instruction paired with an \nenjoyable read. There is \nno better resource than \nGrokking Algorithms.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     299.03607177734375,
+     291.6754150390625,
+     401.465576171875,
+     301.84698486328125
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.17154598236084,
+    "color": 2301728,
+    "text": "—Ben Vinegar, Syntax.fm",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     292.3782958984375,
+     312.5176086425781,
+     416.09503173828125,
+     323.1514892578125
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "“A beautifully illustrated and",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     297.7048034667969,
+     324.53814697265625,
+     420.4285583496094,
+     359.213134765625
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "lucid journey through the \nworld of algorithms and data \nstructures.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     299.03607177734375,
+     363.3385925292969,
+     400.90814208984375,
+     373.5101623535156
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.17154598236084,
+    "color": 2301728,
+    "text": "—Stephen Diehl, Zerolink",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     292.3782958984375,
+     384.1807556152344,
+     417.4754638671875,
+     394.81463623046875
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "“The number one book I rec-",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     297.7048034667969,
+     396.2012939453125,
+     429.66082763671875,
+     466.9379577636719
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.633889198303223,
+    "color": 2301728,
+    "text": "ommend to all new engineers \nand senior engineers looking \nto further build their skills. \nShines by allowing you to truly \nunderstand algorithms and not \njust memorize the code.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     299.03607177734375,
+     471.06451416015625,
+     411.0552978515625,
+     481.236083984375
+    ],
+    "font": "BodoniURW-Reg",
+    "size": 10.17154598236084,
+    "color": 2301728,
+    "text": "—Alexander Manning, Block",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     46.023475646972656,
+     551.7821655273438,
+     124.91767120361328,
+     565.3639526367188
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 11.096232414245605,
+    "color": 2301728,
+    "text": "MANNING",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     317.6882019042969,
+     62.143394470214844,
+     337.04150390625,
+     81.93380737304688
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.870265007019043,
+    "color": 2301728,
+    "text": "F",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     328.2708435058594,
+     58.340885162353516,
+     341.5638122558594,
+     76.74159240722656
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.870318412780762,
+    "color": 2301728,
+    "text": "r",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     335.95477294921875,
+     56.058326721191406,
+     347.45928955078125,
+     74.3615493774414
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.870307922363281,
+    "color": 2301728,
+    "text": "e",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     344.1337890625,
+     54.71421813964844,
+     354.0025634765625,
+     72.61821746826172
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.870261192321777,
+    "color": 2301728,
+    "text": "e",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     356.7161865234375,
+     54.1328125,
+     364.4813232421875,
+     71.28511047363281
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.870294570922852,
+    "color": 2301728,
+    "text": "e",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     363.0270690917969,
+     54.05441665649414,
+     376.6214904785156,
+     72.0728759765625
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.87024974822998,
+    "color": 2301728,
+    "text": "B",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     374.2056884765625,
+     55.54701232910156,
+     385.8051452636719,
+     73.88762664794922
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.870274543762207,
+    "color": 2301728,
+    "text": "o",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     381.0219421386719,
+     57.92330551147461,
+     394.8337707519531,
+     76.63446044921875
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.870322227478027,
+    "color": 2301728,
+    "text": "o",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     387.1348571777344,
+     63.18549728393555,
+     405.0860900878906,
+     81.54051971435547
+    ],
+    "font": "BigFigginsW01-Regular",
+    "size": 13.870260238647461,
+    "color": 2301728,
+    "text": "k",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     7.376125335693359,
+     2.543236255645752,
+     62.41066360473633,
+     10.865410804748535
+    ],
+    "font": "FuturaPT-Book",
+    "size": 8.322174072265625,
+    "color": 2301728,
+    "text": "DEVELOPMENT",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     341.56884765625,
+     73.75170135498047,
+     380.89324951171875,
+     81.1491928100586
+    ],
+    "font": "FuturaPT-Book",
+    "size": 7.397488117218018,
+    "color": 2301728,
+    "text": "See ﬁ rst page",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     324.3859558105469,
+     515.2005004882812,
+     430.3580627441406,
+     523.3493041992188
+    ],
+    "font": "Arial-BoldMT",
+    "size": 8.14759349822998,
+    "color": 2301728,
+    "text": "ISBN-13: 978-1-63343-853-8",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    4.560548782348633,
+    535.571533203125,
+    45.505645751953125,
+    567.3067016601562
+   ],
+   [
+    317.1682434082031,
+    528.2267456054688,
+    434.2168273925781,
+    563.6875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 2,
+  "blocks": [
+   {
+    "bbox": [
+     84.68400573730469,
+     70.00399780273438,
+     286.35235595703125,
+     92.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Praise for the First Edition",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.69700622558594,
+     122.4800033569336,
+     227.01490783691406,
+     148.10000610351562
+    ],
+    "font": "MinionPro-It",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "“This book does the impossible:  \nit makes math fun and easy!”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.69700622558594,
+     151.11000061035156,
+     268.3251037597656,
+     164.60000610351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "—Sander Rossel, COAS Software Systems",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.69700622558594,
+     183.97999572753906,
+     234.0850067138672,
+     245.60000610351562
+    ],
+    "font": "MinionPro-It",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "“Do you want to treat yourself to  \nlearning algorithms in the same  \nway that you would read your  \nfavorite novel? If so, this is the  \nbook you need!”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.69700622558594,
+     248.61000061035156,
+     255.2060089111328,
+     262.1000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "—Sankar Ramanathan, IBM Analytics",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.69700622558594,
+     281.4800109863281,
+     234.6349639892578,
+     355.1000061035156
+    ],
+    "font": "MinionPro-It",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "“In today’s world, there is no  \naspect of our lives that isn’t  \noptimized by some algorithm.  \nLet this be the first book you pick  \nup if you want a well-explained  \nintroduction to the topic.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.69700622558594,
+     358.1099853515625,
+     246.2850341796875,
+     371.6000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "—Amit Lamba, Tech Overture, LLC",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.69700622558594,
+     390.9800109863281,
+     231.2749786376953,
+     428.6000061035156
+    ],
+    "font": "MinionPro-It",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "“Algorithms are not boring! This  \nbook was fun and insightful for  \nboth my students and me.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     102.69700622558594,
+     431.6099853515625,
+     249.6260223388672,
+     445.1000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "—Christopher Haupt, Mobirobo, Inc",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 3,
+  "blocks": [],
+  "images": [
+   [
+    47.839996337890625,
+    200.55999755859375,
+    394.1600036621094,
+    362.03900146484375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 4,
+  "blocks": [
+   {
+    "bbox": [
+     141.5,
+     174.6511993408203,
+     330.7628173828125,
+     248.04200744628906
+    ],
+    "font": "BigFiggins-Regular",
+    "size": 25.171411514282227,
+    "color": 9672088,
+    "text": "grokking\nalgorithms",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     164.3000030517578,
+     268.8559875488281,
+     237.9199981689453,
+     286.7359924316406
+    ],
+    "font": "BodoniSvtyTwoITCTT-Bold",
+    "size": 12.0,
+    "color": 16777215,
+    "text": "Second Edition",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     164.3000030517578,
+     333.72601318359375,
+     270.26605224609375,
+     354.58599853515625
+    ],
+    "font": "BodoniSvtyTwoITCTT-Bold",
+    "size": 14.0,
+    "color": 2301728,
+    "text": "Aditya Y. Bhargava",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     164.3000030517578,
+     356.45599365234375,
+     299.3240051269531,
+     374.33599853515625
+    ],
+    "font": "BodoniSvtyTwoITCTT-Bold",
+    "size": 12.0,
+    "color": 2301728,
+    "text": "Foreword by Daniel Zingaro",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     342.6390075683594,
+     523.7560424804688,
+     432.5008850097656,
+     563.4041137695312
+    ],
+    "font": "Helvetica-Light",
+    "size": 14.683323860168457,
+    "color": 2301728,
+    "text": "M A N N I N G\nShelter Island",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 5,
+  "blocks": [
+   {
+    "bbox": [
+     9.5,
+     35.64202880859375,
+     345.2547912597656,
+     73.77497100830078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "For online information and ordering of this and other Manning books, please visit\nwww​.manning​.com. The publisher offers discounts on this book when ordered in quantity.  \nFor more information, please contact",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.5,
+     83.62994384765625,
+     154.96522521972656,
+     147.75489807128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Special Sales Department\nManning Publications Co.\n20 Baldwin Road, PO Box 761\nShelter Island, NY 11964 \nEmail: orders@manning.com",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     158.61788940429688,
+     211.0576934814453,
+     170.75889587402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "©2024 by Manning Publications Co. All rights reserved.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     181.62188720703125,
+     387.7825927734375,
+     219.75489807128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form \nor by means electronic, mechanical, photocopying, or otherwise, without prior written permission of the \npublisher.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     266.6178894042969,
+     382.84149169921875,
+     304.7508850097656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Many of the designations used by manufacturers and sellers to distinguish their products are claimed \nas trademarks. Where those designations appear in the book, and Manning Publications was aware of a \ntrademark claim, the designations have been printed in initial caps or all caps.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     15.150001525878906,
+     315.6419982910156,
+     375.17901611328125,
+     327.7829895019531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 5.0,
+    "color": 2301728,
+    "text": "\u0007Recognizing the importance of preserving what has been written, it is Manning’s policy to have the",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     17.419998168945312,
+     328.63800048828125,
+     394.33453369140625,
+     366.77099609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "books we publish printed on acid-free paper, and we exert our best efforts to that end. Recognizing also \nour responsibility to conserve the resources of our planet, Manning books are printed on paper that is at \nleast 15 percent recycled and processed without the use of elemental chlorine.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     377.6340026855469,
+     391.4607238769531,
+     428.76300048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The author and publisher have made every effort to ensure that the information in this book was correct \nat press time. The author and publisher do not assume and hereby disclaim any liability to any party for \nany loss, damage, or disruption caused by errors or omissions, whether such errors or omissions result \nfrom negligence, accident, or any other cause, or from any usage of the information herein.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.28700256347656,
+     440.625,
+     375.9766845703125,
+     556.7550048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Manning Publications Co.\t\n\t\nDevelopment editor:\tIan Hough\n  20 Baldwin Road \t\n\t\nTechnical editor:\tDavid Eisenstat\nShelter Island, NY 11964\t\n\t\nReview editor:\tAleksandar Dragosavljević\n\t\n\t\nProduction editor:\tAndy Marinkovich\n\t\n\t\nCopy editor:\tAlisa Larson\n\t\n\t\nProofreader:\tJason Everett\n\t\n\t\nTechnical proofreader:\tTony Holdroyd\n\t\n\t\nTypesetter:\tDennis Dalinnik\n\t\n\t\nCover designer:\tLeslie Haimes",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 6,
+  "blocks": [
+   {
+    "bbox": [
+     106.14999389648438,
+     169.97500610351562,
+     264.03082275390625,
+     184.95701599121094
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For my parents, Sangeeta and Yogesh",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 7,
+  "blocks": [],
+  "images": []
+ },
+ {
+  "pdf_index": 8,
+  "blocks": [
+   {
+    "bbox": [
+     27.5,
+     142.65798950195312,
+     138.93621826171875,
+     164.95999145507812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "brief contents",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     175.10299682617188,
+     367.08599853515625,
+     191.20999145507812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "1\t introduction to algorithms\t\n1",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.48699951171875,
+     195.09698486328125,
+     367.08599853515625,
+     211.20401000976562
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "2\t selection sort\t\n21",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.48699951171875,
+     215.09100341796875,
+     367.0821228027344,
+     231.197998046875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "3\t recursion\n41",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.48699951171875,
+     235.08499145507812,
+     367.08599853515625,
+     251.19198608398438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "4\t quicksort\n55",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.48699951171875,
+     255.0789794921875,
+     367.08599853515625,
+     271.1860046386719
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "5\t hash tables\t\n77",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.48699951171875,
+     275.072998046875,
+     367.08209228515625,
+     291.17999267578125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "6\t breadth-first search\t\n101",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.48699951171875,
+     295.0669860839844,
+     367.0807800292969,
+     311.17401123046875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "7\t trees\n121",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.4739990234375,
+     315.0610046386719,
+     367.08209228515625,
+     331.1679992675781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "8\t balanced trees\t\n141",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.474029541015625,
+     335.05499267578125,
+     367.07171630859375,
+     351.1619873046875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "9\t Dijkstra’s algorithm\t\n165",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.474029541015625,
+     355.0489807128906,
+     367.069091796875,
+     371.156005859375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "10\t greedy algorithms\t\n191",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.4739990234375,
+     375.0429992675781,
+     367.0716857910156,
+     391.1500244140625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "11\t dynamic programming\t\n203",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.4739990234375,
+     395.0369873046875,
+     367.0755615234375,
+     411.14398193359375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "12\t k-nearest neighbors\t\n229",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.4739990234375,
+     415.031005859375,
+     367.061279296875,
+     431.13800048828125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "13\t where to go next\t\n247",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    67.50299072265625,
+    372.5,
+    141.42300415039062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 9,
+  "blocks": [],
+  "images": []
+ },
+ {
+  "pdf_index": 10,
+  "blocks": [
+   {
+    "bbox": [
+     28.031997680664062,
+     142.65798950195312,
+     97.656005859375,
+     164.95999145507812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "contents",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     64.03199768066406,
+     183.2679901123047,
+     367.0963439941406,
+     196.70999145507812
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "foreword\nxiii",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     64.03199768066406,
+     203.26597595214844,
+     367.0962829589844,
+     216.70797729492188
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "preface\nxv",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     64.03199768066406,
+     223.2639617919922,
+     367.0941467285156,
+     236.70596313476562
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "acknowledgments\nxvii",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     64.03199768066406,
+     243.26194763183594,
+     367.1007995605469,
+     256.7040100097656
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "about this book\t\nxix",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     64.031005859375,
+     263.260009765625,
+     367.11285400390625,
+     276.7019958496094
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "about the author\t\nxxiii",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     28.031997680664062,
+     301.1029968261719,
+     367.0849914550781,
+     317.2099914550781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "1\t introduction to algorithms\t\n1",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     64.031005859375,
+     332.26800537109375,
+     367.1039733886719,
+     360.7139892578125
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Binary search\t\n3\nBig O notation\t\n10",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     28.031997680664062,
+     385.10302734375,
+     367.0979919433594,
+     401.21002197265625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "2\t selection sort\t\n21",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     64.031982421875,
+     416.2680358886719,
+     367.10400390625,
+     489.72601318359375
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How memory works\t\n22\nArrays and linked lists\t\n24\nWhich is used more, arrays or linked lists?\t\n31\nSelection sort\t\n34\nExample code listing\t\n38",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    67.50299072265625,
+    372.5,
+    141.42300415039062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 11,
+  "blocks": [
+   {
+    "bbox": [
+     9.498992919921875,
+     0.17300033569335938,
+     198.34600830078125,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "contents\nx",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.89299774169922,
+     325.5000915527344,
+     51.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "3\t recursion\t\n41",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.5,
+     66.05799865722656,
+     325.5115966796875,
+     109.508056640625
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Recursion\t\n42\nBase case and recursive case\t\n44\nThe stack\t\n46",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     133.89300537109375,
+     325.502685546875,
+     150.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "4\t quicksort\t\n55",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.5,
+     165.05799865722656,
+     325.5071716308594,
+     208.50799560546875
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Divide and conquer\t\n56\nQuicksort\t\n64\nBig O notation revisited\t\n70",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     232.89300537109375,
+     325.5000915527344,
+     249.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "5\t hash tables\t\n77",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.5,
+     264.0580139160156,
+     325.5093994140625,
+     322.5119934082031
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hash functions\t\n80\nUse cases\t\n84\nCollisions\t\n91\nPerformance\t\n93",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     346.89300537109375,
+     325.5013732910156,
+     363.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "6\t breadth-first search\t\n101",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.499969482421875,
+     378.0580139160156,
+     325.5115966796875,
+     451.5159912109375
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Introduction to graphs\t\n102\nWhat is a graph?\t\n104\nBreadth-first search\t\n106\nImplementing the graph\t\n111\nImplementing the algorithm\t\n113",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 12,
+  "blocks": [
+   {
+    "bbox": [
+     169.9770050048828,
+     0.14801597595214844,
+     432.5003967285156,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "contents\nxi",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.89299774169922,
+     343.498779296875,
+     51.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "7\t trees\n121",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     63.5,
+     66.05799865722656,
+     343.5126953125,
+     124.51199340820312
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Your first tree\t\n122\nA space odyssey: Depth-first search\t\n126\nBinary trees\t\n131\nHuffman coding\t\n133",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     148.89300537109375,
+     343.5130920410156,
+     165.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "8\t balanced trees\t\n141",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     63.499969482421875,
+     180.05799865722656,
+     343.5137939453125,
+     253.5159912109375
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A balancing act\t\n142\nShorter trees are faster\t\n147\nAVL trees: A type of balanced tree\t\n151\nSplay trees\t\n159\nB-trees\n161",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     277.89300537109375,
+     343.5027160644531,
+     294.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "9\t Dijkstra’s algorithm\t\n165",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     63.499969482421875,
+     309.0580139160156,
+     343.52490234375,
+     382.5159912109375
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Working with Dijkstra’s algorithm\t\n166\nTerminology\n170\nTrading for a piano\t\n172\nNegative-weight edges\t\n178\nImplementation\n181",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     406.89300537109375,
+     343.5000915527344,
+     423.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "10\t greedy algorithms\t\n191",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     63.5,
+     438.0580139160156,
+     343.5182189941406,
+     481.50799560546875
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The classroom scheduling problem\t\n192\nThe knapsack problem\t\n194\nThe set-covering problem\t\n196",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 13,
+  "blocks": [
+   {
+    "bbox": [
+     9.498992919921875,
+     0.17300033569335938,
+     198.34600830078125,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "contents\nxii",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.89299774169922,
+     325.502685546875,
+     51.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "11\t dynamic programming\t\n203",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.5,
+     66.05799865722656,
+     325.5226135253906,
+     109.508056640625
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The knapsack problem (revisited)\t\n203\nKnapsack problem FAQ\t\n213\nLongest common substring\t\n220",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     133.89300537109375,
+     325.5065612792969,
+     150.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "12\t k-nearest neighbors\t\n229",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.5,
+     165.05799865722656,
+     325.5148620605469,
+     238.5159912109375
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Classifying oranges vs. grapefruit\t\n229\nBuilding a recommendations system\t\n231\nRegression\n238\nIntroduction to machine learning\t\n241\nA high-level overview of training an ML model\t\n244",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     262.89300537109375,
+     325.4922790527344,
+     279.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 13.0,
+    "color": 5066063,
+    "text": "13\t where to go next\t\n247",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     45.488983154296875,
+     294.0580139160156,
+     325.5104675292969,
+     457.53997802734375
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Linear regression\t\n247\nInverted indexes\t\n249\nThe Fourier transform\t\n250\nParallel algorithms\t\n251\nmap/reduce\n252\nBloom filters and HyperLogLog\t\n253\nHTTPS and the Diffie–Hellman key exchange\t\n255\nLocality-sensitive hashing\t\n260\nMin heaps and priority queues\t\n261\nLinear programming\t\n263\nEpilogue\n264",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.486015319824219,
+     472.0929870605469,
+     325.49951171875,
+     485.5350036621094
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Appendix A  performance of AVL trees\t\n265",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.49700927734375,
+     492.0910339355469,
+     325.50390625,
+     505.53302001953125
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Appendix B  NP-hard problems\t\n267",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.49700927734375,
+     512.0889892578125,
+     325.5093688964844,
+     525.531005859375
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Appendix C  answers to exercises\t\n277",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.50799560546875,
+     540.083984375,
+     325.5204162597656,
+     553.5260009765625
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "index\n291",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 14,
+  "blocks": [
+   {
+    "bbox": [
+     27.5,
+     196.11801147460938,
+     101.13618469238281,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "foreword",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     229.541015625,
+     368.0323791503906,
+     296.3880615234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "More people than ever need to learn how to program. Sure, some people \nliterally program for their jobs (software engineers or web developers, for \nexample). But many other jobs, not historically requiring programming, have \na programming component now or will in the future. Programming also \nhelps people understand the technological world in which they live.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     299.0500793457031,
+     358.3426208496094,
+     391.9011535644531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Unfortunately, the benefits of programming are not equally distributed. In \nNorth American computer science (CS) programs, for example, we have a \nvery low participation of women and some ethnic/racial groups. It’s critical \nthat we be able to expand programming and CS to a more diverse group. \nThe solution will involve making progress on a number of fronts, including \novercoming bias, training more teachers, and offering more diversified \nlearning experiences. We need to help more people “get in.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     394.5631408691406,
+     362.8658142089844,
+     500.4161071777344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I’m excited about Bhargava’s book because it offers a new way to get into \nalgorithms, which is a key component of effective programming. Some \npeople will tell you that there’s only one way to learn algorithms: find a \ndense mathematical book about algorithms, read it, and, like, understand \neverything. But that privileges the types of people who can learn that way, \nwho have time to learn that way, and who need to learn that way in the first \nplace. It also assumes that we know why someone wants to learn algorithms, \nwhich, let’s face it, is not a fair assumption to make.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     503.0781555175781,
+     361.302734375,
+     543.921142578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To be clear, some of my favorite CS books are exactly those kinds of \nmathematically oriented algorithms books. Those books work for me. They \nwork for a lot of CS professors. But maybe that’s the problem: it’s too easy to",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    67.50299072265625,
+    372.5,
+    141.42300415039062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 15,
+  "blocks": [
+   {
+    "bbox": [
+     9.498992919921875,
+     0.17300033569335938,
+     199.1370849609375,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "foreword\nxiv",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     321.98248291015625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "assume that the way we learn is the same way that others learn. What \nwe need are all kinds of learning resources about all kinds of CS topics, \neach designed for a particular audience.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     78.62301635742188,
+     324.4145812988281,
+     145.47007751464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Bhargava’s book is intentionally designed for people who want a \nnonmathematical introduction to algorithms. What impresses me most \nhere is not what Bhargava chose to include but what he chose not to \ninclude. You can’t include everything in a book like this—that would be \noverwhelming and is not the point.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     148.132080078125,
+     324.7225341796875,
+     214.97914123535156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Bhargava’s teaching expertise enables him to wring a lot of teaching out \nof not a lot of pages. In reading the “Dynamic Programming” chapter, \nfor example, I was struck by the care with which Bhargava answers a lot \nof anticipated reader questions that other algorithm books would not \nanswer.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     217.64114379882812,
+     327.5143127441406,
+     258.4841613769531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I hope that this book helps you learn, whether you’re trying algorithms \nfor the first time or you’ve struggled to find the right resource until now. \nHappy Grokking!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     149.30999755859375,
+     261.14617919921875,
+     325.51678466796875,
+     275.98516845703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "—Daniel Zingaro, University of Toronto",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 16,
+  "blocks": [
+   {
+    "bbox": [
+     27.5,
+     142.65798950195312,
+     87.5300064086914,
+     164.95999145507812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "preface",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     175.93798828125,
+     362.6645202636719,
+     268.93206787109375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I first got into programming as a hobby. Visual Basic 6 for Dummies taught \nme the basics, and I kept reading books to learn more. But the subject \nof algorithms was impenetrable for me. I remember savoring the table \nof contents of my first algorithms book, thinking “I’m finally going to \nunderstand these topics!” But it was dense stuff, and I gave up after a few \nweeks. It wasn’t until I had my first good algorithms professor that I realized \nhow simple and elegant these ideas were.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     271.5940856933594,
+     367.17340087890625,
+     390.4491882324219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I wrote my first illustrated blog post back in 2012. I’m a visual learner, and \nI really liked the illustrated style. Since then, I’ve written a few illustrated \nposts on functional programming, Git, machine learning, and concurrency. \nBy the way, I was a mediocre writer when I started out. Explaining technical \nconcepts is hard. Coming up with good examples takes time, and explaining \na difficult concept takes time. So it’s easiest to gloss over the hard stuff. I \nthought I was doing a pretty good job until after one of my posts got popular, \na coworker came up to me and said, “I read your post, and I still don’t \nunderstand this.” I still had a lot to learn about writing.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     393.1111755371094,
+     359.9914855957031,
+     472.9601745605469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Somewhere in the middle of writing these blog posts, Manning reached out \nto me and asked if I wanted to write an illustrated book. Well, it turns out \nthat Manning editors know a lot about explaining technical concepts, and \nthey taught me how to teach. I wrote this book to scratch a particular itch: \nI wanted to write a book that explained hard technical topics well, and I \nwanted an easy-to-read algorithms book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     475.6221618652344,
+     354.33746337890625,
+     516.4651489257812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The first edition of this book came out in 2016. Since then, more than \n100,000 people have read this book. I’m delighted to see how many people \nhave connected with the visual learning style.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    67.50299072265625,
+    372.5,
+    141.42300415039062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 17,
+  "blocks": [
+   {
+    "bbox": [
+     9.503021240234375,
+     0.17300033569335938,
+     196.1090087890625,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "preface\nxvi",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     326.5695495605469,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "With this second edition, my goal remains the same. In this book, I use \nillustrations and memorable examples to make concepts stick. The book \nis designed for readers who know how to code and want to learn more \nabout algorithms without any math knowledge required.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     91.62503051757812,
+     324.81060791015625,
+     171.47410583496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The second edition fills some gaps in the first edition. I heard from a \nlot of readers that they wanted me to explain trees. There are now two \nchapters on trees in this book. I have also expanded the section on NP \ncompleteness. NP-complete is a very abstract concept, and I wanted an \nexplanation that would make it more concrete. If you feel the same way, \nI hope the section on NP-complete fills that gap for you.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     174.1361083984375,
+     312.48956298828125,
+     201.9771270751953
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "My writing has come a long way since that first blog post, and I hope \nyou find this book an easy and informative read.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 18,
+  "blocks": [
+   {
+    "bbox": [
+     27.5,
+     142.65798950195312,
+     175.044189453125,
+     164.95999145507812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "acknowledgments",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     176.08099365234375,
+     360.94854736328125,
+     307.9381103515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Kudos to Manning for giving me the chance to write this book and letting \nme have a lot of creative freedom with it. Thanks to publisher Marjan \nBace, Mike Stephens for getting me on board, and Ian Hough for being \nan incredibly responsive and helpful editor. Thanks also to the people on \nManning’s production team: Paul Wells, Debbie Holmgren, and all the \nothers behind the scenes. In addition, I want to thank the many people who \nread the manuscript and offered suggestions: Daniel Zingaro, Ben Vinegar, \nAlexander Manning, and Maggie Wenger. Thanks to David Eisenstat, my \ntechnical reviewer, and Tony Holdroyd, the Manning technical proofreader, \nfor catching my many errors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     310.6001281738281,
+     367.0865173339844,
+     429.4551696777344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Thanks to the people who helped me reach this point: Bert Bates for teaching \nme how to write; the folks on the Flashkit game board for teaching me how \nto code; the many friends who helped by reviewing chapters, giving advice, \nand letting me try out different explanations, including Ben Vinegar, Karl \nPuzon, Alex Manning, Esther Chan, Anish Bhatt, Michael Glass, Nikrad \nMahdi, Charles Lee, Jared Friedman, Hema Manickavasagam, Hari Raja, \nMurali Gudipati, Srinivas Varadan, and others, and Gerry Brady for teaching \nme algorithms. Another big thank you to algorithms academics like CLRS, \nKnuth, and Strang. I’m truly standing on the shoulders of giants.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     432.1171875,
+     365.7774658203125,
+     485.9621887207031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Dad, Mom, Priyanka, and the rest of the family: thank you for your constant \nsupport. And a big thank you to my wife Maggie, and my son Yogi. There are \nmany adventures ahead of us, and some of them don’t involve staying inside \non a Friday night rewriting paragraphs.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     488.6241760253906,
+     361.213623046875,
+     542.4691772460938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To all the reviewers—Abhishek Koserwal, Alex Lucas, Andres Sacco,  \nArun Saha, Becky Huett, Cesar Augusto Orozco Manotas, Christian Sutton, \nDiógines Goldoni, Dirk Gómez, Ed Bacher, Eder Andres Avila Niño,  \nFrans Oilinki, Ganesh Swaminathan, Giampiero Granatella, Glen Yu,",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    67.50299072265625,
+    372.5,
+    141.42300415039062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 19,
+  "blocks": [
+   {
+    "bbox": [
+     9.498992919921875,
+     0.17300033569335938,
+     216.00399780273438,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "acknowledgments\nxviii",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     327.560546875,
+     153.97312927246094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Greg Kreiter, Javid Asgarov, João Ferreira, Jobinesh Purushothaman, Joe \nCuevas, Josh McAdams, Krishna Anipindi, Krzysztof Kamyczek, Kyrylo \nKalinichenko, Lakshminarayanan AS, Laud Bentil, Matteo Battista, \nMikael Byström, Nick Rakochy, Ninoslav Cerkez, Oliver Korten, Ooi \nKuan San, Pablo Varela, Patrick Regan, Patrick Wanjau, Philipp Konrad, \nPiotr Pindel, Rajesh Mohanan, Ranjit Sahai, Rohini Uppuluri, Roman \nLevchenko, Sambaran Hazra, Seth MacPherson, Shankar Swamy, \nSrihari Sridharan, Tobias Kopf, Vivek Veerappan, William Jamir Silva, \nand Xiangbo Mao—your suggestions helped make this a better book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     156.6351318359375,
+     317.7915344238281,
+     197.47816467285156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Finally, a big thank you to all the readers who took a chance on this \nbook, and the readers who gave me feedback in the book’s forum. You \nreally helped make this book better.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 20,
+  "blocks": [
+   {
+    "bbox": [
+     27.5,
+     142.65798950195312,
+     153.876220703125,
+     164.95999145507812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "about this book",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49999237060547,
+     175.93798828125,
+     367.62542724609375,
+     242.9280548095703
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Grokking Algorithms is designed to be easy to follow. I avoid big leaps of \nthought. Any time a new concept is introduced, I explain it right away or \ntell you when I’ll explain it. Core concepts are reinforced with exercises and \nmultiple explanations so that you can check your assumptions and make sure \nyou’re following along.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49999237060547,
+     245.59005737304688,
+     365.3143005371094,
+     338.4411315917969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I lead with examples. Instead of writing symbol soup, my goal is to make it \neasy for you to visualize these concepts. I also think we learn best by being \nable to recall something we already know, and examples make recall easier. \nSo when you’re trying to remember the difference between arrays and linked \nlists (explained in chapter 2), you can just think about getting seated for a \nmovie. Also, at the risk of stating the obvious, I’m a visual learner. This book \nis chock-full of images.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49999237060547,
+     341.1031494140625,
+     365.03155517578125,
+     407.9501647949219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The contents of the book are carefully curated. There’s no need to write a book \nthat covers every sorting algorithm—that’s why we have Wikipedia and Khan \nAcademy. All the algorithms I’ve included are practical. I’ve found them useful \nin my job as a software engineer, and they provide a good foundation for more \ncomplex topics. Happy reading!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     419.614013671875,
+     157.22262573242188,
+     436.96002197265625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "How to use this book",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     440.0810241699219,
+     363.6973571777344,
+     480.9239807128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The order and contents of this book have been carefully designed. If you’re \ninterested in a topic, feel free to jump ahead. Otherwise, read the chapters in \norder—they build on each other.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     483.58599853515625,
+     364.7268981933594,
+     550.4330444335938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I strongly recommend executing the code for the examples yourself. I can’t stress \nthis part enough. Just type out my code samples verbatim (or download them \nfrom https://www.manning.com/books/grokking-algorithms-second-edition \nor https://github.com/egonschiele/grokking_algorithms) and execute them. \nYou’ll retain a lot more if you do.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    67.50299072265625,
+    372.5,
+    141.42300415039062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 21,
+  "blocks": [
+   {
+    "bbox": [
+     9.503997802734375,
+     0.17300033569335938,
+     210.9581756591797,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "about this book\nxx",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     322.3465270996094,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I also recommend doing the exercises in this book. The exercises are \nshort—usually just a minute or two, sometimes 5 to 10 minutes. They \nwill help you check your thinking, so you’ll know when you’re off track \nbefore you’ve gone too far.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     100.65100860595703,
+     182.1452178955078,
+     117.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Who should read this book?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     121.11801147460938,
+     327.73663330078125,
+     187.96507263183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This book is aimed at anyone who knows the basics of coding and wants \nto understand algorithms. Maybe you already have a coding problem \nand are trying to find an algorithmic solution. Or maybe you want to \nunderstand what algorithms are useful for. Here’s a short, incomplete \nlist of people who will probably find this book useful:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     195.12600708007812,
+     89.87591552734375,
+     209.96507263183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Hobbyist coders",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     217.12600708007812,
+     139.97979736328125,
+     231.9650115966797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Coding boot camp students",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     239.12600708007812,
+     224.52459716796875,
+     253.9650115966797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Computer science grads looking for a refresher",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     261.1260070800781,
+     289.29266357421875,
+     275.9649963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Physics/math/other grads who are interested in programming",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     287.6510009765625,
+     252.7752227783203,
+     304.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "How this book is organized: A roadmap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     308.1180114746094,
+     256.478515625,
+     322.9570007324219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The first three chapters of this book lay the foundations:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     329.9750061035156,
+     322.62158203125,
+     383.9630432128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Chapter 1—You’ll learn your first practical algorithm: binary search. \nYou also learn to analyze the speed of an algorithm using big O \nnotation. Big O notation is used throughout the book to analyze how \nslow or fast an algorithm is.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     390.9809875488281,
+     327.9015808105469,
+     444.968994140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Chapter 2—You’ll learn about two fundamental data structures: arrays \nand linked lists. These data structures are used throughout the book, \nand they’re used to make more advanced data structures like hash \ntables (chapter 5).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     451.98699951171875,
+     316.7255554199219,
+     479.9709777832031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Chapter 3—You’ll learn about recursion, a handy technique used by \nmany algorithms (such as quicksort, covered in chapter 4).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     482.63299560546875,
+     317.8023681640625,
+     523.4760131835938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In my experience, big O notation and recursion are challenging topics \nfor beginners. So I’ve slowed down and spent extra time on these \nsections.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 22,
+  "blocks": [
+   {
+    "bbox": [
+     157.36500549316406,
+     0.14801597595214844,
+     432.4997253417969,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "about this book\nxxi",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     311.71246337890625,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The rest of the book presents algorithms with broad applications:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     56.97500991821289,
+     341.8437805175781,
+     123.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Problem-solving techniques—Covered in chapters 4, 10, and 11. If you \ncome across a problem and aren’t sure how to solve it efficiently, try \ndivide and conquer (chapter 4) or dynamic programming (chapter \n11). Or you may realize there’s no efficient solution, and get an \napproximate answer using a greedy algorithm instead (chapter 10).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     130.98300170898438,
+     338.453369140625,
+     210.97508239746094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Hash tables—Covered in chapter 5. A hash table is a very useful data \nstructure. It contains sets of key and value pairs, like a person’s name \nand their email address or a username and the associated password. \nIt’s hard to overstate hash tables’ usefulness. When I want to solve \na problem, the two plans of attack I start with are “Can I use a hash \ntable?” and “Can I model this as a graph?”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     217.99301147460938,
+     345.5022277832031,
+     336.9911193847656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Graph and tree algorithms—Covered in chapters 6, 7, 8, and 9. Graphs \nare a way to model a network: a social network, or a network of roads, \nor neurons, or any other set of connections. Breadth-first search \n(chapter 6) and Dijkstra’s algorithm (chapter 9) are ways to find the \nshortest distance between two points in a network: you can use this \napproach to calculate the degrees of separation between two people or \nthe shortest route to a destination. Trees are a type of graph. They are \nused in databases (often B-trees), in your browser (the DOM tree), or \nin your file system.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.50000762939453,
+     344.0090026855469,
+     345.38458251953125,
+     410.9989929199219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t K-nearest neighbors (KNN)—Covered in chapter 12. This is a \nsimple machine-learning algorithm. You can use KNN to build a \nrecommendations system, an OCR engine, a system to predict stock \nvalues—anything that involves predicting a value (“We think Adit will \nrate this movie 4 stars”) or classifying an object (“That letter is a Q”).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     418.0169982910156,
+     336.03460693359375,
+     446.0010070800781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Next steps—Chapter 13 goes over more algorithms that would make \ngood further reading.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     457.6510009765625,
+     125.62461853027344,
+     474.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "About the code",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.495986938476562,
+     478.1180114746094,
+     344.491455078125,
+     531.9609985351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "All the code examples in this book use Python 3. All code in the book is \npresented in a fixed-width font like this to separate it from ordinary \ntext. Code annotations accompany some of the listings, highlighting \nimportant concepts.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 23,
+  "blocks": [
+   {
+    "bbox": [
+     9.503997802734375,
+     0.17300033569335938,
+     210.9581756591797,
+     11.0
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "about this book\nxxii",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     326.50787353515625,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can get executable snippets of code from the liveBook (online) \nversion of this book at https://livebook.manning.com/book/grokking-\nalgorithms-second-edition. The complete code for the examples in the book \nis available for download from the Manning website at www.manning.com \nand from https://github.com/egonschiele/grokking_algorithms.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     104.62704467773438,
+     310.1794738769531,
+     132.4680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I believe you learn best when you really enjoy learning—so have fun \nand run the code samples!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     144.1510009765625,
+     172.96119689941406,
+     161.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "liveBook discussion forum",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     164.47500610351562,
+     327.41754150390625,
+     283.4731140136719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Purchase of Grokking Algorithms includes free access to  \nliveBook, Manning’s online reading platform. Using liveBook’s  \nexclusive discussion features, you can attach comments to the  \nbook globally or to specific sections or paragraphs. It’s a snap to  \nmake notes for yourself, ask and answer technical questions, and receive \nhelp from the author and other users. To access the forum, go to  \nhttps://livebook.manning.com/book/grokking-algorithms-second-edition. \nYou can also learn more about Manning’s forums and the rules of \nconduct at https://livebook.manning.com/discussion.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500015258789062,
+     286.1351318359375,
+     305.6044616699219,
+     404.9902038574219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Manning’s commitment to our readers is to provide a venue where  \na meaningful dialogue between individual readers and between  \nreaders and the author can take place. It is not a commitment to  \nany specific amount of participation on the part of the author,  \nwhose contribution to the forum remains voluntary (and unpaid).  \nWe suggest you try asking the author some challenging questions  \nlest their interest stray! The forum and the archives of previous \ndiscussions will be accessible from the publisher’s website for as  \nlong as the book is in print.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 24,
+  "blocks": [
+   {
+    "bbox": [
+     27.5,
+     142.65798950195312,
+     163.6160125732422,
+     164.95999145507812
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "about the author",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     145.08700561523438,
+     175.69598388671875,
+     354.9538269042969,
+     229.92604064941406
+    ],
+    "font": "MinionPro-Bold",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Aditya Bhargava is a software engineer. He has \na master’s degree in computer science from the \nUniversity of Chicago. He also runs a popular \nillustrated tech blog at adit.io.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     329.1139831542969,
+     190.27659606933594,
+     346.4599914550781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "About the technical editor",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     349.58099365234375,
+     367.053466796875,
+     377.4219970703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "David Eisenstat is a research software engineer. He holds a PhD in Computer \nScience from Brown University.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    67.50299072265625,
+    372.5,
+    141.42300415039062
+   ],
+   [
+    27.5,
+    179.40499877929688,
+    133.08700561523438,
+    284.99200439453125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 25,
+  "blocks": [],
+  "images": []
+ }
+]

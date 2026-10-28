@@ -1,0 +1,2616 @@
+[
+ {
+  "pdf_index": 26,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "1",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     331.0426940917969,
+     244.75
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou get a foundation for the rest of the book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     255.53001403808594,
+     328.1278381347656,
+     282.7550048828125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou write your first search algorithm (binary \nsearch).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     291.53302001953125,
+     359.06195068359375,
+     318.75799560546875
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn how to talk about the running time of an \nalgorithm (big O notation).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     261.1399841308594,
+     4.003999710083008,
+     370.17138671875,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "introduction \nto algorithms",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     367.2539978027344,
+     408.12152099609375,
+     434.2439880371094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "An algorithm is a set of instructions for accomplishing a task. Every \npiece of code could be called an algorithm, but this book covers the \nmore interesting bits. I chose the algorithms in this book for inclusion \nbecause they’re fast, or they solve interesting problems, or both. Here \nare some highlights:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     441.4049987792969,
+     416.55731201171875,
+     482.24798583984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Chapter 1 talks about binary search and shows how an algorithm can \nspeed up your code. In one example, the number of steps needed goes \nfrom 4 billion down to 32!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     489.40899658203125,
+     414.12744140625,
+     517.25
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A GPS device uses graph algorithms (as you’ll learn in chapters 6 and \n9) to calculate the shortest route to your destination.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     524.4109497070312,
+     415.6356201171875,
+     552.2520141601562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You can use dynamic programming (discussed in chapter 11) to write \nan AI algorithm that plays checkers.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 27,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n2",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     323.2144470214844,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In each case, I’ll describe the algorithm and give you an example. Then \nI’ll talk about the running time of the algorithm in big O notation. \nFinally, I’ll explore what other types of problems could be solved by the \nsame algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     100.65100860595703,
+     238.13125610351562,
+     117.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "What you’ll learn about performance",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     121.11801147460938,
+     318.6287536621094,
+     213.96910095214844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The good news is that an implementation of every algorithm in this \nbook is probably available in your favorite language, so you don’t \nhave to write each algorithm yourself! But those implementations are \nuseless if you don’t understand the tradeoffs. In this book, you’ll learn \nto compare tradeoffs between different algorithms: Should you use \nmerge sort or quicksort? Should you use an array or a list? Just using a \ndifferent data structure can make a big difference.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     225.6510009765625,
+     265.2772521972656,
+     242.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "What you’ll learn about solving problems",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     246.11801147460938,
+     327.60357666015625,
+     273.9590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ll learn techniques for solving problems that might have been out of \nyour grasp until now. For example:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     281.1199951171875,
+     301.1595458984375,
+     308.96099853515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If you like making video games, you can write an AI system that \nfollows the user around using graph algorithms.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     316.12200927734375,
+     300.3135070800781,
+     343.9630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You’ll learn to make a recommendations system using k-nearest \nneighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     351.1239929199219,
+     311.53363037109375,
+     404.968994140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Some problems aren’t solvable in a timely manner! The part of this \nbook that talks about NP-complete problems shows you how to \nidentify those problems and come up with an algorithm that gives \nyou an approximate answer.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     407.6310119628906,
+     321.74041748046875,
+     461.4759826660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "More generally, by the end of this book, you’ll know some of the most \nwidely applicable algorithms. You can then use your new knowledge to \nlearn about more specific algorithms for AI, databases, and so on. Or \nyou can take on bigger challenges at work.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 28,
+  "blocks": [
+   {
+    "bbox": [
+     161.29299926757812,
+     0.14801597595214844,
+     432.4996643066406,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Binary search\n3",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     43.65399932861328,
+     183.0926055908203,
+     61.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "What you need to know",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     68.61000061035156,
+     336.8249816894531,
+     94.0999984741211
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You’ll need to know basic algebra before starting this book. In particular, \ntake this function: f(x) = x × 2. What is f(5)? If you answered 10, you’re set.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     97.11000061035156,
+     336.8119201660156,
+     158.60000610351562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Additionally, this chapter (and this book) will be easier to follow if you’re \nfamiliar with one programming language. All the examples in this book \nare in Python. If you don’t know any programming languages and want \nto learn one, choose Python—it’s great for beginners. If you know another \nlanguage, like JavaScript, you’ll be fine.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     197.697998046875,
+     135.7501983642578,
+     220.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Binary search",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     231.12100219726562,
+     337.310546875,
+     297.9680480957031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re searching for a person in the phone book (what an old-\nfashioned sentence!). Their name starts with K. You could start at the \nbeginning and keep flipping pages until you get to the Ks. But you’re \nmore likely to start at a page in the middle because you know the Ks \nare going to be near the middle of the phone book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500030517578125,
+     300.63006591796875,
+     297.7557678222656,
+     328.4710693359375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Or suppose you’re searching for a word in a dictionary, and it \nstarts with O. Again, you’ll start near the middle.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     331.1330871582031,
+     318.88555908203125,
+     410.9820861816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now, suppose you log on to Facebook. When you do, Facebook \nhas to verify that you have an account on the site. So it needs to \nsearch for your username in its database. Suppose your username \nis karlmageddon. Facebook could start from the As and search for \nyour name—but it makes more sense for it to begin somewhere in \nthe middle.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     413.64410400390625,
+     281.485595703125,
+     441.4850769042969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is a search problem. And all these cases use the same \nalgorithm to solve the problem: binary search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     444.1470947265625,
+     262.818603515625,
+     510.99407958984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Binary search is an algorithm; its input is a sorted \nlist of elements (I’ll explain later why it needs to be \nsorted). If an element you’re looking for is in that list, \nbinary search returns the position where it’s located. \nOtherwise, binary search returns null.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    265.4599914550781,
+    402.9999694824219,
+    432.5,
+    523.719970703125
+   ],
+   [
+    328.82000732421875,
+    182.0500030517578,
+    432.5,
+    366.8500061035156
+   ]
+  ]
+ },
+ {
+  "pdf_index": 29,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n4",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     90.46993255615234,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s an example.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     296.7139892578125,
+     312.9966735839844,
+     324.55499267578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now here’s an example of how binary search works. I’m thinking of a \nnumber between 1 and 100.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     367.91400146484375,
+     314.3704528808594,
+     395.7549743652344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You have to try to guess my number in the fewest tries possible. With \nevery guess, I’ll tell you if your guess is too low, too high, or correct.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     398.4169921875,
+     323.2616271972656,
+     413.2559814453125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you start guessing like this: 1, 2, 3, 4, . . . . Here’s how it would go.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     325.5220031738281,
+     158.364990234375,
+     409.1319274902344,
+     187.27001953125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Looking for companies \nin a phone book with \nbinary search",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    31.791000366210938,
+    56.697021484375,
+    303.2309875488281,
+    290.0929870605469
+   ],
+   [
+    95.87100219726562,
+    331.2929992675781,
+    239.1510009765625,
+    361.2929992675781
+   ],
+   [
+    38.03099822998047,
+    419.99298095703125,
+    296.99200439453125,
+    560.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 30,
+  "blocks": [
+   {
+    "bbox": [
+     161.29299926757812,
+     0.14801597595214844,
+     432.4996643066406,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Binary search\n5",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     118.9849853515625,
+     344.0118408203125,
+     159.9710235595703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is simple search (maybe stupid search would be a better term). With \neach guess, you’re eliminating only one number. If my number was 99, \nit could take you 99 guesses to get there!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     171.66098022460938,
+     165.52462768554688,
+     189.00698852539062
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "A better way to search",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     192.12799072265625,
+     198.62367248535156,
+     206.9669952392578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s a better technique. Start with 50.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     305.0140075683594,
+     339.0287780761719,
+     332.9980163574219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Too low, but you just eliminated half the numbers! Now you know that \n1–50 are all too low. Next guess: 75.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     472.3119812011719,
+     337.6087341308594,
+     513.2980346679688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Too high, but again you cut down half the remaining numbers! With \nbinary search, you guess the middle number and eliminate half the \nremaining numbers every time. Next is 63 (halfway between 50 and 75).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     343.5220031738281,
+     66.66500854492188,
+     410.9626770019531,
+     85.57177734375
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "A bad approach to \nnumber guessing",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    56.03099822998047,
+    38.0,
+    314.99200439453125,
+    104.86700439453125
+   ],
+   [
+    27.5,
+    221.70700073242188,
+    370.0830078125,
+    291.0360107421875
+   ],
+   [
+    70.41300201416016,
+    347.73699951171875,
+    300.6099853515625,
+    458.333984375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 31,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n6",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     125.60598754882812,
+     319.1015625,
+     153.44700622558594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is binary search. You just learned your first algorithm! Here’s how \nmany numbers you can eliminate every time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     238.43499755859375,
+     307.4734802246094,
+     279.27801513671875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Whatever number I’m thinking of, you can guess in a maximum of \nseven guesses—because you eliminate so many numbers with every \nguess!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     281.9400329589844,
+     323.0516662597656,
+     322.7830505371094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re looking for a word in the dictionary. The dictionary has \n240,000 words. In the worst case, how many steps do you think each \nsearch will take?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     392.43499755859375,
+     321.4005126953125,
+     433.2779846191406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Simple search could take 240,000 steps if the word you’re looking for is \nthe very last one in the book. With each step of binary search, you cut \nthe number of words in half until you’re left with only one word.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     341.864013671875,
+     180.81698608398438,
+     415.4840393066406,
+     209.72198486328125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Eliminate half the \nnumbers every time \nwith binary search.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    10.384998321533203,
+    37.99998474121094,
+    324.63800048828125,
+    111.4849853515625
+   ],
+   [
+    19.334999084472656,
+    175.71499633789062,
+    315.68701171875,
+    223.46099853515625
+   ],
+   [
+    74.27100372314453,
+    337.5140075683594,
+    260.7510070800781,
+    378.3139953613281
+   ],
+   [
+    19.551002502441406,
+    448.0140380859375,
+    315.47100830078125,
+    551.9340209960938
+   ]
+  ]
+ },
+ {
+  "pdf_index": 32,
+  "blocks": [
+   {
+    "bbox": [
+     161.29299926757812,
+     0.14801597595214844,
+     432.4996643066406,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Binary search\n7",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.495010375976562,
+     35.11800765991211,
+     341.7325134277344,
+     75.95902252197266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So binary search will take 18 steps—a big difference! In general, for any \nlist of n, binary search will take log2 n steps to run in the worst case, \nwhereas simple search will take n steps.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     99.85102081298828,
+     107.843994140625,
+     117.197021484375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "Logarithms",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.498992919921875,
+     124.80699157714844,
+     336.8299865722656,
+     174.2969970703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "You may not remember what logarithms are, but you probably know what \nexponentials are. log10 100 is like asking, “How many 10s do we multiply \ntogether to get 100?” The answer is 2: 10 × 10. So log10 100 = 2. Logs are the \ninverse of exponentials.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     304.302001953125,
+     167.27003479003906,
+     313.2120056152344
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Logs are the inverse of exponentials.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.49598693847656,
+     318.4469909667969,
+     336.84185791015625,
+     427.93701171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "In this book, when I talk about running time in big O notation (explained \na little later), log always means log2. When you search for an element using \nsimple search, in the worst case, you might have to look at every single \nelement. So for a list of eight numbers, you’d have to check eight numbers \nat most. For binary search, you have to check log n elements in the worst \ncase. For a list of eight elements, log 8 == 3, because 23 == 8. So for a list of \neight numbers, you would have to check three numbers at most. For a list \nof 1,024 elements, log 1,024 = 10, because 210 == 1,024. So for a list of 1,024 \nnumbers, you’d have to check 10 numbers at most.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     174.6479949951172,
+     465.84698486328125,
+     196.18800354003906,
+     478.23699951171875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     38.0,
+     483.1929931640625,
+     334.84564208984375,
+     518.6090087890625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "I’ll talk about log time a lot in this book, so you should understand the con-\ncept of logarithms. If you don’t, Khan Academy (https://khanacademy.org) \nhas a nice video that makes it clear.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    111.23199462890625,
+    181.39700317382812,
+    259.7919921875,
+    296.8370056152344
+   ]
+  ]
+ },
+ {
+  "pdf_index": 33,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n8",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     156.64500427246094,
+     46.11000061035156,
+     178.1850128173828,
+     58.5
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     20.0,
+     63.45600128173828,
+     316.89410400390625,
+     110.86956787109375
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "Binary search only works when your list is in sorted order. For example, the \nnames in a phone book are sorted in alphabetical order, so you can use \nbinary search to look for a name. What would happen if the names weren’t \nsorted?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     128.62100219726562,
+     323.1925048828125,
+     208.47007751464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s see how to write binary search in Python. The code sample here \nuses arrays. If you don’t know how arrays work, don’t worry; they’re \ncovered in the next chapter. You just need to know that you can store \na sequence of elements in a row of consecutive buckets called an array. \nThe buckets are numbered starting with 0: the first bucket is at position \n0, the second is at 1, the third is at 2, and so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     156.64500427246094,
+     219.3100128173828,
+     178.1850128173828,
+     231.70001220703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     20.0,
+     236.64651489257812,
+     316.7980041503906,
+     260.074462890625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "You will see me use the terms list and array interchangeably in the code. \nThis is because in Python, arrays are called lists.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.497001647949219,
+     277.8210144042969,
+     321.0566101074219,
+     331.6660461425781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The binary_search function takes a sorted array and an item. If the \nitem is in the array, the function returns its position. You’ll keep track \nof what part of the array you have to search through. At the beginning, \nthis is the entire array:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     339.3316650390625,
+     118.46749114990234,
+     358.3306579589844
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "low = 0\nhigh = len(arr) - 1",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    120.23199462890625,
+    371.8999938964844,
+    214.79098510742188,
+    478.94000244140625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 34,
+  "blocks": [
+   {
+    "bbox": [
+     161.29299926757812,
+     0.14801597595214844,
+     432.4996643066406,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Binary search\n9",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     210.49266052246094,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each time, you check the middle element:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     53.96200942993164,
+     320.0238952636719,
+     82.86700439453125
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "mid = (low + high) // 2   \nmid is rounded down by Python \nautomatically if (low + high) isn’t \nan even number.\nguess = arr[mid]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     86.11801147460938,
+     249.9788818359375,
+     100.9570083618164
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If the guess is too low, you update low accordingly:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     108.30200958251953,
+     122.8792495727539,
+     127.62763977050781
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "if guess < item:\n  low = mid + 1",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     137.11801147460938,
+     315.8668518066406,
+     151.95701599121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And if the guess is too high, you update high. Here’s the full code:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     159.302001953125,
+     199.87057495117188,
+     188.6266326904297
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def binary_search(arr, item):\n  low = 0         \n  high = len(arr)—1",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.49999237060547,
+     199.2979736328125,
+     195.0942840576172,
+     300.15191650390625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "while low <= high:         \n    mid = (low + high) // 2   \n    guess = arr[mid]\n    if guess == item:      \n      return mid\n    elif guess > item:    \n      high = mid - 1\n    else:               \n      low = mid + 1\n  return None",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.49999237060547,
+     309.6135559082031,
+     169.2121124267578,
+     318.6135559082031
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "my_list = [1, 3, 5, 7, 9]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.49999237060547,
+     329.6115417480469,
+     271.9604797363281,
+     348.61053466796875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "print(binary_search(my_list, 3)) # => 1      \nprint(binary_search(my_list, -1)) # => None",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     378.2279052734375,
+     96.57598876953125,
+     392.9720153808594
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     396.6180114746094,
+     334.3055725097656,
+     437.4609680175781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.1  \u0007Suppose you have a sorted list of 128 names, and you’re searching \nthrough it using binary search. What’s the maximum number of \nsteps it would take?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     440.1180114746094,
+     313.1845703125,
+     467.958984375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.2  \u0007Suppose you double the size of the list. What’s the maximum \nnumber of steps now?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     227.510009765625,
+     162.33700561523438,
+     349.59490966796875,
+     181.24526977539062
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "low and high keep track of which  \npart of the list you’ll search in.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     227.510009765625,
+     188.81201171875,
+     338.9599914550781,
+     207.72027587890625
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "While you haven’t narrowed it  \ndown to one element . . .",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     227.510009765625,
+     215.2867431640625,
+     333.3499755859375,
+     224.19699096679688
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": ". . . check the middle element.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     227.510009765625,
+     231.76522827148438,
+     283.8874816894531,
+     240.67523193359375
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Found the item.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     227.70999145507812,
+     253.61398315429688,
+     314.5074157714844,
+     262.52398681640625
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "The guess was too high.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     227.70999145507812,
+     268.1107482910156,
+     311.25994873046875,
+     277.020751953125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "The guess was too low.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     227.70999145507812,
+     282.6090087890625,
+     309.39923095703125,
+     291.5190124511719
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "The item doesn’t exist.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     227.70999145507812,
+     297.1057434082031,
+     269.93505859375,
+     306.0157470703125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Let’s test it!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.7099914550781,
+     320.5369873046875,
+     397.1949157714844,
+     339.44525146484375
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Remember, lists start at 0.  \nThe second slot has index 1.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     296.7099914550781,
+     347.73199462890625,
+     438.4898376464844,
+     366.6402587890625
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "None means null in Python. It indicates \nthat the item wasn’t found.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 35,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n10",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     93.83601379394531,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Running time",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.12099838256836,
+     288.9274597167969,
+     95.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Any time I talk about an algorithm, I’ll discuss its running \ntime. Generally, you want to choose the most efficient \nalgorithm—whether you’re trying to optimize for time or space.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     98.62600708007812,
+     322.4874267578125,
+     178.47508239746094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Back to binary search. How much time do you save by using it? \nWell, the first approach was to check each number, one by one. If \nthis is a list of 100 numbers, it takes up to 100 guesses. If it’s a list \nof 4 billion numbers, it takes up to 4 billion guesses. So the maximum \nnumber of guesses is the same as the size of the list. This is called linear \ntime.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499996185302734,
+     181.1370849609375,
+     311.8074645996094,
+     234.9821319580078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Binary search is different. If the list is 100 items long, it takes at most \nseven guesses. If the list is 4 billion items, it takes at most 32 guesses. \nPowerful, eh? Binary search runs in logarithmic time (or log time, as \nmost people call it). Here’s a table summarizing our findings today.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     453.23797607421875,
+     125.38221740722656,
+     475.53997802734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Big O notation",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     486.5179748535156,
+     326.44964599609375,
+     553.5079956054688
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Big O notation is special notation that tells you how fast an algorithm is. \nWho cares? Well, it turns out that you’ll use other people’s algorithms \noften—and when you do, it’s nice to understand how fast or slow they \nare. In this section, I’ll explain what big O notation is and give you a list \nof the most common running times for algorithms using it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     341.7229919433594,
+     322.1210021972656,
+     405.1505126953125,
+     341.02777099609375
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Run times for \nsearch algorithms",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    292.70599365234375,
+    37.02400207519531,
+    357.5059814453125,
+    122.94400024414062
+   ],
+   [
+    70.18000030517578,
+    241.70001220703125,
+    264.82000732421875,
+    419.53997802734375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 36,
+  "blocks": [
+   {
+    "bbox": [
+     159.4429931640625,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Big O notation\n11",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     322.54718017578125,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Algorithm running times grow at different rates",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     338.6844482421875,
+     95.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Bob is writing a search algorithm for NASA. His algorithm will kick in \nwhen a rocket is about to land on the Moon, and it will help calculate \nwhere to land.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     98.62600708007812,
+     339.63043212890625,
+     217.4811248779297
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is an example of how the run time of two algorithms can grow \nat different rates. Bob is trying to decide between simple search and \nbinary search. The algorithm needs to be both fast and correct. On \none hand, binary search is faster. And Bob has only 10 seconds to \nfigure out where to land—otherwise, the rocket will be off course. \nOn the other hand, simple search is easier to write, and there is less \nchance of bugs being introduced. And Bob really doesn’t want bugs in \nthe code to land a rocket! To be extra careful, Bob decides to time both \nalgorithms with a list of 100 elements.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.498001098632812,
+     220.14312744140625,
+     343.89642333984375,
+     312.9660339355469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s assume it takes 1 ms to check one element. With simple search, \nBob has to check 100 elements, so the search takes 100 ms to run. On \nthe other hand, he only has to check seven elements with binary search \n(log2 100 is roughly 7), so that search takes 7 ms to run. But realistically, \nthe list will have more like a billion elements. If it does, how long will \nsimple search take? How long will binary search take? Make sure you \nhave an answer for each question before reading on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49700164794922,
+     462.1609802246094,
+     336.8115539550781,
+     555.010009765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Bob runs binary search with 1 billion elements, and it takes 30 ms  \n(log2 1,000,000,000 is roughly 30). “Thirty milliseconds!” he thinks. \n“Binary search is about 15 times faster than simple search because \nsimple search took 100 ms with 100 elements, and binary search took \n7 ms. So simple search will take 30 × 15 = 450 ms, right? Way under \nmy threshold of 10 seconds.” Bob decides to go with simple search. Is \nthat the right choice?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     337.30999755859375,
+     388.5049743652344,
+     431.21002197265625,
+     417.40997314453125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Running time for simple \nsearch vs. binary search \nwith a list of 100 elements",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    327.5400085449219,
+    38.0,
+    442.0,
+    172.16000366210938
+   ],
+   [
+    117.69999694824219,
+    319.70001220703125,
+    253.29998779296875,
+    455.53997802734375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 37,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n12",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     321.235595703125,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "No. Turns out that Bob is wrong. Dead wrong. The run time for simple \nsearch with 1 billion items will be 1 billion ms, which is 11 days! The \nproblem is that the run times for binary search and simple search don’t \ngrow at the same rate.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     189.01800537109375,
+     319.6944580078125,
+     307.87310791015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That is, as the number of items increases, binary search takes a little \nmore time to run. But simple search takes a lot more time to run. So \nas the list of numbers gets bigger, binary search suddenly becomes a \nlot faster than simple search. Bob thought binary search was 15 times \nfaster than simple search, but that’s not correct. If the list has 1 billion \nitems, it’s more like 33 million times faster. That’s why it’s not enough \nto know how long an algorithm takes to run—you need to know how \nthe running time increases as the list size increases. That’s where big O \nnotation comes in.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     310.5351257324219,
+     323.8953552246094,
+     390.3841857910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Big O notation tells you how fast an algorithm is. For example, suppose \nyou have a list of size n. Simple search needs to check each element, so \nit will take n operations. The run time in big O notation is O(n). Where \nare the seconds? There are none—big O doesn’t tell you the speed in \nseconds. Big O notation lets you compare the number of operations. It \ntells you how fast the algorithm grows.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     341.7229919433594,
+     130.7080078125,
+     400.5596923828125,
+     159.613037109375
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Run times grow \nat very different \nspeeds!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    22.670997619628906,
+    99.69700622558594,
+    312.35198974609375,
+    178.89700317382812
+   ],
+   [
+    106.67100524902344,
+    401.0970153808594,
+    228.35101318359375,
+    526.1370239257812
+   ]
+  ]
+ },
+ {
+  "pdf_index": 38,
+  "blocks": [
+   {
+    "bbox": [
+     159.4429931640625,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Big O notation\n13",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49993896484375,
+     34.97500991821289,
+     343.647705078125,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Binary search needs log n operations to check a list of size n. What’s the \nrunning time in big O notation? It’s O(log n). In general, big O notation \nis written as follows.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     139.71798706054688,
+     344.3836975097656,
+     180.56101989746094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This notation tells you the number of operations an algorithm will \nmake. It’s called big O notation because you put a “big O” in front of the \nnumber of operations (it sounds like a joke, but it’s true!).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     183.2230224609375,
+     339.9825744628906,
+     211.0640411376953
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now, let’s look at some examples. See if you can figure out the run time \nfor these algorithms.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     222.7509765625,
+     251.06321716308594,
+     240.09698486328125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Visualizing different big O run times",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     243.21798706054688,
+     228.57554626464844,
+     284.0610046386719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s a practical example you can follow at \nhome with a few pieces of paper and a pencil. \nSuppose you have to draw a grid of 16 boxes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     291.20697021484375,
+     82.08899688720703,
+     303.59698486328125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Algorithm 1",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     306.8179931640625,
+     325.738525390625,
+     373.6650390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "One way to do it is to draw 16 boxes, one at \na time. Remember, big O notation counts the \nnumber of operations. In this example, drawing \none box is one operation. You have to draw 16 \nboxes. How many operations will it take, drawing one box at a time?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     468.9179992675781,
+     321.2605285644531,
+     496.7590026855469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It takes 16 steps to draw 16 boxes. What’s the running time for this \nalgorithm?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     343.5220031738281,
+     93.90798950195312,
+     409.5294494628906,
+     112.81622314453125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "What big O  \nnotation looks like",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     359.7227478027344,
+     409.2979736328125,
+     422.0177307128906,
+     428.20623779296875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Drawing a grid \none box at a time",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     372.6677551269531,
+     276.13623046875,
+     425.8277587890625,
+     305.0412292480469
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "What’s a good \nalgorithm to \ndraw this grid?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    247.64199829101562,
+    243.62197875976562,
+    359.72198486328125,
+    343.9419860839844
+   ],
+   [
+    109.77999877929688,
+    82.69698333740234,
+    261.2200012207031,
+    133.09698486328125
+   ],
+   [
+    29.139999389648438,
+    384.39801025390625,
+    341.8599853515625,
+    458.7969970703125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 39,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n14",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.61000061035156,
+     64.08899688720703,
+     48.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Algorithm 2",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     51.22097396850586,
+     194.02171325683594,
+     66.05997467041016
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Try this algorithm instead. Fold the paper.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     160.44100952148438,
+     317.736572265625,
+     188.2820281982422
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In this example, folding the paper once is an operation. You just made \ntwo boxes with that operation!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     190.94403076171875,
+     197.0917205810547,
+     205.7830352783203
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Fold the paper again, and again, and again.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     311.6809997558594,
+     320.717529296875,
+     339.5220031738281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Unfold it after four folds, and you’ll have a beautiful grid! Every fold \ndoubles the number of boxes. You made 16 boxes with four operations!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     471.5810241699219,
+     328.01611328125,
+     512.4240112304688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can “draw” twice as many boxes with every fold, so you can draw 16 \nboxes in four steps. What’s the running time for this algorithm? Come \nup with running times for both algorithms before moving on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     514.9430541992188,
+     318.7826232910156,
+     542.927001953125
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answers: Algorithm 1 takes O(n) time, and algorithm 2 takes O(log n) \ntime.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     341.7229919433594,
+     404.3489990234375,
+     398.2204895019531,
+     423.2557373046875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Drawing a grid  \nin four folds",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    142.91099548339844,
+    80.80001068115234,
+    192.11000061035156,
+    146.32000732421875
+   ],
+   [
+    94.19099426269531,
+    220.51998901367188,
+    240.83099365234375,
+    297.55999755859375
+   ],
+   [
+    10.070999145507812,
+    354.260986328125,
+    324.9520263671875,
+    457.46099853515625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 40,
+  "blocks": [
+   {
+    "bbox": [
+     159.4429931640625,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Big O notation\n15",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     269.22125244140625,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Big O establishes a worst-case run time",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     55.12099838256836,
+     340.1375732421875,
+     147.9720916748047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re using simple search to look for a person in the phone \nbook. You know that simple search takes O(n) time to run, which \nmeans, in the worst case, you’ll have to look through every single entry \nin your phone book. In this case, you’re looking for Adit. This guy is \nthe first entry in your phone book. So you didn’t have to look at every \nentry—you found it on the first try. Did this algorithm take O(n) time? \nOr did it take O(1) time because you found the person on the first try?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     150.4910888671875,
+     334.6485595703125,
+     230.48316955566406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Simple search still takes O(n) time. In this case, you found what you \nwere looking for instantly. That’s the best-case scenario. But we are \nusing big O notation for worst-case scenario analysis. So you can say \nthat in the worst case, you’ll have to look at every entry in the phone \nbook once. That’s O(n) time. It’s a reassurance—you know that simple \nsearch will never be slower than O(n) time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     174.64500427246094,
+     249.3100128173828,
+     196.1850128173828,
+     261.70001220703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     38.0,
+     266.656005859375,
+     334.8465881347656,
+     290.074462890625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "Along with the worst-case run time, it’s also important to look at the average- \ncase run time. Worst case versus average case is discussed in chapter 4.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     316.85400390625,
+     217.96861267089844,
+     334.20001220703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Some common big O run times",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     337.3210144042969,
+     328.949462890625,
+     365.1620178222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here are five big O run times that you’ll encounter a lot, sorted from \nfastest to slowest:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     372.17999267578125,
+     287.350830078125,
+     387.1620178222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t O(log n), also known as log time. Example: binary search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500015258789062,
+     394.17999267578125,
+     283.94073486328125,
+     409.1619873046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t O(n), also known as linear time. Example: simple search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     416.17999267578125,
+     307.40155029296875,
+     444.1639709472656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t O(n * log n). Example: a fast sorting algorithm, like quicksort \n(coming up in chapter 4).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     451.1819763183594,
+     339.9834899902344,
+     479.1619873046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t O(n2). Example: a slow sorting algorithm, like selection sort (coming \nup in chapter 2).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     486.17999267578125,
+     342.9842529296875,
+     514.1640014648438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t O(n!). Example: a really slow algorithm, like the traveling salesperson \n(coming up next!).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     516.8259887695312,
+     337.7165832519531,
+     557.6690063476562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re drawing a grid of 16 boxes again, and you can choose \nfrom five different algorithms to do so. If you use the first algorithm, it \nwill take you O(log n) time to draw the grid. You can do 10 operations",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 41,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n16",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.97500991821289,
+     325.3605651855469,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "per second. With O(log n) time, it will take you four operations to draw \na grid of 16 boxes (log 16 is 4). So it will take you 0.4 seconds to draw \nthe grid. What if you have to draw 1,024 boxes? It will take you log \n1,024 = 10 operations, or 1 second, to draw a grid of 1,024 boxes. These \nnumbers are using the first algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     104.48403930664062,
+     315.7685852050781,
+     145.47007751464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The second algorithm is slower: it takes O(n) time. It will take 16 \noperations to draw 16 boxes, and it will take 1,024 operations to draw \n1,024 boxes. How much time is that in seconds?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     148.132080078125,
+     282.4055480957031,
+     175.9730987548828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s how long it would take to draw a grid for the rest of the \nalgorithms, from fastest to slowest:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     330.89801025390625,
+     304.74652099609375,
+     345.73699951171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There are other run times, too, but these are the five most common.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     348.3990173339844,
+     323.4686279296875,
+     415.2460021972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This explanation is a simplification. In reality, you can’t convert from a \nbig O run time to a number of operations this neatly, but this is good \nenough for now. We’ll come back to big O notation in chapter 4, after \nyou’ve learned a few more algorithms. For now, the main takeaways are \nas follows:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     422.4070129394531,
+     298.8946838378906,
+     450.24798583984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Algorithm speed isn’t measured in seconds but in growth of the \nnumber of operations.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     457.40899658203125,
+     303.271484375,
+     485.2499694824219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Instead of seconds, we talk about how quickly the run time of an \nalgorithm increases as the size of the input increases.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     492.4109802246094,
+     255.884521484375,
+     507.2499694824219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Run time of algorithms is expressed in big O notation.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     514.2680053710938,
+     320.025634765625,
+     542.2520141601562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t O(log n) is faster than O(n), and it gets a lot faster as the list of items \nyou’re searching grows.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    194.69700622558594,
+    403.58099365234375,
+    312.7770080566406
+   ]
+  ]
+ },
+ {
+  "pdf_index": 42,
+  "blocks": [
+   {
+    "bbox": [
+     159.4429931640625,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Big O notation\n17",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     36.730899810791016,
+     96.57598876953125,
+     51.474998474121094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     301.9775390625,
+     69.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Give the run time for each of these scenarios in terms of big O.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     72.62100219726562,
+     338.5076599121094,
+     100.4620132446289
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.3  \u0007You have a name, and you want to find the person’s phone number \nin the phone book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     103.12100219726562,
+     337.8807373046875,
+     143.9640350341797
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.4  \u0007You have a phone number, and you want to find the person’s name \nin the phone book. (Hint: You’ll have to search through the whole \nbook!)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     146.62100219726562,
+     332.9174499511719,
+     161.4600067138672
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.5  \u0007You want to read the numbers of every person in the phone book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     163.97799682617188,
+     334.52276611328125,
+     204.9640350341797
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "1.6  \u0007You want to read the numbers of just the As. (This is a tricky one! \nIt involves concepts that are covered more in chapter 4. Read the \nanswer—you may be surprised!)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     216.65399169921875,
+     186.734619140625,
+     234.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "The traveling salesperson",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     237.12100219726562,
+     335.2303466796875,
+     316.9700622558594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You might have read that last section and thought, “There’s no way I’ll \never run into an algorithm that takes O(n!) time.” Well, let me try to \nprove you wrong! Here’s an example of an algorithm with a really bad \nrunning time. This problem is famous in computer science because \nits growth is appalling and some very smart people think it can’t be \nimproved. It’s called the traveling salesperson problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     488.1410217285156,
+     300.7015380859375,
+     502.9800109863281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You have a salesperson. The salesperson has to go to five cities.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    144.3520050048828,
+    331.70001220703125,
+    226.67098999023438,
+    474.02001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 43,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     254.47610473632812,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 1  I  introduction to algorithms\n18",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     183.11898803710938,
+     313.96343994140625,
+     223.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This salesperson, whom I’ll call Opus, wants to hit all five cities while \ntraveling the minimum distance. Here’s one way to do that: look at \nevery possible order in which he could travel to the cities.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     335.239013671875,
+     320.2884521484375,
+     402.0860290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "He adds up the total distance and then picks the path with the lowest \ndistance. There are 120 permutations with five cities, so it will take 120 \noperations to solve the problem for five cities. For six cities, it will take \n720 operations (there are 720 permutations). For seven cities, it will \ntake 5,040 operations!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     341.7229919433594,
+     473.71600341796875,
+     414.6912841796875,
+     502.6210021972656
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "The number \nof operations \nincreases drastically.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    95.82600402832031,
+    38.0,
+    239.1959991455078,
+    176.49700927734375
+   ],
+   [
+    24.83100128173828,
+    230.69801330566406,
+    310.1919860839844,
+    328.6180114746094
+   ],
+   [
+    59.03099822998047,
+    408.8179931640625,
+    275.9909973144531,
+    553.0579833984375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 44,
+  "blocks": [
+   {
+    "bbox": [
+     174.57200622558594,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Recap\n19",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.97500991821289,
+     344.5364990234375,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In general, for n items, it will take n! (n factorial) operations to compute \nthe result. So this is O(n!) time, or factorial time. It takes a lot of \noperations for everything except the smallest numbers. Once you’re \ndealing with 100+ cities, it’s impossible to calculate the answer in time—\nthe Sun will collapse first.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500045776367188,
+     104.62704467773438,
+     341.4795837402344,
+     171.47410583496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is a terrible algorithm! Opus should use a different one, right? But \nhe can’t. This is one of the unsolved problems in computer science. \nThere’s no fast known algorithm for it, and some smart people think it’s \nimpossible to have a smart algorithm for this problem. The best we can \ndo is come up with an approximate solution; see chapter 10 for more.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     201.19500732421875,
+     76.13600158691406,
+     223.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     234.61801147460938,
+     319.8315734863281,
+     262.4590148925781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Binary search is a lot faster than simple search as your array gets \nbigger.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     269.47698974609375,
+     323.71685791015625,
+     297.46099853515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t O(log n) is faster than O(n), and it gets a lot faster once the list of \nitems you’re searching through grows.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.50000762939453,
+     304.62200927734375,
+     226.86065673828125,
+     319.46099853515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Algorithm speed isn’t measured in seconds.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     326.47900390625,
+     326.0609436035156,
+     341.46099853515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Algorithm times are measured in terms of growth of an algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     348.62200927734375,
+     239.9285888671875,
+     363.46099853515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Algorithm times are written in big O notation.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 45,
+  "blocks": [],
+  "images": []
+ }
+]

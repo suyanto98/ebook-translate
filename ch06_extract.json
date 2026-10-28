@@ -1,0 +1,2556 @@
+[
+ {
+  "pdf_index": 126,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "6",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     344.33074951171875,
+     258.75299072265625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn how to model a network using a new, \nabstract data structure: graphs.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     267.531005859375,
+     361.53472900390625,
+     308.75897216796875
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn breadth-first search, an algorithm you \ncan run on graphs to answer questions like, “What’s \nthe shortest path to go to X?”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     315.53497314453125,
+     358.7186584472656,
+     328.7569885253906
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about directed versus undirected graphs.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     339.5369873046875,
+     352.2101135253906,
+     380.7650146484375
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn topological sort, a different kind of sort-\ning algorithm that exposes dependencies  \nbetween nodes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     266.5360107421875,
+     4.003999710083008,
+     370.1728210449219,
+     26.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "breadth-first",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     315.5500183105469,
+     22.003999710083008,
+     366.4540100097656,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 9968414,
+    "text": "search",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     430.0979919433594,
+     407.52862548828125,
+     470.9410095214844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This chapter introduces graphs. First, I’ll talk about what graphs are \n(they don’t involve an X or Y axis). Then I’ll show you your first graph \nalgorithm. It’s called breadth-first search (BFS).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     473.6029968261719,
+     409.6407470703125,
+     514.4459838867188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Breadth-first search allows you to find the shortest distance between \ntwo things. But shortest distance can mean a lot of things! You can use \nbreadth-first search to",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     521.60693359375,
+     393.5904541015625,
+     549.447998046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Write a spellchecker (fewest edits from your misspelling to a real \nword—for example, READED → READER is one edit).",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 127,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n102",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     224.64566040039062,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Find the doctor closest to you in your network.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     57.11800765991211,
+     148.86778259277344,
+     71.9570083618164
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Build a search engine crawler.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     74.61898803710938,
+     324.5355529785156,
+     115.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Graph algorithms are some of the most useful algorithms I know. Make \nsure you read the next few chapters carefully—these are algorithms \nyou’ll be able to apply again and again.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     143.19500732421875,
+     190.93824768066406,
+     165.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Introduction to graphs",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     381.0580139160156,
+     317.69573974609375,
+     421.9009704589844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re in San Francisco, and you want to go from Twin Peaks \nto the Golden Gate Bridge. You want to get there by bus, with the \nminimum number of transfers. Here are your options.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    93.35099792480469,
+    176.69700622558594,
+    241.67100524902344,
+    368.93701171875
+   ],
+   [
+    11.57400131225586,
+    434.6369934082031,
+    323.4490051269531,
+    558.469970703125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 128,
+  "blocks": [
+   {
+    "bbox": [
+     145.14300537109375,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Introduction to graphs\n103",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     292.947509765625,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What’s your algorithm to find the path with the fewest steps?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     52.61898422241211,
+     334.802490234375,
+     80.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Well, can you get there in one step? Here are all the places you can get \nto in one step.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     208.43798828125,
+     341.8095703125,
+     236.2790069580078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The bridge isn’t highlighted; you can’t get there in one step. Can you get \nthere in two steps?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     361.37799072265625,
+     337.9255065917969,
+     389.2189636230469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Again, the bridge isn’t there, so you can’t get to the bridge in two steps. \nWhat about three steps?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    64.31099700927734,
+    95.19698333740234,
+    306.71099853515625,
+    194.31698608398438
+   ],
+   [
+    46.430999755859375,
+    251.01699829101562,
+    324.5920104980469,
+    347.2569885253906
+   ],
+   [
+    64.91100311279297,
+    403.9570007324219,
+    306.1109924316406,
+    500.9169921875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 129,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n104",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     316.12060546875,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Aha! Now the Golden Gate Bridge shows up. So it takes three steps to \nget from Twin Peaks to the bridge using this route.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     169.89801025390625,
+     326.0085144042969,
+     275.7510986328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There are other routes that will get you to the bridge, too, but they’re \nlonger (four steps). The algorithm found that the shortest route to the \nbridge is three steps long. This type of problem is called a shortest-path \nproblem. You’re always trying to find the shortest something. It could be \nthe shortest route to your friend’s house. Or maybe you’re browsing the \nweb. Without you knowing it, the network is looking for the shortest \npath between your computer and a website’s server. The algorithm to \nsolve a shortest-path problem is called breadth-first search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     278.4131164550781,
+     314.8874206542969,
+     306.2541198730469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There are two steps to figuring out how to get from Twin Peaks to the \nGolden Gate Bridge:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     308.916015625,
+     159.55101013183594,
+     323.755126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Model the problem as a graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     326.4169921875,
+     221.39300537109375,
+     341.2560119628906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Solve the problem using breadth-first search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     345.41400146484375,
+     320.1344909667969,
+     373.2550048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Next I’ll cover what graphs are. Then I’ll go into breadth-first search in \nmore detail.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     394.4749755859375,
+     141.00621032714844,
+     416.7769775390625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "What is a graph?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     424.3979797363281,
+     223.20570373535156,
+     491.2449645996094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A graph models a set of connections. For \nexample, suppose you and your friends are \nplaying poker, and you want to model who owes \nwhom money. Here’s how you could say, “Alex \nowes Rama money.”",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    45.59100341796875,
+    71.69700622558594,
+    289.4309997558594,
+    159.77700805664062
+   ],
+   [
+    238.1619873046875,
+    386.968994140625,
+    412.8819885253906,
+    520.6489868164062
+   ],
+   [
+    9.5,
+    502.7250061035156,
+    171.97999572753906,
+    547.125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 130,
+  "blocks": [
+   {
+    "bbox": [
+     155.51499938964844,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "What is a graph?\n105",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     226.93655395507812,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The full graph could look something like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     193.93798828125,
+     339.7426452636719,
+     221.7790069580078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Alex owes Rama money, Tom owes Adit money, and so on. Each graph \nis made up of nodes and edges.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     303.1180114746094,
+     339.5425109863281,
+     343.9610290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That’s all there is to it! Graphs are made up of nodes and edges. A node \ncan be directly connected to many other nodes. Those nodes are called \nin-neighbors or out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     346.48004150390625,
+     333.7686462402344,
+     387.4660339355469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Since Alex is pointing to Rama, Alex is Rama’s in-neighbor, and Rama \nis Alex’s out-neighbor. This terminology can be confusing, so here’s a \ndiagram to help.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     487.197998046875,
+     342.8205871582031,
+     515.0390014648438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the graph, Adit isn’t Alex’s in-neighbor or out-neighbor because they \naren’t directly connected. But Adit is Rama’s and Tom’s out-neighbor.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     517.7009887695312,
+     331.3375244140625,
+     545.5419921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Graphs are a way to model how different things are connected to one \nanother. Now let’s see breadth-first search in action.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     304.4590148925781,
+     113.08999633789062,
+     399.0264587402344,
+     131.99676513671875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Graph of people who owe \nother people poker money",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    75.23100280761719,
+    60.696983337402344,
+    295.791015625,
+    183.81698608398438
+   ],
+   [
+    118.91099548339844,
+    232.5170135498047,
+    252.11099243164062,
+    292.99700927734375
+   ],
+   [
+    46.670997619628906,
+    400.197021484375,
+    324.35198974609375,
+    475.0769958496094
+   ]
+  ]
+ },
+ {
+  "pdf_index": 131,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n106",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     167.41220092773438,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Breadth-first search",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     312.7765808105469,
+     107.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We looked at a search algorithm in chapter 1: binary search. Breadth-\nfirst search is a different kind of search algorithm: one that runs on \ngraphs. It can help answer two types of questions:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     115.125,
+     263.72760009765625,
+     129.9640350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Question type 1: Is there a path from node A to node B?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     137.125,
+     311.34552001953125,
+     151.96400451660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Question type 2: What is the shortest path from node A to node B?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     154.62600708007812,
+     323.46624755859375,
+     208.47105407714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You already saw breadth-first search once when you calculated the \nshortest route from Twin Peaks to the Golden Gate Bridge. That was \na question of type 2: “What is the shortest path?” Now let’s look at the \nalgorithm in more detail. You’ll ask a question of type 1: “Is there a path?”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     337.0010070800781,
+     328.03466796875,
+     377.8440246582031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re the proud owner of a mango farm. You’re looking for a \nmango seller who can sell your mangoes. Are you connected to a mango \nseller on Facebook? Well, you can search through your friends.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    121.6719970703125,
+    221.20001220703125,
+    213.35101318359375,
+    324.8800048828125
+   ],
+   [
+    100.55099487304688,
+    390.5810241699219,
+    234.4709930419922,
+    554.9810180664062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 132,
+  "blocks": [
+   {
+    "bbox": [
+     150.41200256347656,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Breadth-first search\n107",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     193.02572631835938,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This search is pretty straightforward.  \nFirst, make a list of friends to search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     65.62100219726562,
+     208.71066284179688,
+     93.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now, go to each person in the list and  \ncheck whether that person sells mangoes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     362.0780029296875,
+     345.970703125,
+     389.9189758300781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose none of your friends are mango sellers. Now you have to search \nthrough your friends’ friends.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    64.19100189208984,
+    108.19700622558594,
+    306.83099365234375,
+    347.9570007324219
+   ],
+   [
+    84.47099304199219,
+    402.6579895019531,
+    286.5509948730469,
+    556.4979858398438
+   ],
+   [
+    240.87799072265625,
+    25.4000244140625,
+    325.35699462890625,
+    110.5999755859375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 133,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n108",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     321.37640380859375,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each time you search for someone from the list, add all of their friends \nto the list.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     154.8179931640625,
+     325.0206298828125,
+     234.6670684814453
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This way, you not only search your friends, but you search their friends, \ntoo. Remember, the goal is to find one mango seller in your network. \nSo if Alice isn’t a mango seller, you add her friends to the list, too. That \nmeans you’ll eventually search her friends—and then their friends, and \nso on. With this algorithm, you’ll search your entire network until you \ncome across a mango seller. This algorithm is breadth-first search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     244.35098266601562,
+     305.6805114746094,
+     291.15899658203125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Finding the shortest path\nAs a recap, these are the two questions that breadth-first search can \nanswer for you:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     293.8210144042969,
+     312.43450927734375,
+     321.6620178222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Question type 1: Is there a path from node A to node B? (Is there a \nmango seller in your network?)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     325.82000732421875,
+     313.842529296875,
+     353.6610107421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Question type 2: What is the shortest path from node A to node B? \n(Who is the closest mango seller?)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     356.3230285644531,
+     327.8784484863281,
+     397.166015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You saw how to answer question 1; now let’s try to answer question 2. Can \nyou find the closest mango seller? For example, your friends are first-\ndegree connections, and their friends are second-degree connections.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    10.910999298095703,
+    65.69699096679688,
+    324.1109924316406,
+    149.69699096679688
+   ],
+   [
+    68.29900360107422,
+    405.89801025390625,
+    266.7239990234375,
+    557.2449951171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 134,
+  "blocks": [
+   {
+    "bbox": [
+     150.41200256347656,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Breadth-first search\n109",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     346.03582763671875,
+     166.9751434326172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’d prefer a first-degree connection to a second-degree connection, a \nsecond-degree connection to a third-degree connection, and so on. So \nyou shouldn’t search any second-degree connections before you make \nsure you don’t have a first-degree connection who is a mango seller. \nWell, breadth-first search already does this! The way breadth-first search \nworks is that the search radiates out from the starting point. So you’ll \ncheck first-degree connections before second-degree connections. Pop \nquiz: Who will be checked first, Claire or Anuj? Answer: Claire is a \nfirst-degree connection, and Anuj is a second-degree connection, so \nClaire will be checked before Anuj.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     124.80599975585938,
+     169.63714599609375,
+     329.9526672363281,
+     210.4801788330078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Another way to see this is that first-degree \nconnections are added to the search list before \nsecond-degree connections.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     124.80599975585938,
+     213.14218139648438,
+     344.021728515625,
+     305.9932556152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You just go down the list and check people to see \nwhether each one is a mango seller. The first-\ndegree connections will be searched before the \nsecond-degree connections, so you’ll find the \nmango seller closest to you. Breadth-first search \nnot only finds a path from A to B; it also finds the \nshortest path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     308.6552734375,
+     342.5564880371094,
+     414.5083312988281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice that this only works if you search people in the same order in \nwhich they’re added. That is, if Claire was added to the list before Anuj, \nClaire needs to be searched before Anuj. What happens if you search \nAnuj before Claire, and they’re both mango sellers? Well, Anuj is a \nsecond-degree contact, and Claire is a first-degree contact. You end up \nwith a mango seller who isn’t the closest to you in your network. So \nyou need to search people in the order that they’re added. There’s a data \nstructure for this: it’s called a queue.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     426.1510009765625,
+     74.79200744628906,
+     443.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Queues",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     446.6180114746094,
+     227.2005157470703,
+     552.4710083007812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A queue works exactly like it does in real life. \nSuppose you and your friend are queueing \nup at the bus stop. If you’re before them in \nthe queue, you get on the bus first. A queue \nworks the same way. Queues are similar to \nstacks. You can’t access random elements \nin the queue. Instead, there are only two \noperations, enqueue and dequeue.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    168.885986328125,
+    111.26000213623047,
+    303.7659912109375
+   ],
+   [
+    255.9219970703125,
+    430.5279846191406,
+    431.12200927734375,
+    551.4879760742188
+   ]
+  ]
+ },
+ {
+  "pdf_index": 135,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n110",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     124.60101318359375,
+     319.9606018066406,
+     165.4440460205078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you enqueue two items to the list, the first item you added will be \ndequeued before the second item. You can use this for your search list! \nPeople who are added to the list first will be dequeued and searched first.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     167.96304321289062,
+     327.0524597167969,
+     195.9470672607422
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The queue is called a FIFO data structure: first in, first out. In contrast, a \nstack is a LIFO data structure: last in, first out.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     271.281005859375,
+     313.6797180175781,
+     299.12200927734375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now that you know how a queue works, let’s implement breadth-first \nsearch!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     312.8908996582031,
+     78.57600402832031,
+     327.635009765625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     331.281005859375,
+     317.36358642578125,
+     359.12200927734375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Run the breadth-first search algorithm on each of these graphs to find \nthe solution.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     396.781005859375,
+     187.65765380859375,
+     424.6219787597656
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.1  \u0007Find the length of the shortest path  \nfrom start to finish.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     497.281005859375,
+     187.65765380859375,
+     525.1220092773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.2  \u0007Find the length of the shortest path  \nfrom “cab” to “bat.”",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    75.59100341796875,
+    37.999977111816406,
+    259.4309997558594,
+    116.47998046875
+   ],
+   [
+    81.71099853515625,
+    202.6800079345703,
+    253.31100463867188,
+    263.1600036621094
+   ],
+   [
+    221.0,
+    350.0530090332031,
+    352.52001953125,
+    442.2130126953125
+   ],
+   [
+    221.0,
+    446.6949768066406,
+    359.89801025390625,
+    566.77197265625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 136,
+  "blocks": [
+   {
+    "bbox": [
+     141.7949981689453,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementing the graph\n111",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     223.33822631835938,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Implementing the graph",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     238.3655242919922,
+     94.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, you need to implement the graph in code. \nA graph consists of several nodes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     97.62399291992188,
+     231.5466766357422,
+     151.4690399169922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And each node is connected to other nodes. \nHow do you express a relationship like “you → \nbob”? Luckily, you know a data structure that \nlets you express relationships: a hash table!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     154.13104248046875,
+     241.32569885253906,
+     194.9740753173828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember, a hash table allows you to map a key \nto a value. In this case, you want to map a node \nto all of its out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     275.4209899902344,
+     182.53176879882812,
+     290.2599792480469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s how you’d write it in Python:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     294.431640625,
+     243.03720092773438,
+     313.4306335449219
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph = {}\ngraph[\"you\"] = [\"alice\", \"bob\", \"claire\"]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     322.9209899902344,
+     335.37841796875,
+     363.7640075683594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice that “you” is mapped to an array. So graph[\"you\"] will give \nyou an array of all the out-neighbors of “you.” Remember that the out-\nneighbors are the nodes that the “you” node points to.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.504974365234375,
+     366.426025390625,
+     326.5234375,
+     394.2669982910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A graph is just a bunch of nodes and edges, so this is all you need to \nhave a graph in Python. What about a bigger graph like this one?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    88.10899353027344,
+    203.69998168945312,
+    180.2689971923828,
+    267.29998779296875
+   ],
+   [
+    84.47099304199219,
+    405.0,
+    286.5509948730469,
+    558.8399658203125
+   ],
+   [
+    260.7200012207031,
+    69.02401733398438,
+    395.1199951171875,
+    233.42401123046875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 137,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n112",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     120.85082244873047,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here it is as Python code:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     57.6286506652832,
+     225.0372314453125,
+     146.62074279785156
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph = {}\ngraph[\"you\"] = [\"alice\", \"bob\", \"claire\"]\ngraph[\"bob\"] = [\"anuj\", \"peggy\"]\ngraph[\"alice\"] = [\"peggy\"]\ngraph[\"claire\"] = [\"thom\", \"jonny\"]\ngraph[\"anuj\"] = []\ngraph[\"peggy\"] = []\ngraph[\"thom\"] = []\ngraph[\"jonny\"] = []",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     154.11801147460938,
+     306.8144836425781,
+     181.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Pop quiz: Does it matter what order you add the key/value pairs in? \nDoes it matter if you write",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     187.12864685058594,
+     196.35787963867188,
+     206.1276397705078
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph[\"claire\"] = [\"thom\", \"jonny\"]\ngraph[\"anuj\"] = []",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     213.61801147460938,
+     52.25700759887695,
+     228.45701599121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "instead of",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     232.62864685058594,
+     196.35787963867188,
+     251.6276397705078
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "graph[\"anuj\"] = []\ngraph[\"claire\"] = [\"thom\", \"jonny\"]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     259.1180114746094,
+     309.499755859375,
+     299.9610290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Think back to the previous chapter. Answer: It doesn’t matter. Hash \ntables have no ordering, so it doesn’t matter what order you add key/\nvalue pairs in.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     302.623046875,
+     324.13079833984375,
+     369.4700927734375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Anuj, Peggy, Thom, and Jonny don’t have any out-neighbors. They have \nin-neighbors since they have arrows pointing to them, but no arrows \npoint from them to someone else. This is called a directed graph: the \nrelationship is only one way. An undirected graph doesn’t have any \narrows. For example, both of these graphs are equal.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     451.8379821777344,
+     318.3964538574219,
+     479.6789855957031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you have an undirected graph, you can forget the terms in-neighbor \nand out-neighbor and use the simpler term neighbor.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    14.99100112915039,
+    378.1969909667969,
+    320.031982421875,
+    443.71697998046875
+   ],
+   [
+    95.99099731445312,
+    488.4169921875,
+    239.03099060058594,
+    560.177001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 138,
+  "blocks": [
+   {
+    "bbox": [
+     134.63499450683594,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementing the algorithm\n113",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     255.12620544433594,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Implementing the algorithm",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     64.62100219726562,
+     250.22348022460938,
+     79.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To recap, here’s how the implementation will work.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     414.4419860839844,
+     321.008544921875,
+     442.2829895019531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Make a queue to start. In Python, you use the double-ended queue \n(deque) function for this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     449.95263671875,
+     316.91204833984375,
+     478.95263671875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "from collections import deque        \nsearch_queue = deque()         \nCreates a new queue\nsearch_queue += graph[\"you\"]",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     488.4419860839844,
+     281.2850036621094,
+     529.2830200195312
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember, graph[\"you\"] will give you a list of all your out-\nneighbors, like [\"alice\", \"bob\", \"claire\"]. Those all get \nadded to the search queue.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     241.57901000976562,
+     471.2859802246094,
+     422.52392578125,
+     480.19598388671875
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Adds all of your out-neighbors to the search queue",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     357.5610046386719,
+     204.69300842285156,
+     379.1009826660156,
+     217.0830078125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     314.6610107421875,
+     222.03900146484375,
+     424.02593994140625,
+     305.450927734375
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "When updating queues, I \nuse the terms enqueue and \ndequeue. But sometimes \nyou’ll see people using dif-\nferent terms. Python uses \nappend and popleft instead \nof enqueue and dequeue.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    47.47599792480469,
+    85.19998168945312,
+    306.9159851074219,
+    400.32000732421875
+   ],
+   [
+    278.77801513671875,
+    483.51300048828125,
+    353.79998779296875,
+    560.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 139,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n114",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     82.09785461425781,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s see the rest:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     54.80200958251953,
+     324.9137878417969,
+     183.4590301513672
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "while search_queue:  \nWhile the queue isn’t empty . . .\n    person = search_queue.popleft()  \n    if person_is_seller(person):    \n        print(person + \" is a mango seller!\") \n        return True\n    else:        \n        search_queue += graph[person] \nreturn False        \nIf you reached here, no  \none in the queue is a \nmango seller.\nOne final thing: you still need a person_is_seller function to tell you \nwhen someone is a mango seller. Here’s one:",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     188.302001953125,
+     162.60882568359375,
+     207.6276397705078
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def person_is_seller(name):\n    return name[-1] == 'm'",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     213.97500610351562,
+     322.2355041503906,
+     254.96104431152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This function checks whether the person’s name ends with the letter m. \nIf it does, they’re a mango seller. Kind of a silly way to do it, but it’ll do \nfor this example. Now let’s see the breadth-first search in action.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     236.35775756835938,
+     66.46200561523438,
+     396.520263671875,
+     85.3687744140625
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": ". . . grabs the first person off the queue.\nChecks whether the person is a mango seller",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     300.4330139160156,
+     85.46200561523438,
+     396.70977783203125,
+     94.37200927734375
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Yes, they’re a mango seller.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     279.4330139160156,
+     116.46200561523438,
+     376.3547058105469,
+     145.36703491210938
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "No, they aren’t. Add all of \nthis person’s friends to the \nsearch queue.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    16.39099884033203,
+    263.6969909667969,
+    318.6309814453125,
+    570.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 140,
+  "blocks": [
+   {
+    "bbox": [
+     134.63499450683594,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementing the algorithm\n115",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     338.3687438964844,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And so on. The algorithm will keep going until either a mango seller is \nfound or the queue becomes empty, in which case there is no mango seller.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     65.62100219726562,
+     345.30767822265625,
+     106.46402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Alice and Bob share a friend, Peggy. So Peggy will be added to the \nqueue twice: once when you add Alice’s friends and again when you add \nBob’s friends. You’ll end up with two Peggys in the search queue.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     233.47799682617188,
+     343.06365966796875,
+     287.3230285644531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But you only need to check Peggy once to see whether she’s a mango \nseller. If you check her twice, you’re doing unnecessary, extra work. So \nonce you search a person, you should mark that person as searched and \nnot search them again.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     289.98504638671875,
+     336.2777099609375,
+     317.8260498046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you don’t do this, you could also end up in an infinite loop. Suppose \nthe mango seller graph looked like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     379.5580139160156,
+     293.33258056640625,
+     394.3970031738281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To start, the search queue contains all of your out-neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     464.7779846191406,
+     331.96453857421875,
+     492.6189880371094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you check Peggy. She isn’t a mango seller, so you add all her out-\nneighbors to the search queue.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    119.99099731445312,
+    121.19699096679688,
+    251.03099060058594,
+    219.35699462890625
+   ],
+   [
+    134.87100219726562,
+    332.5570068359375,
+    236.1510009765625,
+    365.43701171875
+   ],
+   [
+    151.67100524902344,
+    409.1369934082031,
+    219.35101318359375,
+    450.656982421875
+   ],
+   [
+    156.4709930419922,
+    507.35699462890625,
+    214.55099487304688,
+    547.43701171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 141,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n116",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     322.5237121582031,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Next, you check yourself. You’re not a mango seller, so you add all your \nout-neighbors to the search queue.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     133.3380126953125,
+     313.9513244628906,
+     161.1790313720703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And so on. This will be an infinite loop because the search queue will \nkeep going from you to Peggy.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     96.13999938964844,
+     283.63800048828125,
+     319.6897277832031,
+     324.48101806640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Before checking a person, it’s important to make \nsure they haven’t been checked already. To do that, \nyou’ll keep a set of people you’ve already checked.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.503997802734375,
+     364.34503173828125,
+     313.18865966796875,
+     379.18402099609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the final code for breadth-first search, taking that into account:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.49999237060547,
+     386.52197265625,
+     299.2511901855469,
+     527.3719482421875
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def search(name):\n    search_queue = deque()\n    search_queue += graph[name]   \n    searched = set()      \n    while search_queue:\n        person = search_queue.popleft()  \n        if not person in searched:       \n            if person_is_seller(person):\n                print(person + \" is a mango seller!\")\n                return True\n            else:\n                search_queue += graph[person]   \n                searched.add(person)      \n    return False",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.499984741210938,
+     536.8335571289062,
+     84.62115478515625,
+     545.8335571289062
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "search(\"you\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     261.95001220703125,
+     418.1819763183594,
+     404.30743408203125,
+     437.0902404785156
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "This set is how you keep track of which \npeople you’ve searched before.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     304.4490051269531,
+     448.1819763183594,
+     415.8990783691406,
+     467.0902404785156
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Only search this person if you \nhaven’t already searched them.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.7439880371094,
+     508.1819763183594,
+     353.70648193359375,
+     527.0902709960938
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Marks this person \nas searched",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    133.67100524902344,
+    77.69697570800781,
+    201.35101318359375,
+    119.21697998046875
+   ],
+   [
+    117.23100280761719,
+    175.9169921875,
+    217.79100036621094,
+    269.5169982910156
+   ],
+   [
+    9.5,
+    279.5360107421875,
+    96.13999938964844,
+    358.2560119628906
+   ]
+  ]
+ },
+ {
+  "pdf_index": 142,
+  "blocks": [
+   {
+    "bbox": [
+     134.63499450683594,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementing the algorithm\n117",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     326.9159240722656,
+     75.95902252197266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Try running this code yourself. Maybe try changing the person_is_\nseller function to something more meaningful and see if it prints \nwhat you expect.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     87.65100860595703,
+     111.83599853515625,
+     104.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Running time",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     108.11801147460938,
+     336.0674743652344,
+     161.9630584716797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you search your entire network for a mango seller, that means you’ll \nfollow each edge (remember, an edge is the arrow or connection from \none person to another). So the running time is at least O(number of \nedges).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     164.62506103515625,
+     344.02056884765625,
+     231.4721221923828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You also keep a queue of every person to search. Adding one person to \nthe queue takes constant time: O(1). Doing this for every person will \ntake O(number of people) total. Breadth-first search takes O(number of \npeople + number of edges), and it’s more commonly written as O(V+E) \n(V for number of vertices; E for number of edges).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     245.2279052734375,
+     96.57598876953125,
+     259.9720153808594
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     263.6180114746094,
+     220.78860473632812,
+     278.4570007324219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s a small graph of my morning routine.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     401.63800048828125,
+     336.5614318847656,
+     429.4789733886719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It tells you that I can’t eat breakfast until I’ve brushed my teeth. So “eat \nbreakfast” depends on “brush teeth.”",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     432.1409912109375,
+     342.4245300292969,
+     472.9839782714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "On the other hand, showering doesn’t depend on brushing my teeth \nbecause I can shower before I brush my teeth. From this graph, you can \nmake a list of the order in which I need to do my morning routine:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     475.64599609375,
+     85.77802276611328,
+     490.4849853515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Wake up.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     493.1470031738281,
+     79.59601593017578,
+     507.9859924316406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Shower.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     510.6479797363281,
+     98.13101959228516,
+     525.4869995117188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t Brush teeth.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     528.1489868164062,
+     104.06002044677734,
+     542.988037109375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "4.\t Eat breakfast.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    94.67100524902344,
+    293.1969909667969,
+    276.35101318359375,
+    387.5169982910156
+   ]
+  ]
+ },
+ {
+  "pdf_index": 143,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n118",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     294.8465576171875,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Note that “shower” can be moved around, so this list is also valid:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     52.61898422241211,
+     67.77801513671875,
+     67.4579849243164
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Wake up.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     70.11996459960938,
+     80.13103485107422,
+     84.95902252197266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Brush teeth.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     87.62100219726562,
+     61.596012115478516,
+     102.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t Shower.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     105.12197875976562,
+     86.06002044677734,
+     119.96097564697266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "4.\t Eat breakfast.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     127.11801147460938,
+     301.9465637207031,
+     141.95701599121094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.3  \u0007For these three lists, mark whether each one is valid or invalid.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     254.8179931640625,
+     258.4085693359375,
+     269.656982421875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.4  \u0007Here’s a larger graph. Make a valid list for this graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     425.4779968261719,
+     327.9015808105469,
+     505.3269958496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You could say that this list is sorted, in a way. If task A depends on \ntask B, task A shows up later in the list. This is called a topological sort, \nand it’s a way to make an ordered list out of a graph. Suppose you’re \nplanning a wedding and have a large graph full of tasks to do, and you’re \nnot sure where to start. You could topologically sort the graph and get a \nlist of tasks to do in order.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     507.9889831542969,
+     146.88772583007812,
+     522.8280029296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have a family tree.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    28.91100311279297,
+    156.69699096679688,
+    306.1109924316406,
+    240.69699096679688
+   ],
+   [
+    57.83100128173828,
+    284.39801025390625,
+    277.1910095214844,
+    411.35699462890625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 144,
+  "blocks": [
+   {
+    "bbox": [
+     134.63499450683594,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Implementing the algorithm\n119",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     186.52099609375,
+     307.0165710449219,
+     201.36000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is a graph, because you have nodes (the people) and edges.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     204.02200317382812,
+     342.5234680175781,
+     244.8650360107422
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The edges point to the nodes’ parents. But all the edges go down—it \nwouldn’t make sense for a family tree to have an edge pointing back up! \nThat would be meaningless—your dad can’t be your grandfather’s dad!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     403.4189758300781,
+     344.87738037109375,
+     431.4029846191406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is called a tree. A tree is a special type of graph where no edges ever \npoint back.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     434.0619812011719,
+     242.5845947265625,
+     448.9009704589844
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "6.5  \u0007Which of the following graphs are also trees?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    102.23100280761719,
+    38.0,
+    268.791015625,
+    178.39999389648438
+   ],
+   [
+    85.07099914550781,
+    253.60098266601562,
+    285.95098876953125,
+    395.44097900390625
+   ],
+   [
+    64.31099700927734,
+    457.6409912109375,
+    306.71099853515625,
+    556.52099609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 145,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     242.0911865234375,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 6  I  breadth-first search\n120",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     58.13600158691406,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     71.62100219726562,
+     268.9965515136719,
+     86.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Breadth-first search tells you if there’s a path from A to B.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     93.62100219726562,
+     292.6124267578125,
+     108.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If there’s a path, breadth-first search will find the shortest path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     115.62100219726562,
+     310.1476135253906,
+     143.46202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If you have a problem like “find the shortest X,” try modeling your \nproblem as a graph and use breadth-first search to solve it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     150.62301635742188,
+     319.2226257324219,
+     178.4640350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A directed graph has arrows, and the relationship follows the \ndirection of the arrow (rama → adit means “rama owes adit money”).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     185.625,
+     321.8846130371094,
+     213.4660186767578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Undirected graphs don’t have arrows, and the relationship goes both \nways (ross — rachel means “ross dated rachel and rachel dated ross”).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     220.62701416015625,
+     174.36578369140625,
+     235.4660186767578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Queues are FIFO (first in, first out).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     242.62701416015625,
+     166.24778747558594,
+     257.46600341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Stacks are LIFO (last in, first out).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     264.62701416015625,
+     319.44140625,
+     305.47003173828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You need to check people in the order they were added to the search \nlist, so the search list needs to be a queue. Otherwise, you won’t get \nthe shortest path.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     312.6310119628906,
+     307.52960205078125,
+     340.4720153808594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Once you check someone, make sure you don’t check them again. \nOtherwise, you might end up in an infinite loop.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    87.35099792480469,
+    355.1999816894531,
+    247.67100524902344,
+    498.47998046875
+   ]
+  ]
+ }
+]

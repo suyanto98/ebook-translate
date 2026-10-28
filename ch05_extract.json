@@ -1,0 +1,3095 @@
+[
+ {
+  "pdf_index": 102,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "5",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     361.601806640625,
+     272.7559814453125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about hash tables, one of the most useful \ndata structures. Hash tables have many uses; this \nchapter covers the common use cases.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     279.531982421875,
+     362.8251647949219,
+     334.7629699707031
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about the internals of hash tables: im-\nplementation, collisions, and hash functions. These \nproperties will help you understand how to analyze \na hash table’s performance.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     277.2969970703125,
+     4.003999710083008,
+     366.4365539550781,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "hash tables",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     384.0979919433594,
+     318.0347900390625,
+     515.9550170898438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you work at a grocery store. When a \ncustomer buys produce, you have to look up the \nprice in a book. If the book is unalphabetized, it \ncan take you a long time to look through every \nsingle line for apple. You’d be doing simple search \nfrom chapter 1, where you have to look at every \nline. Do you remember how long that would \ntake? O(n) time. If the book is alphabetized, you \ncould run binary search to find the price of an \napple. That would only take O(log n) time.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    315.9360046386719,
+    386.98101806640625,
+    423.02001953125,
+    498.02001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 103,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n78",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     220.21798706054688,
+     324.7983703613281,
+     261.2040100097656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "As a reminder, there’s a big difference between O(n) and O(log n) time! \nSuppose you could look through 10 lines of the book per second. Here’s \nhow long simple search and binary search would take you.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     405.5019836425781,
+     327.74749755859375,
+     485.3509826660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You already know that binary search is darn fast. But as a cashier, \nlooking things up in a book is a pain, even if the book is sorted. You can \nfeel the customer steaming up as you search for items in the book. What \nyou really need is a buddy who has all the names and prices memorized. \nThen you don’t need to look up anything: you ask her, and she tells you \nthe answer instantly.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    69.47100067138672,
+    38.0,
+    265.552001953125,
+    206.239990234375
+   ],
+   [
+    29.27100372314453,
+    275.94097900390625,
+    305.7510070800781,
+    391.3800048828125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 104,
+  "blocks": [
+   {
+    "bbox": [
+     164.572998046875,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "79\nHash tables",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     180.76101684570312,
+     343.98760986328125,
+     208.60203552246094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Your buddy Maggie can give you the price in O(1) time for any item, no \nmatter how big the book is. She’s even faster than binary search.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     360.8219909667969,
+     269.1546325683594,
+     375.6609802246094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What a wonderful person! How do you get a “Maggie”?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     378.322998046875,
+     340.7644348144531,
+     419.1659851074219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s put on our data structure hats. You know two data structures so far: \narrays and lists (I won’t talk about stacks because you can’t really “search” \nfor something in a stack). You could implement this book as an array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     479.2220153808594,
+     342.9866027832031,
+     546.0690307617188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each item in the array is really two items: one is the name of a kind of \nproduce, and the other is the price. If you sort this array by name, you \ncan run binary search on it to find the price of an item. So you can find \nitems in O(log n) time. But you want to find items in O(1) time. That is, \nyou want to make a “Maggie.” That’s where hash functions come in.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    103.07099914550781,
+    38.00001525878906,
+    267.95098876953125,
+    166.6400146484375
+   ],
+   [
+    68.51100158691406,
+    223.3409881591797,
+    302.510986328125,
+    346.70098876953125
+   ],
+   [
+    71.03099822998047,
+    433.9010009765625,
+    299.9909973144531,
+    465.10101318359375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 105,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n80",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     129.2702178955078,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Hash functions",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499969482421875,
+     66.97799682617188,
+     303.98095703125,
+     107.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A hash function is a function where you put in a string (string here \nmeans any kind of data—a sequence of bytes), and you get back a \nnumber.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     258.2610168457031,
+     311.81842041015625,
+     312.1060485839844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In technical terminology, we’d say that a hash function “maps strings \nto numbers.” You might think there’s no discernable pattern to what \nnumber you get out when you put a string in. But there are some \nrequirements for a hash function:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     319.2669982910156,
+     325.8446960449219,
+     360.1100158691406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t It needs to be consistent. For example, suppose you put in “apple” and \nget back “3.” Every time you put in “apple,” you should get “3” back. \nWithout this, your hash table won’t work.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     367.27099609375,
+     327.90484619140625,
+     408.1139831542969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t It should map different words to different numbers. For example, a hash \nfunction is no good if it always returns “1” for any word you put in. In \nthe best case, every different word should map to a different number.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     410.7760009765625,
+     307.0775451660156,
+     438.6169738769531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So a hash function maps strings to numbers. What is that good for? \nWell, you can use it to make your “Maggie”!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     441.27899169921875,
+     123.7107925415039,
+     456.11798095703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Start with an empty array:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     521.6809692382812,
+     327.96759033203125,
+     549.5220336914062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ll store all of your prices in this array. Let’s add the price of an apple. \nFeed “apple” into the hash function.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    83.99099731445312,
+    122.70001220703125,
+    251.03099060058594,
+    244.1400146484375
+   ],
+   [
+    112.07099914550781,
+    470.84100341796875,
+    222.95098876953125,
+    507.55999755859375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 106,
+  "blocks": [
+   {
+    "bbox": [
+     158.5970001220703,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Hash functions\n81",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     78.84097290039062,
+     320.48065185546875,
+     106.6819839477539
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The hash function outputs “3.” So let’s store the price of an apple at \nindex 3 in the array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     183.62100219726562,
+     184.191650390625,
+     211.46202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s add milk. Feed “milk” into the \nhash function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     214.1240234375,
+     313.4064636230469,
+     228.96302795410156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The hash function says “0.” Let’s store the price of milk at index 0.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     315.4209899902344,
+     307.4554443359375,
+     330.2599792480469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Keep going, and eventually the whole array will be full of prices.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     376.6410217285156,
+     336.276611328125,
+     404.48199462890625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you ask, “Hey, what’s the price of an avocado?” You don’t need to \nsearch for it in the array. Just feed “avocado” into the hash function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     452.7820129394531,
+     338.674560546875,
+     467.6210021972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It tells you that the price is stored at index 4. And sure enough, there it is.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    100.91099548339844,
+    37.999969482421875,
+    270.1109924316406,
+    68.719970703125
+   ],
+   [
+    128.031005859375,
+    115.41999816894531,
+    242.99099731445312,
+    173.5
+   ],
+   [
+    114.11199951171875,
+    237.70001220703125,
+    256.9110107421875,
+    307.29998779296875
+   ],
+   [
+    107.27200317382812,
+    339.0010070800781,
+    263.7509765625,
+    368.5199890136719
+   ],
+   [
+    87.11099243164062,
+    413.2200012207031,
+    283.9110107421875,
+    444.6600036621094
+   ],
+   [
+    81.11100006103516,
+    476.3609619140625,
+    289.9110107421875,
+    557.240966796875
+   ],
+   [
+    189.56199645996094,
+    180.0469970703125,
+    359.72198486328125,
+    207.1669921875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 107,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n82",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     306.3844909667969,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The hash function tells you exactly where the price is stored, so you \ndon’t have to search at all! This works because",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     70.12002563476562,
+     325.17352294921875,
+     123.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The hash function consistently maps a name to the same index. Every \ntime you put in “avocado,” you’ll get the same number back. So you \ncan use it the first time to find where to store the price of an avocado, \nand then you can use it to find where you stored that price.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     131.12600708007812,
+     323.6324462890625,
+     171.9690399169922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The hash function maps different strings to different indexes. \n“Avocado” maps to index 4. “Milk” maps to index 0. Everything maps \nto a different slot in the array where you can store its price.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     179.1300048828125,
+     326.34942626953125,
+     219.97303771972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The hash function knows how big your array is and only returns valid \nindexes. So if your array is five items, the hash function doesn’t return \n100—that wouldn’t be a valid index in the array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     222.63504028320312,
+     321.92852783203125,
+     289.4820861816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You just built a “Maggie”! Put a hash function and an array together, \nand you get a data structure called a hash table. A hash table is the first \ndata structure you’ll learn that has some extra logic behind it. Arrays \nand lists map straight to memory, but hash tables are smarter. They use \na hash function to intelligently figure out where to store elements.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     292.14410400390625,
+     326.3616943359375,
+     371.9931640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hash tables are probably the most useful complex data structure \nyou’ll learn. They’re also known as hash maps, maps, dictionaries, and \nassociative arrays. And hash tables are fast! Remember our discussion \nof arrays and linked lists back in chapter 2? You can get an item from an \narray instantly. And hash tables use an array to store the data, so they’re \nequally fast.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 108,
+  "blocks": [
+   {
+    "bbox": [
+     158.5970001220703,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Hash functions\n83",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     43.65399932861328,
+     146.6915740966797,
+     61.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "What’s the catch?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.498992919921875,
+     68.4800033569336,
+     336.7919616699219,
+     94.0999984741211
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "The hash function we just saw is called a perfect hash function. It deftly \nmaps each grocery item to its very own slot in the array:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     239.46998596191406,
+     336.8349609375,
+     288.9599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Look at them all snug in their own slots. In reality, you probably won’t get \na perfect one-to-one mapping like this. Your items will need to share a \nroom. Some grocery items will map to the same slot, while other slots will \ngo empty.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     369.16998291015625,
+     336.822021484375,
+     406.6600036621094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "There’s a section on collisions coming up that discusses this. For now, just \nknow that while hash tables are very useful, they rarely map items to slots \nso perfectly.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.499000549316406,
+     409.5400085449219,
+     336.78997802734375,
+     435.1600036621094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "By the way, this kind of one-to-one mapping is called an injective function. \nUse that to impress your friends!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     454.6809997558594,
+     343.8226623535156,
+     508.5259704589844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ll probably never have to implement hash tables yourself. Any good \nlanguage will have an implementation for hash tables. Python has hash \ntables; they’re called dictionaries. You can make a new hash table using \nempty braces:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     530.691650390625,
+     104.5174789428711,
+     539.691650390625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> book = {}",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    74.99099731445312,
+    100.19998168945312,
+    296.031005859375,
+    234.3599853515625
+   ],
+   [
+    117.59100341796875,
+    292.05999755859375,
+    253.43099975585938,
+    364.05999755859375
+   ],
+   [
+    142.8719940185547,
+    500.9219665527344,
+    203.11199951171875,
+    570.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 109,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n84",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     250.63800048828125,
+     49.957008361816406
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "book is a new hash table. Let’s add some prices to book:",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     57.6286506652832,
+     290.94647216796875,
+     108.23505401611328
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> book[\"apple\"] = 0.67    \nAn apple costs 67 cents.\n>>> book[\"milk\"] = 1.49     \nMilk costs $1.49.\n>>> book[\"avocado\"] = 1.49\n>>> print(book)\n{'avocado': 1.49, 'apple': 0.67, 'milk': 1.49}",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     116.11801147460938,
+     240.55169677734375,
+     130.95701599121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Pretty easy! Now let’s ask for the price of an avocado:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     138.62864685058594,
+     236.28306579589844,
+     157.87200927734375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> print(book[\"avocado\"])\n1.49             \nThe price of an avocado",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.496994018554688,
+     167.11801147460938,
+     322.7054748535156,
+     207.96104431152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A hash table has keys and values. In the book hash, the names of \nproduce are the keys, and their prices are the values. A hash table maps \nkeys to values.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.496994018554688,
+     210.623046875,
+     303.4884948730469,
+     238.4640655517578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the next section, you’ll see some examples where hash tables are \nreally useful.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     252.2279052734375,
+     78.57600402832031,
+     266.9720153808594
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     270.6180114746094,
+     322.5226745605469,
+     311.4610290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s important for hash functions to consistently return the same output \nfor the same input. If they don’t, you won’t be able to find your item \nafter you put it in the hash table!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     314.123046875,
+     209.57562255859375,
+     328.9620361328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Which of these hash functions are consistent?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     334.10699462890625,
+     215.5535430908203,
+     346.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.1  f(x) = 1     \nReturns 1 for all input",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     353.10699462890625,
+     317.0360107421875,
+     365.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.2  f(x) = random.random()   \nReturns a random number every time",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     372.10699462890625,
+     326.1390380859375,
+     413.8687438964844
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.3  f(x) = next_empty_slot()    \nReturns the index of the next \nempty slot in the hash table\n5.4  f(x) = len(x)  \nUses the length of the \nstring as the index",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     427.19500732421875,
+     85.31599426269531,
+     449.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Use cases",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     460.6180114746094,
+     300.19146728515625,
+     488.458984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hash tables are used everywhere. This section will show you a few \nuse cases.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     500.1510009765625,
+     192.8566436767578,
+     517.4970092773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Using hash tables for lookups",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     520.6179809570312,
+     282.2978210449219,
+     548.4590454101562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Your phone has a handy phonebook built in. Each name has a \nphone number associated with it.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    315.5220031738281,
+    326.47198486328125,
+    411.5220031738281,
+    403.031005859375
+   ],
+   [
+    290.9320068359375,
+    38.00001525878906,
+    381.89801025390625,
+    151.95901489257812
+   ],
+   [
+    290.9320068359375,
+    428.63800048828125,
+    390.60198974609375,
+    565.886962890625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 110,
+  "blocks": [
+   {
+    "bbox": [
+     168.6009979248047,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Use cases\n85",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     101.32101440429688,
+     339.51055908203125,
+     142.16404724121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you want to build a phone book like this. You’re mapping \npeople’s names to phone numbers. Your phone book needs to have this \nfunctionality:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     149.32501220703125,
+     321.4706115722656,
+     177.16603088378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Add a person’s name and the phone number associated with that \nperson.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     184.32699584960938,
+     342.2265319824219,
+     212.1680145263672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Enter a person’s name and get the phone number associated with that \nname.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     214.83001708984375,
+     344.0524597167969,
+     242.67103576660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is a perfect use case for hash tables! Hash tables are great when you \nwant to",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     249.83200073242188,
+     256.42864990234375,
+     264.6710205078125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Create a mapping from one thing to another thing",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     271.8320007324219,
+     122.24187469482422,
+     286.6709899902344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Look something up",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     289.3330078125,
+     317.1365966796875,
+     304.1719970703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Building a phone book is pretty easy. First, make a new hash table:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     311.8316650390625,
+     137.562744140625,
+     320.8316650390625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> phone_book = {}",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     325.8210144042969,
+     310.0196228027344,
+     340.6600036621094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s add the phone numbers of some people to this phone book:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     348.3316650390625,
+     218.53564453125,
+     367.3306579589844
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> phone_book[\"jenny\"] = \"8675309\"\n>>> phone_book[\"emergency\"] = \"911\"",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     376.8210144042969,
+     294.0267639160156,
+     404.6619873046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That’s all there is to it! Now suppose you want to find Jenny’s \nphone number. Just pass the key in to the hash:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     412.3316650390625,
+     281.2179260253906,
+     431.57501220703125
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> print(phone_book[\"jenny\"])\n8675309     \nJenny’s phone number",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     440.8210144042969,
+     328.939453125,
+     481.6639709472656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Imagine if you had to do this using an array instead. How would \nyou do it? Hash tables make it easy to model a relationship from one \nitem to another.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     484.32598876953125,
+     333.8553161621094,
+     525.1690063476562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hash tables are used for lookups on a much larger scale. For example, \nsuppose you go to a website like http://adit.io. Your computer has to \ntranslate adit.io to an IP address.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    90.71099853515625,
+    38.0000114440918,
+    280.3110046386719,
+    87.20001220703125
+   ],
+   [
+    100.67100524902344,
+    540.5800170898438,
+    270.35101318359375,
+    550.9000244140625
+   ],
+   [
+    309.41900634765625,
+    346.4330139160156,
+    417.65899658203125,
+    442.9129943847656
+   ]
+  ]
+ },
+ {
+  "pdf_index": 111,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n86",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     302.1395568847656,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For any website you go to, the address has to be translated to an IP \naddress.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     120.37799072265625,
+     311.611572265625,
+     187.2250518798828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Wow, mapping a web address to an IP address? Sounds like a perfect \nuse case for hash tables! This process is called DNS resolution. Hash \ntables are one way to provide this functionality. Your computer has a \nDNS cache, which stores this mapping for websites you have recently \nvisited, and a good way to build a DNS cache is to use a hash table.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     198.91098022460938,
+     185.7165985107422,
+     216.25698852539062
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Preventing duplicate entries",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     219.37799072265625,
+     323.5796203613281,
+     273.2230224609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re running a voting booth. Naturally, every person can \nvote just once. How do you make sure they haven’t voted before? When \nsomeone comes in to vote, you ask for their full name. Then you check \nit against the list of people who have voted.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     370.7980041503906,
+     322.642578125,
+     424.6429748535156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If their name is on the list, this person has already voted—kick them \nout! Otherwise, you add their name to the list and let them vote. Now \nsuppose a lot of people have come in to vote, and the list of people who \nhave voted is really long.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    75.47100067138672,
+    65.697021484375,
+    259.5509948730469,
+    112.25701904296875
+   ],
+   [
+    131.51100158691406,
+    283.9580078125,
+    203.51100158691406,
+    362.677001953125
+   ],
+   [
+    130.91099548339844,
+    433.3769836425781,
+    204.11099243164062,
+    553.8569946289062
+   ],
+   [
+    325.5220031738281,
+    202.239990234375,
+    403.5220031738281,
+    323.67999267578125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 112,
+  "blocks": [
+   {
+    "bbox": [
+     168.6009979248047,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Use cases\n87",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     331.62255859375,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Each time someone new comes in to vote, you have to scan this giant \nlist to see if they’ve already voted. But there’s a better way: use a hash!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     65.62100219726562,
+     299.01947021484375,
+     80.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, make a hash to keep track of the people who have voted:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     88.12864685058594,
+     109.4485855102539,
+     97.12864685058594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> voted = {}",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     102.11801147460938,
+     327.0795593261719,
+     129.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When someone new comes in to vote, check if they’re already in the \nhash:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     137.62864685058594,
+     174.0181121826172,
+     146.62864685058594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> value = \"tom\" in voted",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     151.61801147460938,
+     335.78900146484375,
+     179.4590301513672
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "value is now True if “tom” is in the hash table. Otherwise, it is False. \nYou can use this to check whether someone has already voted!",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.50299072265625,
+     304.6170349121094,
+     96.02092742919922,
+     319.4560241699219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the code:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     327.128662109375,
+     89.24089813232422,
+     336.128662109375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "voted = {}",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     346.79998779296875,
+     175.42123413085938,
+     406.1216125488281
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def check_voter(name):\n  if name in voted:\n    print(\"kick them out!\")\n  else:\n    voted[name] = True\n    print(\"let them vote!\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     415.8180236816406,
+     127.4768295288086,
+     430.6570129394531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s test it a few times:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     438.32867431640625,
+     155.18301391601562,
+     497.3236083984375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": ">>> check_voter(\"tom\")\nlet them vote!\n>>> check_voter(\"mike\")\nlet them vote!\n>>> check_voter(\"mike\")\nkick them out!",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     506.8180236816406,
+     340.1253662109375,
+     547.6610107421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The first time Tom goes in, the hash table will print, “let them vote!” \nThen Mike goes in, and it prints, “let them vote!” Then Mike tries to go \na second time, and it prints, “kick them out!”",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    180.51100158691406,
+    191.2630157470703,
+    344.19097900390625,
+    393.343017578125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 113,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n88",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     325.7126159667969,
+     114.96707916259766
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember, if you were storing these names in a list of people who have \nvoted, this function would eventually become really slow, because it \nwould have to run a simple search over the entire list. But you’re storing \ntheir names in a hash table instead, and a hash table instantly tells you \nwhether this person’s name is in the hash table or not. Checking for \nduplicates is very fast with a hash table.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     126.65100860595703,
+     183.9385986328125,
+     143.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Using hash tables as a cache",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     147.11801147460938,
+     246.72267150878906,
+     200.9630584716797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "One final use case: caching. If you work on a website, \nyou may have heard of caching before as a good thing \nto do. Here’s the idea. Suppose you visit  \nhttps://facebook.com:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     203.625,
+     202.82391357421875,
+     218.4640655517578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t You make a request to Facebook’s server.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     221.12600708007812,
+     314.8357238769531,
+     248.96702575683594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t The server thinks for a second and comes up with the web page to \nsend you.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     251.62899780273438,
+     111.8220443725586,
+     266.468017578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t You get a web page.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     403.01800537109375,
+     322.80853271484375,
+     508.8710021972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For example, on Facebook, the server may be collecting all of your \nfriends’ activity to show you. It takes a couple of seconds to collect \nall that activity and show it to you. As a user, that couple of seconds \ncan feel like a long time. You might think, “Why is Facebook being so \nslow?” On the other hand, Facebook’s servers have to serve millions \nof people, and that couple of seconds adds up. Facebook’s servers are \nreally working hard to serve all of those websites. Is there a way to have \nFacebook’s servers do less work?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     511.5329895019531,
+     327.318603515625,
+     552.3760375976562
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have a niece who keeps asking you about planets. “How far \nis Mars from Earth?” “How far is the Moon?” “How far is Jupiter?” Each \ntime, you have to do a Google search and give her an answer. It takes",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    16.910999298095703,
+    285.697021484375,
+    318.11199951171875,
+    388.89703369140625
+   ],
+   [
+    255.23098754882812,
+    118.96197509765625,
+    370.6709899902344,
+    204.88101196289062
+   ]
+  ]
+ },
+ {
+  "pdf_index": 114,
+  "blocks": [
+   {
+    "bbox": [
+     168.6009979248047,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Use cases\n89",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     334.7707214355469,
+     101.9650650024414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "a couple of minutes. Now, suppose she always asked, “How far is the \nMoon?” Pretty soon, you’d memorize that the Moon is 238,900 miles \naway. You wouldn’t have to look it up on Google; you’d just remember \nand answer. This is how caching works: websites remember the data \ninstead of recalculating it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     104.62704467773438,
+     343.3385314941406,
+     210.4801483154297
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you’re logged in to Facebook, all the content you see is tailored just \nfor you. Each time you go to https://facebook.com, its servers have to \nthink about what content you’re interested in. But if you’re not logged \nin to Facebook, you see the login page. Everyone sees the same login \npage. Facebook is asked the same thing over and over: “Give me the \nhome page when I’m logged out.” So it stops making the server do work \nto figure out what the home page looks like. Instead, it memorizes what \nthe home page looks like and sends it to you.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     426.614990234375,
+     219.49282836914062,
+     441.59698486328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is called caching. It has two advantages:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49999237060547,
+     448.75799560546875,
+     339.5765380859375,
+     489.6009826660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You get the web page a lot faster, just like when you memorized the \ndistance from Earth to the Moon. The next time your niece asks you, \nyou won’t have to Google it. You can answer instantly.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     496.7619934082031,
+     166.48277282714844,
+     511.6009826660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Facebook has to do less work.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     514.262939453125,
+     329.26849365234375,
+     542.10400390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Caching is a common way to make things faster. All big websites use \ncaching. And that data is cached in a hash!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    41.990997314453125,
+    225.197998046875,
+    329.031982421875,
+    412.6369934082031
+   ]
+  ]
+ },
+ {
+  "pdf_index": 115,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n90",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     325.04156494140625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Facebook isn’t just caching the home page. It’s also caching the About \npage, the Contact page, the Terms and Conditions page, and a lot more. \nSo it needs a mapping from page URL to page data.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     133.29800415039062,
+     317.2964172363281,
+     161.13902282714844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When you visit a page on Facebook, it first checks whether the page is \nstored in the hash.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     378.3180236816406,
+     118.2878189086914,
+     393.1570129394531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here it is in pseudocode:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     400.82867431640625,
+     71.43621826171875,
+     409.82867431640625
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "cache = {}",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     18.5,
+     420.5,
+     318.467529296875,
+     489.82867431640625
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def get_page(url):\n  if url in cache:\n    return cache[url]    \nReturns cached data\n  else:\n    data = get_data_from_server(url)\n    cache[url] = data    \nSaves this data in your cache first\n    return data",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     499.3179931640625,
+     322.3135986328125,
+     553.1630249023438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here, you make the server do work only if the URL isn’t in the cache. \nBefore you return the data, though, you save it in the cache. The next \ntime someone requests this URL, you can send the data from the cache \ninstead of making the server do the work.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    37.430999755859375,
+    86.69700622558594,
+    297.5920104980469,
+    123.177001953125
+   ],
+   [
+    50.750999450683594,
+    171.87698364257812,
+    284.27099609375,
+    368.1969909667969
+   ]
+  ]
+ },
+ {
+  "pdf_index": 116,
+  "blocks": [
+   {
+    "bbox": [
+     168.46600341796875,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Collisions\n91",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     65.3280029296875,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     154.7457733154297,
+     69.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To recap, hashes are good for",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     77.12100219726562,
+     280.35247802734375,
+     91.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Modeling relationships from one thing to another thing",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     99.12100219726562,
+     137.76181030273438,
+     113.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Filtering out duplicates",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     121.12100219726562,
+     320.0404968261719,
+     135.9600067138672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Caching/memoizing data instead of making your server do work",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     158.197998046875,
+     104.57598876953125,
+     180.5
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Collisions",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     191.62100219726562,
+     345.1426086425781,
+     258.4680480957031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Like I said earlier, most languages have hash tables. You don’t need to \nknow how to write your own. So, I won’t talk about the internals of hash \ntables too much. But you still care about performance! To understand \nthe performance of hash tables, you first need to understand what \ncollisions are. The next two sections cover collisions and performance.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     261.13006591796875,
+     327.63067626953125,
+     288.9710693359375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "First, I’ve been telling you a white lie. I told you that a hash function \nalways maps different keys to different slots in the array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     460.781005859375,
+     337.529541015625,
+     488.6219787597656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In reality, it’s almost impossible to write a hash function that does this. \nLet’s take a simple example. Suppose your array contains 26 slots.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     529.06298828125,
+     329.0925598144531,
+     556.9039916992188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And your hash function is really simple: it assigns a spot in the array \nalphabetically.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    61.191001892089844,
+    299.70001220703125,
+    309.8320007324219,
+    450.6600341796875
+   ],
+   [
+    27.5,
+    499.3609924316406,
+    343.5220031738281,
+    518.9420166015625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 117,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n92",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     122.72099304199219,
+     100.51101684570312,
+     320.1896667480469,
+     141.3540496826172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Maybe you can already see the problem. You \nwant to put the price of apples in your hash. \nYou get assigned the first slot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.497993469238281,
+     161.51705932617188,
+     324.75457763671875,
+     189.3580780029297
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then you want to put the price of bananas in the hash. You get assigned \nthe second slot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     244.37100219726562,
+     295.35272216796875,
+     272.2120056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Everything is going so well! But now you want to put the price of \navocados in your hash. You get assigned the first slot again.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499996185302734,
+     345.791015625,
+     327.53753662109375,
+     451.6440124511719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Oh no! Apples have that slot already! What to do? This is called a \ncollision: two keys have been assigned the same slot. This is a problem. \nIf you store the price of avocados at that slot, you’ll overwrite the price \nof apples. Then the next time someone asks for the price of apples, \nthey will get the price of avocados instead! Collisions are bad, and you \nneed to work around them. There are many different ways to deal with \ncollisions. The simplest one is this: if multiple keys map to the same slot, \nstart a linked list at that slot.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    38.00001525878906,
+    341.72198486328125,
+    86.38897705078125
+   ],
+   [
+    94.31100463867188,
+    196.08999633789062,
+    240.71099853515625,
+    234.25
+   ],
+   [
+    83.39099884033203,
+    284.95001220703125,
+    251.63101196289062,
+    333.6700134277344
+   ],
+   [
+    29.1510009765625,
+    464.3699951171875,
+    305.87200927734375,
+    551.010009765625
+   ],
+   [
+    9.5,
+    102.39399719238281,
+    109.81999969482422,
+    144.87399291992188
+   ]
+  ]
+ },
+ {
+  "pdf_index": 118,
+  "blocks": [
+   {
+    "bbox": [
+     162.4040069580078,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Performance\n93",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     341.98443603515625,
+     127.9690933227539
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In this example, both “apples” and “avocados” map to the same slot. \nSo you start a linked list at that slot. If you need to know the price of \nbananas, it’s still quick. If you need to know the price of apples, it’s a \nlittle slower. You have to search through this linked list to find “apples.” \nIf the linked list is small, no big deal—you have to search through three \nor four elements. But suppose you work at a grocery store where you \nonly sell produce that starts with the letter A.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     236.23501586914062,
+     342.490478515625,
+     290.0800476074219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hey, wait a minute! The entire hash table is totally empty except for one \nslot. And that slot has a giant linked list! Every single element in this \nhash table is in the linked list. That’s as bad as putting everything in a \nlinked list to begin with. It’s going to slow down your hash table.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     292.7420654296875,
+     144.9349365234375,
+     307.5810546875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There are two lessons here:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     314.5989990234375,
+     342.1957092285156,
+     355.58502197265625
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Your hash function is really important. Your hash function mapped all \nthe keys to a single slot. Ideally, your hash function would map keys \nevenly all over the hash.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     362.7460021972656,
+     335.38568115234375,
+     390.5870056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t If those linked lists get long, it slows down your hash table a lot. But \nthey won’t get long if you use a good hash function!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     393.2489929199219,
+     342.7225646972656,
+     434.09197998046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hash functions are important. A good hash function will give you very \nfew collisions. So how do you pick a good hash function? That’s coming \nup in the next section!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     455.31201171875,
+     130.49420166015625,
+     477.614013671875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Performance",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     486.2350158691406,
+     331.0229797363281,
+     527.0780029296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You started this chapter at the grocery store. You wanted to build \nsomething that would give you the prices for produce instantly. Well, \nhash tables are really fast.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500030517578125,
+     529.739990234375,
+     338.4743347167969,
+     557.5809936523438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the average case, hash tables take O(1) for everything. O(1) is called \nconstant time. You haven’t seen constant time before. It doesn’t mean",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    136.697021484375,
+    359.72198486328125,
+    228.114013671875
+   ],
+   [
+    343.5220031738281,
+    454.6239929199219,
+    442.0,
+    553.8829956054688
+   ]
+  ]
+ },
+ {
+  "pdf_index": 119,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n94",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     319.4360656738281,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "instant. It means the time taken will stay the same, regardless of how \nbig the hash table is. For example, you know that simple search takes \nlinear time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     197.09799194335938,
+     187.399658203125,
+     211.93699645996094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Binary search is faster—it takes log time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     338.7179870605469,
+     264.3875427246094,
+     353.5569763183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Looking something up in a hash table takes constant time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     477.2190246582031,
+     319.5526123046875,
+     518.06201171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "See how it’s a flat line? That means it doesn’t matter whether your hash \ntable has 1 element or 1 billion elements—getting something out of \na hash table will take the same amount of time. Actually, you’ve seen",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    128.63099670410156,
+    78.69699096679688,
+    206.3909912109375,
+    191.97698974609375
+   ],
+   [
+    125.39100646972656,
+    217.677001953125,
+    209.63099670410156,
+    333.59698486328125
+   ],
+   [
+    126.83099365234375,
+    359.29803466796875,
+    208.1909942626953,
+    472.0980224609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 120,
+  "blocks": [
+   {
+    "bbox": [
+     162.4040069580078,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Performance\n95",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     339.531494140625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "constant time before. Getting an item out of an array takes constant \ntime. It doesn’t matter how big your array is; it takes the same amount \nof time to get an element. In the average case, hash tables are really fast.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     78.48001098632812,
+     342.007568359375,
+     106.46402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the worst case, a hash table takes O(n)—linear time—for everything, \nwhich is really slow. Let’s compare hash tables to arrays and lists.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     259.031005859375,
+     342.7127685546875,
+     338.88006591796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Look at the average case for hash tables. Hash tables are as fast as arrays \nat searching (getting a value at an index). And they’re as fast as linked \nlists at inserts and deletes. It’s the best of both worlds! But in the worst \ncase, hash tables are slow at all of those. So it’s important that you don’t \nhit worst-case performance with hash tables. And to do that, you need \nto avoid collisions. To avoid collisions, you need",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     346.041015625,
+     112.0888900756836,
+     360.88006591796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A low load factor",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     368.0409851074219,
+     132.0967559814453,
+     382.8800048828125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A good hash function",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     174.74099731445312,
+     405.719970703125,
+     196.281005859375,
+     418.1099853515625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     38.09600067138672,
+     423.06597900390625,
+     334.976806640625,
+     494.4765319824219
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "Before you start this next section, know that it isn’t required reading. I’m \ngoing to talk about how to implement a hash table, but you’ll never have \nto do that yourself. Whatever programming language you use will have an \nimplementation of hash tables built in. You can use the built-in hash table \nand assume it will have good performance. The next section gives you a \npeek under the hood.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    94.80299377441406,
+    121.19700622558594,
+    276.2200012207031,
+    244.91000366210938
+   ]
+  ]
+ },
+ {
+  "pdf_index": 121,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n96",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     80.34001159667969,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Load factor",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.12099838256836,
+     226.11846923828125,
+     69.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The load factor of a hash table is easy to calculate.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     72.62197875976562,
+     252.2214813232422,
+     113.46500396728516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hash tables use an array for storage, so you count the \nnumber of occupied slots in an array. For example, this \nhash table has a load factor of 2/5, or 0.4.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     203.78500366210938,
+     185.94876098632812,
+     218.62400817871094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What’s the load factor of this hash table?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     290.7690124511719,
+     292.6795349121094,
+     318.6100158691406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you said 1/3, you’re right. Load factor measures how full your  \nhash table is.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     321.27203369140625,
+     319.673583984375,
+     362.11505126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you need to store the price of 100 produce items in your hash \ntable, and your hash table has 100 slots. In the best case, each item will \nget its own slot.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     447.1289978027344,
+     320.4314270019531,
+     513.9760131835938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This hash table has a load factor of 1. What if your hash table has only \n50 slots? Then it has a load factor of 2. There’s no way each item will \nget its own slot because there aren’t enough slots! Having a load factor \ngreater than 1 means you have more items than slots in your array. \nOnce the load factor starts to grow, you need to add more slots to your",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    117.90499877929688,
+    128.1999969482422,
+    217.11700439453125,
+    189.66400146484375
+   ],
+   [
+    132.0780029296875,
+    233.364990234375,
+    202.94400024414062,
+    276.64801025390625
+   ],
+   [
+    114.35099792480469,
+    376.8479919433594,
+    220.67098999023438,
+    433.00799560546875
+   ],
+   [
+    295.6419982910156,
+    37.99997329711914,
+    387.802001953125,
+    94.15997314453125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 122,
+  "blocks": [
+   {
+    "bbox": [
+     162.4040069580078,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Performance\n97",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.97500991821289,
+     330.4267883300781,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "hash table. This is called resizing. For example, suppose you have this \nhash table that is getting pretty full.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     156.85800170898438,
+     327.7295837402344,
+     197.70103454589844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You need to resize this hash table. First, you create a new array that’s \nbigger. The rule of thumb is to make an array twice the size of the \noriginal.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     236.87799072265625,
+     324.032470703125,
+     264.718994140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you need to reinsert all of those items into this new hash table \nusing the hash function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     323.8179931640625,
+     343.5135192871094,
+     364.6610107421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This new table has a load factor of 3/8. Much better! With a lower load \nfactor, you’ll have fewer collisions, and your table will perform better. A \ngood rule of thumb is to resize when your load factor is greater than 0.7.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     367.3230285644531,
+     342.6885070800781,
+     408.166015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You might be thinking, “This resizing business takes a lot of time!” And \nyou’re right. Resizing is expensive, and you don’t want to resize too \noften. But averaged out, hash tables take O(1) even with resizing.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     419.85101318359375,
+     160.7506103515625,
+     437.197021484375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "A good hash function",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     440.3180236816406,
+     287.1065368652344,
+     455.1570129394531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A good hash function distributes values in the array evenly.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     508.9779968261719,
+     315.38873291015625,
+     536.8190307617188
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A bad hash function groups values together and produces a lot of \ncollisions.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    128.99099731445312,
+    77.697998046875,
+    242.031005859375,
+    142.73699951171875
+   ],
+   [
+    110.031005859375,
+    200.43698120117188,
+    260.99102783203125,
+    222.75698852539062
+   ],
+   [
+    108.47099304199219,
+    273.4570007324219,
+    262.5509948730469,
+    309.6969909667969
+   ],
+   [
+    110.1510009765625,
+    469.8970031738281,
+    260.8710021972656,
+    494.85699462890625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 123,
+  "blocks": [
+   {
+    "bbox": [
+     9.496002197265625,
+     -3.6251630783081055,
+     227.4849853515625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 5  I  hash tables\n98",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     162.84100341796875,
+     322.32464599609375,
+     268.694091796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What is a good hash function? That’s something you’ll never have to \nworry about—smart folks sit in dark rooms and worry about that. If \nyou’re really curious, look up CityHash. That’s what Google’s Abseil \nlibrary uses. Abseil is an open source C++ library based on internal \nGoogle code. It provides all kinds of general-purpose C++ functions. \nAbseil is a building block for Google’s code, so if it uses CityHash, you \ncan be sure that CityHash is pretty good. You could use that as your \nhash function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     282.4508972167969,
+     78.57600402832031,
+     297.19500732421875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     300.84100341796875,
+     298.1289978027344,
+     354.68603515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s important for hash functions to have a good distribution.  \nThey should map items as broadly as possible. The worst case is  \na hash function that maps all items to the same slot in the  \nhash table.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     357.3480529785156,
+     302.50250244140625,
+     372.1870422363281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you have these four hash functions that work with strings:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     374.8489990234375,
+     130.21400451660156,
+     389.68804931640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Return “1” for all input.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     392.3500061035156,
+     201.3730010986328,
+     407.1889953613281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Use the length of the string as the index.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     409.8509826660156,
+     296.0597839355469,
+     437.6919860839844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t Use the first character of the string as the index. So, all strings \nstarting with a are hashed together, and so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500015258789062,
+     440.35400390625,
+     310.5038757324219,
+     507.20098876953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "4.\t Map every letter to a prime number: a = 2, b = 3, c = 5, d = 7, e = \n11, and so on. For a string, the hash function is the sum of all the \ncharacters modulo the size of the hash. For example, if your hash \nsize is 10, and the string is “bag,” the index is (3 + 2 + 17) % 10 =  \n22 % 10 = 2.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    90.95100402832031,
+    38.0,
+    244.0709991455078,
+    152.72000122070312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 124,
+  "blocks": [
+   {
+    "bbox": [
+     174.57200622558594,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Recap\n99",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     344.3726501464844,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For each of these examples, which hash functions would provide a good \ndistribution? Assume a hash table size of 10 slots.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     65.61801147460938,
+     321.355712890625,
+     93.45902252197266
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.5  \u0007A phonebook where the keys are names and values are phone \nnumbers. The names are as follows: Esther, Ben, Bob, and Dan.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     96.11801147460938,
+     335.5556335449219,
+     123.95902252197266
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.6  \u0007A mapping from battery size to power. The sizes are A, AA, AAA, \nand AAAA.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     126.47500610351562,
+     327.1560363769531,
+     154.4590301513672
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "5.7  \u0007A mapping from book titles to authors. The titles are Maus, Fun \nHome, and Watchmen.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     179.69500732421875,
+     76.13600158691406,
+     201.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     213.11801147460938,
+     333.09869384765625,
+     266.9630432128906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You’ll almost never have to implement a hash table yourself. The \nprogramming language you use should provide an implementation \nfor you. You can use Python’s hash tables and assume that you’ll get \nthe average-case performance: constant time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     274.1239929199219,
+     336.2645568847656,
+     314.9670104980469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Hash tables are a powerful data structure because they’re so fast and \nthey let you model data in a different way. You might soon find that \nyou’re using them all the time.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     322.12799072265625,
+     312.37359619140625,
+     349.968994140625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You can make a hash table by combining a hash function with  \nan array.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     357.1300048828125,
+     302.21063232421875,
+     384.9709777832031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Collisions are bad. You need a hash function that minimizes \ncollisions.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     392.1319885253906,
+     267.2086181640625,
+     406.9709777832031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Hash tables have really fast search, insert, and delete.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     414.1319885253906,
+     325.0784912109375,
+     441.9729919433594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Hash tables are good for modeling relationships from one item to \nanother item.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     449.1340026855469,
+     318.6545104980469,
+     476.9750061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Once your load factor is greater than 0.7, it’s time to resize your  \nhash table.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     484.1360168457031,
+     286.3805236816406,
+     511.97698974609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Hash tables are used for caching data (for example, with  \na web server).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     519.137939453125,
+     231.0845947265625,
+     533.9769897460938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Hash tables are great for catching duplicates.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ },
+ {
+  "pdf_index": 125,
+  "blocks": [],
+  "images": []
+ }
+]

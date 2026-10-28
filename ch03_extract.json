@@ -1,0 +1,1679 @@
+[
+ {
+  "pdf_index": 66,
+  "blocks": [
+   {
+    "bbox": [
+     384.7659912109375,
+     -7.2039947509765625,
+     411.406005859375,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "3",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     359.1257019042969,
+     272.7559814453125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about recursion. Recursion is a coding \ntechnique used in many algorithms. It’s a building \nblock for understanding later chapters in this book.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     279.531982421875,
+     355.00067138671875,
+     320.7599792480469
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn what a base case and a recursive case is. \nThe divide-and-conquer strategy (chapter 4) uses \nthis simple concept to solve hard problems.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     293.0110168457031,
+     4.003999710083008,
+     366.4185791015625,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "recursion",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     369.9549865722656,
+     401.65472412109375,
+     436.9449768066406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I’m excited about this chapter because it covers recursion, an elegant \nway to solve problems. Recursion is one of my favorite topics, but it’s \ndivisive. People either love it or hate it—or hate it until they learn to \nlove it a few years later. I personally was in that third camp. To make \nthings easier for you, I have some advice:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     444.1059875488281,
+     408.660400390625,
+     471.9469909667969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t This chapter has a lot of code examples. Run the code for yourself to \nsee how it works.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     479.1080017089844,
+     414.9445495605469,
+     545.9390258789062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t I’ll talk about recursive functions. At least once, step through a \nrecursive function with pen and paper: something like, “Let’s see, I \npass 5 into factorial, and then I return five times passing 4 into \nfactorial, which is . . . ,” and so on. Walking through a function like \nthis will teach you how a recursive function works.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ]
+  ]
+ },
+ {
+  "pdf_index": 67,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     223.57000732421875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 3  I  recursion\n42",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     34.97500991821289,
+     308.0509948730469,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This chapter also includes a lot of pseudocode. Pseudocode is a high-\nlevel description in code of the problem you’re trying to solve. It’s \nwritten like code, but it’s meant to be closer to human speech.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     105.69500732421875,
+     88.80801391601562,
+     127.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recursion",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     139.11801147460938,
+     324.5805969238281,
+     166.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re digging through your grandma’s attic and come across a \nmysterious locked suitcase.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     285.8179931640625,
+     322.083740234375,
+     313.65899658203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Grandma tells you that the key for the suitcase is probably in this other \nbox.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     508.3580017089844,
+     325.41455078125,
+     549.2009887695312
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This box contains more boxes, with more boxes inside those boxes. The \nkey is in a box somewhere. What’s your algorithm to search for the key? \nThink of an algorithm before you read on.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    35.1510009765625,
+    181.69699096679688,
+    299.87200927734375,
+    271.6969909667969
+   ],
+   [
+    40.91100311279297,
+    328.3970031738281,
+    294.11199951171875,
+    494.23699951171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 68,
+  "blocks": [
+   {
+    "bbox": [
+     167.95700073242188,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Recursion\n43",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     118.16092681884766,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s one approach:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     269.93798828125,
+     206.6691436767578,
+     284.7769775390625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Make a pile of boxes to look through.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     287.4389953613281,
+     182.4900360107422,
+     302.2779846191406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Grab a box and look through it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     304.94000244140625,
+     286.0758361816406,
+     319.77899169921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t If you find a box, add it to the pile to look through later.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     322.4410095214844,
+     172.83203125,
+     337.2799987792969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "4.\t If you find a key, you’re done!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     339.9420166015625,
+     77.7909164428711,
+     354.781005859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "5.\t Repeat.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     361.9420166015625,
+     153.49179077148438,
+     376.781005859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s an alternate approach:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     507.7980041503906,
+     143.010986328125,
+     522.6370239257812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Look through the box.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     525.2989501953125,
+     173.3270721435547,
+     540.1380004882812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t If you find a box, go to step 1.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     542.7999877929688,
+     172.83203125,
+     557.6390380859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t If you find a key, you’re done!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    93.71099853515625,
+    52.697021484375,
+    277.3110046386719,
+    259.8169860839844
+   ],
+   [
+    95.63099670410156,
+    387.5179748535156,
+    275.3909912109375,
+    497.677978515625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 69,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     223.57000732421875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 3  I  recursion\n44",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     317.38543701171875,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Which approach seems easier to you? The first approach uses a while \nloop. While the pile isn’t empty, grab a box and look through it. Here’s \nsome pseudocode:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     83.30200958251953,
+     271.166748046875,
+     172.6206512451172
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def look_for_key(main_box):\n  pile = main_box.make_a_pile_to_look_through()\n  while pile is not empty:\n    box = pile.grab_a_box()\n    for item in box:\n      if item.is_a_box():\n        pile.append(item)\n      elif item.is_a_key():\n        print(\"found the key!\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     181.97500610351562,
+     327.8664245605469,
+     209.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The second way uses recursion. Recursion is where a function calls itself. \nHere’s the second way in pseudocode:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     217.302001953125,
+     242.7959747314453,
+     276.6276550292969
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def look_for_key(box):\n  for item in box:\n    if item.is_a_box():\n      look_for_key(item)    \nRecursion!\n    elif item.is_a_key():\n      print(\"found the key!\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     9.5,
+     286.1180114746094,
+     317.33062744140625,
+     391.9710998535156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Both approaches accomplish the same thing, but the second approach \nis clearer to me. Recursion is used when it makes the solution clearer. \nThere’s no performance benefit to using recursion; in fact, loops are \nsometimes better for performance. I like this quote by Leigh Caldwell \non Stack Overflow:  “Loops may achieve a performance gain for \nyour program. Recursion may achieve a performance gain for your \nprogrammer. Choose which is more important in your situation!” \n(http://stackoverflow.com/a/72694/139117).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     394.6330871582031,
+     282.5364990234375,
+     422.4740905761719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Many important algorithms use recursion, so it’s important to \nunderstand the concept.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     452.19500732421875,
+     235.75640869140625,
+     474.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Base case and recursive case",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     485.6180114746094,
+     256.136474609375,
+     539.4630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Because a recursive function calls itself, it’s easy to write \na function incorrectly that ends up in an infinite loop. \nFor example, suppose you want to write a function that \nprints a countdown like this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     547.128662109375,
+     68.65702819824219,
+     556.128662109375
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "> 3...2...1",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    268.2820129394531,
+    422.48101806640625,
+    341.7220153808594,
+    513.6810302734375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 70,
+  "blocks": [
+   {
+    "bbox": [
+     135.01400756835938,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Base case and recursive case\n45",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     179.15365600585938,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can write it recursively like so:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     57.6286506652832,
+     135.41986083984375,
+     86.62669372558594
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def countdown(i):\n    print(i)\n    countdown(i-1)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     97.62467956542969,
+     109.9435806274414,
+     106.62467956542969
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "countdown(3)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     116.11801147460938,
+     328.0035400390625,
+     143.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Write out this code and run it. You’ll notice a problem: this function \nwill run forever!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     226.3086395263672,
+     157.96585083007812,
+     235.3086395263672
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "> 3...2...1...0...-1...-2...",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     241.79800415039062,
+     169.57264709472656,
+     256.6369934082031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "(Press Ctrl-C to kill your script.)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49999237060547,
+     259.29901123046875,
+     341.9624938964844,
+     326.14605712890625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When you write a recursive function, you have to tell it when to stop \nrecursing. That’s why every recursive function has two parts: the base \ncase and the recursive case. The recursive case is when the function calls \nitself. The base case is when the function doesn’t call itself again, so it \ndoesn’t go into an infinite loop.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49999237060547,
+     328.8080749511719,
+     238.42169189453125,
+     343.6470642089844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s add a base case to the countdown function:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     350.98199462890625,
+     134.65396118164062,
+     410.3036193847656
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def countdown(i):\n  print(i)\n  if i <= 1:      \n    return\n  else:           \n    countdown(i-1)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.50001525878906,
+     421.3016357421875,
+     99.14453887939453,
+     430.3016357421875
+    ],
+    "font": "Courier",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "countdown(3)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     439.7980041503906,
+     309.0174255371094,
+     454.6369934082031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now the function works as expected. It goes something like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     287.75,
+     170.14199829101562,
+     330.5224304199219,
+     179.052001953125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Infinite loop",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     175.14999389648438,
+     372.2330017089844,
+     210.16749572753906,
+     381.14300537109375
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Base case",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     175.14999389648438,
+     392.6419982910156,
+     227.5225067138672,
+     401.552001953125
+    ],
+    "font": "Univers-Bold",
+    "size": 7.5,
+    "color": 2301728,
+    "text": "Recursive case",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    108.71099853515625,
+    158.697998046875,
+    262.3110046386719,
+    207.177001953125
+   ],
+   [
+    106.0050048828125,
+    469.37701416015625,
+    265.01800537109375,
+    553.8410034179688
+   ]
+  ]
+ },
+ {
+  "pdf_index": 71,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     223.57000732421875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 3  I  recursion\n46",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     84.63200378417969,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "The stack",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     66.97799682617188,
+     286.3128662109375,
+     107.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This section covers the call stack. The call stack is an important \nconcept in general programming, and it’s also important to \nunderstand when using recursion.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     110.62603759765625,
+     296.50762939453125,
+     138.46705627441406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re throwing a barbecue. You keep a to-do list for the \nbarbecue, in the form of a stack of sticky notes.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     70.49500274658203,
+     141.12905883789062,
+     313.0406494140625,
+     155.9680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember back when we talked about arrays and lists,",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     88.49099731445312,
+     154.13107299804688,
+     317.5087890625,
+     168.97007751464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "and you had a to-do list? You could add to-do items",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499992370605469,
+     167.13308715820312,
+     315.14154052734375,
+     246.98216247558594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "anywhere to the list or delete random items. The \nstack of sticky notes is much simpler. When you \ninsert an item, it gets added to the top of the list. When \nyou read an item, you only read the topmost item, and it’s taken off \nthe list. So your to-do list has only two actions: push (insert) and pop \n(remove and read).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     377.34100341796875,
+     147.28268432617188,
+     392.17999267578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s see the to-do list in action.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     526.9500122070312,
+     323.5907287597656,
+     554.9340209960938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This data structure is called a stack. The stack is a simple data structure. \nYou’ve been using a stack this whole time without realizing it!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    147.2519989013672,
+    83.41999816894531,
+    192.61199951171875
+   ],
+   [
+    304.1000061035156,
+    38.0,
+    414.5,
+    135.44000244140625
+   ],
+   [
+    48.94000244140625,
+    261.70001220703125,
+    286.05999755859375,
+    363.2200012207031
+   ],
+   [
+    9.5,
+    406.91998291015625,
+    325.5220031738281,
+    512.9719848632812
+   ]
+  ]
+ },
+ {
+  "pdf_index": 72,
+  "blocks": [
+   {
+    "bbox": [
+     168.74000549316406,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The stack\n47",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     110.22599792480469,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "The call stack",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499969482421875,
+     54.97800064086914,
+     340.28387451171875,
+     82.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Your computer uses a stack internally called the call stack. Let’s see it in \naction. Here’s a simple function:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     90.30500030517578,
+     242.57199096679688,
+     139.62767028808594
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def greet(name):\n    print(\"hello, \" + name + \"!\")\n    greet2(name)\n    print(\"getting ready to say bye...\")\n    bye()",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     149.12100219726562,
+     330.6873474121094,
+     176.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This function greets you and then calls two other functions. Here are \nthose two functions:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     184.30499267578125,
+     241.27774047851562,
+     203.63063049316406
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def greet2(name):\n    print(\"how are you, \" + name + \"?\")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     36.5,
+     214.30197143554688,
+     144.64755249023438,
+     233.6276092529297
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def bye():\n    print(\"ok bye! \")",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     243.12100219726562,
+     284.24664306640625,
+     257.9599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s walk through what happens when you call a function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     174.74099731445312,
+     280.80999755859375,
+     196.281005859375,
+     293.20001220703125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     38.09600067138672,
+     298.156005859375,
+     334.9530029296875,
+     321.574462890625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "To keep things simple, I’m only showing the calls to greet, greet2, and \nbye. I’m not showing the calls to the print function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499977111816406,
+     346.8210144042969,
+     329.3197326660156,
+     374.6620178222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you call greet(\"maggie\"). First, your computer allocates a \nbox of memory for that function call.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499977111816406,
+     449.84100341796875,
+     330.6650085449219,
+     477.6819763183594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now let’s use the memory. The variable name is set to \"maggie\". That \nneeds to be saved in memory.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    124.67098236083984,
+    389.3999938964844,
+    246.35098266601562,
+    435.7200012207031
+   ],
+   [
+    127.07198333740234,
+    492.41998291015625,
+    243.95095825195312,
+    540.1799926757812
+   ]
+  ]
+ },
+ {
+  "pdf_index": 73,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     223.57000732421875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 3  I  recursion\n48",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.495010375976562,
+     35.11800765991211,
+     330.9209289550781,
+     88.95902252197266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Every time you make a function call, your computer saves the values for \nall the variables for that call in memory like this. Next, you print hello, \nmaggie! Then you call greet2(\"maggie\"). Again, your computer \nallocates a box of memory for this function call.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.4959716796875,
+     195.65798950195312,
+     326.0635070800781,
+     249.5010223388672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Your computer is using a stack for these boxes. The second box is added \non top of the first one. You print how are you, maggie? Then you \nreturn from the function call. When this happens, the box on top of the \nstack gets popped off.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     352.1180114746094,
+     327.9770202636719,
+     470.958984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now the topmost box on the stack is for the greet function, which \nmeans you returned to the greet function. When you called the greet2 \nfunction, the greet function was partially completed. This is the big \nidea behind this section: when you call a function from another function, \nthe calling function is paused in a partially completed state. All the values \nof the variables for that function are still stored on the call stack (i.e., in \nmemory). Now that you’re done with the greet2 function, you’re back \nto the greet function, and you pick up where you left off. First, you \nprint getting ready to say bye... Then you call the bye function.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    62.750999450683594,
+    101.69699096679688,
+    272.27099609375,
+    183.5369873046875
+   ],
+   [
+    90.35099792480469,
+    262.23699951171875,
+    244.67100524902344,
+    339.99700927734375
+   ],
+   [
+    111.59100341796875,
+    485.697021484375,
+    223.42999267578125,
+    553.3770141601562
+   ]
+  ]
+ },
+ {
+  "pdf_index": 74,
+  "blocks": [
+   {
+    "bbox": [
+     168.74000549316406,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The stack\n49",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     338.3874816894531,
+     62.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A box for that function is added to the top of the stack. Then you print \nok bye! and return from the function call.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     158.77801513671875,
+     343.6946105957031,
+     199.61903381347656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And you’re back to the greet function. There’s nothing else to be done, \nso you return from the greet function, too. This stack, used to save the \nvariables for multiple functions, is called the call stack.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     213.38790893554688,
+     88.73599243164062,
+     228.13201904296875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISE",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     231.77801513671875,
+     225.0506134033203,
+     246.6170196533203
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "3.1  \u0007Suppose I show you a call stack like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     328.6210021972656,
+     310.9105529785156,
+     343.4599914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What information can you give me, just based on this call stack?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     346.12200927734375,
+     297.66424560546875,
+     360.96099853515625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now let’s see the call stack in action with a recursive function.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     372.65399169921875,
+     202.27601623535156,
+     390.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "The call stack with recursion",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.496994018554688,
+     393.1210021972656,
+     343.0590515136719,
+     446.9620056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Recursive functions use the call stack, too! Let’s look at this in action \nwith the factorial function. factorial(5) is written as 5!, and it’s \ndefined like this: 5! = 5 * 4 * 3 * 2 * 1. Similarly, factorial(3) is 3 * 2 * 1. \nHere’s a recursive function to calculate the factorial of a number:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.49998474121094,
+     454.30499267578125,
+     163.5681915283203,
+     505.1639709472656
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "def fact(x):\n  if x == 1:\n    return 1\n  else:\n    return x * fact(x-1)",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     513.1209716796875,
+     345.4625244140625,
+     553.9640502929688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you can call fact(3). Let’s step through this call line by line and \nsee how the stack changes. Remember, the topmost box in the stack tells \nyou what call to fact you’re currently on.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    119.27099609375,
+    77.69701385498047,
+    251.75099182128906,
+    144.65701293945312
+   ],
+   [
+    46.194000244140625,
+    252.71401977539062,
+    152.51400756835938,
+    318.2340087890625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 75,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     223.57000732421875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 3  I  recursion\n50",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    9.5,
+    38.000030517578125,
+    396.6099853515625,
+    548.8090209960938
+   ]
+  ]
+ },
+ {
+  "pdf_index": 76,
+  "blocks": [
+   {
+    "bbox": [
+     168.74000549316406,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The stack\n51",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     170.0889892578125,
+     329.3860168457031,
+     197.9300079345703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Notice that each call to fact has its own copy of x. You can’t access a \ndifferent function’s copy of x.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.49700927734375,
+     200.58999633789062,
+     331.6523742675781,
+     228.43101501464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The stack plays a big part in recursion. In the opening example, there \nwere two approaches to finding the key. Here’s the first way again.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     422.3769836425781,
+     324.8145751953125,
+     450.2179870605469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This way, you make a pile of boxes to search through, so you always \nknow what boxes you still need to search.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    37.99998474121094,
+    343.5220031738281,
+    161.96798706054688
+   ],
+   [
+    107.02200317382812,
+    237.16798400878906,
+    264.0,
+    414.2559814453125
+   ],
+   [
+    108.35200500488281,
+    452.95599365234375,
+    262.66998291015625,
+    560.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 77,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     223.57000732421875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 3  I  recursion\n52",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     205.92369079589844,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But in the recursive approach, there’s no pile.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     189.4580078125,
+     312.2364501953125,
+     217.2990264892578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If there’s no pile, how does your algorithm know what boxes you still \nhave to look through? Here’s an example.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    77.1510009765625,
+    64.69700622558594,
+    257.8710021972656,
+    175.33700561523438
+   ],
+   [
+    10.791000366210938,
+    232.03701782226562,
+    324.23199462890625,
+    555.0780029296875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 78,
+  "blocks": [
+   {
+    "bbox": [
+     168.74000549316406,
+     0.14801597595214844,
+     432.5003356933594,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The stack\n53",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     209.66653442382812,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "At this point, the call stack looks like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     189.93798828125,
+     345.1195068359375,
+     243.7830352783203
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The “pile of boxes” is saved on the stack! This is a stack of half-\ncompleted function calls, each with its own half-complete list of boxes \nto look through. Using the stack is convenient because you don’t have to \nkeep track of a pile of boxes yourself—the stack does it for you.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     246.44503784179688,
+     341.78753662109375,
+     313.2920837402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Using the stack is convenient, but there’s a cost: saving all that info can \ntake up a lot of memory. Each of those function calls takes up some \nmemory, and when your stack is too tall, that means your computer is \nsaving information for many function calls. At that point, you have two \noptions:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     320.4530029296875,
+     245.82464599609375,
+     335.2920837402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You can rewrite your code to use a loop instead.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     342.30999755859375,
+     319.7755126953125,
+     383.2959899902344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You can use something called tail recursion. That’s an advanced \nrecursion topic that is out of the scope of this book. It’s also only \nsupported by some languages, not all.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     397.04791259765625,
+     88.73599243164062,
+     411.7920227050781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISE",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     415.4380187988281,
+     337.1065368652344,
+     469.2829895019531
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "3.2  \u0007Suppose you accidentally write a recursive function that runs \nforever. As you saw, your computer allocates memory on the \nstack for each function call. What happens to the stack when your \nrecursive function runs forever?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    104.39100646972656,
+    64.69698333740234,
+    266.6310119628906,
+    175.81698608398438
+   ]
+  ]
+ },
+ {
+  "pdf_index": 79,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     223.57000732421875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 3  I  recursion\n54",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     33.697998046875,
+     58.13600158691406,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     67.12100219726562,
+     194.38352966308594,
+     81.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Recursion is when a function calls itself.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     89.12100219726562,
+     251.0775909423828,
+     116.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Every recursive function has two cases: the base case \nand the recursive case.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     124.12301635742188,
+     203.1417694091797,
+     138.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t A stack has two operations: push and pop.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     146.12301635742188,
+     190.89649963378906,
+     160.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t All function calls go onto the call stack.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     168.12301635742188,
+     301.3684997558594,
+     182.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The call stack can get very large, which takes up a lot of memory.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    274.3900146484375,
+    41.00000762939453,
+    394.8699951171875,
+    151.8800048828125
+   ]
+  ]
+ }
+]

@@ -1,0 +1,1980 @@
+[
+ {
+  "pdf_index": 254,
+  "blocks": [
+   {
+    "bbox": [
+     362.7659912109375,
+     -7.2039947509765625,
+     416.0460205078125,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "12",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     356.7177734375,
+     258.75299072265625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn to build a classification system using the \nk-nearest neighbors algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     267.531005859375,
+     284.19488525390625,
+     280.75299072265625
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about feature extraction.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     291.53302001953125,
+     353.2088928222656,
+     332.760986328125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about regression: predicting a number, \nlike the value of a stock tomorrow or how much a \nuser will enjoy a movie.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     339.5369873046875,
+     345.4417419433594,
+     366.7619934082031
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn about the use cases and limitations of \nk-nearest neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     264.47601318359375,
+     4.003999710083008,
+     348.1795959472656,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "k-nearest \nneighbors",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     414.677978515625,
+     366.0782165527344,
+     436.97998046875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Classifying oranges vs. grapefruit",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     448.1009826660156,
+     278.4435729980469,
+     488.9440002441406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Look at this fruit. Is it an orange or a \ngrapefruit? Well, I know that grapefruits \nare generally bigger and redder.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    295.0880126953125,
+    447.2279968261719,
+    414.1280212402344,
+    505.7879943847656
+   ]
+  ]
+ },
+ {
+  "pdf_index": 255,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n230",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     315.1415710449219,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "My thought process is something like this: I have a graph in my mind.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     252.5780029296875,
+     315.3153076171875,
+     293.4210205078125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Generally speaking, the bigger, redder fruit are grapefruits. This fruit  \nis big and red, so it’s probably a grapefruit. But what if you get a fruit \nlike this?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499984741210938,
+     480.2959899902344,
+     327.91253662109375,
+     508.2799987792969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How would you classify this fruit? One way is to look at the neighbors of \nthis spot. Take a look at the three closest neighbors of this spot.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    84.23100280761719,
+    64.69700622558594,
+    250.79100036621094,
+    238.45700073242188
+   ],
+   [
+    84.23100280761719,
+    308.1579895019531,
+    250.79100036621094,
+    466.3179931640625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 256,
+  "blocks": [
+   {
+    "bbox": [
+     120.43400573730469,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Building a recommendations system\n231",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     183.88101196289062,
+     341.99554443359375,
+     224.7240447998047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "More neighbors are oranges than grapefruit. So this fruit is probably an \norange. Congratulations! You just used the k-nearest neighbors (KNN) \nalgorithm for classification! The whole algorithm is pretty simple.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     372.62200927734375,
+     333.0304260253906,
+     413.4649963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The KNN algorithm is simple but useful! If you’re trying to classify \nsomething, you might want to try KNN first. Let’s look at a more real-\nworld example.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     443.1990051269531,
+     318.0343933105469,
+     465.5010070800781
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Building a recommendations system",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     476.62200927734375,
+     340.6545104980469,
+     517.4650268554688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re Netflix, and you want to build a movie \nrecommendations system for your users. On a high level, this is similar \nto the grapefruit problem!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    102.11099243164062,
+    38.00001525878906,
+    268.9110107421875,
+    169.760009765625
+   ],
+   [
+    27.5,
+    239.46099853515625,
+    405.260986328125,
+    358.5010070800781
+   ]
+  ]
+ },
+ {
+  "pdf_index": 257,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n232",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     163.56375122070312,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can plot every user on a graph.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     211.4580078125,
+     310.2464904785156,
+     252.30104064941406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "These users are plotted by similarity, so users with similar taste are \nplotted closer together. Suppose you want to recommend movies for \nPriyanka. Find the five users closest to her.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     413.0790100097656,
+     308.38751220703125,
+     440.91998291015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Justin, JC, Joey, Lance, and Chris all have similar taste in movies. So \nwhatever movies they like, Priyanka will probably like too!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500015258789062,
+     443.5820007324219,
+     319.90460205078125,
+     471.4230041503906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Once you have this graph, building a recommendations system is easy. \nIf Justin likes a movie, recommend it to Priyanka.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    92.63099670410156,
+    56.69700622558594,
+    242.3909912109375,
+    203.33700561523438
+   ],
+   [
+    93.35099792480469,
+    261.0369873046875,
+    241.67098999023438,
+    406.95697021484375
+   ],
+   [
+    9.5,
+    480.15802001953125,
+    325.5220031738281,
+    561.802001953125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 258,
+  "blocks": [
+   {
+    "bbox": [
+     120.43400573730469,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Building a recommendations system\n233",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     339.9164733886719,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But there’s still a big piece missing. You graphed the users by similarity. \nHow do you figure out how similar two users are?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     74.65100860595703,
+     142.07460021972656,
+     91.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Feature extraction",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     95.11801147460938,
+     331.9415283203125,
+     148.9630584716797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the grapefruit example, you compared fruit based on how  \nbig they are and how red they are. Size and color are the features  \nyou’re comparing. Now suppose you have three fruit. You can extract \nthe features.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     278.13800048828125,
+     180.73764038085938,
+     292.97698974609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then you can graph the three fruit.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     458.3979797363281,
+     345.9554748535156,
+     499.2409973144531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "From the graph, you can tell visually that fruits A and B are similar. Let’s \nmeasure how close they are. To find the distance between two points, \nyou use the Pythagorean formula.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    74.99099731445312,
+    157.69699096679688,
+    296.031005859375,
+    264.0169982910156
+   ],
+   [
+    109.67100524902344,
+    301.71697998046875,
+    261.35101318359375,
+    444.2769775390625
+   ],
+   [
+    106.07099914550781,
+    513.97705078125,
+    264.95098876953125,
+    550.45703125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 259,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n234",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     227.02163696289062,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the distance between A and B, for example.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     180.09799194335938,
+     284.0567321777344,
+     207.9390106201172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The distance between A and B is 1. You can find the rest of the \ndistances, too.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     345.0379943847656,
+     326.5265808105469,
+     372.8789978027344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The distance formula confirms what you saw visually: fruits A and B are \nsimilar.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     375.541015625,
+     306.17559814453125,
+     416.3840026855469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re comparing Netflix users instead. You need some \nway to graph the users. So, you need to convert each user to a set of \ncoordinates, just as you did for fruit.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    111.23199462890625,
+    58.697998046875,
+    223.79098510742188,
+    171.97698974609375
+   ],
+   [
+    102.71099853515625,
+    210.67800903320312,
+    232.31100463867188,
+    336.9169921875
+   ],
+   [
+    101.87100219726562,
+    425.1180114746094,
+    233.14999389648438,
+    554.718017578125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 260,
+  "blocks": [
+   {
+    "bbox": [
+     120.43400573730469,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Building a recommendations system\n235",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     344.14154052734375,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Once you can graph users, you can measure the distance between them.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     52.61898422241211,
+     339.09259033203125,
+     106.46402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s how you can convert users into a set of numbers. When users \nsign up for Netflix, have them rate some categories of movies based on \nhow much they like those categories. For each user, you now have a set \nof ratings!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     282.9179992675781,
+     338.509521484375,
+     349.7650451660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Priyanka and Justin like Romance and hate Horror. Morpheus likes \nAction but hates Romance (he hates it when a good action movie gets \nruined by a cheesy romantic scene). Remember how, in oranges versus \ngrapefruit, each fruit was represented by a set of two numbers? Here, \neach user is represented by a set of five numbers.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     461.4179992675781,
+     341.74359130859375,
+     502.260986328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "A mathematician would say instead of calculating the distance in two \ndimensions, you’re now calculating the distance in five dimensions. But \nthe distance formula remains the same.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    32.990997314453125,
+    121.19699096679688,
+    338.031982421875,
+    268.7969970703125
+   ],
+   [
+    96.83099365234375,
+    364.49700927734375,
+    274.19097900390625,
+    447.2969970703125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 261,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n236",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     85.24099731445312,
+     306.71453857421875,
+     100.07999420166016
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It just involves a set of five numbers instead of a set of two numbers.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     102.59896850585938,
+     326.04266357421875,
+     169.5890350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The distance formula is flexible: you could have a set of a million \nnumbers and still use the same old distance formula to find the \ndistance. Maybe you’re wondering, “What does distance mean when \nyou have five numbers?” The distance tells you how similar those sets of \nnumbers are.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     321.5610046386719,
+     221.12567138671875,
+     336.3999938964844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the distance between Priyanka and Justin.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     156.74099731445312,
+     359.25,
+     178.281005859375,
+     371.6400146484375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "Note",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     20.095993041992188,
+     376.59600830078125,
+     316.9937438964844,
+     436.00897216796875
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 9.5,
+    "color": 2301728,
+    "text": "By the way, here’s a bit of terminology you’ll see often. Those arrays of \nnumbers like (2, 2) for the grapefruit or (3, 4, 4, 1, 4) for Priyanka’s taste in \nmovies are called vectors. So if you’re reading a paper on machine learn-\ning, and you see the authors talking about vectors, they mean an array of \nnumbers like that.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499977111816406,
+     461.2610168457031,
+     310.8404235839844,
+     489.10198974609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Priyanka and Justin are pretty similar. What’s the difference between \nPriyanka and Morpheus? Calculate the distance before moving on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.499977111816406,
+     491.7640075683594,
+     208.35572814941406,
+     506.6029968261719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Did you get it right? Priyanka and Morpheus",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.501991271972656,
+     491.7610168457031,
+     325.6408996582031,
+     519.6019897460938
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "are apart. The distance \ntells you that Priyanka’s tastes are more like Justin’s than Morpheus’s.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    18.71099853515625,
+    37.999996185302734,
+    316.31201171875,
+    71.1199951171875
+   ],
+   [
+    22.91100311279297,
+    184.32000732421875,
+    312.11199951171875,
+    307.44000244140625
+   ],
+   [
+    208.35498046875,
+    494.66802978515625,
+    222.02197265625,
+    502.6400146484375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 262,
+  "blocks": [
+   {
+    "bbox": [
+     120.43400573730469,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Building a recommendations system\n237",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     343.7565002441406,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Great! Now recommending movies to Priyanka is easy: if Justin likes a \nmovie, recommend it to Priyanka, and vice versa. You just built a movie \nrecommendations system!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     78.62301635742188,
+     332.7873229980469,
+     132.4680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you’re a Netflix user, Netflix will keep telling you, “Please rate more \nmovies. The more movies you rate, the better your recommendations \nwill be.” Now you know why. The more movies you rate, the more \naccurately Netflix can see what other users you’re similar to.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     282.587890625,
+     96.57598876953125,
+     297.3320007324219
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISES",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     300.9779968261719,
+     346.0028381347656,
+     406.8310241699219
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "12.1  \u0007In the Netflix example, you calculated the distance between two \ndifferent users using the distance formula. But not all users rate \nmovies the same way. Suppose you have two users, Yogi and Pinky, \nwho have the same taste in movies. But Yogi rates any movie he \nlikes as a 5, whereas Pinky is choosier and reserves the 5s for \nonly the best. They’re well matched, but according to the distance \nalgorithm, they aren’t neighbors. How would you take their \ndifferent rating strategies into account?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    81.35099792480469,
+    147.19699096679688,
+    289.6710205078125,
+    257.35699462890625
+   ],
+   [
+    103.07099914550781,
+    421.5579833984375,
+    267.95098876953125,
+    547.0770263671875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 263,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n238",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     323.0836486816406,
+     101.9650650024414
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "12.2  \u0007Suppose Netflix nominates a group of “influencers.” For example, \nQuentin Tarantino and Wes Anderson are influencers on Netflix, \nso their ratings count for more than a normal user’s. How would \nyou change the recommendations system so it’s biased toward the \nratings of influencers?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     127.19500732421875,
+     97.89799499511719,
+     149.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Regression",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     160.61801147460938,
+     321.02764892578125,
+     201.46104431152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you want to do more than just recommend a movie: you want \nto guess how Priyanka will rate this movie. Take the five people closest \nto her.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     369.3580017089844,
+     325.2835693359375,
+     423.2029724121094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "By the way, I keep talking about the closest five people. There’s nothing \nspecial about the number 5: you could do the closest 2, or 10, or 10,000. \nThat’s why the algorithm is called k-nearest neighbors and not five-\nnearest neighbors!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     425.72198486328125,
+     317.74200439453125,
+     453.7059631347656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re trying to guess a rating for Pitch Perfect. Well, how did \nJustin, JC, Joey, Lance, and Chris rate it?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    91.91099548339844,
+    210.19700622558594,
+    243.11099243164062,
+    359.23699951171875
+   ],
+   [
+    130.0709991455078,
+    464.4369812011719,
+    204.95098876953125,
+    548.9169921875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 264,
+  "blocks": [
+   {
+    "bbox": [
+     166.17999267578125,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Regression\n239",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     332.8236389160156,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You could take the average of their ratings and get 4.2 stars. That’s \ncalled regression. These are the two basic things you’ll do with KNN—\nclassification and regression:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     83.12197875976562,
+     224.93563842773438,
+     97.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Classification = categorization into a group",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     105.12197875976562,
+     260.13458251953125,
+     119.96097564697266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Regression = predicting a response (like a number)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     122.62298583984375,
+     341.82177734375,
+     163.4660186767578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Regression is very useful. Suppose you run a small bakery in Berkeley, \nand you make fresh bread every day. You’re trying to predict how many \nloaves to make for today. You have a set of features:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     170.62701416015625,
+     245.62551879882812,
+     185.4660186767578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Weather on a scale of 1 to 5 (1 = bad, 5 = great).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     192.62701416015625,
+     326.9815673828125,
+     207.4660186767578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Weekend or holiday? (1 if it’s a weekend or a holiday, 0 otherwise.)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     214.62701416015625,
+     196.09365844726562,
+     229.4660186767578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Is there a game on? (1 if yes, 0 if no.)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     232.12802124023438,
+     290.0897521972656,
+     259.9690246582031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And you know how many loaves of bread you’ve sold in the \npast for different sets of features.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     422.25799560546875,
+     336.210693359375,
+     463.1009826660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Today is a weekend day with good weather. Based on the data you just \nsaw, how many loaves will you sell? Let’s use KNN, where k = 4. First, \nfigure out the four nearest neighbors for this point.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    35.871002197265625,
+    274.6969909667969,
+    335.1520080566406,
+    408.1369934082031
+   ],
+   [
+    122.63099670410156,
+    477.8370056152344,
+    248.3909912109375,
+    508.7969970703125
+   ],
+   [
+    302.7380065917969,
+    205.9829864501953,
+    402.8179931640625,
+    263.3429870605469
+   ]
+  ]
+ },
+ {
+  "pdf_index": 265,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n240",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     239.07760620117188,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here are the distances. A, B, D, and E are the closest.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     200.25799560546875,
+     311.0287170410156,
+     228.09901428222656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Take an average of the loaves sold on those days, and you get 218.75. \nThat’s how many loaves you should make for today!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     249.2050018310547,
+     129.19798278808594,
+     265.8370056152344
+    ],
+    "font": "Univers-Bold",
+    "size": 14.0,
+    "color": 10690613,
+    "text": "Cosine similarity",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     273.4469909667969,
+     318.84307861328125,
+     358.93701171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "So far, you’ve been using the distance formula to compare the distance \nbetween two users. Is this the best formula to use? A common one used in \npractice is cosine similarity. Suppose two users are similar, but one is more \nconservative in their ratings. They both loved Manmohan Desai’s Amar \nAkbar Anthony. Paul rated it 5 stars, but Rowan rated it 4 stars. If you \nkeep using the distance formula, these two users might not be each other’s \nneighbors, even though they have similar taste.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     361.9469909667969,
+     318.81500244140625,
+     411.43701171875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "Cosine similarity doesn’t measure the distance between two vectors. \nInstead, it compares the angles of the two vectors. It’s better at dealing \nwith cases like this. Cosine similarity is out of the scope of this book, but \nlook it up if you use KNN!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     439.9909973144531,
+     145.32662963867188,
+     457.3370056152344
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Picking good features",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     460.4580078125,
+     315.31768798828125,
+     540.3070068359375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "To figure out recommendations, you had users \nrate categories of movies. What if you had them \nrate pictures of cats instead? Then you’d find users \nwho rated those pictures similarly. This would probably be a worse \nrecommendations engine because the “features” don’t have a lot to do \nwith taste in movies!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    137.75100708007812,
+    64.69699096679688,
+    197.27101135253906,
+    186.13699340820312
+   ],
+   [
+    253.65798950195312,
+    445.8489990234375,
+    378.93798828125,
+    489.52899169921875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 266,
+  "blocks": [
+   {
+    "bbox": [
+     126.03199768066406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Introduction to machine learning\n241",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     341.1650390625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Or suppose you ask users to rate movies so you can give them \nrecommendations, but you only ask them to rate Toy Story, Toy Story 2, \nand Toy Story 3. This won’t tell you a lot about the users’ movie tastes!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500038146972656,
+     78.62301635742188,
+     336.2986755371094,
+     106.46402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "When you’re working with KNN, it’s really important to pick the right \nfeatures to compare against. Picking the right features means",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500038146972656,
+     113.625,
+     303.29852294921875,
+     141.4660186767578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Features that directly correlate to the movies you’re trying to \nrecommend",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     148.62701416015625,
+     327.21258544921875,
+     189.4700469970703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Features that don’t have a bias (for example, if you ask the users to \nonly rate comedy movies, that doesn’t tell you whether they like \naction movies)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     192.13204956054688,
+     332.6454162597656,
+     245.9770965576172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Do you think ratings are a good way to recommend movies? Maybe I \nrated Inception more highly than Legally Blonde, but I actually spend \nmore time watching Legally Blonde. How would you improve this \nNetflix recommendations system?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     248.63909912109375,
+     345.2745666503906,
+     302.484130859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Going back to the bakery: Can you think of two good and two bad \nfeatures you could have picked for the bakery? Maybe you need to make \nmore loaves after you advertise in the paper. Or maybe you need to \nmake more loaves on Mondays.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.499984741210938,
+     305.1461486816406,
+     345.4494934082031,
+     332.9871520996094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There’s no one right answer when it comes to picking good features. You \nhave to think about all the different things you need to consider.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     346.7279052734375,
+     88.73599243164062,
+     361.4720153808594
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISE",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     365.1180114746094,
+     344.54736328125,
+     405.96099853515625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "12.3  \u0007Netflix has millions of users. The earlier example looked at the five \nclosest neighbors for building the recommendations system. Is \nthis too low? Too high?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     435.69500732421875,
+     292.76422119140625,
+     457.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Introduction to machine learning",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     469.1180114746094,
+     316.6745300292969,
+     535.9650268554688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "KNN is a really useful algorithm, and it’s your introduction to the \nmagical world of machine learning! Machine learning is all about \nmaking your computer more intelligent. You already saw one \nexample of machine learning: building a recommendations \nsystem. Let’s look at some other examples.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.02801513671875,
+    425.8069763183594,
+    432.468017578125,
+    551.0869750976562
+   ]
+  ]
+ },
+ {
+  "pdf_index": 267,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n242",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     36.170005798339844,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "OCR",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     54.97800064086914,
+     323.8304748535156,
+     108.9660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "OCR stands for optical character recognition. It means you can take a \nphoto of a page of text, and your computer will automatically read the \ntext for you. Google uses OCR to digitize books. How does OCR work? \nFor example, consider this number.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     177.9010009765625,
+     319.7286071777344,
+     205.7420196533203
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How would you automatically figure out what number this is? You can \nuse KNN for this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     208.40399169921875,
+     322.3354797363281,
+     236.24501037597656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Go through a lot of images of numbers and extract features of those \nnumbers.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     238.90701293945312,
+     328.02142333984375,
+     266.7480163574219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t When you get a new image, extract the features of that image and see \nwhat its nearest neighbors are!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     273.9090270996094,
+     321.0243835449219,
+     301.7500305175781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s the same problem as oranges versus grapefruit. Generally speaking, \nOCR algorithms measure lines, points, and curves.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     413.1609802246094,
+     318.8155822753906,
+     441.0019836425781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Then, when you get a new character, you can extract the same features \nfrom it.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     443.66400146484375,
+     317.5384521484375,
+     523.5130004882812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Feature extraction is a lot more complicated in OCR than the \nfruit example. But it’s important to understand that even complex \ntechnologies build on simple ideas, like KNN. You could use the same \nideas for speech recognition or face recognition. When you upload a \nphoto to Facebook, sometimes it’s smart enough to tag people in the \nphoto automatically. That’s machine learning in action!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    152.99200439453125,
+    123.69999694824219,
+    182.031005859375,
+    163.77999877929688
+   ],
+   [
+    51.47100067138672,
+    316.47998046875,
+    283.5509948730469,
+    399.03997802734375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 268,
+  "blocks": [
+   {
+    "bbox": [
+     126.03199768066406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Introduction to machine learning\n243",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     343.65740966796875,
+     140.9711151123047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The first step of OCR, where you go through images of numbers and \nextract features, is called—wait for it—feature extraction. This is where \nyou transform the images into something that your machine learning \nalgorithm can work with. The next step is called training, where you \ntrain a model on your features so it can recognize numbers in images. \nMost machine-learning algorithms have a training step: before your \ncomputer can do the task, it must be trained. The next example involves \nspam filters, and it has a training step.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     152.6510009765625,
+     159.99461364746094,
+     169.99700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Building a spam filter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     172.97500610351562,
+     315.6966857910156,
+     200.9590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Spam filters use another simple algorithm called the Naive Bayes \nclassifier. First, you train your Naive Bayes classifier on some data.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     348.6100158691406,
+     343.4320983886719,
+     480.4670104980469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you get an email with the subject “Сollect your million \ndollars now!” Is it spam? You can break this sentence into words. \nThen, for each word, see what the probability is for that word to show \nup in a spam email. For example, in this very simple model, the word \nmillion only appears in spam emails. Naive Bayes figures out the \nprobability that something is likely to be spam. It has applications \nsimilar to KNN. For example, you could use Naive Bayes to categorize \nfruit: you have a fruit that’s big and red. What’s the probability that it’s \na grapefruit? It’s another simple algorithm that’s fairly effective. We \nlove those algorithms!",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    27.5,
+    215.697021484375,
+    343.5220031738281,
+    334.489013671875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 269,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n244",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.36800003051758,
+     191.8485870361328,
+     52.0
+    ],
+    "font": "Univers-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Predicting the stock market",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.12099838256836,
+     284.09954833984375,
+     173.9761199951172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s something that’s hard to do with machine learning: \npredicting whether the stock market will go up or down. How \ndo you pick good features in a stock market? Suppose you say \nthat if the stock went up yesterday, it will go up today. Is that \na good feature? Or suppose you say that the stock will always \ngo down in May. Will that work? There’s no guaranteed way \nto use past numbers to predict future performance. Predicting \nthe future is hard, and it’s almost impossible when there are so \nmany variables involved.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     204.61599731445312,
+     298.1461486816406,
+     245.99798583984375
+    ],
+    "font": "Univers-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "A high-level overview of training  \nan ML model",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     331.3210144042969,
+     325.18359375,
+     424.1720275878906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now that we’ve seen a few examples, let’s look at the steps to training an \nML model. First gather the data. In the Netflix example, our data was \nmovie ratings from users. Then you need to clean the data. Cleaning \nmeans getting rid of bad data. For example, you may have users who \ndon’t like being prompted to rate movies, so they rate movies randomly \nand move to the next screen. You will want to remove this data from \nyour data set. You will then need to extract features from your data.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     114.04400634765625,
+     426.83404541015625,
+     327.9907531738281,
+     519.68505859375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "After you have your features, it’s time to train \nyour model. Select a model like KNN, SVM’s, or \na neural network and train it with 90% of your \ndata. Keep the remaining 10% to validate the \nmodel. After your model is trained, you will test it \nby asking it to make a prediction. You can use that \n10% of data to see how good that prediction is.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    21.111000061035156,
+    257.20098876953125,
+    313.9119873046875,
+    317.20001220703125
+   ],
+   [
+    299.7799987792969,
+    38.00001525878906,
+    414.5,
+    165.20001220703125
+   ],
+   [
+    7.717998504638672,
+    431.2369689941406,
+    102.03799438476562,
+    550.2769775390625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 270,
+  "blocks": [
+   {
+    "bbox": [
+     103.66299438476562,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "A high-level overview of training an ML model\n245",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     338.982421875,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For example, let’s say we want to test the Netflix recommendations \nmodel. We can ask it how Priyanka would like these movies and shows:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     196.5780029296875,
+     218.87350463867188,
+     211.41700744628906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Our model comes back with its predictions.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     332.3179931640625,
+     342.8643798828125,
+     360.15899658203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "We know which movies Priyanka likes -- that was part of the 10% of \ndata we held back. We can compare that against the model’s predictions.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     501.0989990234375,
+     333.7125244140625,
+     541.9420166015625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Not bad! In that case we can say the model made a good prediction, \nbecause the numbers are pretty close to Priyanka’s actual ratings. This \nstep of testing the model is called validating or evaluating the model.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    73.07099914550781,
+    68.6969985961914,
+    297.95098876953125,
+    182.45700073242188
+   ],
+   [
+    51.35099792480469,
+    217.156982421875,
+    319.6719970703125,
+    318.1969909667969
+   ],
+   [
+    53.1510009765625,
+    368.89801025390625,
+    317.87200927734375,
+    486.97802734375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 271,
+  "blocks": [
+   {
+    "bbox": [
+     9.496994018554688,
+     -3.6251630783081055,
+     245.01617431640625,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 12  I  k-nearest neighbors\n246",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     326.5462951660156,
+     88.96305084228516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "After evaluating the model, we may want to go back and adjust it. For \nexample, let’s say we’ve built a KNN model where K = five. We may \nwant to try it with K = seven to see if it gives better results. This is called \nparameter tuning.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500007629394531,
+     91.62503051757812,
+     323.4563903808594,
+     119.4660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "After you’re done training and evaluating the model, you have a model \nready to go! These are the steps in building an ML model at a high level.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     149.19500732421875,
+     58.13600158691406,
+     171.49700927734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     182.61801147460938,
+     319.07958984375,
+     223.46104431152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I hope this gives you an idea of all the different things you can do with \nKNN and with machine learning! Machine learning is an interesting \nfield that you can go pretty deep into if you decide to.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     230.62200927734375,
+     321.1695251464844,
+     258.4630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t KNN is used for classification and regression and involves looking at \nthe k-nearest neighbors.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     265.6239929199219,
+     209.12461853027344,
+     280.4630126953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Classification = categorization into a group.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     287.6239929199219,
+     244.64254760742188,
+     302.4629821777344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Regression = predicting a response (like a number).",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     309.6239929199219,
+     312.94049072265625,
+     337.4649963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Feature extraction means converting an item (like a fruit or a user) \ninto a list of numbers that can be compared.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     344.6260070800781,
+     297.1774597167969,
+     372.4670104980469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Picking good features is an important part of a successful KNN \nalgorithm.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    96.35099792480469,
+    375.197021484375,
+    238.67100524902344,
+    533.1170043945312
+   ]
+  ]
+ }
+]

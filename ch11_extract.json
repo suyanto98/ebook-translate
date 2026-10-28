@@ -1,0 +1,3189 @@
+[
+ {
+  "pdf_index": 228,
+  "blocks": [
+   {
+    "bbox": [
+     368.7659912109375,
+     -7.2039947509765625,
+     422.0460205078125,
+     52.26800537109375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 48.0,
+    "color": 10690613,
+    "text": "11",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     71.75700378417969,
+     196.11801147460938,
+     186.4512176513672,
+     218.42001342773438
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 2301728,
+    "text": "In this chapter",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     231.5279998779297,
+     349.3906555175781,
+     272.7559814453125
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nYou learn dynamic programming, a technique to \nsolve a hard problem by breaking it up into sub-\nproblems and solving those subproblems first.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     107.75700378417969,
+     279.531982421875,
+     356.7398681640625,
+     306.7569885253906
+    ],
+    "font": "MyriadPro-Regular",
+    "size": 11.0,
+    "color": 10690613,
+    "text": "•\t\nUsing examples, you learn how to come up with a \ndynamic programming solution to a new problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     241.322998046875,
+     4.003999710083008,
+     354.1794128417969,
+     44.0
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 18.0,
+    "color": 6513766,
+    "text": "dynamic \nprogramming",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     354.6780090332031,
+     288.2281494140625,
+     396.97802734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "The knapsack problem  \n(revisited)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     99.5,
+     408.1009826660156,
+     282.7897033691406,
+     448.9440002441406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s revisit the knapsack problem from \nchapter 10. You’re a thief with a knapsack \nthat can carry 4 lb of goods.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    305.8999938964844,
+    140.79901123046875,
+    372.5,
+    214.72000122070312
+   ],
+   [
+    304.3399963378906,
+    358.9800109863281,
+    414.5,
+    454.5
+   ]
+  ]
+ },
+ {
+  "pdf_index": 229,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n204",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     256.5566711425781,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You have three items that you can put into the knapsack.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     189.21798706054688,
+     311.4675598144531,
+     217.0590057373047
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What items should you steal so that you steal the maximum money’s \nworth of goods?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     228.7509765625,
+     134.07200622558594,
+     246.09698486328125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "The simple solution",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     249.21798706054688,
+     315.9115295410156,
+     277.0589904785156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The simplest algorithm is this: you try every possible set of goods and \nfind the set that gives you the most value.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     496.4779968261719,
+     310.35650634765625,
+     550.322998046875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This works, but it’s really slow. For 3 items, you have to calculate 8 \npossible sets. For 4 items, you have to calculate 16 sets. With every \nitem you add, the number of sets you have to calculate doubles! This \nalgorithm takes O(2n) time, which is very, very slow.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    25.670997619628906,
+    64.697021484375,
+    309.35101318359375,
+    175.09698486328125
+   ],
+   [
+    11.390998840332031,
+    291.7969970703125,
+    323.6319885253906,
+    482.35699462890625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 230,
+  "blocks": [
+   {
+    "bbox": [
+     126.55299377441406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The knapsack problem (revisited)\n205",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     184.84100341796875,
+     341.41259765625,
+     225.6840362548828
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That’s impractical for any reasonable number of goods. In chapter 10, \nyou saw how to calculate an approximate solution. That solution will be \nclose to the optimal solution, but it may not be the optimal solution.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500015258789062,
+     228.34603881835938,
+     228.939697265625,
+     243.18504333496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "So how do you calculate the optimal solution?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     254.87399291992188,
+     172.07659912109375,
+     272.2200012207031
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Dynamic programming",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     275.34100341796875,
+     336.2864685058594,
+     316.18402099609375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: With dynamic programming! Let’s see how the dynamic \nprogramming algorithm works here. Dynamic programming starts by \nsolving subproblems and builds up to solving the big problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     318.8460388183594,
+     338.1344909667969,
+     359.6890563964844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For the knapsack problem, you’ll start by solving the problem for \nsmaller knapsacks (or sub-knapsacks) and then work up to solving the \noriginal problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     484.1579895019531,
+     343.9999694824219,
+     512.1420288085938
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Dynamic programming is a hard concept, so don’t worry if you don’t get it \nright away. We’re going to look at a lot of examples.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     514.803955078125,
+     335.8025207519531,
+     555.6470336914062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I’ll start by showing you the algorithm in action. After you’ve seen it \nin action once, you’ll have a lot of questions! I’ll do my best to address \nevery question.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    62.990997314453125,
+    38.0,
+    308.031005859375,
+    170.72000122070312
+   ],
+   [
+    119.51199340820312,
+    374.4200134277344,
+    251.510986328125,
+    470.17999267578125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 231,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n206",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     322.9185485839844,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Every dynamic programming algorithm starts with a grid. Here’s a grid \nfor the knapsack problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     221.5780029296875,
+     312.5433044433594,
+     262.4210205078125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The rows of the grid are the items, and the columns are knapsack \nweights from 1 lb to 4 lb. You need all of those columns because they \nwill help you calculate the values of the sub-knapsacks.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     265.0830383300781,
+     314.7334289550781,
+     305.9260559082031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The grid starts out empty. You’re going to fill in each cell of the grid. \nOnce the grid is filled in, you’ll have your answer to this problem! \nPlease follow along. Make your own grid, and we’ll fill it out together.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     313.0669860839844,
+     76.19902801513672,
+     325.4570007324219
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "The guitar row",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     328.6780090332031,
+     318.9123840332031,
+     356.5190124511719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "I’ll show you the exact formula for calculating this grid later. Let’s do a \nwalkthrough first. Start with the first row.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     459.7950134277344,
+     316.4714660644531,
+     513.7830200195312
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is the guitar row, which means you’re trying to fit the guitar into \nthe knapsack. At each cell, there’s a simple decision: Do you steal the \nguitar or not? Remember, you’re trying to find the set of items to steal \nthat will give you the most value.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     516.4449462890625,
+     323.324462890625,
+     557.2880249023438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The first cell has a knapsack of capacity 1 lb. The guitar is also 1 lb, \nwhich means it fits into the knapsack! So the value of this cell is $1,500, \nand it contains a guitar.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    50.1510009765625,
+    73.69700622558594,
+    284.8710021972656,
+    211.45700073242188
+   ],
+   [
+    98.1510009765625,
+    367.25701904296875,
+    236.87100219726562,
+    449.8170166015625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 232,
+  "blocks": [
+   {
+    "bbox": [
+     126.55299377441406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The knapsack problem (revisited)\n207",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     150.37767028808594,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s start filling in the grid.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     159.61801147460938,
+     334.0084533691406,
+     187.4590301513672
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Like this, each cell in the grid will contain a list of all the items that fit \ninto the knapsack at that point.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     190.12103271484375,
+     337.22161865234375,
+     217.96205139160156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s look at the next cell. Here you have a knapsack with a capacity of  \n2 lb. Well, the guitar will definitely fit in there!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     328.6180114746094,
+     330.2826843261719,
+     369.4610290527344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The same is true for the rest of the cells in this row. Remember, this \nis the first row, so you have only the guitar to choose from. You’re \npretending that the other two items aren’t available to steal right now.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     479.4960021972656,
+     329.86468505859375,
+     559.4869384765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "At this point, you’re probably confused. Why are you doing this for \nknapsacks with a capacity of 1 lb, 2 lb, and so on, when the problem \ntalks about a 4 lb knapsack? Remember how I told you that dynamic \nprogramming starts with a small problem and builds up to the big \nproblem? You’re solving subproblems here that will help you to solve \nthe big problem. Read on, and things will become clearer.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    107.63099670410156,
+    56.69700622558594,
+    263.3909912109375,
+    151.49700927734375
+   ],
+   [
+    107.63099670410156,
+    226.69700622558594,
+    263.3909912109375,
+    321.49700927734375
+   ],
+   [
+    107.63099670410156,
+    378.1969909667969,
+    263.3909912109375,
+    472.5169982910156
+   ]
+  ]
+ },
+ {
+  "pdf_index": 233,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n208",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     204.515625,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "At this point, your grid should look like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     154.13800048828125,
+     312.0505676269531,
+     207.98304748535156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember, you’re trying to maximize the value of the knapsack. \nThis row represents the current best guess for this max. So right now, \naccording to this row, if you had a knapsack of capacity 4 lb, the max \nvalue you could put in there would be $1,500.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     311.489013671875,
+     322.2256164550781,
+     339.33001708984375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You know that’s not the final solution. As we go through the algorithm, \nyou’ll refine your estimate.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     346.4779968261719,
+     77.2450180053711,
+     358.8680114746094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "The stereo row",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     362.0889892578125,
+     323.9526062011719,
+     441.9379577636719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s do the next row. This one is for the stereo. Now that you’re on the \nsecond row, you can steal the stereo or the guitar. At every row, you can \nsteal the item at that row or the items in the rows above it. So you can’t \nchoose to steal the laptop right now, but you can steal the stereo and/or \nthe guitar. Let’s start with the first cell, a knapsack of capacity 1 lb. The \ncurrent max value you can fit into a knapsack of 1 lb is $1,500.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    89.63099670410156,
+    54.696998596191406,
+    245.3909912109375,
+    149.01699829101562
+   ],
+   [
+    40.83000183105469,
+    212.71701049804688,
+    294.1920166015625,
+    306.3680114746094
+   ],
+   [
+    85.31100463867188,
+    447.66796875,
+    249.71099853515625,
+    570.0
+   ]
+  ]
+ },
+ {
+  "pdf_index": 234,
+  "blocks": [
+   {
+    "bbox": [
+     126.55299377441406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The knapsack problem (revisited)\n209",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     180.5957489013672,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Should you steal the stereo or not?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     52.61898422241211,
+     338.3115539550781,
+     93.4620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You have a knapsack of capacity 1 lb. Will the stereo fit in there? Nope, \nit’s too heavy! Because you can’t fit the stereo, $1,500 remains the max \nguess for a 1 lb knapsack.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     214.9580078125,
+     328.4984130859375,
+     242.7990264892578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The same thing is true for the next two cells. These knapsacks have a \ncapacity of 2 lb and 3 lb. The old max value for both was $1,500.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     368.3780212402344,
+     295.8295593261719,
+     383.2170104980469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The stereo still doesn’t fit, so your guesses remain unchanged.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     385.8789978027344,
+     328.82952880859375,
+     426.72198486328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What if you have a knapsack of capacity 4 lb? Aha! The stereo finally \nfits! The old max value was $1,500, but if you put the stereo in there \ninstead, the value is $3,000! Let’s take the stereo.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    106.91099548339844,
+    108.19700622558594,
+    264.1109924316406,
+    200.83700561523438
+   ],
+   [
+    96.23100280761719,
+    257.5369873046875,
+    274.791015625,
+    354.2569885253906
+   ],
+   [
+    95.87100219726562,
+    441.45697021484375,
+    275.1510009765625,
+    538.656982421875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 235,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n210",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     311.15850830078125,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You just updated your estimate! If you have a 4 lb knapsack, you can \nfit at least $3,000 worth of goods in it. You can see from the grid that \nyou’re incrementally updating your estimate.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     196.2670135498047,
+     78.45101928710938,
+     208.65701293945312
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 2301728,
+    "text": "The laptop row",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     211.87799072265625,
+     326.6794738769531,
+     252.7210235595703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s do the same thing with the laptop! The laptop weighs 3 lb, so it \nwon’t fit into a 1 lb or a 2 lb knapsack. The estimate for the first two cells \nstays at $1,500.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     367.0979919433594,
+     305.29766845703125,
+     394.9389953613281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "At 3 lb, the old estimate was $1,500. But you can choose the laptop \ninstead, and that’s worth $2,000. So the new max estimate is $2,000!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     517.3189697265625,
+     318.815673828125,
+     558.1609497070312
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "At 4 lb, things get really interesting. This is an important part. The \ncurrent estimate is $3,000. You can put the laptop in the knapsack, but \nit’s only worth $2,000.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    36.47100067138672,
+    84.69701385498047,
+    298.5509948730469,
+    181.65701293945312
+   ],
+   [
+    86.87100219726562,
+    255.45700073242188,
+    248.1510009765625,
+    356.97698974609375
+   ],
+   [
+    86.87100219726562,
+    405.6780090332031,
+    248.1510009765625,
+    507.197998046875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 236,
+  "blocks": [
+   {
+    "bbox": [
+     126.55299377441406,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "The knapsack problem (revisited)\n211",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     90.52102661132812,
+     324.0226135253906,
+     131.3640594482422
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Hmm, that’s not as good as the old estimate. But wait! The laptop \nweighs only 3 lb, so you have 1 lb free! You could put something in  \nthis 1 lb.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     213.02099609375,
+     333.6805419921875,
+     240.8620147705078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What’s the maximum value you can fit into 1 lb of space? Well, you’ve \nbeen calculating it all along.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     391.8810119628906,
+     334.6036071777344,
+     419.72198486328125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "According to the last best estimate, you can fit the guitar into that 1 lb \nspace, and that’s worth $1,500. So the real comparison is as follows.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     487.7019958496094,
+     345.021484375,
+     554.5490112304688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You might have been wondering why you were calculating max values \nfor smaller knapsacks. I hope now it makes sense! When you have space \nleft over, you can use the answers to those subproblems to figure out \nwhat will fit in that space. It’s better to take the laptop + the guitar for \n$3,500.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    90.59100341796875,
+    38.000022888183594,
+    280.4309997558594,
+    76.4000244140625
+   ],
+   [
+    56.03099822998047,
+    146.09999084472656,
+    314.99200439453125,
+    198.89999389648438
+   ],
+   [
+    76.07099914550781,
+    255.60000610351562,
+    294.95098876953125,
+    377.760009765625
+   ],
+   [
+    81.83100128173828,
+    434.46099853515625,
+    289.1910095214844,
+    473.58001708984375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 237,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n212",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     134.12777709960938,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The final grid looks like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     201.37799072265625,
+     315.27252197265625,
+     229.21900939941406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "There’s the answer: the maximum value that will fit in the knapsack is \n$3,500, made up of a guitar and a laptop!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     231.88101196289062,
+     326.0733337402344,
+     285.7260437011719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Maybe you think I used a different formula to calculate the value of that \nlast cell. That’s because I skipped some unnecessary complexity when \nfilling in the values of the earlier cells. Each cell’s value gets calculated \nwith the same formula. Here it is.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     376.8979797363281,
+     322.171630859375,
+     430.74298095703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can use this formula with every cell in this grid, and you should \nend up with the same grid I did. Remember how I talked about solving \nsubproblems? You combined the solutions to two subproblems to solve \nthe bigger problem.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    67.07099914550781,
+    60.696990966796875,
+    267.95098876953125,
+    191.25698852539062
+   ],
+   [
+    9.5,
+    296.4570007324219,
+    408.6210021972656,
+    366.7770080566406
+   ],
+   [
+    49.91100311279297,
+    441.47802734375,
+    285.1109924316406,
+    549.718017578125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 238,
+  "blocks": [
+   {
+    "bbox": [
+     143.9499969482422,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Knapsack problem FAQ\n213",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     33.697998046875,
+     212.91622924804688,
+     56.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Knapsack problem FAQ",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     67.12100219726562,
+     329.080322265625,
+     94.9620132446289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Maybe this still feels like magic. This section answers some common \nquestions.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     106.65399932861328,
+     237.66661071777344,
+     124.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "What happens if you add an item?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     127.12100219726562,
+     331.5026550292969,
+     154.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you realize there’s a fourth item you can steal that you didn’t \nnotice before! You can also steal an iPhone.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     157.6240234375,
+     339.8184814453125,
+     198.46705627441406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Do you have to recalculate everything to account for this new item? \nNope. Remember, dynamic programming keeps progressively building \non your estimate. So far, these are the max values.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     333.0010070800781,
+     329.3355712890625,
+     373.8440246582031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "That means for a 4 lb knapsack, you can steal $3,500 worth of goods. \nYou thought that was the final max value. But let’s add a row for  \nthe iPhone.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    86.031005859375,
+    211.20001220703125,
+    284.99102783203125,
+    320.8800048828125
+   ],
+   [
+    60.71099853515625,
+    384.58099365234375,
+    310.31201171875,
+    554.02099609375
+   ],
+   [
+    357.3800048828125,
+    107.62600708007812,
+    432.5,
+    198.34600830078125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 239,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n214",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     318.1765441894531,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Turns out you have a new max value! Try to fill in this new row before \nreading on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     65.62100219726562,
+     317.50653076171875,
+     106.46402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s start with the first cell. The iPhone fits into the 1 lb knapsack. \nThe old max was $1,500, but the iPhone is worth $2,000. Let’s take the \niPhone instead.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     269.0950012207031,
+     241.18093872070312,
+     284.0769958496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In the next cell, you can fit the iPhone and the guitar.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     430.2980041503906,
+     324.0527648925781,
+     458.1390075683594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For cell 3, you can’t do better than take the iPhone and the guitar again, \nso leave it as is.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     460.8009948730469,
+     316.3174743652344,
+     488.6419982910156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For the last cell, things get interesting. The current max is $3,500. You \ncan steal the iPhone instead, and you have 3 lb of space left over.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    65.7509994506836,
+    115.19700622558594,
+    269.27099609375,
+    255.11700439453125
+   ],
+   [
+    100.19099426269531,
+    298.8170166015625,
+    234.83099365234375,
+    416.177001953125
+   ],
+   [
+    36.95099639892578,
+    503.3780212402344,
+    298.0719909667969,
+    552.0980224609375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 240,
+  "blocks": [
+   {
+    "bbox": [
+     143.9499969482422,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Knapsack problem FAQ\n215",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     340.5785827636719,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Those 3 lb are worth $2,000! $2,000 from the iPhone + $2,000 from the \nold subproblem: that’s $4,000. A new max!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     65.62100219726562,
+     136.0127716064453,
+     80.45999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the new final grid.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     246.69500732421875,
+     335.12603759765625,
+     261.677001953125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Question: Would the value of a column ever go down? Is this possible?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     392.7779846191406,
+     196.56773376464844,
+     407.6169738769531
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Think of an answer before reading on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     410.27899169921875,
+     343.2505798339844,
+     438.1199645996094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: No. At every iteration, you’re storing the current max estimate. \nThe estimate can never get worse than it was before!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.639999389648438,
+     451.88787841796875,
+     88.73599243164062,
+     466.6319885253906
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISE",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     470.2779846191406,
+     345.9917297363281,
+     498.1189880371094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "11.1  \u0007Suppose you can steal another item: a mechanical keyboard player. \nIt weighs 1 lb and is worth $1,000. Should you steal it?",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    122.031005859375,
+    95.19700622558594,
+    248.99099731445312,
+    232.71701049804688
+   ],
+   [
+    84.83099365234375,
+    276.4169921875,
+    286.19097900390625,
+    378.656982421875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 241,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n216",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     324.13323974609375,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "What happens if you change the order of the rows?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.12099838256836,
+     327.05242919921875,
+     95.96402740478516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Does the answer change? Suppose you fill the rows in this order: stereo, \nlaptop, guitar. What does the grid look like? Fill out the grid for yourself \nbefore moving on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     98.62600708007812,
+     143.46571350097656,
+     113.46500396728516
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s what the grid looks like.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     215.36099243164062,
+     291.2947082519531,
+     230.1999969482422
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The answer doesn’t change. The order of the rows doesn’t matter.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     241.89398193359375,
+     281.7286071777344,
+     275.24200439453125
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Can you fill in the grid column-wise instead  \nof row-wise?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     278.3609924316406,
+     304.4605712890625,
+     306.2019958496094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Try it for yourself! For this problem, it doesn’t make a difference. It \ncould make a difference for other problems.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     317.89398193359375,
+     260.2092590332031,
+     335.239990234375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "What happens if you add a smaller item?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     338.3609924316406,
+     323.6665954589844,
+     418.2099914550781
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you can steal a necklace. It weighs 0.5 lb, and it’s worth $1,000. \nSo far, your grid assumes that all weights are integers. Now you decide \nto steal the necklace. You have 3.5 lb left over. What’s the max value \nyou can fit in 3.5 lb? You don’t know! You only calculated values for 1 \nlb, 2 lb, 3 lb, and 4 lb knapsacks. You need to know the value of a 3.5 lb \nknapsack.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     420.72900390625,
+     317.66064453125,
+     448.7129821777344
+    ],
+    "font": "MinionPro-It",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Because of the necklace, you have to account for finer granularity, so the \ngrid has to change.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    81.83100128173828,
+    118.20001220703125,
+    253.19100952148438,
+    207.239990234375
+   ],
+   [
+    51.23100280761719,
+    451.44000244140625,
+    283.791015625,
+    548.8800048828125
+   ]
+  ]
+ },
+ {
+  "pdf_index": 242,
+  "blocks": [
+   {
+    "bbox": [
+     143.9499969482422,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Knapsack problem FAQ\n217",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     239.5972137451172,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Can you steal fractions of an item?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     340.9185791015625,
+     108.9660415649414
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re a thief in a grocery store. You can steal bags of lentils \nand rice. If a whole bag doesn’t fit, you can open it and take as much as \nyou can carry. So now it’s not all or nothing—you can take a fraction of \nan item. How do you handle this using dynamic programming?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     111.6280517578125,
+     344.2527160644531,
+     152.47108459472656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Answer: You can’t. With the dynamic programming solution, you either \ntake the item or not. There’s no way for it to figure out that you should \ntake half an item.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     155.13308715820312,
+     342.22650146484375,
+     195.9761199951172
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But this case is easily solved using a greedy algorithm! First, take as \nmuch as you can of the most valuable item. When that runs out, take as \nmuch as you can of the next most valuable item, and so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     198.63812255859375,
+     286.36956787109375,
+     213.4771270751953
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For example, suppose you have these items to choose from.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     292.1610107421875,
+     326.9914855957031,
+     333.0040283203125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Quinoa is more expensive per pound than anything else. So, take all \nthe quinoa you can carry! If that fills your knapsack, that’s the best \nyou can do.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     335.6660461425781,
+     311.6476135253906,
+     363.5070495605469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If the quinoa runs out and you still have space in your knapsack, \ntake the next most valuable item, and so on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     375.1939697265625,
+     224.60325622558594,
+     392.53997802734375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Optimizing your travel itinerary",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     395.6609802246094,
+     343.3935852050781,
+     436.5039978027344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you’re going to London for a nice vacation. You have two days \nthere and a lot of things you want to do. You can’t do everything, so you \nmake a list.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    104.99099731445312,
+    224.20001220703125,
+    266.031005859375,
+    282.0400085449219
+   ],
+   [
+    73.5510025024414,
+    445.2400207519531,
+    297.47100830078125,
+    552.52001953125
+   ],
+   [
+    339.2200012207031,
+    287.1449890136719,
+    428.5,
+    370.42498779296875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 243,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n218",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     310.5095520019531,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "For each thing you want to see, you write down how long it will take \nand rate how much you want to see it. Can you figure out what you \nshould visit based on this list?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     78.62301635742188,
+     320.52166748046875,
+     132.4680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s the knapsack problem again! Instead of a knapsack, you have a \nlimited amount of time. And instead of stereos and laptops, you have a \nlist of places you want to go. Draw the dynamic programming grid for \nthis list before moving on.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     135.13006591796875,
+     143.46571350097656,
+     149.9690704345703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s what the grid looks like.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     284.1780090332031,
+     307.8144836425781,
+     312.0190124511719
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Did you get it right? Fill in the grid. What places should you end up \nvisiting? Here’s the answer.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    82.43099975585938,
+    164.69700622558594,
+    252.59100341796875,
+    270.0570068359375
+   ],
+   [
+    27.350997924804688,
+    326.75799560546875,
+    307.6719970703125,
+    547.3179931640625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 244,
+  "blocks": [
+   {
+    "bbox": [
+     143.9499969482422,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Knapsack problem FAQ\n219",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.65399932861328,
+     290.1106262207031,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Handling items that depend on each other",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     55.12099838256836,
+     341.74468994140625,
+     69.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose you want to go to Paris, so you add a couple of items to the list.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     127.94100952148438,
+     340.5775146484375,
+     168.78404235839844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "These places take a lot of time because first you have to travel from \nLondon to Paris. That takes half a day. If you want to do all three items, \nit will take 4.5 days.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     171.446044921875,
+     334.8367614746094,
+     212.28907775878906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Wait, that’s not right. You don’t have to travel to Paris for each item. \nOnce you’re in Paris, each item should only take a day. So it should be \none day per item + half a day of travel = 3.5 days, not 4.5 days.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     214.95108032226562,
+     334.8687438964844,
+     255.7941131591797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If you put the Eiffel Tower in your knapsack, the Louvre becomes \n“cheaper”—it will only cost you a day instead of 1.5 days. How do you \nmodel this in dynamic programming?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     258.45611572265625,
+     338.4986267089844,
+     325.30316162109375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You can’t. Dynamic programming is powerful because it can solve \nsubproblems and use those answers to solve the big problem. Dynamic \nprogramming only works when each subproblem is discrete—when it \ndoesn’t depend on other subproblems. That means there’s no way to \naccount for Paris using the dynamic programming algorithm.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     333.9739990234375,
+     322.36383056640625,
+     367.322021484375
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Is it possible that the solution will require more \nthan two sub-knapsacks?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     370.4410095214844,
+     344.51446533203125,
+     424.2859802246094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It’s possible that the best solution involves stealing more than two items. \nThe way the algorithm is set up, you’re combining two knapsacks at \nmost—you’ll never have more than two sub-knapsacks. But it’s possible \nfor those sub-knapsacks to have their own sub-knapsacks.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    99.23100280761719,
+    76.70001220703125,
+    271.791015625,
+    121.82000732421875
+   ],
+   [
+    92.27099609375,
+    432.02001953125,
+    278.7509765625,
+    562.8200073242188
+   ]
+  ]
+ },
+ {
+  "pdf_index": 245,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n220",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     277.2318115234375,
+     68.00201416015625
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Is it possible that the best solution doesn’t  \nfill the knapsack completely?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     71.12100219726562,
+     205.49464416503906,
+     85.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Yes. Suppose you could also steal a diamond.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     88.62197875976562,
+     291.8336486816406,
+     142.46702575683594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "This is a big diamond: it weighs 3.5 pounds. It’s worth a million \ndollars, way more than anything else. You should definitely steal \nit! But there’s half a pound of space left, and nothing will fit in \nthat space.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     156.23089599609375,
+     70.73600769042969,
+     170.97500610351562
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISE",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     174.62100219726562,
+     325.5256042480469,
+     215.4640350341797
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "11.2  \u0007Suppose you’re going camping. You have a knapsack that will hold \n6 lb, and you can take the following items. Each has a value, and \nthe higher the value, the more important the item is:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500003814697266,
+     222.625,
+     80.4159164428711,
+     237.4640350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Water, 3 lb, 10",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     244.625,
+     72.9579086303711,
+     259.4639892578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Book, 1 lb, 3",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     266.625,
+     72.34190368652344,
+     281.4639892578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Food, 2 lb, 9",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     288.625,
+     75.68592071533203,
+     303.4639892578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Jacket, 2 lb, 5",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     310.625,
+     84.26592254638672,
+     325.4639892578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Camera, 1 lb, 6",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     328.1260070800781,
+     276.4435729980469,
+     342.9649963378906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What’s the optimal set of items to take on your camping trip?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     372.697998046875,
+     227.73199462890625,
+     395.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Longest common substring",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     406.1210021972656,
+     296.39874267578125,
+     433.9620056152344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’ve seen one dynamic programming problem so far. What are \nthe takeaways?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     440.9800109863281,
+     320.28857421875,
+     494.9679870605469
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Dynamic programming is useful when you’re trying to optimize \nsomething given a constraint. In the knapsack problem, you had to \nmaximize the value of the goods you stole, constrained by the size of \nthe knapsack.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500007629394531,
+     502.1289978027344,
+     324.27154541015625,
+     529.9700317382812
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You can use dynamic programming when the problem can be broken \ninto discrete subproblems, and they don’t depend on each other.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    302.49798583984375,
+    38.0,
+    372.5780029296875,
+    151.51998901367188
+   ],
+   [
+    320.5220031738281,
+    352.2779846191406,
+    406.4420166015625,
+    448.0379943847656
+   ]
+  ]
+ },
+ {
+  "pdf_index": 246,
+  "blocks": [
+   {
+    "bbox": [
+     136.81300354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Longest common substring\n221",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     344.0206604003906,
+     62.959022521972656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "It can be hard to come up with a dynamic programming solution. That’s \nwhat we’ll focus on in this section. Some general tips follow:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     70.12002563476562,
+     340.3235168457031,
+     84.95902252197266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t It’s often useful to picture a dynamic programming problem as a grid.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     92.12002563476562,
+     338.9164733886719,
+     119.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The values in the cells are usually what you’re trying to optimize. For \nthe knapsack problem, the values are the value of the goods.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     127.12200927734375,
+     330.44775390625,
+     167.9650421142578
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Each cell is a subproblem, so think about how you can divide  \nyour problem into subproblems. That will help you figure out what \nthe axes are.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     170.62704467773438,
+     337.90460205078125,
+     198.4680633544922
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s look at another example. Suppose you’re running dictionary.com. \nSomeone types in a word, and you give them the definition.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     201.13006591796875,
+     322.1867370605469,
+     254.97511291503906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But if someone misspells a word, you want to be able to guess what \nword they meant. Alex is searching for fish, but he accidentally put \nin hish. That’s not a word in your dictionary, but you have a list of \nwords that are similar.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     331.25799560546875,
+     333.7785949707031,
+     359.0989990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "(This is a toy example, so you’ll limit your list to two words. In reality, \nthis list would probably be thousands of words.)",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     361.6180114746094,
+     316.6240234375,
+     376.6000061035156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Alex typed hish. Which word did Alex mean to type: fish or vista?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     385.2909851074219,
+     126.8160171508789,
+     402.6369934082031
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Making the grid",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     405.75799560546875,
+     345.33941650390625,
+     433.5989685058594
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What does the grid for this problem look like? You need to answer these \nquestions:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     440.7599792480469,
+     176.03079223632812,
+     455.5989990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t What are the values of the cells?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     462.760009765625,
+     261.5118103027344,
+     477.5989990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t How do you divide this problem into subproblems?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     484.760009765625,
+     166.69175720214844,
+     499.5989990234375
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t What are the axes of the grid?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     502.1180114746094,
+     344.5409851074219,
+     556.1060180664062
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "In dynamic programming, you’re trying to maximize something. In this \ncase, you’re trying to find the longest substring that two words have in \ncommon. What substring do hish and fish have in common? How about \nhish and vista? That’s what you want to calculate.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    124.91099548339844,
+    265.6969909667969,
+    246.1099853515625,
+    321.1369934082031
+   ],
+   [
+    335.843994140625,
+    173.51100158691406,
+    442.0,
+    266.1510009765625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 247,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n222",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     35.11800765991211,
+     320.48541259765625,
+     75.9610366821289
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Remember, the values for the cells are usually what you’re trying to \noptimize. In this case, the values will probably be a number: the length \nof the longest substring that the two strings have in common.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     78.62301635742188,
+     325.35943603515625,
+     145.47007751464844
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "How do you divide this problem into subproblems? You could compare \nsubstrings. Instead of comparing hish and fish, you could compare his \nand fis first. Each cell will contain the length of the longest substring \nthat two substrings have in common. This also gives you a clue that the \naxes will probably be the two words. So the grid probably looks like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     294.3179931640625,
+     310.169677734375,
+     335.1610107421875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "If this seems like black magic to you, don’t worry. This is hard stuff—\nthat’s why I’m teaching it so late in the book! Later, I’ll give you an \nexercise so you can practice dynamic programming yourself.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     346.8509826660156,
+     115.31201934814453,
+     364.1969909667969
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Filling in the grid",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     367.3180236816406,
+     323.61920166015625,
+     421.1629943847656
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Now you have a good idea of what the grid should look like. What’s the \nformula for filling in each cell of the grid? You can cheat a little because \nyou already know what the solution should be—hish and fish have a \nsubstring of length 3 in common: ish.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     423.82501220703125,
+     321.44573974609375,
+     477.6700134277344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "But that still doesn’t tell you the formula to use. Computer scientists \nsometimes joke about using the Feynman algorithm. The Feynman \nalgorithm is named after the famous physicist Richard Feynman, and it \nworks like this:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.500019073486328,
+     480.3320007324219,
+     139.2999725341797,
+     495.1709899902344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "1.\t Write down the problem.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     497.8330078125,
+     99.57901763916016,
+     512.6719970703125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "2.\t Think real hard.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     515.333984375,
+     135.51597595214844,
+     530.1730346679688
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "3.\t Write down the solution.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    95.031005859375,
+    160.19699096679688,
+    239.9910125732422,
+    280.1969909667969
+   ]
+  ]
+ },
+ {
+  "pdf_index": 248,
+  "blocks": [
+   {
+    "bbox": [
+     136.81300354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Longest common substring\n223",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     190.84100341796875,
+     189.1757354736328,
+     205.6800079345703
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Computer scientists are a fun bunch!",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     208.34201049804688,
+     335.2743225097656,
+     262.1870422363281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "The truth is that there’s no easy way to calculate the formula here. You \nhave to experiment and try to find something that works. Sometimes \nalgorithms aren’t an exact recipe. They’re a framework that you build \nyour idea on top of.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     264.84906005859375,
+     335.3624267578125,
+     292.6900634765625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Try to come up with a solution to this problem yourself. I’ll give you a \nhint—part of the grid looks like this.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     449.9419860839844,
+     340.02874755859375,
+     490.7850036621094
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "What are the other values? Remember that each cell is the value of a \nsubproblem. Why does cell (3, 3) have a value of 2? Why does cell (3, 4) \nhave a value of 0?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     493.4469909667969,
+     334.09747314453125,
+     521.2880249023438
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Read on after you’ve tried to come up with a formula yourself. Even if \nyou don’t get it right, my explanation will make a lot more sense.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    109.43099975585938,
+    38.0,
+    261.59100341796875,
+    176.72000122070312
+   ],
+   [
+    108.11099243164062,
+    307.4209899902344,
+    262.9110107421875,
+    435.82098388671875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 249,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n224",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.65399932861328,
+     86.85000610351562,
+     52.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "The solution",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.12099838256836,
+     97.24593353271484,
+     69.95999908447266
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the final grid.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     199.1409912109375,
+     186.7935791015625,
+     213.97999572753906
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s my formula for filling in each cell.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     468.2019958496094,
+     206.33071899414062,
+     483.0409851074219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s how the formula looks in pseudocode:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     18.5,
+     490.385986328125,
+     308.0732421875,
+     529.712646484375
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "if word_a[i] == word_b[j]:     \nThe letters match.\n  cell[i][j] = cell[i-1][j-1] + 1\nelse:                         \nThe letters don’t match.\n  cell[i][j] = 0",
+    "is_code": true
+   }
+  ],
+  "images": [
+   [
+    107.99200439453125,
+    84.70001220703125,
+    227.031005859375,
+    185.01998901367188
+   ],
+   [
+    52.670997619628906,
+    228.7209930419922,
+    282.3509826660156,
+    454.08099365234375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 250,
+  "blocks": [
+   {
+    "bbox": [
+     136.81300354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Longest common substring\n225",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     34.97500991821289,
+     165.33885192871094,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the grid for hish vs. vista.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     214.65798950195312,
+     342.48065185546875,
+     268.5030212402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "One thing to note: for this problem, the final solution may not be in \nthe last cell! For the knapsack problem, this last cell always had the \nfinal solution. But for the longest common substring, the solution is the \nlargest number in the grid—and it may not be the last cell.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     271.1650390625,
+     323.0348205566406,
+     312.008056640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s go back to the original question: Which string has more in \ncommon with hish? hish and fish have a substring of three letters in \ncommon. hish and vista have a substring of two letters in common.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.500022888183594,
+     314.5270690917969,
+     172.0950164794922,
+     329.5090637207031
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Alex probably meant to type fish.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     341.19097900390625,
+     219.57858276367188,
+     358.5369873046875
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Longest common subsequence",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     361.5149841308594,
+     339.6140441894531,
+     389.4989929199219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Suppose Alex accidentally searched for fosh. Which word did he mean: \nfish or fort?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.50000762939453,
+     392.1609802246094,
+     317.7514953613281,
+     406.9999694824219
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Let’s compare them using the longest-common-substring formula.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    123.83200073242188,
+    64.69699096679688,
+    247.1909942626953,
+    200.5369873046875
+   ],
+   [
+    40.670997619628906,
+    421.73699951171875,
+    330.35198974609375,
+    534.0570068359375
+   ]
+  ]
+ },
+ {
+  "pdf_index": 251,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n226",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     34.97500991821289,
+     266.5039978027344,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "They’re both the same: two letters! But fosh is closer to fish.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     139.95498657226562,
+     319.6834411621094,
+     193.9430389404297
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "You’re comparing the longest common substring, but you really need \nto compare the longest common subsequence: the number of letters in \na sequence that the two words have in common. How do you calculate \nthe longest common subsequence?",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     196.4620361328125,
+     178.04200744628906,
+     211.4440460205078
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the partial grid for fish and fosh.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     307.5780029296875,
+     316.6265563964844,
+     361.42303466796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Can you figure out the formula for this grid? The longest common \nsubsequence is very similar to the longest common substring, and \nthe formulas are pretty similar, too. Try to solve it yourself—I give the \nanswer next.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     373.1109924316406,
+     267.42059326171875,
+     390.4570007324219
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 14.0,
+    "color": 6513766,
+    "text": "Longest common subsequence—solution",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     393.5780029296875,
+     97.24483489990234,
+     408.4169921875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s the final grid.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    124.79100036621094,
+    56.696990966796875,
+    210.2310028076172,
+    133.97698974609375
+   ],
+   [
+    122.1510009765625,
+    218.177001953125,
+    212.87100219726562,
+    301.4570007324219
+   ],
+   [
+    36.83100128173828,
+    417.15802001953125,
+    298.1910095214844,
+    551.3170166015625
+   ]
+  ]
+ },
+ {
+  "pdf_index": 252,
+  "blocks": [
+   {
+    "bbox": [
+     136.81300354003906,
+     0.14801597595214844,
+     432.5,
+     11.166749954223633
+    ],
+    "font": "MyriadPro-It",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "Longest common substring\n227",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     35.11800765991211,
+     204.79354858398438,
+     49.957008361816406
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Here’s my formula for filling in each cell.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     297.0580139160156,
+     155.81280517578125,
+     311.8970031738281
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "And here it is in pseudocode:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     36.5,
+     319.24200439453125,
+     342.27325439453125,
+     358.56866455078125
+    ],
+    "font": "Courier-Bold",
+    "size": 9.0,
+    "color": 2301728,
+    "text": "if word_a[i] == word_b[j]:        \nThe letters match.\n  cell[i][j] = cell[i-1][j-1] + 1\nelse:                            \nThe letters don’t match.\n  cell[i][j] = max(cell[i-1][j], cell[i][j-1])",
+    "is_code": true
+   },
+   {
+    "bbox": [
+     27.5,
+     368.0580139160156,
+     337.530517578125,
+     395.89898681640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "Whew! You did it! This is definitely one of the toughest chapters in the \nbook. So is dynamic programming ever really used? The answer is yes:",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     403.05999755859375,
+     345.77947998046875,
+     456.9049987792969
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Biologists use the longest common subsequence to find similarities in \nDNA strands. They can use this to tell how similar two animals or two \ndiseases are. The longest common subsequence is being used to find a \ncure for multiple sclerosis.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5,
+     464.0580139160156,
+     346.0210266113281,
+     491.89898681640625
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Have you ever used diff (like git diff)? Diff tells you the differences \nbetween two files, and it uses dynamic programming to do so.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     27.5050048828125,
+     498.9169921875,
+     318.6376037597656,
+     552.905029296875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t We talked about string similarity. Levenshtein distance measures \nhow similar two strings are, and it uses dynamic programming. \nLevenshtein distance is used for everything from spell-check to \nfiguring out whether a user is uploading copyrighted data.",
+    "is_code": false
+   }
+  ],
+  "images": [
+   [
+    95.39100646972656,
+    59.69700622558594,
+    275.6310119628906,
+    287.93701171875
+   ]
+  ]
+ },
+ {
+  "pdf_index": 253,
+  "blocks": [
+   {
+    "bbox": [
+     9.495986938476562,
+     -3.6251630783081055,
+     251.12713623046875,
+     15.166749954223633
+    ],
+    "font": "MyriadPro-Semibold",
+    "size": 9.166999816894531,
+    "color": 2301728,
+    "text": "Chapter 11  I  dynamic programming\n228",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.639999389648438,
+     36.730899810791016,
+     70.73600769042969,
+     51.474998474121094
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 12.90736198425293,
+    "color": 10690613,
+    "text": "EXERCISE",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     55.12099838256836,
+     286.67242431640625,
+     82.9620132446289
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 10.0,
+    "color": 10690613,
+    "text": "11.3  \u0007Draw and fill in the grid to calculate the longest common \nsubstring between blue and clues.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     112.697998046875,
+     58.13600158691406,
+     135.0
+    ],
+    "font": "MyriadPro-Bold",
+    "size": 18.0,
+    "color": 10690613,
+    "text": "Recap",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     146.12100219726562,
+     301.6225891113281,
+     173.96202087402344
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Dynamic programming is useful when you’re trying to optimize \nsomething given a constraint.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     181.12301635742188,
+     324.27154541015625,
+     208.9640350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t You can use dynamic programming when the problem can be broken \ninto discrete subproblems.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     216.125,
+     254.92864990234375,
+     230.9640350341797
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Every dynamic programming solution involves a grid.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     238.125,
+     300.7535400390625,
+     252.96400451660156
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t The values in the cells are usually what you’re trying to optimize.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     260.125,
+     310.7965393066406,
+     287.96600341796875
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t Each cell is a subproblem, so think about how you can divide your \nproblem into subproblems.",
+    "is_code": false
+   },
+   {
+    "bbox": [
+     9.5,
+     295.12701416015625,
+     307.8695068359375,
+     322.968017578125
+    ],
+    "font": "MinionPro-Regular",
+    "size": 11.0,
+    "color": 2301728,
+    "text": "•\t There’s no single formula for calculating a dynamic programming \nsolution.",
+    "is_code": false
+   }
+  ],
+  "images": []
+ }
+]
